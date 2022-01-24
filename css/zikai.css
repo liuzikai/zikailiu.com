@@ -1,0 +1,25 @@
+.edu-image {
+    position:relative;
+    top:-5em
+}
+
+#robomaster-animated-svg{
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+}
+
+#aurora-os-animated-svg{
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+}
+
+.sticky-container {
+    min-height:200vh
+}
+
+.sticky-element {
+    position: sticky;
+    top: 0;
+    height: auto;
+    min-height:100vh
+}
