@@ -1,32 +1,69 @@
-#robomaster-animated-svg{
+#robomaster-animated-svg {
     stroke-dasharray: 520;
     stroke-dashoffset: 520;
 }
 
-#aurora-os-animated-svg{
+#aurora-os-animated-svg {
     stroke-dasharray: 550;
     stroke-dashoffset: 550;
 }
 
 .sticky-container {
-    min-height:100vh
+    min-height: 100vh
 }
 
 .sticky-element {
     position: sticky;
     top: 0;
     height: auto;
-    min-height:100vh
+    min-height: 100vh
 }
 
 .come-in {
     transform: translateY(150px);
     animation: come-in 0.8s ease forwards;
 }
+
 .come-in:nth-child(odd) {
     animation-duration: 0.6s; /* So they look staggered */
 }
 
 @keyframes come-in {
-    to { transform: translateY(0); }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.typography-header {
+    font-size: 28px;
+}
+
+@media (min-width: 576px) {
+    .typography-header {
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 768px) {
+    .typography-header {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .typography-header {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .typography-header {
+        font-size: 43px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .typography-header {
+        font-size: 52px;
+    }
 }
