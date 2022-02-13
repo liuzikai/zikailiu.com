@@ -3009,7 +3009,7 @@ textarea.form-control-lg {
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
@@ -3022,6 +3022,7 @@ textarea.form-control-lg {
 }
 .btn:hover {
   color: #212529;
+  border-color: #212529;
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
