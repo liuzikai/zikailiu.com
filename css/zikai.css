@@ -34,13 +34,31 @@
     }
 }
 
+/* Typography */
+
 .typography-header {
     font-size: 28px;
+}
+
+.typography-text {
+    font-size: 16px;
+}
+
+.typography-footnote {
+    font-size: 10px;
 }
 
 @media (min-width: 576px) {
     .typography-header {
         font-size: 34px;
+    }
+
+    .typography-text {
+        font-size: 24px;
+    }
+
+    .typography-footnote {
+        font-size: 10px;
     }
 }
 
@@ -48,11 +66,27 @@
     .typography-header {
         font-size: 40px;
     }
+
+    .typography-text {
+        font-size: 24px;
+    }
+
+    .typography-footnote {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
     .typography-header {
-        font-size: 36px;
+        font-size: 34px;
+    }
+
+    .typography-text {
+        font-size: 20px;
+    }
+
+    .typography-footnote {
+        font-size: 12px;
     }
 }
 
@@ -60,10 +94,119 @@
     .typography-header {
         font-size: 43px;
     }
+
+    .typography-text {
+        font-size: 24px;
+    }
+
+    .typography-footnote {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1400px) {
     .typography-header {
-        font-size: 52px;
+        font-size: 50px;
+    }
+
+    .typography-text {
+        font-size: 24px;
+    }
+
+    .typography-footnote {
+        font-size: 16px;
+    }
+}
+
+/* Project SVG */
+
+.project-svg {
+    max-width: 70%;
+}
+
+@media (min-width: 992px) {
+    .project-svg {
+        max-width: 100%;
+    }
+}
+
+/* Modal */
+
+.modal-close {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 9999;
+    overflow: hidden;
+    top: 24px;
+    left: 24px;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: rgba(134, 134, 139, 0.8)
+}
+
+.modal-close::before, .modal-close::after {
+    text-decoration: none
+}
+
+.modal-close::before {
+    display: none
+}
+
+.modal-close {
+    color: rgba(110, 110, 115, 0.8)
+}
+
+.modal-close:hover {
+    color: #6e6e73
+}
+
+.modal-close::after {
+    width: 0.9em;
+    height: 0.9em;
+    top: 0.05em;
+    padding: 0;
+    font-weight: 300
+}
+
+@media (min-width: 768px) {
+    .modal-close {
+        left: 22px
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-close {
+        top: 20px;
+        left: 20px;
+        font-size: 32px
+    }
+}
+
+.modal-gallery {
+    padding: 0;
+}
+
+@media (min-width: 992px) {
+    .modal-gallery {
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .show-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .hidden-lg {
+        display: none;
     }
 }

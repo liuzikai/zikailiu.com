@@ -45,11 +45,9 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">People walk on the earth <br>
-                    But try creating starry skies</h2>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Memorize the track I have come by <br>
-                    Not for complacency <br>
-                    But to lead the way</h2>
+                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">Working with great people</p>
+                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">on the things I love</p>
+                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">is always my fortune.</p>
 
             </div>
         </div>
@@ -58,39 +56,126 @@
 
 
 <!-- About-->
-<section class="about-section text-center" id="about">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8">
-                <h2 class="text-white mb-4">Longitudes where I have learned</h2>
-                <p class="text-white-50">
-                    Somehow interesting
-                </p>
-                <img class="img-fluid edu-image" src="assets/img/edu.svg" alt="..."/>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section class="about-section text-center" id="about">-->
+<!--    <div class="container px-4 px-lg-5">-->
+<!--        <div class="row gx-4 gx-lg-5 justify-content-center">-->
+<!--            <div class="col-lg-8">-->
+<!--                <h2 class="text-white mb-4">Longitudes where I have learned</h2>-->
+<!--                <p class="text-white-50">-->
+<!--                    Somehow interesting-->
+<!--                </p>-->
+<!--                <img class="img-fluid edu-image" src="assets/img/edu.svg" alt="..."/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- Projects-->
 <section class="projects-section bg-black" id="projects">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-1 px-lg-5">
         <!-- Project One Row-->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center min-vh-100">
-            <div class="col-lg-6">
+            <div class="col-lg-4 px-4 project-svg">
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
-            <div class="col-lg-6">
-                <div class="bg-black text-start h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-start text-lg-left">
-                            <h2 class="typography-header text-white come-in-text">RoboMaster</h2>
-                            <p class="text-white-75">An example of where you can put an image of a project, or
-                                anything else, along with a description.</p>
-                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
-                                anything else, along with a description.</p>
-                            <hr class="d-none d-lg-block mb-0 ms-0"/>
+            <div class="col-lg-8 mt-0">
+                <div class="bg-black h-100 project">
+                    <div class="project-text w-100 my-auto text-start text-lg-left">
+                        <h2 class="typography-header text-white mb-4 come-in-text">RoboMaster</h2>
+                        <p class="typography-text text-white-50">
+                            At <span class="text-white">ZJU-UIUC Robotics Team, </span>we build combat robots,
+                            targeting the RoboMaster competition.
+                        </p>
+                        <p class="typography-text text-white-50">
+                            Being <span class="text-white">Control Group Lead </span> and
+                            <span class="text-white">Project Manager </span>in 2019,
+                            I led the development of embedded control systems and
+                            managed the timeline for the whole team.
+                        </p>
+                        <p class="typography-text text-white-50">
+                            Being <span class="text-white">Vision Group Lead </span>in 2020-2021,
+                            I worked on a vision-assisted automatic aiming system.
+                        </p>
+                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#robomasterMore">More...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="robomasterMore" tabindex="-1" aria-labelledby="robomasterMoreLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle"></i></button>
+                    <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
+                        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                            <div class="col-lg-5 px-lg-4 hidden-lg">
+                                <img src="assets/img/robomaster-me-gradient.jpg" style="max-width: 100%"/>
+                            </div>
+
+                            <div class="col-lg-7 mt-0">
+                                <div class="h-100 project">
+                                    <div class="project-text w-100 my-auto text-start text-lg-left">
+                                        <p class="typography-text text-white-50">
+                                            <span class="text-white">Meta Robotics </span>of ZJU-UIUC Joint Institute, was found
+                                            in 2018, when I was one of the founding members. We target the RoboMaster
+                                            competition and build our robots from sketch. Unfortunately, being a new
+                                            team at a new campus without any experience and technology heritage,
+                                            we didn't make it to the competition in 2018.
+                                        </p>
+                                        <p class="typography-text text-white-50">
+                                            In 2019, I took the role of <span class="text-white">Control Group Lead </span>. I led
+                                            the development of embedded control programs and electric systems of all
+                                            the robots, built from the ground up. We developed a comprehensive
+                                            all-platform cross compile toolchain for STM32, which has been using by us
+                                            ever since. We developed a system to support convenient parameter adjustment
+                                            with Bluetooth and GUI. During the 2019 season, I contributed 70k+ lines of
+                                            C++ code and 20+ documents.
+                                        </p>
+                                        <p class="typography-text text-white-50">
+                                            Among the things we have built, I am most proud of the attitude and heading
+                                            reference system (<span class="text-white">AHRS</span>), in which a gyroscope, an accelerometer and a
+                                            magnetometer are integrated to calculate the absolute angle of the targeting
+                                            gimbal. Together with the motor control system, our robots were able to
+                                            stabilize the gimbal while rotating the chassis to evade incoming bullets,
+                                            which provided conspicuous advantages to us at the competition.
+                                        </p>
+                                        <p class="typography-text text-white-50">
+                                            At the same time, I took the role of <span class="text-white">Project Manager </span>in 2019.
+                                            I was responsible for scheduling the overall development timeline,
+                                            coordinating different groups of the team.
+                                            I arranged the weekly stand-up meeting, when members exchanged updates and
+                                            laid down upcoming schedule. Together with the team leader, we kept the
+                                            whole team forward.
+                                        </p>
+                                        <p class="typography-text text-white-50">
+                                            In RoboMaster 2019 International Regional Competition, as out debut, we won <span class="text-white">the second prize</span>.
+                                            <!-- https://zjui.intl.zju.edu.cn/en/news/746 -->
+                                        </p>
+                                        <p class="typography-text text-white-50">
+                                            Since 2020, I worked as the <span class="text-white">Vision Group Lead </span>
+                                            of the team. I worked on a vision-assisted automatic aiming system,
+                                            for which I have contributed 27k+ lines of C++ code.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 px-lg-4 mt-0 order-last order-lg-first">
+                                <div class="modal-gallery text-center">
+                                    <img src="assets/img/robomaster-me.jpg" class="show-lg" style="max-width: 100%"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4 show-lg"> RoboMaster 2019</p>
+                                    <img src="assets/img/robomaster-competition.jpg" style="max-width: 100%"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">RoboMaster 2019</p>
+                                    <img src="assets/img/robomaster-we.jpg" style="max-width: 100%"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">Meta Robotics in 2019</p>
+                                    <img src="assets/img/robomaster-teams.jpg" style="max-width: 100%"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">With Fukuoka and Guangdong Taiwan Chung Cheng University Teams</p>
+                                </div>
+
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
