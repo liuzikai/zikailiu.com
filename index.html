@@ -74,31 +74,30 @@
 <section class="projects-section bg-black" id="projects">
     <div class="container px-1 px-lg-5">
         <!-- RoboMaster-->
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center min-vh-100">
-            <div class="col-lg-4 px-4 project-svg">
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center project-container">
+            <div class="col-lg-4 px-4 project-svg-container">
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
             <div class="col-lg-8 mt-0">
-                <div class="bg-black h-100 project">
-                    <div class="project-text w-100 my-auto text-start">
-                        <h2 class="typography-header text-white mb-4 come-in-text">RoboMaster</h2>
-                        <p class="typography-text text-white-50">
-                            At <span class="text-white">ZJU-UIUC Robotics Team, </span>we build combat robots,
-                            targeting the RoboMaster competition.
-                        </p>
-                        <p class="typography-text text-white-50">
-                            Being <span class="text-white">Control Group Lead </span> and
-                            <span class="text-white">Project Manager </span>in 2019,
-                            I led the development of embedded control systems and
-                            managed the timeline for the whole team.
-                        </p>
-                        <p class="typography-text text-white-50">
-                            Being <span class="text-white">Vision Group Lead </span>in 2020-2021,
-                            I worked on a vision-assisted automatic aiming system.
-                        </p>
-                        <div class="text-end">
-                            <a class="btn typography-text more-button" data-bs-toggle="modal" data-bs-target="#robomasterMore">More...</a>
-                        </div>
+                <div class="project-text h-100 w-100 my-auto text-start">
+                    <h2 class="typography-header text-white mb-4 slide-in-text">RoboMaster</h2>
+                    <p class="typography-text text-white-50 slide-in-text">
+                        At <span class="text-white">ZJU-UIUC Robotics Team, </span>we build combat robots,
+                        targeting the RoboMaster competition.
+                    </p>
+                    <p class="typography-text text-white-50 slide-in-text">
+                        Being <span class="text-white">Control Group Lead </span> and
+                        <span class="text-white">Project Manager </span>in 2019,
+                        I led the development of embedded control systems and
+                        managed the timeline for the whole team.
+                    </p>
+                    <p class="typography-text text-white-50 slide-in-text">
+                        Being <span class="text-white">Vision Group Lead </span>in 2020-2021,
+                        I worked on a vision-assisted automatic aiming system.
+                    </p>
+                    <div class="text-end slide-in-text">
+                        <a class="btn typography-text more-button" data-bs-toggle="modal"
+                           data-bs-target="#robomasterMore">More...</a>
                     </div>
                 </div>
             </div>
@@ -119,14 +118,16 @@
                                 <div class="h-100 project">
                                     <div class="project-text w-100 my-auto text-start text-lg-left">
                                         <p class="typography-text text-white-50">
-                                            <span class="text-white">Meta Robotics </span>of ZJU-UIUC Joint Institute, was found
+                                            <span class="text-white">Meta Robotics </span>of ZJU-UIUC Joint Institute,
+                                            was found
                                             in 2018, when I was one of the founding members. We target the RoboMaster
                                             competition and build our robots from sketch. Unfortunately, being a new
                                             team at a new campus without any experience and technology heritage,
                                             we didn't make it to the competition in 2018.
                                         </p>
                                         <p class="typography-text text-white-50">
-                                            In 2019, I took the role of <span class="text-white">Control Group Lead </span>. I led
+                                            In 2019, I took the role of <span
+                                                class="text-white">Control Group Lead </span>. I led
                                             the development of embedded control programs and electric systems of all
                                             the robots, built from the ground up. We developed a comprehensive
                                             all-platform cross compile toolchain for STM32, which has been using by us
@@ -136,14 +137,16 @@
                                         </p>
                                         <p class="typography-text text-white-50">
                                             Among the things we have built, I am most proud of the attitude and heading
-                                            reference system (<span class="text-white">AHRS</span>), in which a gyroscope, an accelerometer and a
+                                            reference system (<span class="text-white">AHRS</span>), in which a
+                                            gyroscope, an accelerometer and a
                                             magnetometer are integrated to calculate the absolute angle of the targeting
                                             gimbal. Together with the motor control system, our robots were able to
                                             stabilize the gimbal while rotating the chassis to evade incoming bullets,
                                             which provided conspicuous advantages to us at the competition.
                                         </p>
                                         <p class="typography-text text-white-50">
-                                            At the same time, I took the role of <span class="text-white">Project Manager </span>in 2019.
+                                            At the same time, I took the role of <span class="text-white">Project Manager </span>in
+                                            2019.
                                             I was responsible for scheduling the overall development timeline,
                                             coordinating different groups of the team.
                                             I arranged the weekly stand-up meeting, when members exchanged updates and
@@ -151,11 +154,13 @@
                                             whole team forward.
                                         </p>
                                         <p class="typography-text text-white-50">
-                                            In RoboMaster 2019 International Regional Competition, as out debut, we won <span class="text-white">the second prize</span>.
+                                            In RoboMaster 2019 International Regional Competition, as out debut, we won
+                                            <span class="text-white">the second prize</span>.
                                             <!-- https://zjui.intl.zju.edu.cn/en/news/746 -->
                                         </p>
                                         <p class="typography-text text-white-50">
-                                            Since 2020, I worked as the <span class="text-white">Vision Group Lead </span>
+                                            Since 2020, I worked as the <span
+                                                class="text-white">Vision Group Lead </span>
                                             of the team. I worked on a vision-assisted automatic aiming system,
                                             for which I have contributed 27k+ lines of C++ code.
                                         </p>
@@ -172,7 +177,8 @@
                                     <img src="assets/img/robomaster-we.jpg" style="max-width: 100%"/>
                                     <p class="typography-footnote text-white-50 mt-1 mb-4">Meta Robotics in 2019</p>
                                     <img src="assets/img/robomaster-teams.jpg" style="max-width: 100%"/>
-                                    <p class="typography-footnote text-white-50 mt-1 mb-4">With Fukuoka and Guangdong Taiwan Chung Cheng University Teams</p>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">With Fukuoka and Guangdong
+                                        Taiwan Chung Cheng University Teams</p>
                                 </div>
 
                             </div>

@@ -19,6 +19,12 @@
     min-height: 100vh
 }
 
+/* Project section */
+
+.project-container {
+    min-height: 100vh !important;
+}
+
 .come-in {
     transform: translateY(150px);
     animation: come-in 0.8s ease forwards;
@@ -120,12 +126,12 @@
 
 /* Project SVG */
 
-.project-svg {
+.project-svg-container {
     max-width: 70%;
 }
 
 @media (min-width: 992px) {
-    .project-svg {
+    .project-svg-container {
         max-width: 100%;
     }
 }
