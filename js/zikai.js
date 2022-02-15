@@ -12,17 +12,17 @@ $(function () {
         return num <= min ? min : (num >= max ? max : num)
     }
 
-    function easeQuint(percentage) {
-        return percentage * percentage * percentage * percentage;
+    function percentageEase(percentage) {
+        return percentage * percentage * percentage;
     }
 
     function calcProjectSVGPercentage(projectElem) {
         // When clientRect.top = window.innerHeight, 0%
         // When clientRect.top = window.innerHeight * 0.25, 100%
-        let alpha = -1 / (window.innerHeight * 0.9)
+        let alpha = -1 / (window.innerHeight * 0.85)
         let percentage = (projectElem.getBoundingClientRect().top - window.innerHeight) * alpha
         if (percentage < 0) return 0;
-        return easeQuint(clamp(percentage, 0, 1))
+        return percentageEase(clamp(percentage, 0, 1))
     }
 
     function drawProjectSVG(svgSel, percentage) {
@@ -40,9 +40,9 @@ $(function () {
         if (current > target) current = target;
         drawProjectSVG(svgSel, current);
         if (current < target) {
-            // Forward 2% per 30ms (take 1.5s from 0% to 100%)
-            await sleep(30);
-            await driveProjectSVG(svgSel, current + 0.02, target);
+            // Forward 1% per 15ms (take 1.5s from 0% to 100%)
+            await sleep(15);
+            await driveProjectSVG(svgSel, current + 0.01, target);
         }
     }
 
