@@ -216,7 +216,7 @@
     }
 }
 
-.more-button {
+.btn {
     font-family: var(--bs-body-font-family);
     text-transform: none;
     border: 3px solid transparent;
@@ -226,12 +226,12 @@
     margin-right: 0;
 }
 
-.more-button {
+.btn {
     color: rgba(255, 255, 255, 0.5) !important;
     border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.more-button:hover {
+.btn:hover {
     color: rgba(255, 255, 255, 1) !important;
     border-color: rgba(255, 255, 255, 1) !important;
 }
