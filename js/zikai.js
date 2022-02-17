@@ -13,13 +13,13 @@ $(function () {
     }
 
     function percentageEase(percentage) {
-        return percentage * percentage * percentage;
+        return percentage * percentage;
     }
 
     function calcProjectSVGPercentage(projectElem) {
         // When clientRect.top = window.innerHeight, 0%
-        // When clientRect.top = window.innerHeight * 0.25, 100%
-        let alpha = -1 / (window.innerHeight * 0.85)
+        // When clientRect.top = navBarHeight, 100%
+        let alpha = -1 / (window.innerHeight - $("#mainNav").innerHeight())
         let percentage = (projectElem.getBoundingClientRect().top - window.innerHeight) * alpha
         if (percentage < 0) return 0;
         return percentageEase(clamp(percentage, 0, 1))

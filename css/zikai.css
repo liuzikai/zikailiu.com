@@ -3,6 +3,11 @@
     stroke-dashoffset: 520;
 }
 
+#joystick-animated-svg {
+    stroke-dasharray: 530;
+    stroke-dashoffset: 530;
+}
+
 #aurora-os-animated-svg {
     stroke-dasharray: 550;
     stroke-dashoffset: 550;
@@ -145,8 +150,8 @@
     display: flex;
     z-index: 9999;
     overflow: hidden;
-    top: 24px;
-    left: 24px;
+    top: 10px;
+    left: 10px;
     margin: 0;
     padding: 0;
     font-size: 30px;
@@ -154,10 +159,11 @@
     cursor: pointer;
     background: none;
     border: 0;
+    mix-blend-mode: difference;
 }
 
 .modal-close::before, .modal-close::after {
-    text-decoration: none
+    /*text-decoration: none*/
 }
 
 .modal-close::before {
@@ -182,7 +188,7 @@
 
 @media (min-width: 768px) {
     .modal-close {
-        left: 22px
+        left: 10px
     }
 }
 
