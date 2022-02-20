@@ -13,7 +13,7 @@ $(function () {
     }
 
     function percentageEase(percentage) {
-        return percentage * percentage;
+        return percentage * percentage * percentage * percentage;
     }
 
     function calcProjectSVGPercentage(projectElem) {
@@ -40,8 +40,8 @@ $(function () {
         if (current > target) current = target;
         drawProjectSVG(svgSel, current);
         if (current < target) {
-            // Forward 1% per 15ms (take 1.5s from 0% to 100%)
-            await sleep(15);
+            // Forward 1% per 20ms (take 2s from 0% to 100%)
+            await sleep(20);
             await driveProjectSVG(svgSel, current + 0.01, target);
         }
     }
