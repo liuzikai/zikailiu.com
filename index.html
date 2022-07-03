@@ -14,8 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet"/>
-    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet"/>
@@ -24,21 +22,22 @@
 </head>
 <body id="page-top">
 
+<!-- TODO: add necessary hyperlinks -->
+
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand text-white" href="#page-top">Zikai Liu</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
+            Menu&nbsp;&nbsp;<i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="/photos">Photographs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
         </div>
@@ -64,7 +63,8 @@
     <div class="container px-1 px-lg-5">
         <!-- RoboMaster -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
+            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
+                <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -84,7 +84,7 @@
                 </p>
                 <div class="mt-4 text-end slide-in-text">
                     <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#robomasterMore">More...</a>
+                       data-bs-target="#robomasterMore">Read more ></a>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                                     <div class="mt-5 text-center slide-in-text">
                                         <a class="btn typography-text github-button" target="_blank"
                                            rel="noopener noreferrer" href="https://github.com/Meta-Team">
-                                            View Repos on <i class="fab fa-github"></i> GitHub
+                                            View on <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -201,7 +201,7 @@
                 </p>
                 <div class="mt-4 text-end slide-in-text">
                     <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#netEaseGameMore">More...</a>
+                       data-bs-target="#netEaseGameMore">Read more ></a>
                 </div>
             </div>
         </div>
@@ -279,7 +279,8 @@
 
         <!-- KLC3 -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
+                <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/klc3-icon.svg"></div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -294,7 +295,7 @@
                 </p>
                 <div class="mt-4 text-end slide-in-text">
                     <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#klc3More">More...</a>
+                       data-bs-target="#klc3More">Read more ></a>
                 </div>
             </div>
         </div>
@@ -406,7 +407,7 @@
                 </p>
                 <div class="mt-4 text-end slide-in-text">
                     <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#wirelessChargingTableMore">More...</a>
+                       data-bs-target="#wirelessChargingTableMore">Read more ></a>
                 </div>
             </div>
         </div>
@@ -454,7 +455,7 @@
                                         <a class="btn typography-text github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://github.com/liuzikai/wireless-charging-table">
-                                            View Repo on <i class="fab fa-github"></i> GitHub
+                                            View on <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -481,22 +482,55 @@
             </div>
         </div>
 
-        <!-- RV32I Processor -->
+        <!-- RV32I Processor and FPGA BoxHead -->
+        <!-- All vertical when < lg, in two columns when >= lg -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
-                <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+            <div class="col-lg-6 project-container d-flex">
+                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
+                        <div class="m-auto px-5 project-svg-container" id="riscvIcon">
+                            <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+                        </div>
+                    </div>
+                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
+                        <h2 class="typography-header-small text-white mb-4 slide-in-text">RISC&#8209;V Processor Design
+                        </h2>
+                        <p class="typography-text text-white-50 slide-in-text">
+                            As the UIUC ECE411 design project, my teammates and I designed and simulated a
+                            pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
+                            The system features parameterized caches, tournament branch predictions,
+                            and a next-line prefetcher.
+                        </p>
+                        <div class="mt-4 text-end slide-in-text">
+                            <a class="btn typography-text more-button" data-bs-toggle="modal"
+                               data-bs-target="#riscvProcessorMore">Read more ></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">Pipelined RISC&#8209;V Processor Design
-                    Project</h2>
-                <p class="typography-text text-white-50 slide-in-text">
-                    As the UIUC ECE411 design project, my teammates and I designed and simulated a pipeline RV32I
-                    processor in SystemVerilog. The system features parameterized caches, tournament branch predictions,
-                    and a prefetcher.
-                </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#riscvProcessorMore">More...</a>
+            <div class="col-lg-6 project-container d-flex">
+                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
+                        <div class="m-auto px-4 project-svg-container" id="boxheadIcon">
+                            <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                        </div>
+                    </div>
+                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
+                        <h2 class="typography-header-small text-white mb-4 slide-in-text">
+                            Boxhead Game on FPGA
+                        </h2>
+                        <p class="typography-text text-white-50 slide-in-text">
+                            As the UIUC ECE385 design project, my teammate and I developed the
+                            Boxhead video game on
+                            theAltera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
+                            <span class="text-white">SystemVerilog</span>,
+                            and the game logic in <span class="text-white">C</span>.
+                        </p>
+                        <div class="mt-4 text-end slide-in-text">
+                            <a class="btn typography-text more-button" data-bs-toggle="modal"
+                               data-bs-target="#boxheadMore">Read more ></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -525,35 +559,42 @@
                                         <a class="btn typography-text github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://github.com/liuzikai/ECE411-RV32I-Processor">
-                                            View Repo on <i class="fab fa-github"></i> GitHub
+                                            View on <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- FPGA BoxHead -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-3 project-svg-container">
-                <div class="h-auto">
-                    <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
-                </div>
-            </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">
-                    BoxHead Video Game on FPGA
-                </h2>
-                <p class="typography-text text-white-50 slide-in-text">
-                    To be added...
-                </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#wirelessChargingTableMore">More...</a>
+        <div class="modal fade" id="boxheadMore" tabindex="-1"
+             aria-labelledby="boxheadMoreLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle"></i></button>
+                    <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
+                        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                            <div class="col-lg-7 mt-0">
+                                <div class="project-text w-100 my-auto text-start text-lg-left">
+                                    <p class="typography-text text-white-50">
+                                        As the final design project of UIUC ECE385 Digital Systems Laboratory Spring
+                                        2020, my teammate and I developed... TODO
+                                    </p>
+                                    <div class="mt-5 text-center slide-in-text">
+                                        <a class="btn typography-text github-button" target="_blank"
+                                           rel="noopener noreferrer"
+                                           href="https://github.com/liuzikai/FPGA-Boxhead">
+                                            View on <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -577,7 +618,7 @@
                 </p>
                 <div class="mt-4 text-end slide-in-text">
                     <a class="btn typography-text more-button" data-bs-toggle="modal"
-                       data-bs-target="#auroraOSMore">More...</a>
+                       data-bs-target="#auroraOSMore">Read more ></a>
                 </div>
             </div>
         </div>
@@ -627,7 +668,7 @@
                                     <div class="mt-5 text-center slide-in-text">
                                         <a class="btn typography-text github-button" target="_blank"
                                            rel="noopener noreferrer" href="https://github.com/liuzikai/AuroraOS">
-                                            View on <i class="fab fa-github"></i> GitHub
+                                            View on <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
                                 </div>
