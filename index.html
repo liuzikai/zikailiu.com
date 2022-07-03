@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet"/>
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet"/>
     <!-- My CSS -->
@@ -24,7 +27,7 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">Zikai Liu</a>
+        <a class="navbar-brand text-white" href="#page-top">Zikai Liu</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -33,19 +36,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos">Photographs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Masthead-->
-<header class="masthead">
+<header class="masthead min-vh-100">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
+        <div class="d-flex justify-content-center slide-in-text">
+            <div class="text-center" style="font-family: 'Roboto', sans-serif;">
                 <p class="typography-text text-white-50 mx-auto mt-1 mb-0">Working with great people</p>
                 <p class="typography-text text-white-50 mx-auto mt-1 mb-0">on the things I love</p>
                 <p class="typography-text text-white-50 mx-auto mt-1 mb-0">is always my fortune.</p>
@@ -55,41 +59,24 @@
     </div>
 </header>
 
-
-<!-- About-->
-<!--<section class="about-section text-center" id="about">-->
-<!--    <div class="container px-4 px-lg-5">-->
-<!--        <div class="row gx-4 gx-lg-5 justify-content-center">-->
-<!--            <div class="col-lg-8">-->
-<!--                <h2 class="text-white mb-4">Longitudes where I have learned</h2>-->
-<!--                <p class="text-white-50">-->
-<!--                    Somehow interesting-->
-<!--                </p>-->
-<!--                <img class="img-fluid edu-image" src="assets/img/edu.svg" alt="..."/>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
 <!-- Projects-->
 <section class="projects-section bg-black" id="projects">
     <div class="container px-1 px-lg-5">
-        <!-- RoboMaster-->
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center project-container">
+        <!-- RoboMaster -->
+        <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="typography-header text-white mb-4 slide-in-text">RoboMaster</h2>
                 <p class="typography-text text-white-50 slide-in-text">
-                    At <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots,
-                    targeting the RoboMaster competition.
+                    At <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots.
                 </p>
                 <p class="typography-text text-white-50 slide-in-text">
                     Being <span class="text-white">Control Group Lead</span> and
                     <span class="text-white">Project Manager</span> in 2019,
                     I led the development of embedded control systems and
-                    managed timeline for the whole team.
+                    managed project timelines.
                 </p>
                 <p class="typography-text text-white-50 slide-in-text">
                     Being <span class="text-white">Vision Group Lead</span> in 2020-2021,
@@ -110,14 +97,15 @@
                     <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-5 px-lg-4 hidden-lg">
-                                <img src="assets/img/robomaster-me-gradient.jpg" style="max-width: 100%" alt="RoboMaster 2019"/>
+                                <img src="assets/img/robomaster-me-gradient.jpg" style="max-width: 100%"
+                                     alt="RoboMaster 2019"/>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
-                                        <span class="text-white">Meta Robotics </span>of ZJU-UIUC Joint Institute,
-                                        was found in 2018, when I was one of the founding members.
-                                        We target the RoboMaster competition and build our robots from sketch.
+                                        <span class="text-white">Meta Robotics of ZJU-UIUC Joint Institute, </span>
+                                        was found in 2018. I was one of the founding members.
+                                        We target the RoboMaster competition and build our robots from scratch.
                                         Unfortunately, being a new team at a new campus without any experience and
                                         technology heritage, we didn't make it to the competition in 2018.
                                     </p>
@@ -133,7 +121,7 @@
                                     </p>
                                     <p class="typography-text text-white-50">
                                         Among the things we have built, I am most proud of the attitude and heading
-                                        reference system (<span class="text-white">AHRS</span>), in which a
+                                        reference system (AHRS), in which a
                                         gyroscope, an accelerometer and a
                                         magnetometer are integrated to calculate the absolute angle of the targeting
                                         gimbal. Together with the motor control system, our robots were able to
@@ -226,24 +214,29 @@
                     <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-5 px-lg-4 hidden-lg">
-                                <img src="assets/img/joystick-photo-gradient.jpg" style="max-width: 100%" alt="Various Joysticks"/>
+                                <img src="assets/img/joystick-photo-gradient.jpg" style="max-width: 100%"
+                                     alt="Various Joysticks"/>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
                                         There are various joysticks in the market. On the Windows platform, most
-                                        joysticks use the <span class="text-white">DirectInput</span> interface, which is flexible but lacks keymap
+                                        joysticks use the <span class="text-white">DirectInput</span> interface, which
+                                        is flexible but lacks keymap
                                         standards. For example, the same key in DirectInput can map to key A for one
                                         joystick, but to key B for another.
                                     </p>
                                     <p class="typography-text text-white-50">
                                         When Microsoft rolled out their own joystick&mdash;the Xbox controllers,
-                                        a new interface, <span class="text-white">XInput</span>, was introduced. XInput is defined more clearly and
+                                        a new interface, <span class="text-white">XInput</span>, was introduced. XInput
+                                        is defined more clearly and
                                         easier to use, but only supports Xbox controllers.
                                     </p>
                                     <p class="typography-text text-white-50">
                                         On the other hands, as Nintendo Switch becomes popular, more and more users own
-                                        <span class="text-white">Switch Joy-Cons</span> and want to use them in the NetEase Android Emulator. However,
+                                        <span class="text-white">Nintendo Switch Joy-Cons</span> and want to use them in
+                                        the
+                                        NetEase Android Emulator. However,
                                         being a pair of two detached controllers, Joy-Cons are recognized as two
                                         DirectInput devices on Windows. To use the two pieces as one, either the program
                                         needs to support reading from two joysticks simultaneously, or they needs to
@@ -252,7 +245,8 @@
                                         DirectInput.
                                     </p>
                                     <p class="typography-text text-white-50">
-                                        We intended to provide <span class="text-white">smooth user experience</span> for joystick users of the
+                                        We intended to provide <span class="text-white">smooth user experience</span>
+                                        for joystick users of the
                                         NetEase Android Emulator by introducing an adapter module.
                                         When a user plugs a joystick, the module looks up the joystick in a database
                                         and deploys the common keymap automatically. The user can also manually
@@ -284,7 +278,7 @@
         </div>
 
         <!-- KLC3 -->
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center project-container">
+        <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
                 <div data-include="assets/img/klc3-icon.svg"></div>
             </div>
@@ -292,7 +286,8 @@
                 <h2 class="typography-header text-white mb-4 slide-in-text">KLC3</h2>
                 <p class="typography-text text-white-50 slide-in-text">
                     <!-- Non-break hyphen &#8209; -->
-                    KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an educational assembly) based on LLVM KLEE
+                    KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
+                    educational assembly) based on LLVM KLEE
                     for automatic bug detection and test case generation. KLC3 was used to provide automatic
                     end-to-end feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall 2020.
                     Our work was published at <span class="text-white">ASE 2021</span>.
@@ -312,12 +307,66 @@
                     <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-5 px-lg-4 hidden-lg">
-                                <img src="assets/img/klc3-ase2021-title-gradient.jpg" style="max-width: 100%" alt="My Presentation at ASE 2021"/>
+                                <img src="assets/img/klc3-ase2021-title-gradient.jpg" style="max-width: 100%"
+                                     alt="My Presentation at ASE 2021"/>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
-
+                                        Learning to program is difficult. As with all topics, students learn more
+                                        quickly when given immediate feedback tailored to their efforts. However, while
+                                        university staff&mdash;instructors and teaching assistants&mdash;are capable of
+                                        providing such feedback, staff are not available 24/7 and lack the time needed
+                                        to provide individual attention to each student's programs.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        Automating feedback has been an important topic for years. A simple and widely
+                                        adopted approach is to use test-case-based systems. However, these systems
+                                        typically fail to provide feedback tailored to each student's effort.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        To address the need of rapid and tailored feedback, we develop
+                                        <span class="text-white">an end-to-end system of automatic feedback</span>.
+                                        Specifically, we target LC&#8209;3, a RISC-like educational assembly used in
+                                        the courses of UIUC and other universities.
+                                        At the heart of the system is <span class="text-white">KLC3</span>, a concolic
+                                        (concrete + symbolic) execution engine for LC&#8209;3 built on top of LLVM KLEE.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        At high-level, symbolic execution is a technique that treats inputs as symbols
+                                        rather than concrete values, operates them the same way as the program executes,
+                                        and checks the result symbolically. Intuitively, it executes all the possible
+                                        values concurrently. It provides additional power to the feedback system, not
+                                        only to perform more thorough test, but also to generate test cases tailored
+                                        to the students' programs, which can be released to the students without
+                                        undermining the power of the system.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        We also built tools around KLC3 into the system to cover the whole workflow
+                                        of editing, testing, and debugging when students program.
+                                        At the frontend, we develop a <span class="text-white">VSCode extension</span>
+                                        that provides real-time feedback to students while they are editing their code,
+                                        leveraging static analysis to provide warnings of possible bugs or poor styles.
+                                        At the backend, we develop a fully fledged
+                                        <span class="text-white">in-browser LC&#8209;3 simulator</span>
+                                        with WebAssembly, freeing students from compiling the Unix LC&#8209;3 tools
+                                        locally.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        We actually deployed the system to provide feedback for the assembly programming
+                                        assignments in a class of <span class="text-white">over 100 students</span> in
+                                        Fall 2020. Students wrote a median of around 700 lines of assembly for these
+                                        assignments, making heavy use of our tools to understand and eliminate their
+                                        bugs. Anonymous student feedback on the tools was uniformly positive. Our work
+                                        was published and presented at <span class="text-white">ASE 2021</span>,
+                                        the 36th IEEE/ACM International Conference on Automated Software Engineering.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        Concolic execution is powerful, but the power doesn't come for free.
+                                        It can be time-consuming. A lot of effort has been settled to enable KLC3
+                                        to provide feedback in time after students submit their code. Those work
+                                        also form parts of my <span class="text-white">senior thesis</span>
+                                        of the Bachelor's degree.
                                     </p>
                                 </div>
                             </div>
@@ -325,7 +374,8 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/klc3-ase2021-title.jpg" class="show-lg" style="max-width: 100%"
                                          alt="My Presentation at ASE 2021"/>
-                                    <p class="typography-footnote text-white-50 mt-1 mb-4 show-lg">My Presentation at ASE 2021</p>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4 show-lg">My Presentation at
+                                        ASE 2021</p>
                                 </div>
 
                             </div>
@@ -336,12 +386,203 @@
             </div>
         </div>
 
+        <!-- Wireless Charging Table -->
+        <div class="row gx-0 justify-content-center align-items-center project-container">
+            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-4 project-svg-container">
+                <div class="h-auto">
+                    <div data-include="assets/img/wireless-charging-table-icon.svg"></div>
+                </div>
+            </div>
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="typography-header text-white mb-4 slide-in-text">
+                    Wireless Charging Table with Auto Alignment
+                </h2>
+                <p class="typography-text text-white-50 slide-in-text">
+                    As our Bachelor's senior design project, my teammates and I built a wireless charging table that
+                    automatically
+                    aligns the charging coils with the devices, combining electrical engineering, computer vision, and
+                    mechanical system. We won <span class="text-white">the most Interdisciplinary Project Award</span>
+                    at the ZJU-UIUC Institute.
+                </p>
+                <div class="mt-4 text-end slide-in-text">
+                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                       data-bs-target="#wirelessChargingTableMore">More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wirelessChargingTableMore" tabindex="-1"
+             aria-labelledby="wirelessChargingTableMoreLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle"></i></button>
+                    <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
+                        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                            <div class="col-lg-5 px-lg-4 hidden-lg">
+                                <img src="assets/img/qi-table-demo.gif" style="max-width: 100%"
+                                     alt="Demonstration of the table charging multiple cellphones"/>
+                            </div>
+                            <div class="col-lg-7 mt-0">
+                                <div class="project-text w-100 my-auto text-start text-lg-left">
+                                    <p class="typography-text text-white-50">
+                                        Nowadays, more and more mobile devices support wireless charging. Among them,
+                                        the Qi standard is the most widely adopted wireless charging protocol. Qi
+                                        hotspots can be found in many public places, such as cafeterias and airports.
+                                        However, the Qi protocol requires proper alignment between the charging coil and
+                                        the device being
+                                        charged (by the time we developed this project, Apple
+                                        MagSafe for iPhones is not yet available).
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        Our goal is to provide <span class="text-white">seamless wireless charging experience</span>
+                                        at Qi hotspots
+                                        like cafeterias, where customers sit around tables. We designed a smart table
+                                        that automatically aligns wireless charging coils with users' devices, which are
+                                        detected with computer vision. The coils are moved by a mechanical system
+                                        like 3D printers. Up to 3 devices can be charged concurrently. Phone cases
+                                        with common thickness are allowed. The system is able to detect if a device on
+                                        the table supports wireless charging with a few trials. If not, the device is
+                                        ignored.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        We designed and implemented the table. Our team won
+                                        <span class="text-white">the most Interdisciplinary Project Award</span>
+                                        of ECE445 Senior Design at the ZJU-UIUC Joint Institute in 2021.
+                                    </p>
+                                    <div class="mt-5 text-center slide-in-text">
+                                        <a class="btn typography-text github-button" target="_blank"
+                                           rel="noopener noreferrer"
+                                           href="https://github.com/liuzikai/wireless-charging-table">
+                                            View Repo on <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 px-lg-4 mt-0 order-last order-lg-first">
+                                <div class="modal-gallery text-center">
+                                    <!-- First side image only showing in lg mode -->
+                                    <img src="assets/img/qi-table-demo.gif" class="show-lg" style="max-width: 100%"
+                                         alt="Demonstration of the table charging multiple cellphones"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4 show-lg">Demonstration of the
+                                        Table Charging Multiple Cellphones</p>
+                                    <!-- Additional images -->
+                                    <img src="assets/img/qi-table-mechanism.gif" style="max-width: 100%"
+                                         alt="Mechanical system of the table"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">Mechanical System of
+                                        the Table</p>
+                                    <img src="assets/img/qi-table-block-diagram.png" style="max-width: 100%"
+                                         alt="System block diagram of the table"/>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">System Block Diagram
+                                        of the Table</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RV32I Processor -->
+        <div class="row gx-0 justify-content-center align-items-center project-container">
+            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-5 project-svg-container">
+                <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+            </div>
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="typography-header text-white mb-4 slide-in-text">Pipelined RISC&#8209;V Processor Design
+                    Project</h2>
+                <p class="typography-text text-white-50 slide-in-text">
+                    As the UIUC ECE411 design project, my teammates and I designed and simulated a pipeline RV32I
+                    processor in SystemVerilog. The system features parameterized caches, tournament branch predictions,
+                    and a prefetcher.
+                </p>
+                <div class="mt-4 text-end slide-in-text">
+                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                       data-bs-target="#riscvProcessorMore">More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="riscvProcessorMore" tabindex="-1"
+             aria-labelledby="riscvProcessorMoreLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle"></i></button>
+                    <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
+                        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                            <div class="col-lg-7 mt-0">
+                                <div class="project-text w-100 my-auto text-start text-lg-left">
+                                    <p class="typography-text text-white-50">
+                                        Nowadays, more and more mobile devices support wireless charging. Among them,
+                                        the Qi standard is the most widely adopted wireless charging protocol. Qi
+                                        hotspots can be found in many public places, such as cafeterias and airports.
+                                        However, the Qi protocol requires proper alignment between the charging coil and
+                                        the device being
+                                        charged (by the time we developed this project, Apple
+                                        MagSafe for iPhones is not yet available).
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        Our goal is to provide <span class="text-white">seamless wireless charging experience</span>
+                                        at Qi hotspots
+                                        like cafeterias, where customers sit around tables. We designed a smart table
+                                        that automatically aligns wireless charging coils with users' devices, which are
+                                        detected with computer vision. The coils are moved by a mechanical system
+                                        like 3D printers. Up to 3 devices can be charged concurrently. Phone cases
+                                        with common thickness are allowed. The system is able to detect if a device on
+                                        the table supports wireless charging with a few trials. If not, the device is
+                                        ignored.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        We designed and implemented the table. Our team won
+                                        <span class="text-white">the most Interdisciplinary Project Award</span>
+                                        of ECE445 Senior Design at the ZJU-UIUC Joint Institute in 2021.
+                                    </p>
+                                    <div class="mt-5 text-center slide-in-text">
+                                        <a class="btn typography-text github-button" target="_blank"
+                                           rel="noopener noreferrer"
+                                           href="https://github.com/liuzikai/wireless-charging-table">
+                                            View Repo on <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FPGA BoxHead -->
+        <div class="row gx-0 justify-content-center align-items-center project-container">
+            <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-3 project-svg-container">
+                <div class="h-auto">
+                    <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                </div>
+            </div>
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="typography-header text-white mb-4 slide-in-text">
+                    BoxHead Video Game on FPGA
+                </h2>
+                <p class="typography-text text-white-50 slide-in-text">
+                    To be added...
+                </p>
+                <div class="mt-4 text-end slide-in-text">
+                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                       data-bs-target="#wirelessChargingTableMore">More...</a>
+                </div>
+            </div>
+        </div>
+
         <!-- AuroraOS -->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-4 mb-lg-auto px-3 project-svg-container">
                 <div data-include="assets/img/aurora-os-icon.svg"></div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="typography-header text-white mb-4 slide-in-text">AuroraOS</h2>
                 <p class="typography-text text-white-50 slide-in-text">
                     <span class="text-white">x86 operating system</span> design project of UIUC ECE391 in Fall 2019.
@@ -368,7 +609,8 @@
                     <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-5 px-lg-4 hidden-lg">
-                                <img src="assets/img/aurora-os-photo-gradient.jpg" style="max-width: 100%" alt="AuroraOS"/>
+                                <img src="assets/img/aurora-os-photo-gradient.jpg" style="max-width: 100%"
+                                     alt="AuroraOS"/>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
@@ -417,7 +659,8 @@
                                         QEMU</p>
                                     <img src="assets/img/aurora-os-competition.jpg" style="max-width: 100%"
                                          alt="Our Team at ECE391 Design Competition"/>
-                                    <p class="typography-footnote text-white-50 mt-1 mb-4">Our Team at ECE391 Design Competition</p>
+                                    <p class="typography-footnote text-white-50 mt-1 mb-4">Our Team at ECE391 Design
+                                        Competition</p>
                                 </div>
                             </div>
                         </div>
@@ -427,35 +670,6 @@
             </div>
         </div>
 
-        <!-- Featured Project Row-->
-        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg"
-                                                alt="..."/></div>
-            <div class="col-xl-4 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
-                    <h4>Shoreline</h4>
-                    <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it
-                        for any project - even commercial projects! Download it, customize it, and publish your
-                        website!</p>
-                </div>
-            </div>
-        </div>
-        <!-- Project Two Row-->
-        <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..."/></div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Mountains</h4>
-                            <p class="mb-0 text-white-50">Another example of a project with its respective description.
-                                These sections work well responsively as well, try this theme on a small screen!</p>
-                            <hr class="d-none d-lg-block mb-0 me-0"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <!-- Signup-->

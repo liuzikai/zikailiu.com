@@ -13,6 +13,21 @@
     stroke-dashoffset: 575;
 }
 
+#wireless-charging-table-animated-svg, #wireless-charging-table-side-animated-svg {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+}
+
+#rv32i-processor-animated-svg {
+    stroke-dasharray: 385;
+    stroke-dashoffset: 385;
+}
+
+#fpga-boxhead-animated-svg {
+    stroke-dasharray: 470;
+    stroke-dashoffset: 470;
+}
+
 #aurora-os-animated-svg {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
