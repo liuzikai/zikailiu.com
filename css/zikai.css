@@ -33,6 +33,11 @@
     stroke-dashoffset: 500;
 }
 
+#ozone-animated-svg {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+}
+
 .sticky-container {
     min-height: 100vh
 }
@@ -193,6 +198,14 @@
     }
 
     #boxheadIcon {
+        max-width: 60%;
+    }
+
+    #auroraOSIcon {
+        max-width: 60%;
+    }
+
+    #ozoneIcon {
         max-width: 60%;
     }
 
