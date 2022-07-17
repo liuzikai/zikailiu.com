@@ -456,8 +456,9 @@
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-5 px-lg-4 text-center hidden-lg">
                                 <!-- GIF is too large, ~20MB, while MP4 is only 2MB -->
-                                <video style="max-width: 600px" autoplay muted loop>
+                                <video style="width: 100%; object-fit: cover" autoplay muted loop>
                                     <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                    Sorry, your browser does not support the video tag.
                                 </video>
                                 <p class="typography-footnote text-white-50 mt-2 mb-0">
                                     Demonstration of the Table Charging Multiple Cellphones</p>
@@ -502,8 +503,9 @@
                             <div class="col-lg-5 px-lg-4 mt-0 order-last order-lg-first">
                                 <div class="modal-gallery text-center">
                                     <!-- First side image only showing in lg mode -->
-                                    <video style="max-width: 600px" autoplay muted loop>
+                                    <video style="width: 100%; object-fit: cover" autoplay muted loop>
                                         <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                        Sorry, your browser does not support the video tag.
                                     </video>
                                     <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">Demonstration of the
                                         Table Charging Multiple Cellphones</p>
@@ -663,7 +665,35 @@
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
-                                        TODO
+                                        At the Fall 2022 offering of the <span class="text-white">Advanced Operating Systems</span>
+                                        at ETH Zurich, my
+                                        teammates and I built <span class="text-white">Ozone</span> ("OS one"). Ozone is
+                                        an <span class="text-white">ARMv8</span> operating
+                                        system, built upon the research OS Barrelfish. Similar to Barrelfish, Ozone is a
+                                        <span class="text-white">multikernel</span> OS&mdash;each CPU runs an
+                                        independent copy of the kernel, while the
+                                        shared states are minimized and inter-core communications are pushed to the user
+                                        space. Being also a microkernel OS, Ozone (Barrelfish) delegates various
+                                        services to
+                                        user-space programs, while the kernel provides light-weight inter-process
+                                        communication mechanisms. It also adopts a lot of ideas from previous OS
+                                        research, such as the capability system, processor dispatch with upcalls,
+                                        user-space RPC, etc.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        As part of the project, I developed the
+                                        <span class="text-white">virtual memory management system</span>. The
+                                        system supports mapping to given addresses, mapping to dynamic addresses,
+                                        on-demand paging, and unmapping. Combining the buddy allocation algorithm and
+                                        the red-black tree, all these operations can be done in logarithmic time
+                                        complexities. Combining with the physical memory system developed by my
+                                        teammate, which similarly adopts the binary search tree, Ozone is able to
+                                        achieve efficient memory allocation for processes.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        In addition, I worked on the process management system, intra- and inter-core
+                                        communications, the naming service, etc. We ran Ozone on both QEMU and all four
+                                        cores of the Toradex Colibri i.MX8 development board.
                                     </p>
                                 </div>
                             </div>
@@ -747,9 +777,10 @@
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
-                                        As the final design project of UIUC ECE411 Computer Organization and Design in
-                                        Fall
-                                        2020, my teammates and I designed and simulates a RV32I processor in
+                                        As the final design project of UIUC
+                                        <span class="text-white">ECE411 Computer Organization and Design</span>
+                                        in Fall 2020, my teammates and I designed and simulates a
+                                        <span class="text-white">RV32I processor</span> in
                                         SystemVerilog. The processor has 5-stage pipeline with data forwarding and
                                         hazard detection. We implemented the Tournament Branch Predictor, combining both
                                         local and global branch histories. As for caches, we implemented a parameterized
@@ -767,6 +798,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-5 px-lg-4 mt-0 order-last order-lg-first">
+                                <div class="modal-gallery text-center">
+                                    <img src="assets/img/rv32i-processor-cache.jpg" style="max-width: 100%"
+                                         alt="Presentation of the cache performance: more than 90% hit rates for all levels and significant speedups, varying for different workloads"/>
+                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                        Presentation of the cache performance</p>
+                                    <img src="assets/img/rv32i-processor-datapath.jpg" style="max-width: 100%"
+                                         alt="Datapath block diagram of the processor"/>
+                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                        Datapath of the Processor</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -781,11 +824,54 @@
                             class="far fa-times-circle"></i></button>
                     <div class="modal-body bg-black px-0 py-0 px-lg-4 py-lg-4">
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                            <div class="col-lg-5 px-lg-4 text-center hidden-lg">
+                                <img src="assets/img/boxhead-original.jpg" style="max-width: 100%"
+                                     alt="Screenshot of the original Boxhead game: two players killing zombines"/>
+                                <p class="typography-footnote text-white-50 mt-2 mb-0">
+                                    Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
+                            </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
                                     <p class="typography-text text-white-50">
-                                        As the final design project of UIUC ECE385 Digital Systems Laboratory Spring
-                                        2020, my teammate and I developed... TODO
+                                        As the final design project of UIUC
+                                        <span class="text-white">ECE385 Digital Systems Laboratory</span> in Spring
+                                        2020, my teammate and I developed a dual-player video game on the Altera DE2-115
+                                        FPGA, imitating the well-known zombie-killing game Boxhead.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        We developed a <span class="text-white">framebuffer-based hardware graphic
+                                        engine</span>. The engine supports
+                                        640x480 16-bit VGA output, 60Hz refresh rate, double buffering, auto background
+                                        refresh, and DMA. On-chip memory was not large enough to hold the frame buffers,
+                                        so SRAM was used. One challenge we encountered was that the SRAM was not fast
+                                        enough to support the full refresh rate. VGA standard requires 25MHz output
+                                        pixel rate. However, the main clock of the FPGA is only 50MHz. As SRAM does not
+                                        support concurrent R/W, we only had two read and/or write operations per pixel
+                                        per frame on average. Excluding one necessary read to generate VGA
+                                        output, the remaining one write is clearly insufficient, since we must
+                                        overwrite the background before drawing any sprite.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        One possible solution was reducing the actual game refresh rate, for example,
+                                        to 30Hz, a half of VGA refresh rate, by switching game frame every two VGA
+                                        frames.
+                                        However, this approach only provides one more write cycle per pixel, as
+                                        read operations still take half of the time (we must output VGA color at 25MHz).
+                                        On the other hand, since we are implementing a shooting game, reducing refresh
+                                        rate is likely to diminish the user experience.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        Our solution to this problem was booting the SRAM to 100MHz. We generated
+                                        100MHz clock signals from the 50MHz input clock using the PLL IP. The read/write
+                                        operations were carefully distributed so that SRAM could operate in this extreme
+                                        condition. Offsets were carefully adjusted to compensate data delay. The 100MHz
+                                        SRAM controller served as the basic of our high-efficiency graphic
+                                        engine and allowed 60Hz game refresh rate.
+                                    </p>
+                                    <p class="typography-text text-white-50">
+                                        In addition to the graphic engine, we implemented the
+                                        <span class="text-white">USB keyboard driver</span> and wrote the
+                                        <span class="text-white">game logic in C</span>, running on the Nois II SoC IP.
                                     </p>
                                     <div class="mt-5 text-center slide-in-text">
                                         <a class="btn typography-text github-button" target="_blank"
@@ -795,6 +881,22 @@
                                                 class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 px-lg-4 mt-0 order-last order-lg-first">
+                                <div class="modal-gallery text-center">
+                                    <img src="assets/img/boxhead-original.jpg" class="show-lg" style="max-width: 100%"
+                                         alt="Screenshot of the original Boxhead game: two players killing zombines"/>
+                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">
+                                        Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
+                                    <img src="assets/img/boxhead-block-diagram.jpg" style="max-width: 100%"
+                                         alt="Block diagram of the system"/>
+                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                        Block Diagram of the System</p>
+                                    <img src="assets/img/boxhead-pll-cycles.jpg" style="max-width: 100%"
+                                         alt="PLL cycle allocation: 3 cycles for writes and 1 cycle for read"/>
+                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                        PLL Cycle Allocation</p>
                                 </div>
                             </div>
                         </div>

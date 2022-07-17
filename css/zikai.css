@@ -81,7 +81,7 @@
 }
 
 .typography-footnote {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 @media (min-width: 576px) {
@@ -94,7 +94,7 @@
     }
 
     .typography-footnote {
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 
@@ -108,7 +108,7 @@
     }
 
     .typography-footnote {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
