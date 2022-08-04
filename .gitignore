@@ -2,3 +2,4 @@
 *.icloud
 .idea/
 original/
+node_modules
