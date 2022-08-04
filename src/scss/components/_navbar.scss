@@ -1,16 +1,23 @@
-// 
+//
 // Navbar
-// 
+//
 
 #mainNav {
     min-height: 3.5rem;
-    background-color: $white;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color, border-bottom-color 0.2s ease-in-out;
+    /* border-bottom-color behaviors weirdly on Safari */
 
     .navbar-toggler {
         font-size: 80%;
         padding: 0.75rem;
-        color: $primary;
-        border: $border-width solid $primary;
+        color: rgba(255, 255, 255, 0.5);
+        border: $border-width solid rgba(255, 255, 255, 0.3);
 
         &:focus {
             outline: none;
@@ -18,15 +25,21 @@
     }
 
     .navbar-brand {
-        color: $black;
+        color: $white;
         font-weight: 700;
         padding: 0.9rem 0;
+    }
+
+    .nav-link {
+        &:hover {
+            color: $white;
+        }
     }
 
     .navbar-nav {
         .nav-item {
             &:hover {
-                color: fade($white, 80%);
+                color: $white;
                 outline: none;
                 background-color: transparent;
             }
@@ -40,11 +53,12 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding-top: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-        background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
+        &:not(.navbar-shrink) {
+            border-bottom: none;
+            background-color: transparent;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+        }
 
         .navbar-brand {
             padding: 0.5rem 0;
@@ -52,12 +66,13 @@
         }
 
         .nav-link {
-            transition: none;
-            padding: 2rem 1.5rem;
-            color: fade-out($white, 0.5);
+            padding: 1.5rem 1.5rem 1.25rem;
+            color: rgba(255, 255, 255, 0.3);
+            transition: color 0.2s ease-in-out;
+            /* Safari behaviors weirdly if this is commented */
 
             &:hover {
-                color: fade-out($white, 0.25);
+                color: $white;
             }
 
             &:active {
@@ -66,30 +81,28 @@
         }
 
         &.navbar-shrink {
-            background-color: $white;
-
             .navbar-brand {
-                color: $black;
+                color: rgba(255, 255, 255, 0.5);
             }
 
             .nav-link {
-                color: $black;
+                color: rgba(255, 255, 255, 0.5);
                 padding: 1.5rem 1.5rem 1.25rem;
                 border-bottom: 0.25rem solid transparent;
 
                 &:hover {
-                    color: $primary;
+                    color: $white;
                 }
 
                 &:active {
-                    color: darken($primary, 15%);
+                    color: $white;
                 }
 
-                &.active {
-                    color: $primary;
+                /*&.active {
+                    color: $white;
                     outline: none;
                     border-bottom: 0.25rem solid $primary;
-                }
+                }*/
             }
         }
     }
