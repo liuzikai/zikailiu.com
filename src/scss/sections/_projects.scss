@@ -6,8 +6,8 @@
     min-height: 100vh !important;
 }
 
-.project-container-down-md {
-    @include media-breakpoint-down(md) {
+.project-container-down-lg {
+    @include media-breakpoint-down(lg) {
         min-height: 100vh !important;
     }
 }
@@ -137,9 +137,14 @@
     }
 }
 
-.project-svg-container-two-column {
-    max-width: 70%;
+.show-lg {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.hidden-lg {
     @include media-breakpoint-up(lg) {
-        max-width: 50%;
+        display: none;
     }
 }
