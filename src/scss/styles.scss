@@ -3,7 +3,9 @@
 //
 
 // Import variables
-@import "./variables.scss";
+@import "./variables/colors.scss";
+@import "./variables/typography.scss";  // should be ahead of bootstrap.scss to set font family
+@import "./variables/animations.scss";
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
@@ -14,6 +16,7 @@
 // Components
 @import "./components/navbar.scss";
 @import "./components/buttons.scss";
+@import "./components/svgs.scss";
 
 // Sections
 @import "./sections/masthead.scss";

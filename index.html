@@ -10,18 +10,13 @@
     <!-- Font Awesome icons (free version)-->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/brands.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap and self-host Nunito)-->
+    <link href="dist/styles.css" rel="stylesheet"/>
     <!-- My CSS -->
     <link href="css/zikai.css" rel="stylesheet"/>
     <div id="preload" style="display: none">
         <!-- Make the background render blocking -->
-        <img src="assets/img/bg-masthead.jpg">
+        <img src="assets/img/bg-masthead.webp">
     </div>
 </head>
 <body id="page-top">
@@ -52,10 +47,10 @@
 <header class="masthead min-vh-100">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
-            <div class="text-center" style="font-family: 'Roboto', sans-serif;">
-                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">Working with great people</p>
-                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">on the things I love</p>
-                <p class="typography-text text-white-50 mx-auto mt-1 mb-0">is always my fortune.</p>
+            <div class="masthead-text text-center" style="font-weight: lighter;">
+                <p class="mx-auto mt-1 mb-0">Working with great people</p>
+                <p class="mx-auto mt-1 mb-0">on the things I love</p>
+                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>
 
             </div>
         </div>
@@ -71,23 +66,23 @@
                 <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">RoboMaster</h2>
-                <p class="typography-text text-white-50 slide-in-text">
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                <h2 class="project-header mb-4 ">RoboMaster</h2>
+                <p>
                     At <span class="text-white">ZJU-UIUC Robotics Team,</span> we built combat robots.
                 </p>
-                <p class="typography-text text-white-50 slide-in-text">
+                <p>
                     Being <span class="text-white">Control Group Lead</span> and
                     <span class="text-white">Project Manager</span> in 2019,
                     I led the development of embedded control systems and
                     managed project timelines.
                 </p>
-                <p class="typography-text text-white-50 slide-in-text">
+                <p>
                     As <span class="text-white">Vision Group Lead</span> in 2020-2021,
                     I worked on a vision-assisted automatic aiming system.
                 </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                <div class="mt-4 text-end ">
+                    <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#robomasterMore">Read more ></a>
                 </div>
             </div>
@@ -106,14 +101,14 @@
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         <span class="text-white">Meta Robotics of ZJU-UIUC Joint Institute, </span>
                                         was found in 2018. I was one of the founding members.
                                         We target the RoboMaster competition and build our robots from scratch.
                                         Unfortunately, being a new team at a new campus without any experience and
                                         technology heritage, we didn't make it to the competition in 2018.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         In 2019, I took the role of <span class="text-white">Control Group
                                             Lead</span>. I led the development of embedded control programs and
                                         electric systems of all the robots, built from the ground up.
@@ -123,7 +118,7 @@
                                         with Bluetooth and GUI. During the 2019 season, I contributed 70k+ lines of
                                         C++ code and 20+ documents.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Among the things we have built, I am most proud of the attitude and heading
                                         reference system (AHRS), in which a
                                         gyroscope, an accelerometer and a
@@ -132,7 +127,7 @@
                                         stabilize the gimbal while rotating the chassis to evade incoming bullets,
                                         which provided conspicuous advantages to us at the competition.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         At the same time, I took the role of <span class="text-white">Project
                                             Manager</span> in 2019.
                                         I was responsible for scheduling the overall development timeline,
@@ -141,19 +136,19 @@
                                         laid down upcoming schedule. Together with the team leader, we kept the
                                         whole team forward.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         In RoboMaster 2019 International Regional Competition, as out debut, we won
                                         <span class="text-white">the second prize</span>.
                                         <!-- https://zjui.intl.zju.edu.cn/en/news/746 -->
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Since 2020, I worked as the <span
                                             class="text-white">Vision Group Lead </span>
                                         of the team. I worked on a vision-assisted automatic aiming system,
                                         for which I have contributed 27k+ lines of C++ code.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer" href="https://github.com/Meta-Team">
                                             View on <i class="fab fa-github"></i> GitHub <i
                                                 class="fas fa-external-link-alt"></i>
@@ -165,16 +160,16 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/robomaster-me.jpg" class="show-lg" style="max-width: 100%"
                                          alt="RoboMaster 2019"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">RoboMaster 2019</p>
+                                    <p class="image-caption mt-2 mb-4 show-lg">RoboMaster 2019</p>
                                     <img src="assets/img/robomaster-competition.jpg" style="max-width: 100%"
                                          alt="RoboMaster 2019"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">RoboMaster 2019</p>
+                                    <p class="image-caption mt-2 mb-4">RoboMaster 2019</p>
                                     <img src="assets/img/robomaster-we.jpg" style="max-width: 100%"
                                          alt="Meta Robotics in 2019"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">Meta Robotics in 2019</p>
+                                    <p class="image-caption mt-2 mb-4">Meta Robotics in 2019</p>
                                     <img src="assets/img/robomaster-teams.jpg" style="max-width: 100%"
                                          alt="With Fukuoka and Guangdong Taiwan Chung Cheng University Teams"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">With Fukuoka and Guangdong
+                                    <p class="image-caption mt-2 mb-4">With Fukuoka and Guangdong
                                         Taiwan Chung Cheng University Teams</p>
                                 </div>
 
@@ -193,19 +188,19 @@
                     <div data-include="assets/img/joystick-icon.svg"></div>
                 </div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                <h2 class="project-header mb-4 ">
                     JoyStick Module for NetEase Android Emulator
                 </h2>
-                <p class="typography-text text-white-50 slide-in-text">
+                <p>
                     During Summer 2020, as <span class="text-white">Platform Engineer Intern at NetEase Game</span>,
                     I developed a driver module that maps various joysticks to a unified
                     interface and configures keymap automatically using a predefined database,
                     providing <span class="text-white">plug-and-play user experience</span> for joystick users of
                     the NetEase Android Emulator.
                 </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                <div class="mt-4 text-end ">
+                    <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#netEaseGameMore">Read more ></a>
                 </div>
             </div>
@@ -224,20 +219,20 @@
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         There are various joysticks in the market. On the Windows platform, most
                                         joysticks use the <span class="text-white">DirectInput</span> interface, which
                                         is flexible but lacks keymap
                                         standards. For example, the same key in DirectInput can map to key A for one
                                         joystick, but to key B for another.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         When Microsoft rolled out their own joystick&mdash;the Xbox controllers,
                                         a new interface, <span class="text-white">XInput</span>, was introduced. XInput
                                         is defined more clearly and
                                         easier to use, but only supports Xbox controllers.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         On the other hands, as Nintendo Switch becomes popular, more and more users own
                                         <span class="text-white">Nintendo Switch Joy-Cons</span> and want to use them in
                                         the
@@ -249,7 +244,7 @@
                                         such as the gyroscope and the haptic feedback, are not exposed through
                                         DirectInput.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We intended to provide <span class="text-white">smooth user experience</span>
                                         for joystick users of the
                                         NetEase Android Emulator by introducing an adapter module.
@@ -260,7 +255,7 @@
                                         of joysticks). Gyroscope and haptic feedback are supported. Users can map
                                         the gyroscope to axes or buttons, turning games into interactive style.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Technically, the module maps various joystick backends (DirectInput, XInput, and
                                         HID) to the unified XInput interface, minimizing changes in the Emulator main
                                         program. Joy-Cons are controlled through HID interface rather than DirectInput
@@ -273,7 +268,7 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/joystick-photo.jpg" class="show-lg" style="max-width: 100%"
                                          alt="Various Joysticks"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">Various Joysticks</p>
+                                    <p class="image-caption mt-2 mb-4 show-lg">Various Joysticks</p>
                                 </div>
                             </div>
                         </div>
@@ -288,9 +283,9 @@
                 <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/klc3-icon.svg"></div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">KLC3</h2>
-                <p class="typography-text text-white-50 slide-in-text">
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                <h2 class="project-header mb-4 ">KLC3</h2>
+                <p>
                     <!-- Non-break hyphen &#8209; -->
                     KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
                     educational assembly) based on LLVM KLEE
@@ -298,8 +293,8 @@
                     end-to-end feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall 2020.
                     Our work was published at <span class="text-white">ASE 2021</span>.
                 </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                <div class="mt-4 text-end ">
+                    <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#klc3More">Read more ></a>
                 </div>
             </div>
@@ -315,24 +310,24 @@
                             <div class="col-lg-5 px-lg-4 text-center hidden-lg">
                                 <img src="assets/img/klc3-ase2021-title.jpg" style="max-width: 100%"
                                      alt="My Presentation at ASE 2021"/>
-                                <p class="typography-footnote text-white-50 mt-2 mb-0">
+                                <p class="image-caption mt-2 mb-0">
                                     My Presentation at ASE 2021</p>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Learning to program is difficult. As with all topics, students learn more
                                         quickly when given immediate feedback tailored to their efforts. However, while
                                         university staff&mdash;instructors and teaching assistants&mdash;are capable of
                                         providing such feedback, staff are not available 24/7 and lack the time needed
                                         to provide individual attention to each student's programs.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Automating feedback has been an important topic for years. A simple and widely
                                         adopted approach is to use test-case-based systems. However, these systems
                                         typically fail to provide feedback tailored to each student's effort.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         To address the need of rapid and tailored feedback, we develop
                                         <span class="text-white">a system for end-to-end automatic feedback</span>.
                                         Specifically, we target LC&#8209;3, a RISC-like educational assembly used in
@@ -340,7 +335,7 @@
                                         At the heart of the system is <span class="text-white">KLC3</span>, a concolic
                                         (concrete + symbolic) execution engine for LC&#8209;3 built on top of LLVM KLEE.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         At high-level, symbolic execution is a technique that treats inputs as symbols
                                         rather than concrete values, operates them the same way as the program executes,
                                         and checks the result symbolically. Intuitively, it executes all the possible
@@ -349,7 +344,7 @@
                                         to the students' programs, which can be released to the students without
                                         undermining the power of the system.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We also built tools around KLC3 into the system to cover the whole workflow
                                         of editing, testing, and debugging when students program.
                                         At the frontend, we develop a <span class="text-white">VSCode extension</span>
@@ -360,7 +355,7 @@
                                         with WebAssembly, freeing students from compiling the Unix LC&#8209;3 tools
                                         locally.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We actually deployed the system to provide feedback for the assembly programming
                                         assignments in a class of <span class="text-white">over 100 students</span> in
                                         Fall 2020. Students wrote a median of around 700 lines of assembly for these
@@ -369,39 +364,39 @@
                                         was published and presented at <span class="text-white">ASE 2021</span>,
                                         the 36th IEEE/ACM International Conference on Automated Software Engineering.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Concolic execution is powerful, but the power doesn't come for free.
                                         It can be time-consuming. A lot of effort has been settled to enable KLC3
                                         to provide feedback in time after students submit their code. Those work
                                         also form parts of my <span class="text-white">senior thesis</span>
                                         of the Bachelor's degree.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://doi.org/10.1109/ASE51524.2021.9678837">
                                             The ASE 2021 Paper <i
                                                 class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
-                                    <div class="mt-0 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-0 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="http://lumetta.web.engr.illinois.edu/ase2021.html">
                                             Replication Package <i
                                                 class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
-                                    <div class="mt-0 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-0 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="http://hdl.handle.net/2142/110284">
                                             My Senior Thesis on <i class="fas fa-university"></i> UIUC IDEALS <i
                                                 class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
-                                    <div class="mt-0 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-0 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer" href="https://github.com/liuzikai/klc3">
                                             KLC3 on <i class="fab fa-github"></i> GitHub <i
                                                 class="fas fa-external-link-alt"></i>
@@ -413,7 +408,7 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/klc3-ase2021-title.jpg" class="show-lg" style="max-width: 100%"
                                          alt="My Presentation at ASE 2021"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">My Presentation at
+                                    <p class="image-caption mt-2 mb-4 show-lg">My Presentation at
                                         ASE 2021</p>
                                 </div>
 
@@ -432,19 +427,19 @@
                     <div data-include="assets/img/wireless-charging-table-icon.svg"></div>
                 </div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="typography-header text-white mb-4 slide-in-text">
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                <h2 class="project-header mb-4 ">
                     Wireless Charging Table with Auto Alignment
                 </h2>
-                <p class="typography-text text-white-50 slide-in-text">
+                <p>
                     As our Bachelor's senior design project, my teammates and I built a wireless charging table that
                     <span class="text-white"> automatically aligns the charging coils with the devices</span>, combining
                     electrical engineering, computer vision, and
                     mechanical system. We won <span class="text-white">the most Interdisciplinary Project Award</span>
                     at the ZJU-UIUC Institute.
                 </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn typography-text more-button" data-bs-toggle="modal"
+                <div class="mt-4 text-end ">
+                    <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#wirelessChargingTableMore">Read more ></a>
                 </div>
             </div>
@@ -464,12 +459,12 @@
                                     <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
                                     Sorry, your browser does not support the video tag.
                                 </video>
-                                <p class="typography-footnote text-white-50 mt-2 mb-0">
+                                <p class="image-caption mt-2 mb-0">
                                     Demonstration of the Table Charging Multiple Cellphones</p>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Nowadays, more and more mobile devices support wireless charging. Among them,
                                         the Qi standard is the most widely adopted wireless charging protocol. Qi
                                         hotspots can be found in many public places, such as cafeterias and airports.
@@ -478,7 +473,7 @@
                                         charged (by the time we developed this project, Apple
                                         MagSafe for iPhones is not yet available).
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Our goal is to provide <span class="text-white">seamless wireless charging experience</span>
                                         at Qi hotspots
                                         like cafeterias, where customers sit around tables. We designed a smart table
@@ -489,13 +484,13 @@
                                         the table supports wireless charging with a few trials. If not, the device is
                                         ignored.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We designed and implemented the table. Our team won
                                         <span class="text-white">the most Interdisciplinary Project Award</span>
                                         of ECE445 Senior Design at the ZJU-UIUC Joint Institute in 2021.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://github.com/liuzikai/wireless-charging-table">
                                             View on <i class="fab fa-github"></i> GitHub <i
@@ -511,12 +506,12 @@
                                         <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
                                         Sorry, your browser does not support the video tag.
                                     </video>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">Demonstration of the
+                                    <p class="image-caption mt-2 mb-4 show-lg">Demonstration of the
                                         Table Charging Multiple Cellphones</p>
                                     <!-- Additional images -->
                                     <img src="assets/img/qi-table-mechanism.gif" style="max-width: 100%"
                                          alt="Mechanical system of the table"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">Mechanical System of
+                                    <p class="image-caption mt-2 mb-4">Mechanical System of
                                         the Table</p>
                                 </div>
 
@@ -531,52 +526,61 @@
         <!-- TODO: the gap here is not consistent with the previous ones -->
 
         <!-- AuroraOS and Ozone -->
-        <!-- All vertical when < lg, in two columns when >= lg -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-6 project-container d-flex">
-                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
-                        <div class="m-auto px-3 project-svg-container" id="auroraOSIcon">
-                            <div data-include="assets/img/aurora-os-icon.svg"></div>
+        <!-- Full page < lg, in two columns when >= lg -->
+        <!-- d-flex required to centralize vertically using my-lg-auto when >= lg -->
+        <!-- project-container has no effect when < lg since it only claims min-height -->
+        <div class="gx-0 justify-content-center align-items-center project-container d-flex">
+            <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
+            <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
+            <div class="row my-lg-auto">
+                <div class="col-lg-6 project-container-down-md d-flex">
+                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                            <!-- need both mx-auto, why? -->
+                            <div class="mx-auto px-3" id="auroraOSIcon">
+                                <div data-include="assets/img/aurora-os-icon.svg"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
-                        <h2 class="typography-header-small text-white mb-4 slide-in-text">AuroraOS</h2>
-                        <p class="typography-text text-white-50 slide-in-text">
-                            <span class="text-white">x86 operating system</span> with basic
-                            kernel functions, a scheduler with wait lists, SVGA high-color
-                            driver with hardware acceleration, and GUI.
+                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                            <h2 class="project-header mb-4 ">AuroraOS</h2>
+                            <p>
+                                <span class="text-white">x86 operating system</span> with basic
+                                kernel functions, a scheduler with wait lists, SVGA high-color
+                                driver with hardware acceleration, and GUI.
 
-                            Our team got a prize at the <span class="text-white">ECE391 design competition</span>
-                            amongst
-                            all Computer Engineers at UIUC.
-                        </p>
-                        <div class="mt-4 text-end slide-in-text">
-                            <a class="btn typography-text more-button" data-bs-toggle="modal"
-                               data-bs-target="#auroraOSMore">Read more ></a>
+                                Our team got a prize at the <span class="text-white">ECE391 design competition</span>
+                                amongst
+                                all Computer Engineers at UIUC.
+                            </p>
+                            <div class="mt-4 text-end ">
+                                <a class="btn more-button" data-bs-toggle="modal"
+                                   data-bs-target="#auroraOSMore">Read more ></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 project-container d-flex">
-                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
-                        <div class="m-auto px-3 project-svg-container" id="ozoneIcon">
-                            <div data-include="assets/img/ozone-icon.svg"></div>
+                <div class="col-lg-6 project-container-down-md d-flex">
+                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                            <!-- need both mx-auto, why? -->
+                            <div class="mx-auto px-3" id="ozoneIcon">
+                                <div data-include="assets/img/ozone-icon.svg"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
-                        <h2 class="typography-header-small text-white mb-4 slide-in-text">
-                            Ozone
-                        </h2>
-                        <p class="typography-text text-white-50 slide-in-text">
-                            <span class="text-white">ARMv8 multi-kernel operating system</span> built on the Barrelfish
-                            codebase, featuring tree-based memory management systems, multiple IPC mechanisms,
-                            and several user-level services. Team project at ETH <span class="text-white">Advanced Operating Systems</span>.
-                        </p>
-                        <div class="mt-4 text-end slide-in-text">
-                            <a class="btn typography-text more-button" data-bs-toggle="modal"
-                               data-bs-target="#ozoneMore">Read more ></a>
+                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                            <h2 class="project-header mb-4 ">
+                                Ozone
+                            </h2>
+                            <p>
+                                <span class="text-white">ARMv8 multi-kernel operating system</span> built on the
+                                Barrelfish
+                                codebase, featuring tree-based memory management systems, multiple IPC mechanisms,
+                                and several user-level services. Team project at ETH <span class="text-white">Advanced Operating Systems</span>.
+                            </p>
+                            <div class="mt-4 text-end ">
+                                <a class="btn more-button" data-bs-toggle="modal"
+                                   data-bs-target="#ozoneMore">Read more ></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -593,24 +597,24 @@
                             <div class="col-lg-5 px-lg-4 hidden-lg text-center">
                                 <img src="assets/img/aurora-os-competition.jpg" style="max-width: 100%"
                                      alt="Our Team at ECE391 Design Competition"/>
-                                <p class="typography-footnote text-white-50 mt-2 mb-0">Our Team at ECE391 Design
+                                <p class="image-caption mt-2 mb-0">Our Team at ECE391 Design
                                     Competition</p>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         During Fall 2019, as a part of the UIUC ECE391 course, my teammates and I
                                         designed and implemented <span class="text-white">AuroraOS</span>, an x86
                                         operating system. The system was
                                         emulated in QEMU.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We implemented the <span class="text-white">basic kernel features</span>
                                         required by the course, including
                                         memory management, real-time clock, interrupts, system calls, user program
                                         loader, a read-only file system, terminal, and a round-robin scheduler.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         In additions to these basic features, we implemented a handful of
                                         <span class="text-white">extra functions</span>. We implemented the 1024x768
                                         16-bit high color SVGA driver with hardware acceleration and alpha blending.
@@ -622,13 +626,13 @@
                                         in Linux) and CMOS clock. To ease the development and debug work, we
                                         also employed a cross compile toolchain from macOS to x86.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         ECE391 hosted an <span class="text-white">OS design competition</span>
                                         every semester. In Fall 2019, our team got the third prize at the
                                         competition.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer" href="https://github.com/liuzikai/AuroraOS">
                                             View on <i class="fab fa-github"></i> GitHub <i
                                                 class="fas fa-external-link-alt"></i>
@@ -640,11 +644,11 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/aurora-os-competition.jpg" class="show-lg"
                                          style="max-width: 100%" alt="Our team at ECE391 design competition"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">
+                                    <p class="image-caption mt-2 mb-4 show-lg">
                                         Our Team at ECE391 Design Competition</p>
                                     <img src="assets/img/aurora-os-photo.jpg" style="max-width: 100%"
                                          alt="AuroraOS"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                    <p class="image-caption mt-2 mb-4">
                                         Emulation with QEMU</p>
                                 </div>
                             </div>
@@ -665,12 +669,12 @@
                             <div class="col-lg-5 px-lg-4 text-center hidden-lg">
                                 <img src="assets/img/ozone-team.jpg" style="max-width: 100%"
                                      alt="Our team at the Advanced Operating Systems demo"/>
-                                <p class="typography-footnote text-white-50 mt-2 mb-0">
+                                <p class="image-caption mt-2 mb-0">
                                     Our team at the Advanced Operating Systems Demo</p>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         At the Fall 2022 offering of the <span class="text-white">Advanced Operating Systems</span>
                                         at ETH Zurich, my
                                         teammates and I built <span class="text-white">Ozone</span> ("OS one"). Ozone is
@@ -686,7 +690,7 @@
                                         research, such as the capability system, processor dispatch with upcalls,
                                         user-space RPC, etc.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         As part of the project, I developed the
                                         <span class="text-white">virtual memory management system</span>. The
                                         system supports mapping to given addresses, mapping to dynamic addresses,
@@ -696,7 +700,7 @@
                                         teammate, which similarly adopts the binary search tree, Ozone is able to
                                         achieve efficient memory allocation for processes.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         In addition, I worked on the process management system, intra- and inter-core
                                         communications, the naming service, etc. We ran Ozone on both QEMU and all four
                                         cores of the Toradex Colibri i.MX8 development board.
@@ -707,7 +711,7 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/ozone-team.jpg" class="show-lg" style="max-width: 100%"
                                          alt="Our team and the teaching staff at the Advanced Operating Systems demo"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-0 show-lg">
+                                    <p class="image-caption mt-2 mb-0 show-lg">
                                         Our Team and the Teaching Staff at the Advanced Operating Systems Demo</p>
                                 </div>
                             </div>
@@ -720,52 +724,60 @@
 
 
         <!-- RV32I Processor and FPGA BoxHead -->
-        <!-- All vertical when < lg, in two columns when >= lg -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-6 project-container d-flex">
-                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
-                        <div class="m-auto px-5 project-svg-container" id="riscvIcon">
-                            <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+        <!-- Full page < lg, in two columns when >= lg -->
+        <!-- d-flex required to centralize vertically using my-lg-auto when >= lg -->
+        <!-- project-container has no effect when < lg since it only claims min-height -->
+        <div class="gx-0 justify-content-center align-items-center project-container d-flex">
+            <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
+            <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
+            <div class="row my-lg-auto">
+                <div class="col-lg-6 project-container d-flex">
+                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                        <!-- need both mx-auto, why? -->
+                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                            <div class="mx-auto px-4" id="riscvIcon">
+                                <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
-                        <h2 class="typography-header-small text-white mb-4 slide-in-text">RISC&#8209;V Processor Design
-                        </h2>
-                        <p class="typography-text text-white-50 slide-in-text">
-                            As the UIUC ECE411 design project, my teammates and I designed and simulated a
-                            pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
-                            The system features parameterized caches, tournament branch predictions,
-                            and a next-line prefetcher.
-                        </p>
-                        <div class="mt-4 text-end slide-in-text">
-                            <a class="btn typography-text more-button" data-bs-toggle="modal"
-                               data-bs-target="#riscvProcessorMore">Read more ></a>
+                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                            <h2 class="project-header mb-4 ">RISC&#8209;V Processor Design
+                            </h2>
+                            <p>
+                                As the UIUC ECE411 design project, my teammates and I designed and simulated a
+                                pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
+                                The system features parameterized caches, tournament branch predictions,
+                                and a next-line prefetcher.
+                            </p>
+                            <div class="mt-4 text-end ">
+                                <a class="btn more-button" data-bs-toggle="modal"
+                                   data-bs-target="#riscvProcessorMore">Read more ></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 project-container d-flex">
-                <div class="my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                    <div class="fixed-height-svg-container mt-auto mt-lg-0">
-                        <div class="m-auto px-4 project-svg-container" id="boxheadIcon">
-                            <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                <div class="col-lg-6 project-container d-flex">
+                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                            <!-- need both mx-auto, why? -->
+                            <div class="m-auto px-4" id="boxheadIcon">
+                                <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start">
-                        <h2 class="typography-header-small text-white mb-4 slide-in-text">
-                            Boxhead Game on FPGA
-                        </h2>
-                        <p class="typography-text text-white-50 slide-in-text">
-                            As the UIUC ECE385 design project, my teammate and I developed the
-                            Boxhead video game on
-                            the Altera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
-                            <span class="text-white">SystemVerilog</span>,
-                            and the game logic in <span class="text-white">C</span>.
-                        </p>
-                        <div class="mt-4 text-end slide-in-text">
-                            <a class="btn typography-text more-button" data-bs-toggle="modal"
-                               data-bs-target="#boxheadMore">Read more ></a>
+                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
+                            <h2 class="project-header mb-4 ">
+                                Boxhead Game on FPGA
+                            </h2>
+                            <p>
+                                As the UIUC ECE385 design project, my teammate and I developed the
+                                Boxhead video game on
+                                the Altera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
+                                <span class="text-white">SystemVerilog</span>,
+                                and the game logic in <span class="text-white">C</span>.
+                            </p>
+                            <div class="mt-4 text-end ">
+                                <a class="btn more-button" data-bs-toggle="modal"
+                                   data-bs-target="#boxheadMore">Read more ></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -782,7 +794,7 @@
                         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         As the final design project of UIUC
                                         <span class="text-white">ECE411 Computer Organization and Design</span>
                                         in Fall 2020, my teammates and I designed and simulates a
@@ -794,8 +806,8 @@
                                         I-/D-caches are instantiated. In addition, we also implemented a next-line
                                         prefetcher.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://github.com/liuzikai/ECE411-RV32I-Processor">
                                             View on <i class="fab fa-github"></i> GitHub <i
@@ -808,11 +820,11 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/rv32i-processor-cache.jpg" style="max-width: 100%"
                                          alt="Presentation of the cache performance: more than 90% hit rates for all levels and significant speedups, varying for different workloads"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                    <p class="image-caption mt-2 mb-4">
                                         Presentation of the cache performance</p>
                                     <img src="assets/img/rv32i-processor-datapath.jpg" style="max-width: 100%"
                                          alt="Datapath block diagram of the processor"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                    <p class="image-caption mt-2 mb-4">
                                         Datapath of the Processor</p>
                                 </div>
                             </div>
@@ -833,18 +845,18 @@
                             <div class="col-lg-5 px-lg-4 text-center hidden-lg">
                                 <img src="assets/img/boxhead-original.jpg" style="max-width: 100%"
                                      alt="Screenshot of the original Boxhead game: two players killing zombines"/>
-                                <p class="typography-footnote text-white-50 mt-2 mb-0">
+                                <p class="image-caption mt-2 mb-0">
                                     Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
                             </div>
                             <div class="col-lg-7 mt-0">
                                 <div class="project-text w-100 my-auto text-start text-lg-left">
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         As the final design project of UIUC
                                         <span class="text-white">ECE385 Digital Systems Laboratory</span> in Spring
                                         2020, my teammate and I developed a dual-player video game on the Altera DE2-115
                                         FPGA, imitating the well-known zombie-killing game Boxhead.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         We developed a <span class="text-white">framebuffer-based hardware graphic
                                         engine</span>. The engine supports
                                         640x480 16-bit VGA output, 60Hz refresh rate, double buffering, auto background
@@ -857,7 +869,7 @@
                                         output, the remaining one write is clearly insufficient, since we must
                                         overwrite the background before drawing any sprite.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         One possible solution was reducing the actual game refresh rate, for example,
                                         to 30Hz, a half of VGA refresh rate, by switching game frame every two VGA
                                         frames.
@@ -866,7 +878,7 @@
                                         On the other hand, since we are implementing a shooting game, reducing refresh
                                         rate is likely to diminish the user experience.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         Our solution to this problem was booting the SRAM to 100MHz. We generated
                                         100MHz clock signals from the 50MHz input clock using the PLL IP. The read/write
                                         operations were carefully distributed so that SRAM could operate in this extreme
@@ -874,13 +886,13 @@
                                         SRAM controller served as the basic of our high-efficiency graphic
                                         engine and allowed 60Hz game refresh rate.
                                     </p>
-                                    <p class="typography-text text-white-50">
+                                    <p>
                                         In addition to the graphic engine, we implemented the
                                         <span class="text-white">USB keyboard driver</span> and wrote the
                                         <span class="text-white">game logic in C</span>, running on the Nois II SoC IP.
                                     </p>
-                                    <div class="mt-5 text-center slide-in-text">
-                                        <a class="btn typography-text github-button" target="_blank"
+                                    <div class="mt-5 text-center ">
+                                        <a class="btn github-button" target="_blank"
                                            rel="noopener noreferrer"
                                            href="https://github.com/liuzikai/FPGA-Boxhead">
                                             View on <i class="fab fa-github"></i> GitHub <i
@@ -893,15 +905,15 @@
                                 <div class="modal-gallery text-center">
                                     <img src="assets/img/boxhead-original.jpg" class="show-lg" style="max-width: 100%"
                                          alt="Screenshot of the original Boxhead game: two players killing zombines"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4 show-lg">
+                                    <p class="image-caption mt-2 mb-4 show-lg">
                                         Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
                                     <img src="assets/img/boxhead-block-diagram.jpg" style="max-width: 100%"
                                          alt="Block diagram of the system"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                    <p class="image-caption mt-2 mb-4">
                                         Block Diagram of the System</p>
                                     <img src="assets/img/boxhead-pll-cycles.jpg" style="max-width: 100%"
                                          alt="PLL cycle allocation: 3 cycles for writes and 1 cycle for read"/>
-                                    <p class="typography-footnote text-white-50 mt-2 mb-4">
+                                    <p class="image-caption mt-2 mb-4">
                                         PLL Cycle Allocation</p>
                                 </div>
                             </div>
@@ -968,10 +980,5 @@
 <script src="js/jquery.visible.js"></script>
 <!-- My JS -->
 <script src="js/zikai.js"></script>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-<!-- * *                               SB Forms JS                               * *-->
-<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>

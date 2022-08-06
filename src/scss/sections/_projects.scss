@@ -1,6 +1,16 @@
-// 
+//
 // Projects
-// 
+//
+
+.project-container {
+    min-height: 100vh !important;
+}
+
+.project-container-down-md {
+    @include media-breakpoint-down(md) {
+        min-height: 100vh !important;
+    }
+}
 
 .projects-section {
     padding: 10rem 0;
@@ -16,7 +26,6 @@
 
     .project-text {
         padding: 3rem;
-        font-size: 90%;
 
         @include media-breakpoint-up(lg) {
             padding: 5rem;
@@ -27,5 +36,110 @@
                 width: 30%;
             }
         }
+
+        // Font color: .text-white-50
+        --bs-text-opacity: 1;
+        color: rgba(255, 255, 255, 0.5) !important;
+
+        // Customized responsive font sizes
+        font-size: 16px;
+        @include media-breakpoint-up(sm) {
+            font-size: 20px;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 20px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 24px;
+        }
+        @include media-breakpoint-up(xxl) {
+            font-size: 24px;
+        }
+
+        .project-header {
+            // Font color: .text-white
+            --bs-text-opacity: 1;
+            color: $white !important;
+
+            // Customized responsive font sizes
+            font-size: 28px;
+            @include media-breakpoint-up(sm) {
+                font-size: 34px;
+            }
+            @include media-breakpoint-up(md) {
+                font-size: 40px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 34px;
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: 43px;
+            }
+            @include media-breakpoint-up(xxl) {
+                font-size: 50px;
+            }
+        }
+
+        .project-header-small {
+            // Font color: .text-white
+            --bs-text-opacity: 1;
+            color: $white !important;
+
+            // Customized responsive font sizes
+            font-size: 34px;
+            @include media-breakpoint-up(xl) {
+                font-size: 33px;
+            }
+            @include media-breakpoint-up(xxl) {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+.image-caption {
+    // Font color: .text-white-50
+    --bs-text-opacity: 1;
+    color: rgba(255, 255, 255, 0.5) !important;
+
+    // Customized responsive font sizes
+    font-size: 12px;
+    @include media-breakpoint-up(sm) {
+        font-size: 16px;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 12px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 16px;
+    }
+    @include media-breakpoint-up(xxl) {
+        font-size: 16px;
+    }
+}
+
+.project-svg-container {
+    max-width: 60%;
+    @include media-breakpoint-up(sm) {
+        max-width: 70%;
+    }
+    @include media-breakpoint-up(md) {
+        max-width: 70%;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 100%;
+    }
+}
+
+.project-svg-container-two-column {
+    max-width: 70%;
+    @include media-breakpoint-up(lg) {
+        max-width: 50%;
     }
 }

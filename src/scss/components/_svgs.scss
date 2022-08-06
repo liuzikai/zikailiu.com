@@ -1,0 +1,61 @@
+//
+// SVGs
+//
+
+#robomaster-animated-svg {
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+}
+
+#joystick-animated-svg {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+}
+
+#klc3-animated-svg, #klc3-side-animated-svg {
+  stroke-dasharray: 575;
+  stroke-dashoffset: 575;
+}
+
+#wireless-charging-table-animated-svg, #wireless-charging-table-side-animated-svg {
+  stroke-dasharray: 550;
+  stroke-dashoffset: 550;
+}
+
+#rv32i-processor-animated-svg {
+  stroke-dasharray: 395;
+  stroke-dashoffset: 395;
+}
+
+#fpga-boxhead-animated-svg {
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+}
+
+#aurora-os-animated-svg {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+#ozone-animated-svg {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+@include media-breakpoint-up(lg) {
+  #riscvIcon {
+    max-width: 60%;
+  }
+
+  #boxheadIcon {
+    max-width: 60%;
+  }
+
+  #auroraOSIcon {
+    max-width: 60%;
+  }
+
+  #ozoneIcon {
+    max-width: 60%;
+  }
+}
