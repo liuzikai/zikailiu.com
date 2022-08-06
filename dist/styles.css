@@ -11633,22 +11633,22 @@ body {
 }
 @media (min-width: 768px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
   .btn {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1400px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -11890,7 +11890,6 @@ body {
     min-height: 100vh !important;
   }
 }
-
 .projects-section {
   padding: 10rem 0;
 }

@@ -8,14 +8,20 @@
     <title>Zikai Liu</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito)-->
-    <link href="min/styles.css" rel="stylesheet"/>
-
+    <link href="dist/styles.css" rel="stylesheet"/>
+    <!-- Preloads, crossorigin for fonts -->
+    <link rel="preload" href="fonts/nunito-v25-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/nunito-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/nunito-v25-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/img/bg-masthead.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/img/robomaster-icon.svg" as="image" type="image/svg+xml">
 </head>
 <body id="page-top">
 
-<!-- Load the background image as early as possible but not display it -->
+<!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="assets/img/bg-masthead.webp" onload='document.getElementById("masthead").classList.add("masthead-actual-background");' alt="">
+    <img src="assets/img/bg-masthead.webp"
+         onload='document.getElementById("masthead").classList.add("masthead-actual-background");' alt="">
 </div>
 
 <!-- TODO: add necessary hyperlinks -->
@@ -63,22 +69,22 @@
                 <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/robomaster-icon.svg"></div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                <h2 class="project-header mb-3">RoboMaster</h2>
-                <p>
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
+                <p class="slide-in-text">
                     At <span class="text-white">ZJU-UIUC Robotics Team,</span> we built combat robots.
                 </p>
-                <p>
+                <p class="slide-in-text">
                     Being <span class="text-white">Control Group Lead</span> and
                     <span class="text-white">Project Manager</span> in 2019,
                     I led the development of embedded control systems and
                     managed project timelines.
                 </p>
-                <p>
+                <p class="slide-in-text">
                     As <span class="text-white">Vision Group Lead</span> in 2020-2021,
                     I worked on a vision-assisted automatic aiming system.
                 </p>
-                <div class="mt-4 text-end ">
+                <div class="mt-4 text-end slide-in-text">
                     <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#robomasterMore">
                         Read more
@@ -197,18 +203,18 @@
                     <div data-include="assets/img/joystick-icon.svg"></div>
                 </div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                <h2 class="project-header mb-3">
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="project-header mb-3 slide-in-text">
                     JoyStick Module for NetEase Android Emulator
                 </h2>
-                <p>
+                <p class="slide-in-text">
                     During Summer 2020, as <span class="text-white">Platform Engineer Intern at NetEase Game</span>,
                     I developed a driver module that maps various joysticks to a unified
                     interface and configures keymap automatically using a predefined database,
                     providing <span class="text-white">plug-and-play user experience</span> for joystick users of
                     the NetEase Android Emulator.
                 </p>
-                <div class="mt-4 text-end ">
+                <div class="mt-4 text-end slide-in-text">
                     <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#netEaseGameMore">
                         Read more
@@ -315,9 +321,9 @@
                 <!-- pb-lg-5 shift it up a little -->
                 <div data-include="assets/img/klc3-icon.svg"></div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                <h2 class="project-header mb-3">KLC3</h2>
-                <p>
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="project-header mb-3 slide-in-text">KLC3</h2>
+                <p class="slide-in-text">
                     <!-- Non-break hyphen &#8209; -->
                     KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
                     educational assembly) based on LLVM KLEE
@@ -325,7 +331,7 @@
                     end-to-end feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall 2020.
                     Our work was published at <span class="text-white">ASE 2021</span>.
                 </p>
-                <div class="mt-4 text-end ">
+                <div class="mt-4 text-end slide-in-text">
                     <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#klc3More">
                         Read more
@@ -489,18 +495,18 @@
                     <div data-include="assets/img/wireless-charging-table-icon.svg"></div>
                 </div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                <h2 class="project-header mb-3">
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="project-header mb-3 slide-in-text">
                     Wireless Charging Table with Auto Alignment
                 </h2>
-                <p>
+                <p class="slide-in-text">
                     As our Bachelor's senior design project, my teammates and I built a wireless charging table that
                     <span class="text-white"> automatically aligns the charging coils with the devices</span>, combining
                     electrical engineering, computer vision, and
                     mechanical system. We won <span class="text-white">the most Interdisciplinary Project Award</span>
                     at the ZJU-UIUC Institute.
                 </p>
-                <div class="mt-4 text-end ">
+                <div class="mt-4 text-end slide-in-text">
                     <a class="btn more-button" data-bs-toggle="modal"
                        data-bs-target="#wirelessChargingTableMore">
                         Read more
@@ -605,7 +611,7 @@
         </div>
 
         <!-- Placeholder -->
-        <div class="show-lg" style="min-height: 30vh !important;"></div>
+        <div class="show-lg" style="min-height: 20vh !important;"></div>
 
         <!-- AuroraOS and Ozone -->
         <!-- Full page < lg, in two columns when >= lg -->
@@ -614,68 +620,96 @@
         <div class="gx-0 justify-content-center align-items-center project-container d-flex">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
-            <div class="row my-lg-auto">
-                <div class="col-lg-6 project-container-down-md d-flex">
-                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
-                            <!-- need both mx-auto, why? -->
-                            <div class="mx-auto px-3" id="auroraOSIcon">
-                                <div data-include="assets/img/aurora-os-icon.svg"></div>
+            <div class="container">
+                <div class="row my-lg-auto">
+                    <div class="col-lg-6 project-container-down-lg d-flex">
+                        <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                            <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                                <!-- need both mx-auto, why? -->
+                                <div class="mx-auto px-3" id="auroraOSIcon">
+                                    <div data-include="assets/img/aurora-os-icon.svg"></div>
+                                </div>
+                            </div>
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                                <h2 class="project-header mb-4 slide-in-text">AuroraOS</h2>
+                                <p class="slide-in-text">
+                                    <span class="text-white">x86 operating system</span> with basic
+                                    kernel functions, a scheduler with wait lists, SVGA high-color
+                                    driver with hardware acceleration, and GUI.
+
+                                    Our team got a prize at the <span
+                                        class="text-white">ECE391 design competition</span>
+                                    amongst
+                                    all Computer Engineers at UIUC.
+                                </p>
+                                <!-- This button is hidden when >= lg -->
+                                <div class="mt-4 text-end slide-in-text hidden-lg">
+                                    <a class="btn more-button" data-bs-toggle="modal"
+                                       data-bs-target="#auroraOSMore">
+                                        Read more
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                             fill="currentColor"
+                                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                            <h2 class="project-header mb-4 ">AuroraOS</h2>
-                            <p>
-                                <span class="text-white">x86 operating system</span> with basic
-                                kernel functions, a scheduler with wait lists, SVGA high-color
-                                driver with hardware acceleration, and GUI.
-
-                                Our team got a prize at the <span class="text-white">ECE391 design competition</span>
-                                amongst
-                                all Computer Engineers at UIUC.
-                            </p>
-                            <div class="mt-4 text-end ">
-                                <a class="btn more-button" data-bs-toggle="modal"
-                                   data-bs-target="#auroraOSMore">
-                                    Read more
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
-                                         class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
-                                </a>
+                    </div>
+                    <div class="col-lg-6 project-container-down-lg d-flex">
+                        <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                            <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                                <!-- need both mx-auto, why? -->
+                                <div class="mx-auto px-3" id="ozoneIcon">
+                                    <div data-include="assets/img/ozone-icon.svg"></div>
+                                </div>
+                            </div>
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                                <h2 class="project-header mb-4 slide-in-text">Ozone</h2>
+                                <p class="slide-in-text">
+                                    <span class="text-white">ARMv8 multi-kernel operating system</span> built on the
+                                    Barrelfish
+                                    codebase, featuring tree-based memory management systems, multiple IPC mechanisms,
+                                    and several user-level services. Team project at ETH <span class="text-white">Advanced Operating Systems</span>.
+                                </p>
+                                <!-- This button is hidden when >= lg -->
+                                <div class="mt-4 text-end slide-in-text hidden-lg">
+                                    <a class="btn more-button" data-bs-toggle="modal"
+                                       data-bs-target="#ozoneMore">
+                                        Read more
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                             fill="currentColor"
+                                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 project-container-down-md d-flex">
-                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
-                            <!-- need both mx-auto, why? -->
-                            <div class="mx-auto px-3" id="ozoneIcon">
-                                <div data-include="assets/img/ozone-icon.svg"></div>
-                            </div>
-                        </div>
-                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                            <h2 class="project-header mb-4 ">
-                                Ozone
-                            </h2>
-                            <p>
-                                <span class="text-white">ARMv8 multi-kernel operating system</span> built on the
-                                Barrelfish
-                                codebase, featuring tree-based memory management systems, multiple IPC mechanisms,
-                                and several user-level services. Team project at ETH <span class="text-white">Advanced Operating Systems</span>.
-                            </p>
-                            <div class="mt-4 text-end ">
-                                <a class="btn more-button" data-bs-toggle="modal"
-                                   data-bs-target="#ozoneMore">
-                                    Read more
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
-                                         class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                <!-- To align two read more buttons, having a new row seems to be the easiest way -->
+                <div class="row show-lg mt-0 text-end slide-in-text">
+                    <div class="col-lg-6" style="padding: 0 5rem">
+                        <a class="btn more-button" data-bs-toggle="modal"
+                           data-bs-target="#auroraOSMore">
+                            Read more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
+                                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-6" style="padding: 0 5rem">
+                        <a class="btn more-button" data-bs-toggle="modal"
+                           data-bs-target="#ozoneMore">
+                            Read more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
+                                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -835,7 +869,7 @@
         </div>
 
         <!-- Placeholder -->
-        <div class="show-lg" style="min-height: 30vh !important;"></div>
+        <div class="show-lg" style="min-height: 20vh !important;"></div>
 
         <!-- RV32I Processor and FPGA BoxHead -->
         <!-- Full page < lg, in two columns when >= lg -->
@@ -844,67 +878,94 @@
         <div class="gx-0 justify-content-center align-items-center project-container d-flex">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
-            <div class="row my-lg-auto">
-                <div class="col-lg-6 project-container d-flex">
-                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                        <!-- need both mx-auto, why? -->
-                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
-                            <div class="mx-auto px-4" id="riscvIcon">
-                                <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+            <div class="container">
+                <div class="row my-lg-auto">
+                    <div class="col-lg-6 project-container-down-lg d-flex">
+                        <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                            <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                                <!-- need both mx-auto, why? -->
+                                <div class="mx-auto px-4" id="riscvIcon">
+                                    <div data-include="assets/img/rv32i-processor-icon.svg"></div>
+                                </div>
+                            </div>
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                                <h2 class="project-header mb-4 slide-in-text">RISC&#8209;V Processor Design</h2>
+                                <p class="slide-in-text">
+                                    As the UIUC ECE411 design project, my teammates and I designed and simulated a
+                                    pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
+                                    The system features parameterized caches, tournament branch predictions,
+                                    and a next-line prefetcher.
+                                </p>
+                                <!-- This button is hidden when >= lg -->
+                                <div class="mt-4 text-end slide-in-text hidden-lg">
+                                    <a class="btn more-button" data-bs-toggle="modal"
+                                       data-bs-target="#riscvProcessorMore">
+                                        Read more
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                             fill="currentColor"
+                                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                            <h2 class="project-header mb-4 ">RISC&#8209;V Processor Design
-                            </h2>
-                            <p>
-                                As the UIUC ECE411 design project, my teammates and I designed and simulated a
-                                pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
-                                The system features parameterized caches, tournament branch predictions,
-                                and a next-line prefetcher.
-                            </p>
-                            <div class="mt-4 text-end ">
-                                <a class="btn more-button" data-bs-toggle="modal"
-                                   data-bs-target="#riscvProcessorMore">
-                                    Read more
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
-                                         class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
-                                </a>
+                    </div>
+                    <div class="col-lg-6 project-container-down-lg d-flex">
+                        <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
+                            <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
+                                <!-- need both mx-auto, why? -->
+                                <div class="m-auto px-4" id="boxheadIcon">
+                                    <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                                </div>
+                            </div>
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                                <h2 class="project-header mb-4 slide-in-text">Boxhead Game on FPGA</h2>
+                                <p class="slide-in-text">
+                                    As the UIUC ECE385 design project, my teammate and I developed the
+                                    Boxhead video game on
+                                    the Altera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
+                                    <span class="text-white">SystemVerilog</span>,
+                                    and the game logic in <span class="text-white">C</span>.
+                                </p>
+                                <!-- This button is hidden when >= lg -->
+                                <div class="mt-4 text-end slide-in-text hidden-lg">
+                                    <a class="btn more-button" data-bs-toggle="modal"
+                                       data-bs-target="#boxheadMore">
+                                        Read more
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                             fill="currentColor"
+                                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 project-container d-flex">
-                    <div class="mt-lg-0 mb-lg-auto my-auto"> <!-- d-flex of parent + this div gives vertical center -->
-                        <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
-                            <!-- need both mx-auto, why? -->
-                            <div class="m-auto px-4" id="boxheadIcon">
-                                <div data-include="assets/img/fpga-boxhead-icon.svg"></div>
-                            </div>
-                        </div>
-                        <div class="pt-lg-3 mt-0 mb-auto mb-lg-0 project-text text-start slide-in-text">
-                            <h2 class="project-header mb-4 ">
-                                Boxhead Game on FPGA
-                            </h2>
-                            <p>
-                                As the UIUC ECE385 design project, my teammate and I developed the
-                                Boxhead video game on
-                                the Altera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
-                                <span class="text-white">SystemVerilog</span>,
-                                and the game logic in <span class="text-white">C</span>.
-                            </p>
-                            <div class="mt-4 text-end ">
-                                <a class="btn more-button" data-bs-toggle="modal"
-                                   data-bs-target="#boxheadMore">
-                                    Read more
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor"
-                                         class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                <div class="row show-lg mt-0 text-end slide-in-text">
+                    <div class="col-lg-6" style="padding: 0 5rem">
+                        <a class="btn more-button" data-bs-toggle="modal"
+                           data-bs-target="#riscvProcessorMore">
+                            Read more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                 fill="currentColor"
+                                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-6" style="padding: 0 5rem">
+                        <a class="btn more-button" data-bs-toggle="modal"
+                           data-bs-target="#boxheadMore">
+                            Read more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                 fill="currentColor"
+                                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

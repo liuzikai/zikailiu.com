@@ -22,16 +22,16 @@
         font-size: 16px;
     }
     @include media-breakpoint-up(md) {
-        font-size: 16px;
+        font-size: 18px;
     }
     @include media-breakpoint-up(lg) {
-        font-size: 12px;
+        font-size: 16px;
     }
     @include media-breakpoint-up(xl) {
-        font-size: 16px;
+        font-size: 18px;
     }
     @include media-breakpoint-up(xxl) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 

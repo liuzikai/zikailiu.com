@@ -34,6 +34,17 @@
   src: local(""), url("../fonts/nunito-v25-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v25-latin-500.woff2") format("woff2"), url("../fonts/nunito-v25-latin-500.woff") format("woff"), url("../fonts/nunito-v25-latin-500.ttf") format("truetype"), url("../fonts/nunito-v25-latin-500.svg#Nunito") format("svg");
   /* Legacy iOS */
 }
+.come-in {
+  transform: translateY(150px);
+  -webkit-animation: come-in 0.8s ease forwards;
+          animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  /* so they look staggered */
+}
 
 @-webkit-keyframes come-in {
   to {
@@ -1036,6 +1047,10 @@ output {
     padding-top: 1rem !important;
   }
 
+  .pb-lg-0 {
+    padding-bottom: 0 !important;
+  }
+
   .pb-lg-5 {
     padding-bottom: 3rem !important;
   }
@@ -1133,22 +1148,22 @@ body {
 }
 @media (min-width: 768px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
   .btn {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1400px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -1356,6 +1371,11 @@ body {
   min-height: 100vh !important;
 }
 
+@media (max-width: 991.98px) {
+  .project-container-down-lg {
+    min-height: 100vh !important;
+  }
+}
 .projects-section {
   padding: 10rem 0;
 }

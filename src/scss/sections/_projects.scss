@@ -6,8 +6,8 @@
     min-height: 100vh !important;
 }
 
-.project-container-down-lg {
-    @include media-breakpoint-down(lg) {
+@include media-breakpoint-down(lg) {
+    .project-container-down-lg {
         min-height: 100vh !important;
     }
 }

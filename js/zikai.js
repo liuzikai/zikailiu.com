@@ -1,5 +1,19 @@
 $(function () {
 
+    // https://stackoverflow.com/a/12418814/10087792
+    function inViewport (element) {
+        if (!element) return false;
+        if (1 !== element.nodeType) return false;
+
+        var html = document.documentElement;
+        var rect = element.getBoundingClientRect();
+
+        return !!rect &&
+            rect.bottom >= 0 &&
+            rect.right >= 0 &&
+            rect.left <= html.clientWidth &&
+            rect.top <= html.clientHeight;
+    }
 
     let allSlideInTexts = $(".slide-in-text");
     $.each(allSlideInTexts, function () {
