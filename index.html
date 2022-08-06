@@ -4,17 +4,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
-    <meta name="author" content="liuzikai"/>
+    <meta name="author" content="Zikai Liu"/>
     <title>Zikai Liu</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito)-->
     <link href="min/styles.css" rel="stylesheet"/>
-    <div id="preload" style="display: none">
-        <!-- Make the background render blocking -->
-        <img src="assets/img/bg-masthead.webp">
-    </div>
+
 </head>
 <body id="page-top">
+
+<!-- Load the background image as early as possible but not display it -->
+<div id="preload" style="display: none">
+    <img src="assets/img/bg-masthead.webp" onload='document.getElementById("masthead").classList.add("masthead-actual-background");' alt="">
+</div>
 
 <!-- TODO: add necessary hyperlinks -->
 
@@ -39,7 +41,7 @@
 </nav>
 
 <!-- Masthead-->
-<header class="masthead min-vh-100">
+<header class="masthead min-vh-100" id="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="masthead-text text-center" style="font-weight: lighter;">
