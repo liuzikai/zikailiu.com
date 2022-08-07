@@ -53,18 +53,26 @@ window.addEventListener('DOMContentLoaded', event => {
     //
 
     // Reference: https://stackoverflow.com/a/12418814/10087792
-    function inViewport(element) {
+    //            jquery-visible(https://github.com/customd/jquery-visible)
+    function inViewportPartial(element) {
         if (!element) return false;
         if (1 !== element.nodeType) return false;
 
-        var html = document.documentElement;
-        var rect = element.getBoundingClientRect();
+        let vpWidth = window.innerWidth,
+            vpHeight = window.innerHeight;
 
-        return !!rect &&
-            rect.bottom >= 0 &&
-            rect.right >= 0 &&
-            rect.left <= html.clientWidth &&
-            rect.top <= html.clientHeight;
+        let rec = element.getBoundingClientRect(),
+            tViz = rec.top >= 0 && rec.top < vpHeight,
+            bViz = rec.bottom > 0 && rec.bottom <= vpHeight,
+            lViz = rec.left >= 0 && rec.left < vpWidth,
+            rViz = rec.right > 0 && rec.right <= vpWidth;
+
+        let vVisible = tViz || bViz,
+            hVisible = lViz || rViz;
+        vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible;
+        hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
+
+        return vVisible && hVisible;
     }
 
     // Get the array of all .slide-in-text
@@ -77,7 +85,7 @@ window.addEventListener('DOMContentLoaded', event => {
     function updateSlideInTexts() {
         for (var i = 0; i < allSlideInTexts.length; i++) {
             let e = allSlideInTexts[i];
-            if (inViewport(e)) {
+            if (inViewportPartial(e)) {
                 e.classList.add("come-in");
                 // Remove it from the list
                 allSlideInTexts.splice(i, 1);
