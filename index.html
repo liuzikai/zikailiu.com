@@ -14,8 +14,7 @@
     <link rel="preload" href="assets/img/bg-masthead.webp" as="image" type="image/webp">
     <link rel="preload" href="fonts/nunito-v25-latin-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/nunito-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="js/scripts.js" as="script">
-    <link rel="preload" href="js/bootstrap.min.js" as="script">
+    <link rel="preload" href="js/scripts.min.js" as="script">
     <!-- If not preloading, images files can be loaded first, which is not desired -->
     <!-- SVG files are loaded in the scripts.js, which also have high priorities   -->
 </head>
@@ -70,7 +69,7 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder" data-include="assets/img/robomaster-icon.svg"></div>
+                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/robomaster-icon.svg">Loading image...</div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
@@ -203,7 +202,7 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder" data-include="assets/img/joystick-icon.svg"></div>
+                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/joystick-icon.svg">Loading image...</div>
                 </div>
             </div>
             <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -322,7 +321,7 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder" data-include="assets/img/klc3-icon.svg"></div>
+                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/klc3-icon.svg">Loading image...</div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">KLC3</h2>
@@ -495,7 +494,7 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder" data-include="assets/img/wireless-charging-table-icon.svg"></div>
+                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/wireless-charging-table-icon.svg">Loading image...</div>
                 </div>
             </div>
             <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -630,7 +629,7 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-3" id="auroraOSIcon">
-                                    <div class="icon-placeholder" data-include="assets/img/aurora-os-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/aurora-os-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -665,7 +664,7 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-3" id="ozoneIcon">
-                                    <div class="icon-placeholder" data-include="assets/img/ozone-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/ozone-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -888,7 +887,7 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-4" id="riscvIcon">
-                                    <div class="icon-placeholder" data-include="assets/img/rv32i-processor-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/rv32i-processor-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -919,7 +918,7 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="m-auto px-4" id="boxheadIcon">
-                                    <div class="icon-placeholder" data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/fpga-boxhead-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -1191,9 +1190,7 @@
 <footer class="footer bg-black small text-center text-white-50">
     <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
 </footer>
-<!-- Core JS -->
-<script src="js/scripts.js"></script>
-<!-- Bootstrap core JS-->
-<script src="js/bootstrap.min.js"></script>
+<!-- Core JS with Bootstrap components needed -->
+<script src="js/scripts.min.js"></script>
 </body>
 </html>

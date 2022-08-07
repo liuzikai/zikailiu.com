@@ -1,8 +1,22 @@
 /*!
-* Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2022 Zikai Liu
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
+ * Script for my portfolio. See script.js for unminified version with comments.
+ * Copyright 2022 Zikai Liu
+ * Reference: Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale, Licensed under MIT)
+ */
+
+// Include only necessary JS from Bootstrap
+// import Alert from 'bootstrap/js/src/alert'
+// import Button from 'bootstrap/js/src/button'
+// import Carousel from 'bootstrap/js/src/carousel'
+import Collapse from 'bootstrap/js/src/collapse'
+// import Dropdown from 'bootstrap/js/src/dropdown'
+import Modal from 'bootstrap/js/src/modal'
+// import Offcanvas from 'bootstrap/js/src/offcanvas'
+// import Popover from 'bootstrap/js/src/popover'
+import ScrollSpy from 'bootstrap/js/src/scrollspy'
+// import Tab from 'bootstrap/js/src/tab'
+// import Toast from 'bootstrap/js/src/toast'
+// import Tooltip from 'bootstrap/js/src/tooltip'
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -29,7 +43,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
+        new ScrollSpy(document.body, {
             target: '#mainNav',
             offset: 74,
         });
@@ -48,9 +62,9 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    //
-    // My JS Script
-    //
+/*!
+ * My JS Script
+ */
 
     // Reference: https://stackoverflow.com/a/12418814/10087792
     //            jquery-visible(https://github.com/customd/jquery-visible)
@@ -139,9 +153,9 @@ window.addEventListener('DOMContentLoaded', event => {
         if (current > target) current = target;
         drawProjectSVG(svgElem, dashTotal, current);
         if (current < target) {
-            // Forward 2% per 50ms (take 2.5s from 0% to 100%)
-            await sleep(50);
-            await driveSVG(svgElem, dashTotal, current + 0.02, target);
+            // Forward 4% per 40ms (take 1s from 0% to 100%)
+            await sleep(40);
+            await driveSVG(svgElem, dashTotal, current + 0.04, target);
         }
     }
 
