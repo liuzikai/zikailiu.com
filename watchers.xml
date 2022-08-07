@@ -1,0 +1,42 @@
+<TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="run build:css" />
+    <option name="checkSyntaxErrors" value="true" />
+    <option name="description" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="scss" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="SCSS" />
+    <option name="output" value="$ProjectFileDir$/css" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="program" value="npm" />
+    <option name="runOnExternalChanges" value="true" />
+    <option name="scopeName" value="src/scss" />
+    <option name="trackOnlyRoot" value="true" />
+    <option name="workingDir" value="$ProjectFileDir$" />
+    <envs />
+  </TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="run build:js" />
+    <option name="checkSyntaxErrors" value="true" />
+    <option name="description" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="js" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="JS" />
+    <option name="output" value="$ProjectFileDir$/js" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="program" value="npm" />
+    <option name="runOnExternalChanges" value="true" />
+    <option name="scopeName" value="scripts.js" />
+    <option name="trackOnlyRoot" value="false" />
+    <option name="workingDir" value="$ProjectFileDir$" />
+    <envs />
+  </TaskOptions>
+</TaskOptions>
