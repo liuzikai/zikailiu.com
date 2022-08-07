@@ -10,7 +10,7 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color, border-bottom-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     /* border-bottom-color behaviors weirdly on Safari */
 
     .navbar-toggler {
