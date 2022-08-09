@@ -2357,10 +2357,13 @@
       }
 
       function calcProjectSVGPercentage(projectElem) {
-          // When clientRect.top = window.innerHeight, 0%
-          // When clientRect.top = navBarHeight, 100%
-          let alpha = -1 / (window.innerHeight - document.getElementById("mainNav").offsetHeight);
-          let percentage = (projectElem.getBoundingClientRect().top - window.innerHeight) * alpha;
+          // When clientRect.center = window.innerHeight + clientRect.height * 0.5, 0%
+          // When clientRect.center = navBarHeight + (window.innerHeight - navBarHeight) * 0.5, 100%
+          let clientRect = projectElem.getBoundingClientRect();
+          let a = 0.5 * window.innerHeight + 0.5 * clientRect.height;
+          let alpha = -1 / (a - document.getElementById("mainNav").offsetHeight * 0.5);
+          let center = (clientRect.top + clientRect.bottom) * 0.5;
+          let percentage = (center - (window.innerHeight + 0.5 * clientRect.height)) * alpha;
           if (percentage < 0) return 0;
           return percentageEase(clamp(percentage, 0, 1));
       }

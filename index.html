@@ -8,7 +8,7 @@
     <title>Zikai Liu</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin for fonts) -->
     <link rel="preload" href="fonts/nunito-v25-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/img/bg-masthead.webp" as="image" type="image/webp">
@@ -622,8 +622,8 @@
         <div class="gx-0 justify-content-center align-items-center project-container d-flex">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
-            <div class="container">
-                <div class="row my-lg-auto">
+            <div class="container my-lg-auto">
+                <div class="row">
                     <div class="col-lg-6 project-container-down-lg d-flex">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
@@ -692,7 +692,7 @@
                     </div>
                 </div>
                 <!-- To align two read more buttons, having a new row seems to be the easiest way -->
-                <div class="row show-lg mt-0 text-end slide-in-text">
+                <div class="row show-lg text-end slide-in-text">
                     <div class="col-lg-6" style="padding: 0 5rem">
                         <a class="btn more-button" data-bs-toggle="modal"
                            data-bs-target="#auroraOSMore">
@@ -880,8 +880,8 @@
         <div class="gx-0 justify-content-center align-items-center project-container d-flex">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
-            <div class="container">
-                <div class="row my-lg-auto">
+            <div class="container my-lg-auto">
+                <div class="row">
                     <div class="col-lg-6 project-container-down-lg d-flex">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
@@ -946,7 +946,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row show-lg mt-0 text-end slide-in-text">
+                <div class="row show-lg text-end slide-in-text">
                     <div class="col-lg-6" style="padding: 0 5rem">
                         <a class="btn more-button" data-bs-toggle="modal"
                            data-bs-target="#riscvProcessorMore">
