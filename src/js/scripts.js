@@ -125,7 +125,8 @@ window.addEventListener('DOMContentLoaded', event => {
         // When clientRect.center = navBarHeight + (window.innerHeight - navBarHeight) * 0.5, 100%
         let clientRect = projectElem.getBoundingClientRect();
         let a = 0.5 * window.innerHeight + 0.5 * clientRect.height;
-        let alpha = -1 / (a - document.getElementById("mainNav").offsetHeight * 0.5);
+        // mainNav expandable in mobile, use mainNavBody
+        let alpha = -1 / (a - document.getElementById("mainNavBody").offsetHeight * 0.5);
         let center = (clientRect.top + clientRect.bottom) * 0.5;
         let percentage = (center - (window.innerHeight + 0.5 * clientRect.height)) * alpha;
         if (percentage < 0) return 0;

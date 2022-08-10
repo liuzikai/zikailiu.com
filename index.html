@@ -8,7 +8,7 @@
     <title>Zikai Liu</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="css/styles.full.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin for fonts) -->
     <link rel="preload" href="fonts/nunito-v25-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/img/bg-masthead.webp" as="image" type="image/webp">
@@ -30,17 +30,29 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5 collapsed my-auto"  id="mainNavBody"
+         type="button" data-bs-toggle="collapse"
+         data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+         aria-label="Toggle navigation" style="height: 100%">
+        <div class="navbar-brand text-white" href="#page-top">
+            <!-- There should be no space between spans -->
+            <span class="navbar-brand-text navbar-brand-part1">Zikai</span><span class="navbar-brand-part2-container"><span class="navbar-brand-text navbar-brand-part2 text-white"></span></span>
+        </div>
+        <div class="navbar-toggler navbar-toggler-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+    </div>
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand text-white" href="#page-top">Zikai Liu</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu&nbsp;&nbsp;<i class="fas fa-bars"></i>
-        </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
@@ -69,7 +81,9 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/robomaster-icon.svg">Loading image...</div>
+                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/robomaster-icon.svg">
+                    Loading image...
+                </div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
@@ -98,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="robomasterMore" tabindex="-1" aria-labelledby="robomasterMoreLabel"
+        <div class="modal fade" id="robomasterMore" tabindex="-1" aria-labelledby="robomasterMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -202,7 +216,9 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/joystick-icon.svg">Loading image...</div>
+                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/joystick-icon.svg">
+                        Loading image...
+                    </div>
                 </div>
             </div>
             <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -228,7 +244,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="netEaseGameMore" tabindex="-1" aria-labelledby="netEaseGameMoreLabel"
+        <div class="modal fade" id="netEaseGameMore" tabindex="-1" aria-labelledby="netEaseGameMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -321,7 +337,9 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/klc3-icon.svg">Loading image...</div>
+                <div class="icon-placeholder text-center text-white-50" data-include="assets/img/klc3-icon.svg">Loading
+                    image...
+                </div>
             </div>
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">KLC3</h2>
@@ -345,7 +363,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="klc3More" tabindex="-1" aria-labelledby="klc3MoreLabel"
+        <div class="modal fade" id="klc3More" tabindex="-1" aria-labelledby="klc3MoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -494,7 +512,9 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/wireless-charging-table-icon.svg">Loading image...</div>
+                    <div class="icon-placeholder text-center text-white-50"
+                         data-include="assets/img/wireless-charging-table-icon.svg">Loading image...
+                    </div>
                 </div>
             </div>
             <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -520,7 +540,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="wirelessChargingTableMore" tabindex="-1"
+        <div class="modal fade" id="wirelessChargingTableMore" tabindex="-1"
              aria-labelledby="wirelessChargingTableMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
@@ -629,7 +649,8 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-3" id="auroraOSIcon">
-                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/aurora-os-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50"
+                                         data-include="assets/img/aurora-os-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -664,7 +685,8 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-3" id="ozoneIcon">
-                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/ozone-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50"
+                                         data-include="assets/img/ozone-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -716,7 +738,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="auroraOSMore" tabindex="-1" aria-labelledby="auroraOSMoreLabel"
+        <div class="modal fade" id="auroraOSMore" tabindex="-1" aria-labelledby="auroraOSMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -794,7 +816,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="ozoneMore" tabindex="-1" aria-labelledby="ozoneMoreLabel"
+        <div class="modal fade" id="ozoneMore" tabindex="-1" aria-labelledby="ozoneMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -887,7 +909,8 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="mx-auto px-4" id="riscvIcon">
-                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/rv32i-processor-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50"
+                                         data-include="assets/img/rv32i-processor-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -918,7 +941,8 @@
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
                                 <div class="m-auto px-4" id="boxheadIcon">
-                                    <div class="icon-placeholder text-center text-white-50" data-include="assets/img/fpga-boxhead-icon.svg"></div>
+                                    <div class="icon-placeholder text-center text-white-50"
+                                         data-include="assets/img/fpga-boxhead-icon.svg"></div>
                                 </div>
                             </div>
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
@@ -972,7 +996,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="riscvProcessorMore" tabindex="-1"
+        <div class="modal fade" id="riscvProcessorMore" tabindex="-1"
              aria-labelledby="riscvProcessorMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
@@ -1031,7 +1055,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="boxheadMore" tabindex="-1"
+        <div class="modal fade" id="boxheadMore" tabindex="-1"
              aria-labelledby="boxheadMoreLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">

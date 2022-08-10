@@ -5,7 +5,7 @@ const {PurgeCSS} = require("purgecss");
 const htmlFile = upath.resolve(upath.dirname(__filename), '../index.html');
 const srcFile = upath.resolve(upath.dirname(__filename), '../css/styles.full.css');
 const safeList = {
-    standard: [/.+-animated-svg/, 'come-in'],
+    standard: [/.+-animated-svg/, 'come-in', 'collapsed', 'collapsing'],
 }
 const destFile = upath.resolve(upath.dirname(__filename), '../css/styles.css');
 

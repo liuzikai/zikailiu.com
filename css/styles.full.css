@@ -11544,16 +11544,53 @@ body {
   font-size: 80%;
   padding: 0.75rem;
   color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
+  transform: rotate(180deg);
+  transition: transform 0.5s;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
+#mainNav .collapsed .navbar-toggler {
+  transform: none;
+  transition: transform 0.5s;
+}
 #mainNav .navbar-brand {
+  padding: 0.9rem 0;
+}
+#mainNav .navbar-brand-text {
   font-size: 1.5rem;
   color: #fff;
   font-weight: 700;
-  padding: 0.9rem 0;
+}
+#mainNav .navbar-brand-part1 {
+  padding-right: 0;
+}
+#mainNav .navbar-brand-part2-container {
+  position: relative;
+}
+#mainNav .navbar-brand-part2:after {
+  content: " Liu";
+}
+@media (max-width: 991.98px) {
+  #mainNav .navbar-brand-part2:before {
+    content: "'s Projects";
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #mainNav .navbar-brand-part2:after {
+    content: " Liu";
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    left: 0;
+  }
+  #mainNav .collapsed .navbar-brand-part2:before {
+    opacity: 1;
+  }
+  #mainNav .collapsed .navbar-brand-part2:after {
+    opacity: 0;
+  }
 }
 #mainNav .nav-link:hover {
   color: #fff;
@@ -11574,10 +11611,6 @@ body {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-  #mainNav .navbar-brand {
-    padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
-  }
   #mainNav .nav-link {
     padding: 1.5rem 1.5rem 1.25rem;
     color: rgba(255, 255, 255, 0.3);
@@ -11596,7 +11629,7 @@ body {
   #mainNav.navbar-shrink .nav-link {
     color: rgba(255, 255, 255, 0.5);
     padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
+    /*border-bottom: 0.25rem solid transparent;*/
     /*&.active {
         color: $white;
         outline: none;
@@ -11767,6 +11800,10 @@ body {
 
 .modal-close:hover {
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.modal.fade .modal-dialog {
+  transform: none;
 }
 
 .masthead {

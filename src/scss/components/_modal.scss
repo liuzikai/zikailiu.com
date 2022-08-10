@@ -40,3 +40,11 @@
 .modal-close:hover {
     color: rgba(255, 255, 255, 0.5) !important;
 }
+
+.modal.fade .modal-dialog {
+    // Disable slide-in
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+
+}
