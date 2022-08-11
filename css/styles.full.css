@@ -11801,8 +11801,6 @@ body {
   min-height: 35rem;
   padding: 15rem 0;
   opacity: 0;
-  /* Firefox < 16 */
-  /* Safari, Chrome and Opera > 12.1 */
 }
 .masthead.masthead-actual-background {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.webp");
@@ -12074,6 +12072,24 @@ body {
   .hidden-lg {
     display: none;
   }
+}
+
+#robomaster-head-image {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/img/robomaster-me.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 66.64%;
+}
+
+#joystick-head-image {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/img/joystick-photo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 50%;
 }
 
 .footer {
