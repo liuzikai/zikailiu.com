@@ -17,6 +17,7 @@
     <link rel="preload" href="js/scripts.min.js" as="script">
     <!-- If not preloading, images files can be loaded first, which is not desired -->
     <!-- SVG files are loaded in the scripts.js, which also have high priorities   -->
+    <!-- Images are loaded normally, while the videos are loaded as modal opens    -->
 </head>
 <body id="page-top">
 
@@ -130,7 +131,7 @@
                     I worked on a vision-assisted automatic aiming system.
                 </p>
                 <div class="mt-4 text-end slide-in-text">
-                    <a class="btn shadow-none" data-bs-toggle="modal"
+                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#robomasterMore">
                         Read more
                         <svg width="1.2em" height="1.2em">
@@ -262,7 +263,7 @@
                     the NetEase Android Emulator.
                 </p>
                 <div class="mt-4 text-end slide-in-text">
-                    <a class="btn shadow-none" data-bs-toggle="modal"
+                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#netEaseGameMore">
                         Read more
                         <svg width="1.2em" height="1.2em">
@@ -376,7 +377,7 @@
                     Our work was published at <span class="text-white">ASE 2021</span>.
                 </p>
                 <div class="mt-4 text-end slide-in-text">
-                    <a class="btn shadow-none" data-bs-toggle="modal"
+                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#klc3More">
                         Read more
                         <svg width="1.2em" height="1.2em">
@@ -558,7 +559,7 @@
                     at the ZJU-UIUC Institute.
                 </p>
                 <div class="mt-4 text-end slide-in-text">
-                    <a class="btn shadow-none" data-bs-toggle="modal"
+                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#wirelessChargingTableMore">
                         Read more
                         <svg width="1.2em" height="1.2em">
@@ -582,7 +583,7 @@
                         <div class="text-center hidden-lg">
                             <!-- GIF is too large, ~20MB, while MP4 is only 2MB -->
                             <video style="width: 100%; object-fit: cover" autoplay muted loop>
-                                <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                <source class="modal-lazy" src="" data-src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
                                 Sorry, your browser does not support the video tag.
                             </video>
                             <p class="image-caption mt-2 mb-0">
@@ -643,15 +644,15 @@
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
                                         <!-- First side image only showing in lg mode -->
-                                        <video style="width: 100%; object-fit: cover" autoplay muted loop>
-                                            <source src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                        <video class="show-lg" src style="width: 100%; object-fit: cover" autoplay muted loop>
+                                            <source class="modal-lazy" src="" data-src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
                                         <p class="image-caption mt-2 mb-4 show-lg">Demonstration of the
                                             Table Charging Multiple Cellphones</p>
                                         <!-- Additional images -->
                                         <video style="width: 100%; object-fit: cover" autoplay muted loop>
-                                            <source src="assets/img/qi-table-mechanism.mp4" type="video/mp4">
+                                            <source class="modal-lazy" src="" data-src="assets/img/qi-table-mechanism.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
                                         <p class="image-caption mt-2 mb-4">Mechanical System of
@@ -701,7 +702,7 @@
                                 </p>
                                 <!-- This button is hidden when >= lg -->
                                 <div class="mt-4 text-end slide-in-text hidden-lg">
-                                    <a class="btn shadow-none" data-bs-toggle="modal"
+                                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                                        data-bs-target="#auroraOSMore">
                                         Read more
                                         <svg width="1.2em" height="1.2em">
@@ -731,7 +732,7 @@
                                 </p>
                                 <!-- This button is hidden when >= lg -->
                                 <div class="mt-4 text-end slide-in-text hidden-lg">
-                                    <a class="btn shadow-none" data-bs-toggle="modal"
+                                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                                        data-bs-target="#ozoneMore">
                                         Read more
                                         <svg width="1.2em" height="1.2em">
@@ -746,7 +747,7 @@
                 <!-- To align two read more buttons, having a new row seems to be the easiest way -->
                 <div class="row show-lg text-end slide-in-text">
                     <div class="col-lg-6" style="padding: 0 5rem">
-                        <a class="btn shadow-none" data-bs-toggle="modal"
+                        <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                            data-bs-target="#auroraOSMore">
                             Read more
                             <svg width="1.2em" height="1.2em">
@@ -755,7 +756,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6" style="padding: 0 5rem">
-                        <a class="btn shadow-none" data-bs-toggle="modal"
+                        <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                            data-bs-target="#ozoneMore">
                             Read more
                             <svg width="1.2em" height="1.2em">
@@ -953,7 +954,7 @@
                                 </p>
                                 <!-- This button is hidden when >= lg -->
                                 <div class="mt-4 text-end slide-in-text hidden-lg">
-                                    <a class="btn shadow-none" data-bs-toggle="modal"
+                                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                                        data-bs-target="#riscvProcessorMore">
                                         Read more
                                         <svg width="1.2em" height="1.2em">
@@ -984,7 +985,7 @@
                                 </p>
                                 <!-- This button is hidden when >= lg -->
                                 <div class="mt-4 text-end slide-in-text hidden-lg">
-                                    <a class="btn shadow-none" data-bs-toggle="modal"
+                                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                                        data-bs-target="#boxheadMore">
                                         Read more
                                         <svg width="1.2em" height="1.2em">
@@ -998,7 +999,7 @@
                 </div>
                 <div class="row show-lg text-end slide-in-text">
                     <div class="col-lg-6" style="padding: 0 5rem">
-                        <a class="btn shadow-none" data-bs-toggle="modal"
+                        <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                            data-bs-target="#riscvProcessorMore">
                             Read more
                             <svg width="1.2em" height="1.2em">
@@ -1007,7 +1008,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6" style="padding: 0 5rem">
-                        <a class="btn shadow-none" data-bs-toggle="modal"
+                        <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                            data-bs-target="#boxheadMore">
                             Read more
                             <svg width="1.2em" height="1.2em">
@@ -1246,5 +1247,18 @@
 </footer>
 <!-- Core JS with Bootstrap components needed -->
 <script src="js/scripts.min.js"></script>
+<script>
+    function readMoreClicked(readMoreButton) {
+        // Lazy loading images and videos (not in scripts.js as it is removed as unused)
+        let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
+        Array.from(modal.querySelectorAll(".modal-lazy")).forEach(e => {
+            e.src = e.dataset.src;
+            e.classList.remove("modal-lazy");
+            if (e.type === "video/mp4") {
+                e.parentNode.load();
+            }
+        });
+    }
+</script>
 </body>
 </html>
