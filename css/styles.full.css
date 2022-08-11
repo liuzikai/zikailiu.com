@@ -11651,12 +11651,12 @@ body {
   /*border: 2px solid transparent;*/
   border: none;
   padding: 0.375rem 1rem;
-  border-radius: 3rem;
+  /*border-radius: 3rem;*/
+  border-radius: unset;
   margin-left: auto;
   margin-right: 0;
-  color: rgba(255, 255, 255, 0.5) !important;
-  fill: rgba(255, 255, 255, 0.5) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5);
+  /*border-color: rgba(255, 255, 255, 0.5);*/
   font-size: 12px;
 }
 @media (min-width: 576px) {
@@ -11685,10 +11685,13 @@ body {
   }
 }
 
+.btn-external-link {
+  color: #1cabc4;
+}
+
 .btn:hover {
   color: #fff !important;
-  fill: #fff !important;
-  border-color: #fff !important;
+  /*border-color: $white !important;*/
 }
 
 #robomaster-animated-svg {
