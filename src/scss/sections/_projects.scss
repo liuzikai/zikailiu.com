@@ -25,7 +25,10 @@
     }
 
     .project-text {
-        padding: 3rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 5rem;
 
         @include media-breakpoint-up(lg) {
             padding: 5rem;

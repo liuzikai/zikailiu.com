@@ -2357,14 +2357,22 @@
       }
 
       function calcProjectSVGPercentage(projectElem) {
-          // When clientRect.center = window.innerHeight + clientRect.height * 0.5, 0%
-          // When clientRect.center = navBarHeight + (window.innerHeight - navBarHeight) * 0.5, 100%
+          // 0% when first becomes visible from the bottom
+          //   clientRect.top = window.innerHeight
+          // Case 1: 100% when the container is centralized vertically
+          //   clientRect.top = navBarHeight + (window.innerHeight - navBarHeight) * 0.5 - clientRect.height * 0.5
+          // Case 2: 100% when container.top = navBarHeight * 1.5, useful for mobile short screen
+          //   clientRect.top = navBarHeight * 1.5
+          // Choose the larger one of case 1 and 2 (whichever reach first)
           let clientRect = projectElem.getBoundingClientRect();
-          let a = 0.5 * window.innerHeight + 0.5 * clientRect.height;
           // mainNav expandable in mobile, use mainNavBody
-          let alpha = -1 / (a - document.getElementById("mainNavBody").offsetHeight * 0.5);
-          let center = (clientRect.top + clientRect.bottom) * 0.5;
-          let percentage = (center - (window.innerHeight + 0.5 * clientRect.height)) * alpha;
+          let navBarHeight = document.getElementById("mainNavBody").offsetHeight;
+          let topStart = window.innerHeight,
+              topEnd1 = (navBarHeight + window.innerHeight - clientRect.height) * 0.5,  // simplified
+              topEnd2 = (navBarHeight * 1.5),
+              topEnd = Math.max(topEnd1, topEnd2);
+          let slope = 1 / (topEnd - topStart);
+          let percentage = (clientRect.top - topStart) * slope;
           if (percentage < 0) return 0;
           return percentageEase(clamp(percentage, 0, 1));
       }
