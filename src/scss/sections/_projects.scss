@@ -12,6 +12,15 @@
     }
 }
 
+@include media-breakpoint-up(lg) {
+    .project-container-down-lg {
+        .project-text {
+            padding-left: 2.5rem !important;
+            padding-right: 2.5rem !important;
+        }
+    }
+}
+
 .projects-section {
     padding: 10rem 0;
 

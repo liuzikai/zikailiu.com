@@ -61,14 +61,15 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
     <!-- This brand show when >= lg -->
-    <div class="container px-4 px-lg-5 my-auto show-lg" id="mainNavBody" style="height: 100%">
-        <div class="navbar-brand text-white" href="#page-top">
-            <span class="navbar-brand-text navbar-brand-part1">Zikai Liu</span>
-        </div>
+    <div class="show-lg" id="mainNavBody" style="height: 100%">
+        <a class="navbar-brand text-white" href="/">
+            <span class="navbar-brand-text">Zikai Liu</span>
+        </a>
     </div>
     <!-- This brand show when < lg -->
-    <div class="container px-4 px-lg-5 my-auto hidden-lg collapsed" style="height: 100%"
+    <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
          data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
          aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-brand text-white" href="#page-top">
@@ -77,24 +78,23 @@
                 class="navbar-brand-part2-container"><span
                 class="navbar-brand-text navbar-brand-part2 text-white"></span></span>
         </div>
-        <div class="navbar-toggler navbar-toggler-right">
+        <div class="navbar-toggler my-auto">
             <svg width="16" height="16">
                 <use href="#bi-chevron-down"></use>
             </svg>
         </div>
     </div>
     <!-- Expanded when >= lg, drop-down menu when < lg -->
-    <div class="container px-4 px-lg-5">
+    <div class="">
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
+                <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
         </div>
+    </div>
     </div>
 </nav>
 
@@ -956,7 +956,7 @@
                                          data-include="assets/img/rv32i-processor-icon.svg"></div>
                                 </div>
                             </div>
-                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text project-text-left text-start">
                                 <h2 class="project-header mb-4 slide-in-text">RISC&#8209;V Processor Design</h2>
                                 <p class="slide-in-text">
                                     As the UIUC ECE411 design project, my teammates and I designed and simulated a
@@ -986,7 +986,7 @@
                                          data-include="assets/img/fpga-boxhead-icon.svg"></div>
                                 </div>
                             </div>
-                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
+                            <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text project-text-right text-start">
                                 <h2 class="project-header mb-4 slide-in-text">Boxhead Game on FPGA</h2>
                                 <p class="slide-in-text">
                                     As the UIUC ECE385 design project, my teammate and I developed the
