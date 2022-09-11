@@ -15,9 +15,9 @@
     <link rel="preload" href="fonts/nunito-v25-latin-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/nunito-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="js/scripts.min.js" as="script">
-    <!-- If not preloading, images files can be loaded first, which is not desired -->
-    <!-- SVG files are loaded in the scripts.js, which also have high priorities   -->
-    <!-- Images are loaded normally, while the videos are loaded as modal opens    -->
+    <!-- If not preloading, images files can be loaded first, which is not desired     -->
+    <!-- SVG files are loaded in the scripts.js, which also have high priorities       -->
+    <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
 </head>
 <body id="page-top">
 
@@ -61,10 +61,16 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5 collapsed my-auto" id="mainNavBody"
-         type="button" data-bs-toggle="collapse"
-         data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-         aria-label="Toggle navigation" style="height: 100%">
+    <!-- This brand show when >= lg -->
+    <div class="container px-4 px-lg-5 my-auto show-lg" id="mainNavBody" style="height: 100%">
+        <div class="navbar-brand text-white" href="#page-top">
+            <span class="navbar-brand-text navbar-brand-part1">Zikai Liu</span>
+        </div>
+    </div>
+    <!-- This brand show when < lg -->
+    <div class="container px-4 px-lg-5 my-auto hidden-lg collapsed" style="height: 100%"
+         data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+         aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-brand text-white" href="#page-top">
             <!-- There should be no space between spans -->
             <span class="navbar-brand-text navbar-brand-part1">Zikai</span><span
@@ -77,6 +83,7 @@
             </svg>
         </div>
     </div>
+    <!-- Expanded when >= lg, drop-down menu when < lg -->
     <div class="container px-4 px-lg-5">
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
@@ -346,7 +353,8 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
-                                        <img src="assets/img/joystick-photo.webp" class="show-lg" style="max-width: 100%"
+                                        <img src="assets/img/joystick-photo.webp" class="show-lg"
+                                             style="max-width: 100%"
                                              alt="Various Joysticks"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">Various Joysticks</p>
                                     </div>
@@ -583,7 +591,8 @@
                         <div class="text-center hidden-lg">
                             <!-- GIF is too large, ~20MB, while MP4 is only 2MB -->
                             <video style="width: 100%; object-fit: cover" autoplay muted loop>
-                                <source class="modal-lazy" src="" data-src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                <source class="modal-lazy" src="" data-src="assets/img/qi-table-demo-muted.mp4"
+                                        type="video/mp4">
                                 Sorry, your browser does not support the video tag.
                             </video>
                             <p class="image-caption mt-2 mb-0">
@@ -644,15 +653,18 @@
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
                                         <!-- First side image only showing in lg mode -->
-                                        <video class="show-lg" src style="width: 100%; object-fit: cover" autoplay muted loop>
-                                            <source class="modal-lazy" src="" data-src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
+                                        <video class="show-lg" src style="width: 100%; object-fit: cover" autoplay muted
+                                               loop>
+                                            <source class="modal-lazy" src=""
+                                                    data-src="assets/img/qi-table-demo-muted.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
                                         <p class="image-caption mt-2 mb-4 show-lg">Demonstration of the
                                             Table Charging Multiple Cellphones</p>
                                         <!-- Additional images -->
                                         <video style="width: 100%; object-fit: cover" autoplay muted loop>
-                                            <source class="modal-lazy" src="" data-src="assets/img/qi-table-mechanism.mp4" type="video/mp4">
+                                            <source class="modal-lazy" src=""
+                                                    data-src="assets/img/qi-table-mechanism.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
                                         <p class="image-caption mt-2 mb-4">Mechanical System of
@@ -1260,5 +1272,7 @@
         });
     }
 </script>
+<!-- Statistics -->
+<script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>
 </html>

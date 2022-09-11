@@ -34,9 +34,9 @@ module.exports = function renderSCSS() {
 };
 
 const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
-*/
+ * CSS for my portfolio. See styles.full.js for the unminified version.
+ * Copyright 2022 Zikai Liu
+ * Reference: Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale, Licensed under MIT)
+ */
 @import "${stylesPath}"
 `

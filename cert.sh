@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WEBSITE_OPTIONS='-d zikailiu.com -d liuzik.ai'
+WEBSITE_OPTIONS='-d zikailiu.com -d stats.zikailiu.com -d liuzik.ai'
 
 systemctl stop nginx
 

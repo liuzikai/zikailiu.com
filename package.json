@@ -57,5 +57,8 @@
         "shelljs": "0.8.5",
         "terser": "^5.14.2",
         "upath": "2.0.1"
-    }
+    },
+    "browserslist": [
+        "defaults"
+    ]
 }
