@@ -2,6 +2,12 @@
 // Navbar
 //
 
+.navbar {
+    .navbar-brand {
+        font-weight: 700;
+    }
+}
+
 #mainNav {
     min-height: 3.5rem;
     background-color: rgba(0, 0, 0, 0.3);
