@@ -61,31 +61,29 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-    <!-- This brand show when >= lg -->
-    <div class="show-lg" id="mainNavBody" style="height: 100%">
-        <a class="navbar-brand text-white" href="/">
-            <span class="navbar-brand-text">Zikai Liu</span>
-        </a>
-    </div>
-    <!-- This brand show when < lg -->
-    <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-         data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-         aria-expanded="false" aria-label="Toggle navigation">
-        <div class="navbar-brand text-white" href="#page-top">
-            <!-- There should be no space between spans -->
-            <span class="navbar-brand-text navbar-brand-part1">Zikai</span><span
-                class="navbar-brand-part2-container"><span
-                class="navbar-brand-text navbar-brand-part2 text-white"></span></span>
+    <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
+    <div class="container px-4 px-lg-5 d-block d-lg-flex">
+        <!-- This brand show when >= lg -->
+        <div class="show-lg" id="mainNavBody" style="height: 100%">
+            <a class="navbar-brand" href="/">Zikai Liu</a>
         </div>
-        <div class="navbar-toggler my-auto">
-            <svg width="16" height="16">
-                <use href="#bi-chevron-down"></use>
-            </svg>
+        <!-- This brand show when < lg -->
+        <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+             aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-brand" href="#page-top">
+                <!-- There should be no space between spans -->
+                <span class="navbar-brand-part1">Zikai</span><span
+                    class="navbar-brand-part2-container"><span
+                    class="navbar-brand-part2 text-white"></span></span>
+            </div>
+            <div class="navbar-toggler navbar-toggler-right my-auto">
+                <svg width="16" height="16">
+                    <use href="#bi-chevron-down"></use>
+                </svg>
+            </div>
         </div>
-    </div>
-    <!-- Expanded when >= lg, drop-down menu when < lg -->
-    <div class="">
+        <!-- Expanded when >= lg, drop-down menu when < lg -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
@@ -94,7 +92,6 @@
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
         </div>
-    </div>
     </div>
 </nav>
 
@@ -118,7 +115,8 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/robomaster-icon.svg">
+                <div class="icon-placeholder text-center text-white-50"
+                     data-include="/assets/projects/robomaster-icon.svg">
                     Loading image...
                 </div>
             </div>
@@ -226,7 +224,8 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
-                                        <img src="/assets/projects/robomaster-me.webp" class="show-lg" style="max-width: 100%"
+                                        <img src="/assets/projects/robomaster-me.webp" class="show-lg"
+                                             style="max-width: 100%"
                                              alt="RoboMaster 2019"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">RoboMaster 2019</p>
                                         <img src="/assets/projects/robomaster-competition.webp" style="max-width: 100%"
@@ -253,7 +252,8 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/joystick-icon.svg">
+                    <div class="icon-placeholder text-center text-white-50"
+                         data-include="/assets/projects/joystick-icon.svg">
                         Loading image...
                     </div>
                 </div>
@@ -370,7 +370,8 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/klc3-icon.svg">Loading
+                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/klc3-icon.svg">
+                    Loading
                     image...
                 </div>
             </div>
@@ -922,7 +923,8 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
-                                        <img src="/assets/projects/ozone-team.webp" class="show-lg" style="max-width: 100%"
+                                        <img src="/assets/projects/ozone-team.webp" class="show-lg"
+                                             style="max-width: 100%"
                                              alt="Our team and the teaching staff at the Advanced Operating Systems demo"/>
                                         <p class="image-caption mt-2 mb-0 show-lg">
                                             Our Team and the Teaching Staff at the Advanced Operating Systems Demo</p>
@@ -1082,7 +1084,8 @@
                                              alt="Presentation of the cache performance: more than 90% hit rates for all levels and significant speedups, varying for different workloads"/>
                                         <p class="image-caption mt-2 mb-4">
                                             Presentation of the cache performance</p>
-                                        <img src="/assets/projects/rv32i-processor-datapath.webp" style="max-width: 100%"
+                                        <img src="/assets/projects/rv32i-processor-datapath.webp"
+                                             style="max-width: 100%"
                                              alt="Datapath block diagram of the processor"/>
                                         <p class="image-caption mt-2 mb-4">
                                             Datapath of the Processor</p>

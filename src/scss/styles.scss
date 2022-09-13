@@ -6,6 +6,7 @@
 @import "./variables/colors.scss";
 @import "./variables/typography.scss";  // should be ahead of bootstrap.scss to set font family
 @import "./variables/animations.scss";
+@import "./variables/navbar.scss";
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
@@ -28,5 +29,5 @@
 @import "./sections/footer.scss";
 
 // Pages
-@import "./pages/index.scss";
+@import "./pages/home.scss";
 @import "./pages/projects.scss";

@@ -4,8 +4,6 @@
 
 #mainNav {
     min-height: 3.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -14,7 +12,6 @@
 
     .navbar-toggler {
         font-size: 80%;
-        padding: 0.75rem;
         color: rgba(255, 255, 255, 0.5);
         border: none;
 
@@ -31,29 +28,15 @@
         transition: transform 0.5s;
     }
 
-    .navbar-brand {
-        padding: 0.9rem 0;
-    }
-
-    .navbar-brand-text {
-        font-size: 1.5rem;
-        color: $white;
-        font-weight: 700;
-    }
-
-    .navbar-brand-part1 {
-        padding-right: 0;
-    }
-
-    .navbar-brand-part2-container {
-        position: relative;
-    }
-
-    .navbar-brand-part2:after {
-        content: " Liu";
-    }
-
     @include media-breakpoint-down(lg) {
+        .navbar-brand-part1 {
+            padding-right: 0;
+        }
+
+        .navbar-brand-part2-container {
+            position: relative;
+        }
+
         .navbar-brand-part2:before {
             content: "'s Projects";
             opacity: 0;
@@ -61,7 +44,7 @@
         }
 
         .navbar-brand-part2:after {
-            content: "\00a0Liu";
+            content: "\00a0Liu's";
             opacity: 1;
             transition: opacity 0.5s ease;
             position:absolute;
@@ -108,7 +91,6 @@
         }
 
         .nav-link {
-            padding: 1.5rem 1.5rem 1.25rem;
             color: rgba(255, 255, 255, 0.3);
             transition: color 0.2s ease-in-out;
             /* Safari behaviors weirdly if this is commented */

@@ -1,0 +1,13 @@
+.masthead {
+    &.masthead-home-bg {
+        background: url("/assets/home/masthead-normal.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        opacity: 1;
+        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
+        animation: bg-fadein 1s;
+    }
+}

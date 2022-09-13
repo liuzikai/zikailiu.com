@@ -4108,7 +4108,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1.25rem 1.5rem;
   color: #64a19d;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -4200,8 +4200,10 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4216,12 +4218,17 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.275rem + 0.3vw);
   text-decoration: none;
   white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 }
 .navbar-nav {
   display: flex;
@@ -4239,8 +4246,8 @@ textarea.form-control-lg {
 }
 
 .navbar-text {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .navbar-collapse {
@@ -4250,7 +4257,7 @@ textarea.form-control-lg {
 }
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
+  padding: 0.75rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -4299,8 +4306,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-expand-sm .navbar-nav-scroll {
     overflow: visible;
@@ -4352,8 +4359,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-expand-md .navbar-nav-scroll {
     overflow: visible;
@@ -4405,8 +4412,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
@@ -4458,8 +4465,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-xl .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-expand-xl .navbar-nav-scroll {
     overflow: visible;
@@ -4511,8 +4518,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-xxl .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-expand-xxl .navbar-nav-scroll {
     overflow: visible;
@@ -4563,8 +4570,8 @@ textarea.form-control-lg {
   position: absolute;
 }
 .navbar-expand .navbar-nav .nav-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 .navbar-expand .navbar-nav-scroll {
   overflow: visible;
@@ -11531,8 +11538,6 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -11542,7 +11547,6 @@ body {
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.75rem;
   color: rgba(255, 255, 255, 0.5);
   border: none;
   transform: rotate(180deg);
@@ -11555,31 +11559,20 @@ body {
   transform: none;
   transition: transform 0.5s;
 }
-#mainNav .navbar-brand {
-  padding: 0.9rem 0;
-}
-#mainNav .navbar-brand-text {
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: 700;
-}
-#mainNav .navbar-brand-part1 {
-  padding-right: 0;
-}
-#mainNav .navbar-brand-part2-container {
-  position: relative;
-}
-#mainNav .navbar-brand-part2:after {
-  content: " Liu";
-}
 @media (max-width: 991.98px) {
+  #mainNav .navbar-brand-part1 {
+    padding-right: 0;
+  }
+  #mainNav .navbar-brand-part2-container {
+    position: relative;
+  }
   #mainNav .navbar-brand-part2:before {
     content: "'s Projects";
     opacity: 0;
     transition: opacity 0.5s ease;
   }
   #mainNav .navbar-brand-part2:after {
-    content: " Liu";
+    content: " Liu's";
     opacity: 1;
     transition: opacity 0.5s ease;
     position: absolute;
@@ -11612,7 +11605,6 @@ body {
     backdrop-filter: none;
   }
   #mainNav .nav-link {
-    padding: 1.5rem 1.5rem 1.25rem;
     color: rgba(255, 255, 255, 0.3);
     transition: color 0.2s ease-in-out;
     /* Safari behaviors weirdly if this is commented */
@@ -12085,6 +12077,19 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.masthead.masthead-home-bg {
+  background: url("/assets/home/masthead-normal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 1;
+  -webkit-animation: bg-fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  animation: bg-fadein 1s;
 }
 
 .masthead.masthead-projects-bg {

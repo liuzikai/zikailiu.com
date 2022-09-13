@@ -8,7 +8,7 @@
     <title>Zikai Liu's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-v25-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/projects/projects-masthead.webp" as="image" type="image/webp">
@@ -23,8 +23,8 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/projects/projects-masthead.webp"
-         onload='document.getElementById("masthead").classList.add("masthead-actual-background");' alt="">
+    <img src="/assets/home/masthead-normal.png"
+         onload='document.getElementById("masthead").classList.add("masthead-home-bg");' alt="">
 </div>
 
 <!-- Embedded SVG used -->
@@ -60,46 +60,44 @@
 <!-- TODO: add necessary hyperlinks -->
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-    <!-- This brand show when >= lg -->
-    <div class="show-lg" id="mainNavBody" style="height: 100%">
-        <a class="navbar-brand text-white" href="/">
-            <span class="navbar-brand-text">Zikai Liu</span>
-        </a>
-    </div>
-    <!-- This brand show when < lg -->
-    <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-         data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-         aria-expanded="false" aria-label="Toggle navigation">
-        <div class="navbar-brand text-white" href="#page-top">
-            <!-- There should be no space between spans -->
-            <span class="navbar-brand-text navbar-brand-part1">Zikai</span><span
-                class="navbar-brand-part2-container"><span
-                class="navbar-brand-text navbar-brand-part2 text-white"></span></span>
-        </div>
-        <div class="navbar-toggler my-auto">
-            <svg width="16" height="16">
-                <use href="#bi-chevron-down"></use>
-            </svg>
-        </div>
-    </div>
-    <!-- Expanded when >= lg, drop-down menu when < lg -->
-    <div class="">
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
-</nav>
+
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
+    <div class="navbar navbar-expand-lg navbar-light" id="">
+        <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
+        <div class="container px-4 px-lg-5 d-block d-lg-flex">
+            <!-- This brand show when >= lg -->
+            <div class="show-lg" id="mainNavBody" style="height: 100%">
+                <a class="navbar-brand" href="/">Zikai Liu</a>
+            </div>
+            <!-- This brand show when < lg -->
+            <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                 aria-expanded="false" aria-label="Toggle navigation">
+                <div class="navbar-brand" href="#page-top">
+                    <!-- There should be no space between spans -->
+                    <span class="navbar-brand-part1">Zikai</span><span
+                        class="navbar-brand-part2-container"><span
+                        class="navbar-brand-part2 text-white"></span></span>
+                </div>
+                <div class="navbar-toggler navbar-toggler-right my-auto">
+                    <svg width="16" height="16">
+                        <use href="#bi-chevron-down"></use>
+                    </svg>
+                </div>
+            </div>
+            <!-- Expanded when >= lg, drop-down menu when < lg -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="masthead-text text-center" style="font-weight: lighter;">
