@@ -216,7 +216,7 @@ small, .small {
 
 a {
   color: #64a19d;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: #50817e;
@@ -473,7 +473,6 @@ output {
   line-height: 1.5;
   color: #fff;
   text-align: center;
-  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
@@ -543,7 +542,6 @@ output {
   display: block;
   padding: 1.25rem 1.5rem;
   color: #64a19d;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -577,7 +575,6 @@ output {
   padding-bottom: 0.9rem;
   margin-right: 1rem;
   font-size: calc(1.275rem + 0.3vw);
-  text-decoration: none;
   white-space: nowrap;
 }
 @media (min-width: 1200px) {
@@ -902,6 +899,10 @@ output {
   justify-content: center !important;
 }
 
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
 .align-items-start {
   align-items: flex-start !important;
 }
@@ -1053,6 +1054,11 @@ output {
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-black {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -1144,8 +1150,15 @@ body {
   font-weight: 700;
 }
 
+.navbar-light .navbar-brand .navbar-brand-text {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-dark .navbar-brand .navbar-brand-text {
+  color: #fff;
+}
+
 #mainNav {
-  min-height: 3.5rem;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1604,16 +1617,40 @@ body {
 }
 
 .masthead.masthead-home-bg {
-  background: url("/assets/home/masthead-normal.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+  background: transparent;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
   /* Firefox < 16 */
   animation: bg-fadein 1s;
+}
+
+.home-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: 100vh;
+  background-image: url("../Portfolio/assets/home/masthead-normal.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.home-bg-wireframe {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  background-image: url("../Portfolio/assets/home/masthead-wireframe.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
 .masthead.masthead-projects-bg {

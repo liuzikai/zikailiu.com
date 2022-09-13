@@ -2448,6 +2448,18 @@
           updateSlideInTexts();
       });
 
+      window.readMoreClicked = function(readMoreButton) {
+          // Lazy loading images and videos (not in scripts.js as it is removed as unused)
+          let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
+          Array.from(modal.querySelectorAll(".modal-lazy")).forEach(e => {
+              e.src = e.dataset.src;
+              e.classList.remove("modal-lazy");
+              if (e.type === "video/mp4") {
+                  e.parentNode.load();
+              }
+          });
+          console.log("readMoreClicked");
+      };
   });
 
 }));

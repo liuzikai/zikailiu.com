@@ -64,8 +64,8 @@
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-lg-flex">
         <!-- This brand show when >= lg -->
-        <div class="show-lg" id="mainNavBody" style="height: 100%">
-            <a class="navbar-brand" href="/">Zikai Liu</a>
+        <div class="navbar-brand show-lg" id="mainNavBody">
+            <a class="navbar-brand-text" href="/">Zikai Liu</a>
         </div>
         <!-- This brand show when < lg -->
         <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
@@ -1262,19 +1262,6 @@
 </footer>
 <!-- Core JS with Bootstrap components needed -->
 <script src="/js/scripts.min.js"></script>
-<script>
-    function readMoreClicked(readMoreButton) {
-        // Lazy loading images and videos (not in scripts.js as it is removed as unused)
-        let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
-        Array.from(modal.querySelectorAll(".modal-lazy")).forEach(e => {
-            e.src = e.dataset.src;
-            e.classList.remove("modal-lazy");
-            if (e.type === "video/mp4") {
-                e.parentNode.load();
-            }
-        });
-    }
-</script>
 <!-- Statistics -->
 <script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>

@@ -2,14 +2,31 @@
 // Navbar
 //
 
+// We use .navbar-brand as div, to set height of navbar with its padding, while use .navbar-brand-text for the href
+
 .navbar {
     .navbar-brand {
         font-weight: 700;
     }
 }
 
+.navbar-light {
+    .navbar-brand {
+        .navbar-brand-text {
+            color: $navbar-light-brand-color;
+        }
+    }
+}
+
+.navbar-dark {
+    .navbar-brand {
+        .navbar-brand-text {
+            color: $navbar-dark-brand-color;
+        }
+    }
+}
+
 #mainNav {
-    min-height: 3.5rem;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -53,7 +70,7 @@
             content: "\00a0Liu's";
             opacity: 1;
             transition: opacity 0.5s ease;
-            position:absolute;
+            position: absolute;
             left: 0;
         }
 

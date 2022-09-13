@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--bs-body-color: #000; --bs-body-bg: #fff;">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -8,7 +8,7 @@
     <title>Zikai Liu's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <!-- TODO: use minimal css -->
+    <!-- FIXME: use minimal css -->
     <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
@@ -61,18 +61,35 @@
 <!-- TODO: add necessary hyperlinks -->
 
 <!-- Navigation-->
-
+<div class="home-bg-wireframe"></div>
+<div class="home-bg" id="homeBG">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-between">
+        <div>
+            <svg width="1.2em" height="1.2em" style="transform: rotate(180deg);">
+                <use href="#bi-chevron-right"></use>
+            </svg>
+            Projects
+        </div>
+        <div>Photography
+            <svg width="1.2em" height="1.2em">
+                <use href="#bi-chevron-right"></use>
+            </svg>
+        </div>
+    </div>
+</div>
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
+    <!-- Use navbar classes for layout, but not #mainNav so it's not floating navbar  -->
     <div class="navbar navbar-expand-lg navbar-light" id="">
         <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
         <div class="container px-4 px-lg-5 d-block d-lg-flex">
             <!-- This brand show when >= lg -->
-            <div class="show-lg" id="mainNavBody" style="height: 100%">
-                <a class="navbar-brand" href="/">Zikai Liu</a>
+            <div class="navbar-brand show-lg" id="mainNavBody">
+                <a class="navbar-brand-text" href="/">Zikai Liu</a>
             </div>
             <!-- This brand show when < lg -->
+            <!-- FIXME: update -->
             <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
                  data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                  aria-expanded="false" aria-label="Toggle navigation">
@@ -88,171 +105,29 @@
                     </svg>
                 </div>
             </div>
-            <!-- Expanded when >= lg, drop-down menu when < lg -->
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                </ul>
-            </div>
+
         </div>
     </div>
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="masthead-text text-center" style="font-weight: lighter;">
-                <p class="mx-auto mt-1 mb-0">Working with great people</p>
-                <p class="mx-auto mt-1 mb-0">on the things I love</p>
-                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>
-            </div>
-        </div>
-    </div>
+
+    <!--    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">-->
+    <!--        <div class="d-flex justify-content-center">-->
+    <!--            <div class="text-center text-black" style="text-shadow: 0px 0px 2px white;">-->
+    <!--                <p class="mx-auto mt-1 mb-0">Working with great people</p>-->
+    <!--                <p class="mx-auto mt-1 mb-0">on the things I love</p>-->
+    <!--                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </header>
 
 <!-- Projects-->
 <section class="projects-section bg-black" id="projects">
     <div class="container px-1 px-lg-5">
-        <!-- RoboMaster -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
-                <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/robomaster-icon.svg">
-                    Loading image...
-                </div>
-            </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
-                <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
-                <p class="slide-in-text">
-                    At <span class="text-white">ZJU-UIUC Robotics Team,</span> we built combat robots.
-                </p>
-                <p class="slide-in-text">
-                    Being <span class="text-white">Control Group Lead</span> and
-                    <span class="text-white">Project Manager</span> in 2019,
-                    I led the development of embedded control systems and
-                    managed project timelines.
-                </p>
-                <p class="slide-in-text">
-                    As <span class="text-white">Vision Group Lead</span> in 2020-2021,
-                    I worked on a vision-assisted automatic aiming system.
-                </p>
-                <div class="mt-4 text-end slide-in-text">
-                    <a class="btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
-                       data-bs-target="#robomasterMore">
-                        Read more
-                        <svg width="1.2em" height="1.2em">
-                            <use href="#bi-plus-circle-fill"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="robomasterMore" tabindex="-1" aria-labelledby="robomasterMoreLabel"
-             aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
-                        <svg width="1em" height="1em">
-                            <use href="#bi-x-circle"></use>
-                        </svg>
-                    </button>
-                    <div class="modal-body px-0 py-0 py-lg-4">
-                        <div class="hidden-lg" id="robomaster-head-image"></div>
-                        <div class="container">
-                            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
-                                <div class="col-lg-8 mt-0">
-                                    <div class="project-text w-100 my-auto text-start text-lg-left">
-                                        <p>
-                                            <span class="text-white">Meta Robotics of ZJU-UIUC Joint Institute, </span>
-                                            was found in 2018. I was one of the founding members.
-                                            We target the RoboMaster competition and build our robots from scratch.
-                                            Unfortunately, being a new team at a new campus without any experience and
-                                            technology heritage, we didn't make it to the competition in 2018.
-                                        </p>
-                                        <p>
-                                            In 2019, I took the role of <span class="text-white">Control Group
-                                            Lead</span>. I led the development of embedded control programs and
-                                            electric systems of all the robots, built from the ground up.
-                                            We developed a comprehensive all-platform cross compile toolchain for
-                                            STM32, which has been using by us ever since.
-                                            We developed a system to support convenient parameter adjustment
-                                            with Bluetooth and GUI. During the 2019 season, I contributed 70k+ lines of
-                                            C++ code and 20+ documents.
-                                        </p>
-                                        <p>
-                                            Among the things we have built, I am most proud of the attitude and heading
-                                            reference system (AHRS), in which a
-                                            gyroscope, an accelerometer and a
-                                            magnetometer are integrated to calculate the absolute angle of the targeting
-                                            gimbal. Together with the motor control system, our robots were able to
-                                            stabilize the gimbal while rotating the chassis to evade incoming bullets,
-                                            which provided conspicuous advantages to us at the competition.
-                                        </p>
-                                        <p>
-                                            At the same time, I took the role of <span class="text-white">Project
-                                            Manager</span> in 2019.
-                                            I was responsible for scheduling the overall development timeline,
-                                            coordinating different groups of the team.
-                                            I arranged the weekly stand-up meeting, when members exchanged updates and
-                                            laid down upcoming schedule. Together with the team leader, we kept the
-                                            whole team forward.
-                                        </p>
-                                        <p>
-                                            In RoboMaster 2019 International Regional Competition, as out debut, we won
-                                            <span class="text-white">the second prize</span>.
-                                            <!-- https://zjui.intl.zju.edu.cn/en/news/746 -->
-                                        </p>
-                                        <p>
-                                            Since 2020, I worked as the <span
-                                                class="text-white">Vision Group Lead </span>
-                                            of the team. I worked on a vision-assisted automatic aiming system,
-                                            for which I have contributed 27k+ lines of C++ code.
-                                        </p>
-                                        <div class="mt-5 text-center">
-                                            <a class="btn shadow-none btn-external-link" target="_blank"
-                                               rel="noopener noreferrer" href="https://github.com/Meta-Team">
-                                                View Repos on
-                                                <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                                                    <use href="#bi-github"></use>
-                                                </svg>
-                                                GitHub
-                                                <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                                                    <use href="#bi-chevron-right"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
-                                    <div class="modal-gallery text-center">
-                                        <img src="/assets/projects/robomaster-me.webp" class="show-lg" style="max-width: 100%"
-                                             alt="RoboMaster 2019"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">RoboMaster 2019</p>
-                                        <img src="/assets/projects/robomaster-competition.webp" style="max-width: 100%"
-                                             alt="RoboMaster 2019"/>
-                                        <p class="image-caption mt-2 mb-4">RoboMaster 2019</p>
-                                        <img src="/assets/projects/robomaster-we.webp" style="max-width: 100%"
-                                             alt="Meta Robotics in 2019"/>
-                                        <p class="image-caption mt-2 mb-4">Meta Robotics in 2019</p>
-                                        <img src="/assets/projects/robomaster-teams.webp" style="max-width: 100%"
-                                             alt="With Fukuoka and Guangdong Taiwan Chung Cheng University Teams"/>
-                                        <p class="image-caption mt-2 mb-4">With Fukuoka and Guangdong
-                                            Taiwan Chung Cheng University Teams</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- NetEase Game -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container">
                 <div class="h-auto">
-                    <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/joystick-icon.svg">
+                    <div class="icon-placeholder text-center text-white-50"
+                         data-include="/assets/projects/joystick-icon.svg">
                         Loading image...
                     </div>
                 </div>
@@ -369,7 +244,8 @@
         <div class="row gx-0 justify-content-center align-items-center project-container">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
-                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/klc3-icon.svg">Loading
+                <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/klc3-icon.svg">
+                    Loading
                     image...
                 </div>
             </div>
@@ -921,7 +797,8 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
-                                        <img src="/assets/projects/ozone-team.webp" class="show-lg" style="max-width: 100%"
+                                        <img src="/assets/projects/ozone-team.webp" class="show-lg"
+                                             style="max-width: 100%"
                                              alt="Our team and the teaching staff at the Advanced Operating Systems demo"/>
                                         <p class="image-caption mt-2 mb-0 show-lg">
                                             Our Team and the Teaching Staff at the Advanced Operating Systems Demo</p>
@@ -1081,7 +958,8 @@
                                              alt="Presentation of the cache performance: more than 90% hit rates for all levels and significant speedups, varying for different workloads"/>
                                         <p class="image-caption mt-2 mb-4">
                                             Presentation of the cache performance</p>
-                                        <img src="/assets/projects/rv32i-processor-datapath.webp" style="max-width: 100%"
+                                        <img src="/assets/projects/rv32i-processor-datapath.webp"
+                                             style="max-width: 100%"
                                              alt="Datapath block diagram of the processor"/>
                                         <p class="image-caption mt-2 mb-4">
                                             Datapath of the Processor</p>
