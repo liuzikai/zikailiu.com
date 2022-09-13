@@ -11,7 +11,7 @@
     <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/projects/projects-masthead.webp" as="image" type="image/webp">
+    <link rel="preload" href="/assets/masthead-wireframe.png" as="image" type="image/webp">
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
@@ -23,7 +23,7 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/projects/projects-masthead.webp"
+    <img src="/assets/masthead-wireframe.png"
          onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
 </div>
 
@@ -86,10 +86,9 @@
         <!-- Expanded when >= lg, drop-down menu when < lg -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item hidden-lg"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             </ul>
         </div>
     </div>

@@ -644,22 +644,23 @@ output {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000;
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.7);
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
 }
-.navbar-light .navbar-nav .show > .nav-link {
-  color: rgba(0, 0, 0, 0.9);
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #000;
 }
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -675,7 +676,8 @@ output {
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
 }
-.navbar-dark .navbar-nav .show > .nav-link {
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
 }
 .navbar-dark .navbar-toggler {
@@ -899,10 +901,6 @@ output {
   justify-content: center !important;
 }
 
-.justify-content-between {
-  justify-content: space-between !important;
-}
-
 .align-items-start {
   align-items: flex-start !important;
 }
@@ -1054,11 +1052,6 @@ output {
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-black {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
-}
-
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -1151,7 +1144,7 @@ body {
 }
 
 .navbar-light .navbar-brand .navbar-brand-text {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000;
 }
 
 .navbar-dark .navbar-brand .navbar-brand-text {
@@ -1226,7 +1219,6 @@ body {
     backdrop-filter: none;
   }
   #mainNav .nav-link {
-    color: rgba(255, 255, 255, 0.3);
     transition: color 0.2s ease-in-out;
     /* Safari behaviors weirdly if this is commented */
   }
@@ -1617,7 +1609,11 @@ body {
 }
 
 .masthead.masthead-home-bg {
-  background: transparent;
+  background: url("../assets/masthead-normal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -1625,38 +1621,8 @@ body {
   animation: bg-fadein 1s;
 }
 
-.home-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 0;
-  height: 100vh;
-  mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
-  background-image: url("../Portfolio/assets/home/masthead-normal.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-.home-bg-wireframe {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  height: 100vh;
-  background-image: url("../Portfolio/assets/home/masthead-color.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
 .masthead.masthead-projects-bg {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("/assets/projects/projects-masthead.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -1669,7 +1635,7 @@ body {
 }
 
 #robomaster-head-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("/assets/projects/robomaster-me.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/projects/robomaster-me.webp");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -1678,7 +1644,7 @@ body {
 }
 
 #joystick-head-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("/assets/projects/joystick-photo.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/projects/joystick-photo.webp");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;

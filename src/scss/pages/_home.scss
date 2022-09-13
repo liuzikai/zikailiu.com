@@ -1,70 +1,17 @@
 .masthead {
     &.masthead-home-bg {
-        background: transparent;
-        opacity: 1;
-        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
-        animation: bg-fadein 1s;
-    }
-
-    .masthead-home-wireframe {
-        position: relative;
-        top: 0;
-        left: -50%;
-        background-image: url("/assets/home/masthead-normal.png");
+        background: /*linear-gradient(to bottom,
+                #{fade-out($white, 0.7)} 0%,
+                #{fade-out($white, 0.3)} 75%,
+                $white 100%),*/
+        url("../assets/masthead-normal.png");
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-size: cover;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.home-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    height: 100vh;
-    mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
-    background-image: url("../Portfolio/assets/home/masthead-normal.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-
-    //filter: blur(10px);
-
-    .home-bg-container {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100vh;
-        height: 100vh;
-    }
-}
-
-.home-bg-wireframe {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    height: 100vh;
-    background-image: url("../Portfolio/assets/home/masthead-color.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-
-    .home-bg-container {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100vh;
-        height: 100vh;
+        opacity: 1;
+        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
+        animation: bg-fadein 1s;
     }
 }

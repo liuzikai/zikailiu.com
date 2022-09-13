@@ -24,7 +24,7 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/home/masthead-normal.png"
+    <img src="/assets/masthead-normal.png"
          onload='document.getElementById("masthead").classList.add("masthead-home-bg");' alt="">
 </div>
 
@@ -61,65 +61,51 @@
 <!-- TODO: add necessary hyperlinks -->
 
 <!-- Navigation-->
-<div class="home-bg-wireframe"></div>
-<div class="home-bg" id="homeMasthead">
-
-</div>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
+    <div class="container px-4 px-lg-5 d-block d-lg-flex">
+        <!-- This brand show when >= lg -->
+        <div class="navbar-brand show-lg" id="mainNavBody">
+            <a class="navbar-brand-text" href="/">Zikai Liu</a>
+        </div>
+        <!-- This brand show when < lg -->
+        <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+             aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-brand" href="#page-top">
+                <!-- There should be no space between spans -->
+                <span class="navbar-brand-part1">Zikai</span><span
+                    class="navbar-brand-part2-container"><span
+                    class="navbar-brand-part2 text-white"></span></span>
+            </div>
+            <div class="navbar-toggler navbar-toggler-right my-auto">
+                <svg width="16" height="16">
+                    <use href="#bi-chevron-down"></use>
+                </svg>
+            </div>
+        </div>
+        <!-- Expanded when >= lg, drop-down menu when < lg -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photography">Photography</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
-    <!-- Use navbar classes for layout, but not #mainNav so it's not floating navbar  -->
-    <div class="navbar navbar-expand-lg navbar-light" id="">
-        <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
-        <div class="container px-4 px-lg-5 d-block d-lg-flex">
-            <!-- This brand show when >= lg -->
-            <div class="navbar-brand show-lg" id="mainNavBody">
-                <a class="navbar-brand-text" href="/">Zikai Liu</a>
-            </div>
-            <!-- This brand show when < lg -->
-            <!-- FIXME: update -->
-            <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                 aria-expanded="false" aria-label="Toggle navigation">
-                <div class="navbar-brand" href="#page-top">
-                    <!-- There should be no space between spans -->
-                    <span class="navbar-brand-part1">Zikai</span><span
-                        class="navbar-brand-part2-container"><span
-                        class="navbar-brand-part2 text-white"></span></span>
-                </div>
-                <div class="navbar-toggler navbar-toggler-right my-auto">
-                    <svg width="16" height="16">
-                        <use href="#bi-chevron-down"></use>
-                    </svg>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-between">
-        <div onclick="setMastheadMask(0.01);" id="homeProject">
-            <svg width="1.2em" height="1.2em" style="transform: rotate(180deg);">
-                <use href="#bi-chevron-right"></use>
-            </svg>
-            Projects
-        </div>
-        <div>Photography
-            <svg width="1.2em" height="1.2em">
-                <use href="#bi-chevron-right"></use>
-            </svg>
-        </div>
-    </div>
-
-    <!--    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">-->
-    <!--        <div class="d-flex justify-content-center">-->
-    <!--            <div class="text-center text-black" style="text-shadow: 0px 0px 2px white;">-->
-    <!--                <p class="mx-auto mt-1 mb-0">Working with great people</p>-->
-    <!--                <p class="mx-auto mt-1 mb-0">on the things I love</p>-->
-    <!--                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
+<!--    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">-->
+<!--        <div class="d-flex justify-content-center">-->
+<!--            <div class="masthead-text text-center" style="font-weight: lighter;">-->
+<!--                <p class="mx-auto mt-1 mb-0">Working with great people</p>-->
+<!--                <p class="mx-auto mt-1 mb-0">on the things I love</p>-->
+<!--                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </header>
 
 <!-- Projects-->
