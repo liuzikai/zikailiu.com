@@ -62,20 +62,8 @@
 
 <!-- Navigation-->
 <div class="home-bg-wireframe"></div>
-<div class="home-bg" id="homeBG">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-between">
-        <div>
-            <svg width="1.2em" height="1.2em" style="transform: rotate(180deg);">
-                <use href="#bi-chevron-right"></use>
-            </svg>
-            Projects
-        </div>
-        <div>Photography
-            <svg width="1.2em" height="1.2em">
-                <use href="#bi-chevron-right"></use>
-            </svg>
-        </div>
-    </div>
+<div class="home-bg" id="homeMasthead">
+
 </div>
 
 <!-- Masthead-->
@@ -106,6 +94,20 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-between">
+        <div onclick="setMastheadMask(0.01);" id="homeProject">
+            <svg width="1.2em" height="1.2em" style="transform: rotate(180deg);">
+                <use href="#bi-chevron-right"></use>
+            </svg>
+            Projects
+        </div>
+        <div>Photography
+            <svg width="1.2em" height="1.2em">
+                <use href="#bi-chevron-right"></use>
+            </svg>
         </div>
     </div>
 
@@ -1135,20 +1137,8 @@
     <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->
-<script src="/js/scripts.min.js"></script>
-<script>
-    function readMoreClicked(readMoreButton) {
-        // Lazy loading images and videos (not in scripts.js as it is removed as unused)
-        let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
-        Array.from(modal.querySelectorAll(".modal-lazy")).forEach(e => {
-            e.src = e.dataset.src;
-            e.classList.remove("modal-lazy");
-            if (e.type === "video/mp4") {
-                e.parentNode.load();
-            }
-        });
-    }
-</script>
+<!-- FIXME: use minified JS -->
+<script src="/js/scripts.js"></script>
 <!-- Statistics -->
 <script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>

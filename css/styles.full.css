@@ -12112,6 +12112,8 @@ body {
   left: 0;
   z-index: 0;
   height: 100vh;
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, black 100%);
   background-image: url("../Portfolio/assets/home/masthead-normal.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -12133,7 +12135,7 @@ body {
   left: 0;
   z-index: -1;
   height: 100vh;
-  background-image: url("../Portfolio/assets/home/masthead-wireframe.png");
+  background-image: url("../Portfolio/assets/home/masthead-color.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
