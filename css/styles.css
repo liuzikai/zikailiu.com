@@ -1359,18 +1359,6 @@ body {
   padding: 15rem 0;
   opacity: 0;
 }
-.masthead.masthead-actual-background {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  opacity: 1;
-  -webkit-animation: bg-fadein 1s;
-  /* Safari, Chrome and Opera > 12.1 */
-  /* Firefox < 16 */
-  animation: bg-fadein 1s;
-}
 @keyframes bg-fadein {
   from {
     opacity: 0;
@@ -1587,8 +1575,25 @@ body {
   }
 }
 
+.footer {
+  padding: 5rem 0;
+}
+
+.masthead.masthead-projects-bg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("/assets/projects/projects-masthead.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 1;
+  -webkit-animation: bg-fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  animation: bg-fadein 1s;
+}
+
 #robomaster-head-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/img/robomaster-me.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("/assets/projects/robomaster-me.webp");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -1597,14 +1602,10 @@ body {
 }
 
 #joystick-head-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/img/joystick-photo.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("/assets/projects/joystick-photo.webp");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 0;
   padding-top: 50%;
-}
-
-.footer {
-  padding: 5rem 0;
 }

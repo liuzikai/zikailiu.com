@@ -2,7 +2,6 @@ const fs = require('fs');
 const upath = require('upath');
 const {PurgeCSS} = require("purgecss");
 
-const htmlFile = upath.resolve(upath.dirname(__filename), '../index.html');
 const srcFile = upath.resolve(upath.dirname(__filename), '../css/styles.full.css');
 const safeList = {
     standard: [/.+-animated-svg/, 'come-in', 'collapsed', 'collapsing'],
@@ -11,7 +10,10 @@ const destFile = upath.resolve(upath.dirname(__filename), '../css/styles.css');
 
 async function runPurgeCSS() {
     const purgeCSSResult = await new PurgeCSS().purge({
-        content: [htmlFile],
+        content: [
+            upath.resolve(upath.dirname(__filename), '../projects/index.html'),
+            upath.resolve(upath.dirname(__filename), '../index.html'),
+        ],
         css: [srcFile],
         safelist: safeList
     })

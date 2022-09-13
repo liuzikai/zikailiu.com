@@ -10,21 +10,7 @@
     padding: 15rem 0;
     opacity: 0;
 
-    &.masthead-actual-background {
-        background: linear-gradient(to bottom,
-                #{fade-out($black, 0.7)} 0%,
-                #{fade-out($black, 0.3)} 75%,
-                $black 100%),
-        url("../assets/img/bg-masthead.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-        opacity: 1;
-        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
-        animation: bg-fadein 1s;
-    }
+    // Actual background &.masthead-*-bg in page-specific scss
 
     @keyframes bg-fadein {
         from { opacity: 0; }
