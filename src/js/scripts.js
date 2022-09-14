@@ -220,51 +220,11 @@ window.addEventListener("DOMContentLoaded", event => {
             e.src = e.dataset.src;
             e.classList.remove("modal-lazy");
             if (e.type === "video/mp4") {
+                console.log(e.src, e.parentNode);
                 e.parentNode.load();
             }
         });
         // console.log("readMoreClicked");
     };
-
-    // Home page
-
-    // let mhElem = document.getElementById("homeMasthead");
-    // let mhRunning = false;
-    // let mhDirection, mhStep, mhCurrent = 0;
-    //
-    // async function mhDrive() {
-    //     // console.log(mhCurrent);
-    //     if ((mhStep > 0 && mhCurrent <= 1) || (mhStep < 0 && mhCurrent >= 0)) {
-    //         let transparentEnd = clamp(mhCurrent, 0, 1) * 100;
-    //         let solidStart = clamp(mhCurrent, 0, 1) * 100;
-    //         let direction = mhDirection > 0 ? "90deg" : "-90deg";
-    //         let mask = "linear-gradient(" + direction + ", transparent 0%, black " + solidStart + "%, black 100%)";
-    //         mhElem.style["mask-image"] = mask;
-    //         mhElem.style["-webkit-mask-image"] = mask;
-    //         await sleep(30);
-    //         mhCurrent += mhStep;
-    //         await mhDrive();
-    //     } else {
-    //
-    //     }
-    // }
-    //
-    // function mhStart(direction, step) {
-    //     mhDirection = direction;
-    //     mhStep = step
-    //     // if (!mhRunning) {
-    //         mhRunning = true;
-    //         mhDrive().then(_ => mhRunning = false);
-    //     // }
-    // }
-    //
-    // let homeProjectElem = document.getElementById("homeProject");
-    // homeProjectElem.addEventListener("mouseenter", _ => mhStart(1, 0.05));
-    // homeProjectElem.addEventListener("mouseout", _ => mhStart(1, -0.05));
-    //
-    // window.setMastheadMask = function(step) {
-    //     console.log(step);
-    //
-    // };
 
 });
