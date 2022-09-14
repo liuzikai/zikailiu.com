@@ -2,7 +2,7 @@
     &.masthead-home-bg {
         background: /*linear-gradient(to bottom,
                 #{fade-out($white, 0.95)} 0%,
-                #{fade-out($white, 0.5)} 80%,
+                #{fade-out($white, 0.7)} 80%,
                 $white 100%),*/
         url("../assets/masthead-normal.png");
         background-position: center;
@@ -14,4 +14,33 @@
         -moz-animation: bg-fadein 1s; /* Firefox < 16 */
         animation: bg-fadein 1s;
     }
+}
+
+.biography-text {
+    // Customized responsive font sizes
+    font-size: 1rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 1.25rem;
+    }
+    /*@include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 1.25rem;
+    }
+    @include media-breakpoint-up(xxl) {
+        font-size: 1.25rem;
+    }*/
+}
+
+.home-timeline tr,th,td{
+    vertical-align: top;
+    text-align: start;
+}
+
+.home-timeline span{
+    color: rgba(0, 0, 0, 50%);
 }

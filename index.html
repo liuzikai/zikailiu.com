@@ -103,13 +103,17 @@
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-end justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center text-black-50" style="font-weight: lighter; padding-bottom: 1.5rem">
-                <svg width="1.5em" height="1.5em">
-                    <use href="#bi-chevron-double-down"></use>
-                </svg>
-            </div>
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-end justify-content-between pb-4">
+        <div class="text-start" style="font-size: 1.2rem;">
+            Life undefined
+        </div>
+        <div class="text-center text-black-50">
+            <svg width="1.75em" height="1.75em">
+                <use href="#bi-chevron-double-down"></use>
+            </svg>
+        </div>
+        <div class="text-black-50" style="font-size: 0.8rem; font-weight: lighter;">
+            <p>Inspired by Testify</p>
         </div>
     </div>
 </header>
@@ -118,18 +122,61 @@
 <section class="projects-section" id="projects">
     <div class="container px-1 px-lg-5">
         <div class="row gx-0 justify-content-center align-items-center">
-
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start text-black">
-                <h2 class="project-header mb-3 slide-in-text">
-                    About Me
+            <div class="col-lg-7 px-4 px-lg-0 biography-text">
+                <h2 class="project-header-small mb-3 mb-lg-5 slide-in-text">
+                    About <mark>Me</mark>
                 </h2>
-                <p class="slide-in-text">
-                    something
-                </p>
+                <table class="home-timeline">
+                    <tr>
+                        <th><p>Education</p></th>
+                    </tr>
+                    <tr>
+                        <td><span>2017-2021</span></td>
+                        <td>University of Illinois at Urbana-Champaign, BSc</td>
+                    </tr>
+                    <tr>
+                        <td><span>2017-2021</span></td>
+                        <td>Zhejiang University, BEng</td>
+                    </tr>
+                    <tr>
+                        <td><span>2021-</span></td>
+                        <td><mark>ETH Zurich, MSc</mark></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th><p>Experiences&nbsp;&nbsp;&nbsp;&nbsp;</p></th>
+                    </tr>
+                    <tr>
+                        <td colspan="100%">ZJU-UIUC Robotics Team</td>
+                    </tr>
+                    <tr>
+                        <td><span>2018-2019</span></td>
+                        <td>Control Group Lead & Project Manager</td>
+                    </tr>
+                    <tr>
+                        <td><span>2019-2021</span></td>
+                        <td>Vision Group Lead</td>
+                    </tr>
+                    <tr>
+                        <td colspan="100%">NetEase Games</td>
+                    </tr>
+                    <tr>
+                        <td><span>2020 Summer</span></td>
+                        <td>Platform Engineer Intern</td>
+                    </tr>
+                    <tr>
+                        <td colspan="100%">ZJU-UIUC Joint Institute</td>
+                    </tr>
+                    <tr>
+                        <td><span>2021 Fall</span></td>
+                        <td>Teaching Assistant</td>
+                    </tr>
+                </table>
             </div>
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3">
+            <div class="col-lg-5 mt-auto mb-0 mb-lg-auto py-5 px-4 px-lg-0">
                 <img class="img-fluid" src="/assets/projects/robomaster-me.webp">
-
             </div>
         </div>
     </div>
@@ -178,7 +225,7 @@
     </div>
 </section>
 <!-- Footer-->
-<footer class="footer bg-black small text-center text-white-50">
+<footer class="footer small text-center">
     <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->

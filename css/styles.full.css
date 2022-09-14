@@ -11855,8 +11855,6 @@ body {
   }
 }
 .masthead .masthead-text {
-  --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
   font-size: 16px;
 }
 @media (min-width: 576px) {
@@ -11925,8 +11923,16 @@ body {
   padding-right: 2.5rem;
   padding-top: 1.5rem;
   padding-bottom: 5rem;
-  --bs-text-opacity: 1;
-  font-size: 16px;
+  font-size: 1rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }*/
+  /*@include media-breakpoint-up(xxl) {
+      font-size: 1.5rem;
+  }*/
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
@@ -11940,70 +11946,51 @@ body {
 }
 @media (min-width: 576px) {
   .projects-section .project-text {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .projects-section .project-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1200px) {
   .projects-section .project-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 1400px) {
-  .projects-section .project-text {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .projects-section .project-text .project-header {
   color: var(--bs-header-color);
-  font-size: 28px;
+  font-size: 1.75rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+  }*/
 }
 @media (min-width: 576px) {
   .projects-section .project-text .project-header {
-    font-size: 34px;
-  }
-}
-@media (min-width: 768px) {
-  .projects-section .project-text .project-header {
-    font-size: 40px;
-  }
-}
-@media (min-width: 992px) {
-  .projects-section .project-text .project-header {
-    font-size: 34px;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
   .projects-section .project-text .project-header {
-    font-size: 43px;
+    font-size: 2.75rem;
   }
 }
 @media (min-width: 1400px) {
   .projects-section .project-text .project-header {
-    font-size: 50px;
+    font-size: 3rem;
   }
 }
 .projects-section .project-text .project-header-small {
   color: var(--bs-header-color);
-  font-size: 34px;
+  font-size: 1.75rem;
 }
 @media (min-width: 1200px) {
   .projects-section .project-text .project-header-small {
-    font-size: 33px;
+    font-size: 2.75rem;
   }
 }
 @media (min-width: 1400px) {
   .projects-section .project-text .project-header-small {
-    font-size: 36px;
+    font-size: 3rem;
   }
 }
 
@@ -12098,8 +12085,38 @@ body {
   animation: bg-fadein 1s;
 }
 
+.biography-text {
+  font-size: 1rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xxl) {
+      font-size: 1.25rem;
+  }*/
+}
+@media (min-width: 576px) {
+  .biography-text {
+    font-size: 1.25rem;
+  }
+}
+
+.home-timeline tr, th, td {
+  vertical-align: top;
+  text-align: start;
+}
+
+.home-timeline span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .masthead.masthead-projects-bg {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 90%, #000 100%), url("../assets/masthead-wireframe.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

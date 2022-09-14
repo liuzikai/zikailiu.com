@@ -214,6 +214,11 @@ small, .small {
   font-size: 0.875em;
 }
 
+mark, .mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
 a {
   color: #64a19d;
   text-decoration: none;
@@ -252,6 +257,20 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
 }
 
 button {
@@ -432,9 +451,19 @@ output {
     width: 33.33333333%;
   }
 
+  .col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
   }
 
   .col-lg-8 {
@@ -906,6 +935,10 @@ output {
   justify-content: center !important;
 }
 
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
 .align-items-start {
   align-items: flex-start !important;
 }
@@ -1037,6 +1070,10 @@ output {
   padding-bottom: 1.5rem !important;
 }
 
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
 .text-start {
   text-align: left !important;
 }
@@ -1059,11 +1096,6 @@ output {
 .text-primary {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-black {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-white {
@@ -1114,8 +1146,17 @@ output {
     margin-bottom: 0 !important;
   }
 
+  .mb-lg-5 {
+    margin-bottom: 3rem !important;
+  }
+
   .mb-lg-auto {
     margin-bottom: auto !important;
+  }
+
+  .px-lg-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   .px-lg-4 {
@@ -1442,8 +1483,6 @@ body {
   }
 }
 .masthead .masthead-text {
-  --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
   font-size: 16px;
 }
 @media (min-width: 576px) {
@@ -1495,8 +1534,16 @@ body {
   padding-right: 2.5rem;
   padding-top: 1.5rem;
   padding-bottom: 5rem;
-  --bs-text-opacity: 1;
-  font-size: 16px;
+  font-size: 1rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }*/
+  /*@include media-breakpoint-up(xxl) {
+      font-size: 1.5rem;
+  }*/
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
@@ -1510,56 +1557,51 @@ body {
 }
 @media (min-width: 576px) {
   .projects-section .project-text {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .projects-section .project-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1200px) {
   .projects-section .project-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 1400px) {
-  .projects-section .project-text {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .projects-section .project-text .project-header {
   color: var(--bs-header-color);
-  font-size: 28px;
+  font-size: 1.75rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+  }*/
 }
 @media (min-width: 576px) {
   .projects-section .project-text .project-header {
-    font-size: 34px;
-  }
-}
-@media (min-width: 768px) {
-  .projects-section .project-text .project-header {
-    font-size: 40px;
-  }
-}
-@media (min-width: 992px) {
-  .projects-section .project-text .project-header {
-    font-size: 34px;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
   .projects-section .project-text .project-header {
-    font-size: 43px;
+    font-size: 2.75rem;
   }
 }
 @media (min-width: 1400px) {
   .projects-section .project-text .project-header {
-    font-size: 50px;
+    font-size: 3rem;
+  }
+}
+.projects-section .project-text .project-header-small {
+  color: var(--bs-header-color);
+  font-size: 1.75rem;
+}
+@media (min-width: 1200px) {
+  .projects-section .project-text .project-header-small {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1400px) {
+  .projects-section .project-text .project-header-small {
+    font-size: 3rem;
   }
 }
 
@@ -1642,8 +1684,38 @@ body {
   animation: bg-fadein 1s;
 }
 
+.biography-text {
+  font-size: 1rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xxl) {
+      font-size: 1.25rem;
+  }*/
+}
+@media (min-width: 576px) {
+  .biography-text {
+    font-size: 1.25rem;
+  }
+}
+
+.home-timeline tr, th, td {
+  vertical-align: top;
+  text-align: start;
+}
+
+.home-timeline span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .masthead.masthead-projects-bg {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 90%, #000 100%), url("../assets/masthead-wireframe.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
