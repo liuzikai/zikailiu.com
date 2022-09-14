@@ -11821,7 +11821,7 @@ body {
   }
 }
 .projects-section {
-  padding: 10rem 0 0 0;
+  padding: 5rem 0 0 0;
 }
 .projects-section .featured-text {
   padding: 2rem;
@@ -12016,6 +12016,9 @@ body {
   padding: 5rem 0;
 }
 
+.masthead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
 .masthead.masthead-home-bg {
   background: url("../assets/masthead-normal.png");
   background-position: 58% 50%;

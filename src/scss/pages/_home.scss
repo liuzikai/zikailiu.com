@@ -13,6 +13,8 @@
         opacity: 1;
         animation: bg-fadein 1s;
     }
+
+    border-bottom: 1px solid $navbar-light-border-color;
 }
 
 .scroll-indicator-path {
