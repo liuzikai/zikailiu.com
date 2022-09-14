@@ -5,31 +5,41 @@
  */
 
 // Include only necessary JS from Bootstrap
-// import Alert from 'bootstrap/js/src/alert'
-// import Button from 'bootstrap/js/src/button'
-// import Carousel from 'bootstrap/js/src/carousel'
-import Collapse from 'bootstrap/js/src/collapse'
-// import Dropdown from 'bootstrap/js/src/dropdown'
-import Modal from 'bootstrap/js/src/modal'
-// import Offcanvas from 'bootstrap/js/src/offcanvas'
-// import Popover from 'bootstrap/js/src/popover'
-import ScrollSpy from 'bootstrap/js/src/scrollspy'
-// import Tab from 'bootstrap/js/src/tab'
-// import Toast from 'bootstrap/js/src/toast'
-// import Tooltip from 'bootstrap/js/src/tooltip'
+// import Alert from "bootstrap/js/src/alert"
+// import Button from "bootstrap/js/src/button"
+// import Carousel from "bootstrap/js/src/carousel"
+import Collapse from "bootstrap/js/src/collapse"
+// import Dropdown from "bootstrap/js/src/dropdown"
+import Modal from "bootstrap/js/src/modal"
+// import Offcanvas from "bootstrap/js/src/offcanvas"
+// import Popover from "bootstrap/js/src/popover"
+// import ScrollSpy from "bootstrap/js/src/scrollspy"
+// import Tab from "bootstrap/js/src/tab"
+// import Toast from "bootstrap/js/src/toast"
+// import Tooltip from "bootstrap/js/src/tooltip"
 
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener("DOMContentLoaded", event => {
+
+    // Home page scroll indicator
+    const scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
 
     // Navbar shrink function
     var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
+        const navbarCollapsible = document.body.querySelector("#mainNav");
         if (!navbarCollapsible) {
             return;
         }
         if (window.scrollY <= 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove("navbar-shrink")
+            // Do not restart the scroll indicator animation
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add("navbar-shrink")
+            // Stop the scroll indicator  animation smoothly
+            Array.from(scrollIndicators).forEach(el => {
+                el.addEventListener('animationiteration', _ => {
+                    el.classList.remove("scroll-indicator-path-active");
+                }, {once : true});
+            });
         }
 
     };
@@ -38,25 +48,16 @@ window.addEventListener('DOMContentLoaded', event => {
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    /* const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    } */
+    document.addEventListener("scroll", navbarShrink);
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const navbarToggler = document.body.querySelector(".navbar-toggler");
     const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
+        document.querySelectorAll("#navbarResponsive .nav-link")
     );
     responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+        responsiveNavItem.addEventListener("click", () => {
+            if (window.getComputedStyle(navbarToggler).display !== "none") {
                 navbarToggler.click();
             }
         });
@@ -174,7 +175,7 @@ window.addEventListener('DOMContentLoaded', event => {
     for (const e of document.getElementsByClassName("icon-placeholder")) {
         // Fetch the content
         let request = new XMLHttpRequest();
-        request.open('GET', e.dataset.include, true);
+        request.open("GET", e.dataset.include, true);
         request.onload = function () {
             if (request.status >= 200 && request.status < 400) {
                 e.innerHTML = request.responseText;
@@ -207,7 +208,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Note: svgInfo is updated async
 
     // On a scroll event
-    document.addEventListener('scroll', function (e) {
+    document.addEventListener("scroll", function (e) {
         updateSVGs();
         updateSlideInTexts();
     });

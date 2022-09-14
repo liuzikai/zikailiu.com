@@ -5,15 +5,30 @@
                 #{fade-out($white, 0.7)} 80%,
                 $white 100%),*/
         url("../assets/masthead-normal.png");
-        background-position: center;
+
+        background-position: 58% 50%;
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-size: cover;
         opacity: 1;
-        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
         animation: bg-fadein 1s;
     }
+}
+
+.scroll-indicator-path {
+    display: none;
+}
+
+.scroll-indicator-path-active {
+    display: inline;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown{
+    0% { opacity:0 }
+    25% { opacity:1 }
+    75% { opacity:0 }
+    100% { opacity:0 }
 }
 
 .biography-text {
