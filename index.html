@@ -3,16 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Zikai Liu's portfolio"/>
+    <meta name="description" content="Zikai Liu's portfolio home page"/>
     <meta name="author" content="Zikai Liu"/>
     <title>Zikai Liu's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <!-- FIXME: use minimal css -->
-    <link href="/css/styles.full.css" rel="stylesheet"/>
+    <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets-masthead.webp" as="image" type="image/webp">
+    <link rel="preload" href="/assets/masthead-normal.webp" as="image" type="image/webp">
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
@@ -24,7 +23,7 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/masthead-normal.png"
+    <img src="/assets/masthead-normal.webp"
          onload='document.getElementById("masthead").classList.add("masthead-home-bg");' alt="">
 </div>
 
@@ -108,7 +107,7 @@
     </div>
 </header>
 
-<!-- Projects-->
+<!-- Body -->
 <section class="projects-section" id="projects">
     <!-- Biography -->
     <div class="container px-1 px-lg-5 pb-1 pb-lg-5">
@@ -228,8 +227,7 @@
     <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->
-<!-- FIXME: use minified JS -->
-<script src="/js/scripts.js"></script>
+<script src="/js/scripts.min.js"></script>
 <!-- Statistics -->
 <script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>

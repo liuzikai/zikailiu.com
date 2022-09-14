@@ -12,7 +12,7 @@
     <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/masthead-wireframe.png" as="image" type="image/webp">
+    <link rel="preload" href="/assets/masthead-wireframe.webp" as="image" type="image/webp">
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
@@ -24,7 +24,7 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/masthead-wireframe.png"
+    <img src="/assets/masthead-wireframe.webp"
          onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
 </div>
 
