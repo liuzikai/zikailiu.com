@@ -17,22 +17,6 @@
     border-bottom: 1px solid $navbar-light-border-color;
 }
 
-.scroll-indicator-path {
-    display: none;
-}
-
-.scroll-indicator-path-active {
-    display: inline;
-    animation: scrollDown 2s infinite;
-}
-
-@keyframes scrollDown{
-    0% { opacity:0 }
-    25% { opacity:1 }
-    75% { opacity:0 }
-    100% { opacity:0 }
-}
-
 .biography-text {
     // Customized responsive font sizes
     font-size: 1rem;

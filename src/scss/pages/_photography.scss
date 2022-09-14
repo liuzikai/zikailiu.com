@@ -1,0 +1,43 @@
+.masthead {
+    &.masthead-photography-bg {
+        background: /*linear-gradient(to bottom,
+                #{fade-out($white, 0.95)} 0%,
+                #{fade-out($white, 0.7)} 80%,
+                $white 100%),*/
+        url("../assets/masthead-color.webp");
+
+        background-position: 58% 50%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        opacity: 1;
+        animation: bg-fadein 1s;
+    }
+
+    border-bottom: 1px solid $navbar-light-border-color;
+}
+
+#mainNav {
+    .navbar-brand-part2-projects:before {
+        content: "Projects";
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .navbar-brand-part2-projects:after {
+        content: "Portfolio";
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        // Left align to .navbar-brand-part2-container
+        position: absolute;
+        left: 0;
+    }
+
+    .collapsed .navbar-brand-part2-projects:before {
+        opacity: 1;
+    }
+
+    .collapsed .navbar-brand-part2-projects:after {
+        opacity: 0;
+    }
+}

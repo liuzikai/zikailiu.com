@@ -11797,6 +11797,45 @@ body {
   }
 }
 
+.scroll-indicator-path {
+  display: none;
+}
+
+.scroll-indicator-path-active {
+  display: inline;
+  -webkit-animation: scrollDown 2s infinite;
+          animation: scrollDown 2s infinite;
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .about-section {
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
@@ -12030,45 +12069,6 @@ body {
           animation: bg-fadein 1s;
 }
 
-.scroll-indicator-path {
-  display: none;
-}
-
-.scroll-indicator-path-active {
-  display: inline;
-  -webkit-animation: scrollDown 2s infinite;
-          animation: scrollDown 2s infinite;
-}
-
-@-webkit-keyframes scrollDown {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes scrollDown {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .biography-text {
   font-size: 1rem;
   /*@include media-breakpoint-up(md) {
@@ -12154,4 +12154,37 @@ body {
   width: 100%;
   height: 0;
   padding-top: 50%;
+}
+
+.masthead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.masthead.masthead-photography-bg {
+  background: url("../assets/masthead-color.webp");
+  background-position: 58% 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 1;
+  -webkit-animation: bg-fadein 1s;
+          animation: bg-fadein 1s;
+}
+
+#mainNav .navbar-brand-part2-projects:before {
+  content: "Projects";
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#mainNav .navbar-brand-part2-projects:after {
+  content: "Portfolio";
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  left: 0;
+}
+#mainNav .collapsed .navbar-brand-part2-projects:before {
+  opacity: 1;
+}
+#mainNav .collapsed .navbar-brand-part2-projects:after {
+  opacity: 0;
 }
