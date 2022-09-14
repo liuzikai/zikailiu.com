@@ -11562,7 +11562,6 @@ body {
 
 #mainNav .navbar-toggler {
   font-size: 80%;
-  color: rgba(255, 255, 255, 0.5);
   border: none;
   transform: rotate(270deg);
   transition: transform 0.5s;
@@ -11580,14 +11579,6 @@ body {
 #mainNav .navbar-brand-part2-container {
   position: relative;
 }
-#mainNav .navbar-nav .nav-item:hover {
-  outline: none;
-  background-color: transparent;
-}
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent;
-}
 @media (min-width: 768px) {
   #mainNav:not(.navbar-shrink) {
     border-bottom: none;
@@ -11601,14 +11592,6 @@ body {
   #mainNav .nav-link {
     transition: color 0.2s ease-in-out;
     /* Safari behaviors weirdly if this is commented */
-  }
-  #mainNav.navbar-shrink .nav-link {
-    /*border-bottom: 0.25rem solid transparent;*/
-    /*&.active {
-        color: $white;
-        outline: none;
-        border-bottom: 0.25rem solid $primary;
-    }*/
   }
 }
 
