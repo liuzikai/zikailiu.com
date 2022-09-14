@@ -5,20 +5,18 @@
 // We use .navbar-brand as div, to set height of navbar with its padding, while use .navbar-brand-text for the href
 
 .navbar {
+    backdrop-filter: blur(10px);
+    transition: background-color 0.2s ease-in-out;
+    /* border-bottom-color transition behaviors weirdly on Safari */
     .navbar-brand {
         font-weight: 700;
     }
 }
 
-.navbar-light {
-    .navbar-brand {
-        .navbar-brand-text {
-            color: $navbar-light-brand-color;
-        }
-    }
-}
 
 .navbar-dark {
+    background-color: $navbar-dark-background-color;
+    border-bottom: 1px solid $navbar-dark-border-color;
     .navbar-brand {
         .navbar-brand-text {
             color: $navbar-dark-brand-color;
@@ -26,13 +24,17 @@
     }
 }
 
-#mainNav {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.2s ease-in-out;
-    /* border-bottom-color behaviors weirdly on Safari */
+.navbar-light {
+    background-color: $navbar-light-background-color;
+    border-bottom: 1px solid $navbar-light-border-color;
+    .navbar-brand {
+        .navbar-brand-text {
+            color: $navbar-light-brand-color;
+        }
+    }
+}
 
+#mainNav {
     .navbar-toggler {
         font-size: 80%;
         color: rgba(255, 255, 255, 0.5);
@@ -111,6 +113,11 @@
             background-color: transparent;
             -webkit-backdrop-filter: none;
             backdrop-filter: none;
+
+            .nav-link-outline {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                //text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+            }
         }
 
         .nav-link {
@@ -128,12 +135,7 @@
         }
 
         &.navbar-shrink {
-            .navbar-brand {
-                color: rgba(255, 255, 255, 0.5);
-            }
-
             .nav-link {
-                color: rgba(255, 255, 255, 0.5);
                 padding: 1.5rem 1.5rem 1.25rem;
                 /*border-bottom: 0.25rem solid transparent;*/
 

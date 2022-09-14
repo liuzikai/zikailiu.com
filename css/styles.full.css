@@ -4611,10 +4611,10 @@ textarea.form-control-lg {
   color: #000;
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
@@ -4624,22 +4624,22 @@ textarea.form-control-lg {
 }
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
 }
 .navbar-light .navbar-toggler {
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   border-color: rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
 }
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:hover,
 .navbar-light .navbar-text a:focus {
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-dark .navbar-brand {
@@ -4649,7 +4649,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.3);
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
@@ -4662,14 +4662,14 @@ textarea.form-control-lg {
   color: #fff;
 }
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.1);
 }
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.3);
 }
 .navbar-dark .navbar-text a,
 .navbar-dark .navbar-text a:hover,
@@ -11530,26 +11530,32 @@ body {
   letter-spacing: 0.0625em;
 }
 
+.navbar {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease-in-out;
+  /* border-bottom-color transition behaviors weirdly on Safari */
+}
 .navbar .navbar-brand {
   font-weight: 700;
 }
 
-.navbar-light .navbar-brand .navbar-brand-text {
-  color: #000;
+.navbar-dark {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .navbar-dark .navbar-brand .navbar-brand-text {
   color: #fff;
 }
 
-#mainNav {
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background-color 0.2s ease-in-out;
-  /* border-bottom-color behaviors weirdly on Safari */
+.navbar-light {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+.navbar-light .navbar-brand .navbar-brand-text {
+  color: #000;
+}
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   color: rgba(255, 255, 255, 0.5);
@@ -11609,6 +11615,9 @@ body {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
+  #mainNav:not(.navbar-shrink) .nav-link-outline {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
   #mainNav .nav-link {
     transition: color 0.2s ease-in-out;
     /* Safari behaviors weirdly if this is commented */
@@ -11619,11 +11628,7 @@ body {
   #mainNav .nav-link:active {
     color: #fff;
   }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: rgba(255, 255, 255, 0.5);
-  }
   #mainNav.navbar-shrink .nav-link {
-    color: rgba(255, 255, 255, 0.5);
     padding: 1.5rem 1.5rem 1.25rem;
     /*border-bottom: 0.25rem solid transparent;*/
     /*&.active {
@@ -11921,7 +11926,6 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 5rem;
   --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
   font-size: 16px;
 }
 @media (min-width: 992px) {
@@ -11960,8 +11964,7 @@ body {
   }
 }
 .projects-section .project-text .project-header {
-  --bs-text-opacity: 1;
-  color: #fff !important;
+  color: var(--bs-header-color);
   font-size: 28px;
 }
 @media (min-width: 576px) {
@@ -11990,8 +11993,7 @@ body {
   }
 }
 .projects-section .project-text .project-header-small {
-  --bs-text-opacity: 1;
-  color: #fff !important;
+  color: var(--bs-header-color);
   font-size: 34px;
 }
 @media (min-width: 1200px) {
@@ -12097,7 +12099,7 @@ body {
 }
 
 .masthead.masthead-projects-bg {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 90%, #000 100%), url("../assets/masthead-wireframe.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

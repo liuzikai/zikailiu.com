@@ -51,7 +51,7 @@
 
         // Font color: .text-white-50
         --bs-text-opacity: 1;
-        color: rgba(255, 255, 255, 0.5) !important;
+        //color: rgba(255, 255, 255, 0.5) !important;
 
         // Customized responsive font sizes
         font-size: 16px;
@@ -72,9 +72,7 @@
         }
 
         .project-header {
-            // Font color: .text-white
-            --bs-text-opacity: 1;
-            color: $white !important;
+            color: var(--bs-header-color);
 
             // Customized responsive font sizes
             font-size: 28px;
@@ -96,9 +94,7 @@
         }
 
         .project-header-small {
-            // Font color: .text-white
-            --bs-text-opacity: 1;
-            color: $white !important;
+            color: var(--bs-header-color);
 
             // Customized responsive font sizes
             font-size: 34px;
