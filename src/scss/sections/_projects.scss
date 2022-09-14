@@ -22,7 +22,7 @@
 }
 
 .projects-section {
-    padding: 10rem 0;
+    padding: 10rem 0 0 0;
 
     .featured-text {
         padding: 2rem;
@@ -68,7 +68,7 @@
         }*/
 
         .project-header {
-            color: var(--bs-header-color);
+            color: var(--bs-active-color);
 
             // Customized responsive font sizes
             font-size: 1.75rem;
@@ -90,7 +90,7 @@
         }
 
         .project-header-small {
-            color: var(--bs-header-color);
+            color: var(--bs-active-color);
 
             // Customized responsive font sizes
             font-size: 1.75rem;
@@ -131,10 +131,10 @@
 .project-svg-container {
     max-width: 60%;
     @include media-breakpoint-up(sm) {
-        max-width: 70%;
+        max-width: 50%;
     }
     @include media-breakpoint-up(md) {
-        max-width: 70%;
+        max-width: 50%;
     }
     @include media-breakpoint-up(lg) {
         max-width: 100%;

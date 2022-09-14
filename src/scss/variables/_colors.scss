@@ -6,6 +6,12 @@
 $body-bg: #000;
 $body-color: #fff;
 
+// Customization
+$active-color: #fff;
+:root {
+    --bs-active-color: #{$active-color};
+}
+
 // Grayscale
 
 $white: #fff;
@@ -31,7 +37,7 @@ $cyan: #1cabc4;
 
 // State colors
 
-$primary: $teal;
+$primary: #64a19d;
 $secondary: $purple;
 $success: $green;
 $info: $cyan;

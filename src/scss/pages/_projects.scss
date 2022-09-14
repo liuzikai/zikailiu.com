@@ -1,3 +1,27 @@
+#mainNav {
+    .navbar-brand-part2-projects:before {
+        content: "Projects";
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .navbar-brand-part2-projects:after {
+        content: "Portfolio";
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        position: absolute;
+        left: 0;
+    }
+
+    .collapsed .navbar-brand-part2-projects:before {
+        opacity: 1;
+    }
+
+    .collapsed .navbar-brand-part2-projects:after {
+        opacity: 0;
+    }
+}
+
 .masthead {
     &.masthead-projects-bg {
         background: linear-gradient(to bottom,

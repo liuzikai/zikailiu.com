@@ -17,6 +17,7 @@
 .navbar-dark {
     background-color: $navbar-dark-background-color;
     border-bottom: 1px solid $navbar-dark-border-color;
+
     .navbar-brand {
         .navbar-brand-text {
             color: $navbar-dark-brand-color;
@@ -27,6 +28,7 @@
 .navbar-light {
     background-color: $navbar-light-background-color;
     border-bottom: 1px solid $navbar-light-border-color;
+
     .navbar-brand {
         .navbar-brand-text {
             color: $navbar-light-brand-color;
@@ -35,6 +37,9 @@
 }
 
 #mainNav {
+
+    // navbar-toggler uses #bi-chevron-right so the rotation degrees + 90
+
     .navbar-toggler {
         font-size: 80%;
         color: rgba(255, 255, 255, 0.5);
@@ -44,57 +49,35 @@
             outline: none;
         }
 
-        transform: rotate(180deg);
+        transform: rotate(270deg);
         transition: transform 0.5s;
     }
 
     .collapsed .navbar-toggler {
-        transform: none;
+        transform: rotate(90deg);
         transition: transform 0.5s;
     }
 
-    @include media-breakpoint-down(lg) {
-        .navbar-brand-part1 {
-            padding-right: 0;
-        }
-
-        .navbar-brand-part2-container {
-            position: relative;
-        }
-
-        .navbar-brand-part2:before {
-            content: "'s Projects";
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .navbar-brand-part2:after {
-            content: "\00a0Liu's";
-            opacity: 1;
-            transition: opacity 0.5s ease;
-            position: absolute;
-            left: 0;
-        }
-
-        .collapsed .navbar-brand-part2:before {
-            opacity: 1;
-        }
-
-        .collapsed .navbar-brand-part2:after {
-            opacity: 0;
-        }
+    .navbar-brand-part1 {
+        padding-right: 0;
     }
+
+    .navbar-brand-part2-container {
+        position: relative;
+    }
+
+    // .navbar-brand-part2 in page-specific scss
 
     .nav-link {
         &:hover {
-            color: $white;
+            //color: var(--bs-active-color);
         }
     }
 
     .navbar-nav {
         .nav-item {
             &:hover {
-                color: $white;
+                //color: var(--bs-active-color);
                 outline: none;
                 background-color: transparent;
             }
@@ -107,11 +90,10 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         &:not(.navbar-shrink) {
             border-bottom: none;
             background-color: transparent;
-            -webkit-backdrop-filter: none;
             backdrop-filter: none;
 
             .nav-link-outline {
@@ -126,25 +108,25 @@
             /* Safari behaviors weirdly if this is commented */
 
             &:hover {
-                color: $white;
+                //color: $white;
             }
 
             &:active {
-                color: $white;
+                //color: $white;
             }
         }
 
         &.navbar-shrink {
             .nav-link {
-                padding: 1.5rem 1.5rem 1.25rem;
+                //padding: 1.5rem 1.5rem 1.25rem;
                 /*border-bottom: 0.25rem solid transparent;*/
 
                 &:hover {
-                    color: $white;
+                    //color: $white;
                 }
 
                 &:active {
-                    color: $white;
+                    //color: $white;
                 }
 
                 /*&.active {

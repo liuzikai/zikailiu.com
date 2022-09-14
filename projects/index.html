@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--bs-body-color: rgba(255, 255, 255, 0.5); --bs-body-rgb: 255, 255, 255; --bs-header-color: white;">
+<html lang="en" style="--bs-body-color: rgba(255, 255, 255, 0.5); --bs-body-rgb: 255, 255, 255; --bs-active-color: white;">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -30,10 +30,6 @@
 <!-- Embedded SVG used -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
     <defs>
-        <symbol id="bi-chevron-down" viewBox="0 0 16 16" fill="currentColor">
-            <path fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </symbol>
         <symbol id="bi-plus-circle-fill" viewBox="0 0 16 16" fill="currentColor">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
         </symbol>
@@ -47,12 +43,24 @@
             <path fill-rule="evenodd"
                   d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </symbol>
-        <symbol id="bi-github" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-        </symbol>
         <symbol id="bi-chevron-right" viewBox="0 0 16 16" fill="currentColor">
             <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </symbol>
+        <symbol id="bi-chevron-double-down" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd"
+                  d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd"
+                  d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </symbol>
+        <symbol id="bi-envelope" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+        </symbol>
+        <symbol id="bi-github" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </symbol>
+        <symbol id="bi-linkedin" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
         </symbol>
     </defs>
 </svg>
@@ -60,30 +68,29 @@
 <!-- TODO: add necessary hyperlinks -->
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
-    <div class="container px-4 px-lg-5 d-block d-lg-flex">
-        <!-- This brand show when >= lg -->
-        <div class="navbar-brand show-lg" id="mainNavBody">
+    <div class="container px-4 px-lg-5 d-block d-md-flex">
+        <!-- This brand show when >= md -->
+        <div class="navbar-brand show-md" id="mainNavBody">
             <a class="navbar-brand-text" href="/">Zikai Liu</a>
         </div>
-        <!-- This brand show when < lg -->
-        <div class="hidden-lg collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+        <!-- This brand show when < md -->
+        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
              data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
              aria-expanded="false" aria-label="Toggle navigation">
             <div class="navbar-brand" href="#page-top">
-                <!-- There should be no space between spans -->
-                <span class="navbar-brand-part1">Zikai</span><span
-                    class="navbar-brand-part2-container"><span
-                    class="navbar-brand-part2 text-white"></span></span>
+                <!-- Newline between spans to act as space -->
+                <span class="navbar-brand-part1">Zikai Liu's</span>
+                <span class="navbar-brand-part2-container"><span class="navbar-brand-part2-projects"></span></span>
             </div>
             <div class="navbar-toggler navbar-toggler-right my-auto">
                 <svg width="16" height="16">
-                    <use href="#bi-chevron-down"></use>
+                    <use href="#bi-chevron-right"></use>
                 </svg>
             </div>
         </div>
-        <!-- Expanded when >= lg, drop-down menu when < lg -->
+        <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
@@ -112,7 +119,7 @@
     <div class="container px-1 px-lg-5">
         <!-- RoboMaster -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-lg-5">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-1 pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
                 <div class="icon-placeholder text-center text-white-50"
                      data-include="/assets/projects/robomaster-icon.svg">
@@ -249,7 +256,7 @@
 
         <!-- NetEase Game -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container pb-4 pb-lg-0">
                 <div class="h-auto">
                     <div class="icon-placeholder text-center text-white-50"
                          data-include="/assets/projects/joystick-icon.svg">
@@ -367,7 +374,7 @@
 
         <!-- KLC3 -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-lg-5">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-5 project-svg-container pb-0 pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
                 <div class="icon-placeholder text-center text-white-50" data-include="/assets/projects/klc3-icon.svg">
                     Loading
@@ -548,7 +555,7 @@
 
         <!-- Wireless Charging Table -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container pb-4 pb-lg-0">
                 <div class="h-auto">
                     <div class="icon-placeholder text-center text-white-50"
                          data-include="/assets/projects/wireless-charging-table-icon.svg">Loading image...
@@ -1214,47 +1221,28 @@
     </div>
 </section>
 <!-- Contact-->
-<section class="contact-section bg-black">
+<section class="contact-section contact-section-dark">
     <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Address</h4>
-                        <hr class="my-4 mx-auto"/>
-                        <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-envelope text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Email</h4>
-                        <hr class="my-4 mx-auto"/>
-                        <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Phone</h4>
-                        <hr class="my-4 mx-auto"/>
-                        <div class="small text-black-50">+1 (555) 902-8832</div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="social d-flex justify-content-center">
-            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+            <a class="mx-2" href="mailto: zikai.liu@outlook.com">
+                <svg width="1.5rem" height="1.5rem">
+                    <use href="#bi-envelope"></use>
+                </svg>
+            </a>
+            <a class="mx-2" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zikai-liu/">
+                <svg width="1.5rem" height="1.5rem">
+                    <use href="#bi-linkedin"></use>
+                </svg>
+            </a>
+            <a class="mx-2" target="_blank" rel="noopener noreferrer" href="https://github.com/liuzikai">
+                <svg width="1.5rem" height="1.5rem">
+                    <use href="#bi-github"></use>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
+
 <!-- Footer-->
 <footer class="footer bg-black small text-center text-white-50">
     <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
