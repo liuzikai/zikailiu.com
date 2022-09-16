@@ -1514,13 +1514,6 @@ body {
 #mainNav .navbar-brand-part2-container {
   position: relative;
 }
-#mainNav .navbar-invisible-shrink {
-  opacity: 1;
-  -webkit-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
 @media (min-width: 768px) {
   #mainNav:not(.navbar-shrink) {
     border-bottom: none;
@@ -1528,8 +1521,8 @@ body {
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
   }
-  #mainNav:not(.navbar-shrink) .navbar-invisible-shrink {
-    opacity: 0;
+  #mainNav:not(.navbar-shrink) .nav-link-outline {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
     -webkit-transition: color 0.2s ease-in-out;
