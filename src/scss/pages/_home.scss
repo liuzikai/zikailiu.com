@@ -1,8 +1,9 @@
 .masthead {
     &.masthead-home-bg {
-        background: /*linear-gradient(to bottom,
-                #{fade-out($white, 0.95)} 0%,
-                #{fade-out($white, 0.7)} 80%,
+        background:/* linear-gradient(to bottom,
+                #{fade-out($white, 1)} 0%,
+                #{fade-out($white, 0.9)} 90%,
+                #{fade-out($white, 0.05)} 99%,
                 $white 100%),*/
         url("../assets/masthead-normal.webp");
 
@@ -12,9 +13,9 @@
         background-size: cover;
         opacity: 1;
         animation: bg-fadein 1s;
-    }
 
-    border-bottom: 1px solid $navbar-light-border-color;
+        border-bottom: 1px solid rgba(0, 0, 0, 50%);
+    }
 }
 
 .biography-text {

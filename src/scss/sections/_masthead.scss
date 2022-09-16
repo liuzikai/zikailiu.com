@@ -63,3 +63,50 @@
     75% { opacity:0 }
     100% { opacity:0 }
 }
+
+.masthead-annotation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 50%);
+    text-align: left;
+
+    @media (min-width: 420px) {
+        left: unset;
+        right: 0;
+        text-align: right;
+        padding-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    a {
+        color: inherit;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+
+    .masthead-annotation-container {
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 0.5rem;
+        display: none;
+    }
+
+    .masthead-annotation-button {
+        transition: color 0.2s ease-in-out;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 75%));
+    }
+
+    &:hover, &:active {
+        .masthead-annotation-container {
+            display: block;
+        }
+        .masthead-annotation-button {
+            color: var(--bs-active-color);
+        }
+    }
+}

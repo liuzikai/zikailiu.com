@@ -5,7 +5,6 @@
 // We use .navbar-brand as div, to set height of navbar with its padding, while use .navbar-brand-text for the href
 
 .navbar {
-    backdrop-filter: blur(10px);
     transition: background-color 0.2s ease-in-out;
     /* border-bottom-color transition behaviors weirdly on Safari */
     .navbar-brand {
@@ -15,6 +14,7 @@
 
 
 .navbar-dark {
+    backdrop-filter: blur(10px);
     background-color: $navbar-dark-background-color;
     border-bottom: 1px solid $navbar-dark-border-color;
 
@@ -26,6 +26,7 @@
 }
 
 .navbar-light {
+    backdrop-filter: blur(20px);
     background-color: $navbar-light-background-color;
     border-bottom: 1px solid $navbar-light-border-color;
 
@@ -42,7 +43,6 @@
 
     .navbar-toggler {
         font-size: 80%;
-        //color: rgba(255, 255, 255, 0.5);
         border: none;
 
         &:focus {
@@ -68,9 +68,9 @@
 
     // .navbar-brand-part2 in page-specific scss
 
-    .nav-link {
-        &:hover {
-        }
+    .navbar-invisible-shrink {
+        opacity: 1;
+        transition: opacity 1s ease;
     }
 
     @include media-breakpoint-up(md) {
@@ -82,6 +82,10 @@
             .nav-link-outline {
                 text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
                 // text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+            }
+
+            .navbar-invisible-shrink {
+                opacity: 0;
             }
         }
 

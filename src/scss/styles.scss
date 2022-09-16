@@ -28,7 +28,7 @@
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
 
-// Pages
+// Pages (this is not per-page configuration but still all pages share the same css)
 @import "./pages/home.scss";
 @import "./pages/projects.scss";
 @import "./pages/photography.scss";
