@@ -1,11 +1,11 @@
 .masthead {
     &.masthead-home-bg {
-        background:/* linear-gradient(to bottom,
+        background: /* linear-gradient(to bottom,
                 #{fade-out($white, 1)} 0%,
                 #{fade-out($white, 0.9)} 90%,
                 #{fade-out($white, 0.05)} 99%,
                 $white 100%),*/
-        url("../assets/masthead-normal.webp");
+                url("../assets/masthead-normal.webp");
 
         background-position: 58% 50%;
         background-repeat: no-repeat;
@@ -36,19 +36,26 @@
     @include media-breakpoint-up(xxl) {
         font-size: 1.25rem;
     }*/
+
+    mark {
+        background: fade-out(#fcd303, 0.9);
+    }
 }
 
-.home-timeline tr,th,td{
-    vertical-align: top;
-    text-align: start;
-}
+.home-timeline {
+    tr, th, td {
+        vertical-align: top;
+        text-align: start;
+    }
 
-.home-timeline span{
-    color: rgba(0, 0, 0, 50%);
+    span {
+        color: rgba(0, 0, 0, 50%);
+    }
 }
 
 .home-large-link {
     color: var(--bs-body-color);
+
     &:hover {
         color: var(--bs-active-color);
     }

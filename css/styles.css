@@ -218,6 +218,11 @@ small, .small {
   font-size: 0.875em;
 }
 
+mark, .mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
 a {
   color: #64a19d;
   text-decoration: none;
@@ -1578,10 +1583,6 @@ body {
   }
 }
 
-.btn-external-link {
-  color: #1cabc4;
-}
-
 .btn:hover {
   color: #fff !important;
   /*border-color: $white !important;*/
@@ -1901,6 +1902,15 @@ body {
     padding: 5rem;
   }
 }
+.projects-section .project-text a {
+  color: var(--bs-body-color);
+  -webkit-text-decoration-line: underline;
+     -moz-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dotted;
+     -moz-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
 @media (min-width: 576px) {
   .projects-section .project-text {
     font-size: 1.25rem;
@@ -1935,6 +1945,11 @@ body {
   .projects-section .project-text .project-header {
     font-size: 3rem;
   }
+}
+.projects-section .read-more-button, .projects-section .project-details-link {
+  -webkit-text-decoration-line: none !important;
+     -moz-text-decoration-line: none !important;
+          text-decoration-line: none !important;
 }
 
 .image-caption {
@@ -2081,12 +2096,14 @@ body {
     font-size: 1.25rem;
   }
 }
+.biography-text mark, .biography-text .mark {
+  background: rgba(252, 211, 3, 0.1);
+}
 
-.home-timeline tr, th, td {
+.home-timeline tr, .home-timeline th, .home-timeline td {
   vertical-align: top;
   text-align: start;
 }
-
 .home-timeline span {
   color: rgba(0, 0, 0, 0.5);
 }

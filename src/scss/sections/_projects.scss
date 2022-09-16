@@ -41,12 +41,12 @@
 
         @include media-breakpoint-up(lg) {
             padding: 5rem;
+        }
 
-            hr {
-                border-color: $primary;
-                border-width: 0.25rem;
-                width: 30%;
-            }
+        a {
+            color: var(--bs-body-color);
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
         }
 
         // Customized responsive font sizes
@@ -101,6 +101,10 @@
                 font-size: 3rem;
             }
         }
+    }
+
+    .read-more-button, .project-details-link {
+        text-decoration-line: none !important;
     }
 }
 
