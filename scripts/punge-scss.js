@@ -11,8 +11,10 @@ const destFile = upath.resolve(upath.dirname(__filename), '../css/styles.css');
 async function runPurgeCSS() {
     const purgeCSSResult = await new PurgeCSS().purge({
         content: [
-            upath.resolve(upath.dirname(__filename), '../projects/index.html'),
             upath.resolve(upath.dirname(__filename), '../index.html'),
+            upath.resolve(upath.dirname(__filename), '../projects/index.html'),
+            upath.resolve(upath.dirname(__filename), '../photographs/index.html'),
+            upath.resolve(upath.dirname(__filename), '../errors/404.html'),
         ],
         css: [srcFile],
         safelist: safeList

@@ -38,6 +38,7 @@
         -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: bg-fadein 1s; /* Firefox < 16 */
         animation: bg-fadein 1s;
+        border-bottom: 1px solid $black;
     }
 }
 

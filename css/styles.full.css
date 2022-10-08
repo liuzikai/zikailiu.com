@@ -14772,31 +14772,47 @@ body {
   }
 }
 .masthead .masthead-text {
-  font-size: 16px;
-}
-@media (min-width: 576px) {
-  .masthead .masthead-text {
-    font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  /*@include media-breakpoint-up(sm) {
+      font-size: 1.25rem;
   }
-}
-@media (min-width: 768px) {
-  .masthead .masthead-text {
-    font-size: 20px;
+  @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }*/
+  /*@include media-breakpoint-up(xl) {
+      font-size: 1.5rem;
   }
+  @include media-breakpoint-up(xxl) {
+      font-size: 1.5rem;
+  }*/
 }
 @media (min-width: 992px) {
   .masthead .masthead-text {
-    font-size: 20px;
+    font-size: 1.5rem;
+  }
+}
+.masthead .masthead-text-large {
+  font-weight: 700;
+  font-size: 1.75rem;
+  /*@include media-breakpoint-up(md) {
+      font-size: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+  }*/
+  /*@include media-breakpoint-up(xxl) {
+      font-size: 2.75rem;
+  }*/
+}
+@media (min-width: 576px) {
+  .masthead .masthead-text-large {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .masthead .masthead-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 1400px) {
-  .masthead .masthead-text {
-    font-size: 24px;
+  .masthead .masthead-text-large {
+    font-size: 2.75rem;
   }
 }
 
@@ -14863,7 +14879,7 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--bs-annotation-color);
   text-align: left;
 }
 @media (min-width: 420px) {
@@ -14886,7 +14902,7 @@ body {
           text-decoration-style: dotted;
 }
 .masthead-annotation .masthead-annotation-container {
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--bs-annotation-bg);
   -webkit-border-radius: 0.5rem;
      -moz-border-radius: 0.5rem;
           border-radius: 0.5rem;
@@ -14897,8 +14913,8 @@ body {
   -o-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  -webkit-filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
-          filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+  -webkit-filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
+          filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
 }
 .masthead-annotation:hover .masthead-annotation-container, .masthead-annotation:active .masthead-annotation-container {
   display: block;
@@ -15142,7 +15158,11 @@ body {
 }
 
 .masthead.masthead-home-bg {
-  background: url("../assets/masthead-normal.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-normal.webp");
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15152,7 +15172,7 @@ body {
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #fff;
 }
 
 .biography-text {
@@ -15236,6 +15256,7 @@ body {
   -moz-animation: bg-fadein 1s;
   /* Firefox < 16 */
   animation: bg-fadein 1s;
+  border-bottom: 1px solid #000;
 }
 
 #robomaster-head-image {
@@ -15269,8 +15290,12 @@ body {
 .masthead {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.masthead.masthead-photography-bg {
-  background: url("../assets/masthead-color.webp");
+.masthead.masthead-photographs-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-color.webp");
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15282,15 +15307,15 @@ body {
           animation: bg-fadein 1s;
 }
 
-#mainNav .navbar-brand-part2-projects:before {
-  content: "Projects";
+#mainNav .navbar-brand-part2-photographs:before {
+  content: "Photographs";
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-#mainNav .navbar-brand-part2-projects:after {
+#mainNav .navbar-brand-part2-photographs:after {
   content: "Portfolio";
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -15300,9 +15325,25 @@ body {
   position: absolute;
   left: 0;
 }
-#mainNav .collapsed .navbar-brand-part2-projects:before {
+#mainNav .collapsed .navbar-brand-part2-photographs:before {
   opacity: 1;
 }
-#mainNav .collapsed .navbar-brand-part2-projects:after {
+#mainNav .collapsed .navbar-brand-part2-photographs:after {
   opacity: 0;
+}
+
+.masthead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.masthead.masthead-error-bg {
+  background: url("../assets/masthead-white.webp");
+  background-position: 58% 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -moz-background-size: cover;
+       background-size: cover;
+  opacity: 1;
+  -webkit-animation: bg-fadein 1s;
+     -moz-animation: bg-fadein 1s;
+          animation: bg-fadein 1s;
 }

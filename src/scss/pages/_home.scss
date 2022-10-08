@@ -1,10 +1,9 @@
 .masthead {
     &.masthead-home-bg {
-        background: /* linear-gradient(to bottom,
-                #{fade-out($white, 1)} 0%,
-                #{fade-out($white, 0.9)} 90%,
-                #{fade-out($white, 0.05)} 99%,
-                $white 100%),*/
+        background: linear-gradient(to bottom,
+                #{fade-out($white, 0.8)} 0%,
+                #{fade-out($white, 0.3)} 65%,
+                $white 100%),
                 url("../assets/masthead-normal.webp");
 
         background-position: 58% 50%;
@@ -14,7 +13,8 @@
         opacity: 1;
         animation: bg-fadein 1s;
 
-        border-bottom: 1px solid rgba(0, 0, 0, 50%);
+        // border-bottom: 1px solid rgba(0, 0, 0, 50%);
+        border-bottom: 1px solid $white;
     }
 }
 

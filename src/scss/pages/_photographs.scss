@@ -1,9 +1,9 @@
 .masthead {
-    &.masthead-photography-bg {
-        background: /*linear-gradient(to bottom,
-                #{fade-out($white, 0.95)} 0%,
-                #{fade-out($white, 0.7)} 80%,
-                $white 100%),*/
+    &.masthead-photographs-bg {
+        background: linear-gradient(to bottom,
+                #{fade-out($white, 0.8)} 0%,
+                #{fade-out($white, 0.3)} 65%,
+                $white 100%),
         url("../assets/masthead-color.webp");
 
         background-position: 58% 50%;
@@ -18,13 +18,13 @@
 }
 
 #mainNav {
-    .navbar-brand-part2-projects:before {
-        content: "Projects";
+    .navbar-brand-part2-photographs:before {
+        content: "Photographs";
         opacity: 0;
         transition: opacity 0.5s ease;
     }
 
-    .navbar-brand-part2-projects:after {
+    .navbar-brand-part2-photographs:after {
         content: "Portfolio";
         opacity: 1;
         transition: opacity 0.5s ease;
@@ -33,11 +33,11 @@
         left: 0;
     }
 
-    .collapsed .navbar-brand-part2-projects:before {
+    .collapsed .navbar-brand-part2-photographs:before {
         opacity: 1;
     }
 
-    .collapsed .navbar-brand-part2-projects:after {
+    .collapsed .navbar-brand-part2-photographs:after {
         opacity: 0;
     }
 }

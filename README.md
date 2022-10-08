@@ -82,7 +82,6 @@ Specifically, about performance optimizations:
 ## TODOs and Known Issues
 
 - [ ] The photographs page
-- [ ] 404 and other error pages
 
 ## Reference
 
