@@ -1176,14 +1176,6 @@ output {
           align-items: flex-start !important;
 }
 
-.align-items-end {
-  -webkit-box-align: end !important;
-  -webkit-align-items: flex-end !important;
-     -moz-box-align: end !important;
-      -ms-flex-align: end !important;
-          align-items: flex-end !important;
-}
-
 .align-items-center {
   -webkit-box-align: center !important;
   -webkit-align-items: center !important;
@@ -1277,11 +1269,6 @@ output {
   padding-left: 0.25rem !important;
 }
 
-.px-2 {
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-}
-
 .px-3 {
   padding-right: 1rem !important;
   padding-left: 1rem !important;
@@ -1300,11 +1287,6 @@ output {
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-}
-
-.py-2 {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
 }
 
 .py-4 {
@@ -1769,17 +1751,6 @@ body {
   }
 }
 
-.scroll-indicator-path {
-  display: none;
-}
-
-.scroll-indicator-path-active {
-  display: inline;
-  -webkit-animation: scrollDown 2s infinite;
-     -moz-animation: scrollDown 2s infinite;
-          animation: scrollDown 2s infinite;
-}
-
 @-webkit-keyframes scrollDown {
   0% {
     opacity: 0;
@@ -1823,57 +1794,6 @@ body {
   100% {
     opacity: 0;
   }
-}
-.masthead-annotation {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  font-size: 0.8rem;
-  color: var(--bs-annotation-color);
-  text-align: left;
-}
-@media (min-width: 420px) {
-  .masthead-annotation {
-    left: unset;
-    right: 0;
-    text-align: right;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-.masthead-annotation a {
-  color: inherit;
-  -webkit-text-decoration-line: underline;
-     -moz-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-style: dotted;
-     -moz-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-}
-.masthead-annotation .masthead-annotation-container {
-  background: var(--bs-annotation-bg);
-  -webkit-border-radius: 0.5rem;
-     -moz-border-radius: 0.5rem;
-          border-radius: 0.5rem;
-  display: none;
-}
-.masthead-annotation .masthead-annotation-button {
-  -webkit-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-  -webkit-filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
-          filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
-}
-.masthead-annotation:hover .masthead-annotation-container, .masthead-annotation:active .masthead-annotation-container {
-  display: block;
-}
-.masthead-annotation:hover .masthead-annotation-button, .masthead-annotation:active .masthead-annotation-button {
-  color: var(--bs-active-color);
 }
 
 .project-container {
