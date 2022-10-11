@@ -60,13 +60,15 @@ template and ended up changing almost everything.
 
 This is a static website. Bootstrap is used for its responsive design. A bit of detail:
 
-* I use SCSS to generate CSS in the same way as the starting template. But I work on raw HTML rather than PUG.
-* CSS is processed
+* I use SCSS to generate CSS in the same way as the starting template. But I work on raw HTML rather than PUG used by
+  the template.
+* CSS is post-processed
   with [autoprefixer](https://github.com/postcss/autoprefixer) ([render-scss.js](scripts/render-scss.js))
   so that there is no need to add prefixes manually. Currently, the target compatibility is set
   to `cover 99.5%` ([browserslist](https://github.com/browserslist/browserslist)).
 * Website statistics: self-hosted [umami](https://umami.is). Only anonymous, aggregated statistics are collected
   locally.
+* Favicon assets generated from [RealFaviconGenerator](https://realfavicongenerator.net/#).
 
 Specifically, about performance optimizations:
 
@@ -75,9 +77,10 @@ Specifically, about performance optimizations:
 * Vanilla JS. No JQuery.
 * Self-host fonts (only three weights of Nunito Sans). No Google Fonts.
 * Inline SVG icons from [Bootstrap Icons](https://icons.getbootstrap.com). No CDN-delivered FontAwesome.
-* Lossy WEBP for images. Target Fast 3G loading speed.
+* Lossy WEBP for images. Targeting Fast 3G loading speed.
 * GZIP encoding (less important after deploying the CDN).
 * Preload CSS, fonts, JS and the masthead background.
+* CDN.
 
 ## TODOs and Known Issues
 
@@ -97,6 +100,6 @@ Any feedback is appreciated! If you know me well, just shoot a message to me :)
 
 ## License
 
-All source code (HTML, JS, CSS) is available under the UIUC license. Texts and images remain copyrighted 
+All source code (HTML, JS, CSS) is available under the UIUC open source license. Texts and images remain copyrighted
 unless originated from somewhere else ([reference.md](reference.md)).
 
