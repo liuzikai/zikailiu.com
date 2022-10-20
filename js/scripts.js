@@ -2077,6 +2077,9 @@
           return percentage * percentage * percentage * percentage;
       }
 
+      let mainNavBodyElem = document.getElementById("mainNavBody");
+      let mainNavBodyMobileElem = document.getElementById("mainNavBodyMobile");
+
       function calcProjectSVGPercentage(projectElem) {
           // 0% when first becomes visible from the bottom
           //   clientRect.top = window.innerHeight
@@ -2087,7 +2090,8 @@
           // Choose the larger one of case 1 and 2 (whichever reach first)
           let clientRect = projectElem.getBoundingClientRect();
           // mainNav expandable in mobile, use mainNavBody
-          let navBarHeight = document.getElementById("mainNavBody").offsetHeight;
+          let navBarHeight = mainNavBodyElem.offsetHeight;
+          if (navBarHeight === 0) navBarHeight = mainNavBodyMobileElem.offsetHeight;
           let topStart = window.innerHeight,
               topEnd1 = (navBarHeight + window.innerHeight - clientRect.height) * 0.5,  // simplified
               topEnd2 = (navBarHeight * 1.5),
