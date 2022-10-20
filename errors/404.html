@@ -17,7 +17,7 @@
     <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/masthead-white.webp" as="image" type="image/webp">
+    <link rel="preload" href="/assets/masthead-white.jpg" as="image" type="image/webp">
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
@@ -29,7 +29,7 @@
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/masthead-white.webp"
+    <img src="/assets/masthead-white.jpg"
          onload='document.getElementById("masthead").classList.add("masthead-error-bg");' alt="">
 </div>
 

@@ -29,7 +29,7 @@
                 #{fade-out($black, 0.7)} 0%,
                 #{fade-out($black, 0.3)} 75%,
                 $black 100%),
-        url("../assets/masthead-wireframe.webp");
+        url("../assets/masthead-wireframe.jpg");
         background-position: 58% 50%;
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -47,7 +47,7 @@
             #{fade-out($black, 1)} 0%,
             #{fade-out($black, 1)} 80%,
             $black 100%),
-    url("../../../assets/robomaster-me.webp");
+    url("../../../assets/robomaster-me.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -60,7 +60,7 @@
             #{fade-out($black, 1)} 0%,
             #{fade-out($black, 1)} 80%,
             $black 100%),
-    url("../../../assets/joystick-photo.webp");
+    url("../../../assets/joystick-photo.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;

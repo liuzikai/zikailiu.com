@@ -15158,11 +15158,11 @@ body {
 }
 
 .masthead.masthead-home-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-normal.webp");
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-normal.jpg");
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15240,11 +15240,11 @@ body {
 }
 
 .masthead.masthead-projects-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(75%, rgba(0, 0, 0, 0.7)), to(#000)), url("../assets/masthead-wireframe.webp");
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.webp");
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.webp");
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.webp");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(75%, rgba(0, 0, 0, 0.7)), to(#000)), url("../assets/masthead-wireframe.jpg");
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.jpg");
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/masthead-wireframe.jpg");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15260,11 +15260,11 @@ body {
 }
 
 #robomaster-head-image {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), to(#000)), url("../../../assets/robomaster-me.webp");
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.webp");
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.webp");
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.webp");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), to(#000)), url("../../../assets/robomaster-me.jpg");
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.jpg");
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/robomaster-me.jpg");
   -moz-background-size: contain;
        background-size: contain;
   background-repeat: no-repeat;
@@ -15274,11 +15274,11 @@ body {
 }
 
 #joystick-head-image {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), to(#000)), url("../../../assets/joystick-photo.webp");
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.webp");
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.webp");
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.webp");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), to(#000)), url("../../../assets/joystick-photo.jpg");
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.jpg");
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../../../assets/joystick-photo.jpg");
   -moz-background-size: contain;
        background-size: contain;
   background-repeat: no-repeat;
@@ -15291,11 +15291,11 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .masthead.masthead-photographs-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-color.webp");
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-color.jpg");
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.jpg");
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.jpg");
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.jpg");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-color.jpg");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15336,7 +15336,7 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .masthead.masthead-error-bg {
-  background: url("../assets/masthead-white.webp");
+  background: url("../assets/masthead-white.jpg");
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
