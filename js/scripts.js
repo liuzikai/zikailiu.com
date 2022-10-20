@@ -2030,7 +2030,7 @@
           if (1 !== element.nodeType) return false;
 
           let vpWidth = window.innerWidth,
-              vpHeight = window.innerHeight;
+              vpHeight = window.innerHeight * 1.1;  // multiply by a factor to avoid flicking
 
           let rec = element.getBoundingClientRect(),
               tViz = rec.top >= 0 && rec.top < vpHeight,
