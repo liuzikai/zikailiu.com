@@ -1980,7 +1980,7 @@
       const scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
 
       // Navbar shrink function
-      var navbarShrink = function () {
+      let navbarShrink = function () {
           const navbarCollapsible = document.body.querySelector("#mainNav");
           if (!navbarCollapsible) {
               return;
@@ -1990,10 +1990,10 @@
               // Do not restart the scroll indicator animation
           } else {
               navbarCollapsible.classList.add("navbar-shrink");
-              // Stop the scroll indicator  animation smoothly
-              Array.from(scrollIndicators).forEach(el => {
-                  el.addEventListener('animationiteration', _ => {
-                      el.classList.remove("scroll-indicator-path-active");
+              // Stop the scroll indicator animation smoothly
+              Array.from(scrollIndicators).forEach(e => {
+                  e.addEventListener('animationiteration', _ => {
+                      e.classList.remove("scroll-indicator-path-active");
                   }, {once : true});
               });
           }
@@ -2028,6 +2028,7 @@
       function inViewportPartial(element) {
           if (!element) return false;
           if (1 !== element.nodeType) return false;
+          if (element.offsetParent === null) return false;  // invisible
 
           let vpWidth = window.innerWidth,
               vpHeight = window.innerHeight * 1.1;  // multiply by a factor to avoid flicking
@@ -2048,8 +2049,8 @@
 
       // Get the array of all .slide-in-text
       let allSlideInTexts = [];
-      for (const el of document.getElementsByClassName("slide-in-text")) {
-          allSlideInTexts.push(el);
+      for (const e of document.getElementsByClassName("slide-in-text")) {
+          allSlideInTexts.push(e);
       }
 
       // Slide in animation
@@ -2132,7 +2133,7 @@
           }
       }
 
-      for (const e of document.getElementsByClassName("icon-placeholder")) {
+      for (let e of document.getElementsByClassName("icon-placeholder")) {
           // Fetch the content
           let request = new XMLHttpRequest();
           request.open("GET", e.dataset.include, true);
@@ -2167,25 +2168,61 @@
       }
       // Note: svgInfo is updated async
 
+      // Lazy load images and videos in Read More sections
+
+      // Get the array of all .read-more-button
+      let allReadMoreButtons = [];
+      for (let e of document.getElementsByClassName("read-more-button")) {
+          allReadMoreButtons.push(e);
+      }
+
+      // Slide in animation
+      function handleVisibleReadMoreButtons() {
+          for (let i = 0; i < allReadMoreButtons.length; i++) {
+              let e = allReadMoreButtons[i];
+              if (inViewportPartial(e)) {
+                  // Lazy load modal image
+                  let modal = document.querySelector(e.getAttribute("data-bs-target"));
+                  Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
+                      e.src = e.dataset.src;
+                      // console.log("Lazy load image:", e.src);
+                  });
+
+                  // Remove it from the list
+                  allReadMoreButtons.splice(i, 1);
+                  i--;
+              }
+          }
+      }
+      handleVisibleReadMoreButtons();  // call once at start
+
+      window.readMoreClicked = function(readMoreButton) {
+          // console.log("readMoreClicked:", readMoreButton);
+          let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
+          // Lazy load modal videos
+          Array.from(modal.querySelectorAll(".modal-lazy-video")).forEach(e => {
+              e.src = e.dataset.src;
+              e.classList.remove("modal-lazy-video");
+              if (e.type === "video/mp4") {
+                  // console.log(e.src, e.parentNode);
+                  e.parentNode.load();
+              }
+          });
+          // Just in case handleVisibleReadMoreButtons does not work
+          Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
+              if (!e.getAttribute("src")) {
+                  e.src = e.dataset.src;
+                  console.warn("Modal lazy loading image is not loaded:", e.src);
+              }
+          });
+      };
+
       // On a scroll event
       document.addEventListener("scroll", function (e) {
           updateSVGs();
           updateSlideInTexts();
+          handleVisibleReadMoreButtons();
       });
-
-      window.readMoreClicked = function(readMoreButton) {
-          // Lazy loading images and videos (not in scripts.js as it is removed as unused)
-          let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
-          Array.from(modal.querySelectorAll(".modal-lazy")).forEach(e => {
-              e.src = e.dataset.src;
-              e.classList.remove("modal-lazy");
-              if (e.type === "video/mp4") {
-                  console.log(e.src, e.parentNode);
-                  e.parentNode.load();
-              }
-          });
-          // console.log("readMoreClicked");
-      };
 
   });
 
