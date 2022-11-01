@@ -1,9 +1,10 @@
 .masthead {
     &.masthead-error-bg {
-        background: /*linear-gradient(to bottom,
-                #{fade-out($white, 0.8)} 0%,
-                #{fade-out($white, 0.3)} 65%,
-                $white 100%),*/
+        background: linear-gradient(to bottom,
+                #{fade-out($white, 0.3)} 0%,
+                #{fade-out($white, 0.8)} 20%,
+                #{fade-out($white, 0.3)} 70%,
+                $white 100%),
         url("../assets/masthead-white.jpg");
 
         background-position: 58% 50%;
@@ -15,4 +16,11 @@
     }
 
     border-bottom: 1px solid $navbar-light-border-color;
+}
+
+.back-to-home-link {
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: var(--bs-active-color);
+    }
 }
