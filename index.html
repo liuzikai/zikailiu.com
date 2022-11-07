@@ -51,6 +51,10 @@
             <path fill-rule="evenodd"
                   d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </symbol>
+        <symbol id="bi-chevron-left" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </symbol>
         <symbol id="bi-chevron-right" viewBox="0 0 16 16" fill="currentColor">
             <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -80,7 +84,8 @@
             <a class="navbar-brand-text" href="/">Zikai Liu</a>
         </div>
         <!-- This brand show when < md -->
-        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;" id="mainNavBodyMobile"
+        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             id="mainNavBodyMobile"
              data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
              aria-expanded="false" aria-label="Toggle navigation">
             <div class="navbar-brand" href="#page-top">
@@ -88,7 +93,7 @@
             </div>
             <div class="navbar-toggler my-auto">
                 <svg width="16" height="16">
-                    <use href="#bi-chevron-right"></use>
+                    <use xlink:href="#bi-chevron-right"></use>
                 </svg>
             </div>
         </div>
@@ -127,7 +132,9 @@
                 <h2 class="mb-5 mb-lg-5">
                     About Me
                 </h2>
-                I am <mark>Zikai Liu</mark>, a Master's student in Computer Science at ETH Zürich. I am generally interested in
+                I am
+                <mark>Zikai Liu</mark>
+                , a Master's student in Computer Science at ETH Zürich. I am generally interested in
                 all aspects about computer systems, with hands-on experience in hardware and software projects.
                 I am diving into those areas with my study, while exploring many others (augmented/mixed reality,
                 human-computer interaction, design).
@@ -204,8 +211,8 @@
     <div class="container py-4 px-4 px-lg-5 d-flex justify-content-between slide-in-text">
         <div class="biography-text text-start">
             <h2><a href="/projects" class="home-large-link umami--click--large-projects">
-                <svg width="0.5em" height="0.5em" style="rotate: 180deg">
-                    <use href="#bi-chevron-right"></use>
+                <svg width="0.5em" height="0.5em">
+                    <use xlink:href="#bi-chevron-left"></use>
                 </svg>
                 Projects
             </a></h2>
@@ -214,7 +221,7 @@
             <h2><a href="/photographs" class="home-large-link umami--click--large-photographs">
                 Photographs
                 <svg width="0.5em" height="0.5em">
-                    <use href="#bi-chevron-right"></use>
+                    <use xlink:href="#bi-chevron-right"></use>
                 </svg>
             </a></h2>
         </div>
@@ -228,19 +235,19 @@
         <div class="social d-flex justify-content-center">
             <a class="mx-2 umami--click--footer-email" href="mailto: zikai.liu@outlook.com">
                 <svg width="1.5em" height="1.5em">
-                    <use href="#bi-envelope"></use>
+                    <use xlink:href="#bi-envelope"></use>
                 </svg>
             </a>
             <a class="mx-2 umami--click--footer-linkedin" target="_blank" rel="noopener noreferrer"
                href="https://www.linkedin.com/in/zikai-liu/">
                 <svg width="1.5em" height="1.5em">
-                    <use href="#bi-linkedin"></use>
+                    <use xlink:href="#bi-linkedin"></use>
                 </svg>
             </a>
             <a class="mx-2 umami--click--footer-github" target="_blank" rel="noopener noreferrer"
                href="https://github.com/liuzikai">
                 <svg width="1.5em" height="1.5em">
-                    <use href="#bi-github"></use>
+                    <use xlink:href="#bi-github"></use>
                 </svg>
             </a>
         </div>
@@ -256,11 +263,11 @@
             Nuts and bolts about this website on
             <span style="white-space: nowrap">
             <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                <use href="#bi-github"></use>
+                <use xlink:href="#bi-github"></use>
             </svg>
             GitHub
             <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                <use href="#bi-chevron-right"></use>
+                <use xlink:href="#bi-chevron-right"></use>
             </svg>
             </span>
         </a>
