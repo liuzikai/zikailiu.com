@@ -60,7 +60,7 @@ template and ended up changing almost everything.
 
 This is a static website. Bootstrap is used for its responsive design. A bit of detail:
 
-* I use SCSS to generate CSS in the same way as the starting template. But I work on raw HTML rather than PUG used by
+* Use SCSS to generate CSS in the same way as the starting template. But I work on raw HTML rather than PUG used by
   the template.
 * CSS is post-processed
   with [autoprefixer](https://github.com/postcss/autoprefixer) ([render-scss.js](scripts/render-scss.js))
@@ -68,7 +68,7 @@ This is a static website. Bootstrap is used for its responsive design. A bit of 
   to `cover 99.5%` ([browserslist](https://github.com/browserslist/browserslist)).
 * Website statistics: self-hosted [umami](https://umami.is). Only anonymous, aggregated statistics are collected
   locally.
-* Favicon assets generated from [RealFaviconGenerator](https://realfavicongenerator.net/#).
+* Favicon assets generated with [RealFaviconGenerator](https://realfavicongenerator.net/#).
 
 Specifically, about performance optimizations:
 
@@ -77,9 +77,10 @@ Specifically, about performance optimizations:
 * Vanilla JS. No JQuery.
 * Self-host fonts (only three weights of Nunito Sans). No Google Fonts.
 * Inline SVG icons from [Bootstrap Icons](https://icons.getbootstrap.com). No CDN-delivered FontAwesome.
-* Lossy WEBP for images. Targeting Fast 3G loading speed.
+* ~~Lossy WEBP for images. Targeting Fast 3G loading speed.~~ JPEG images for backward compatibility. WEBP saves up to ~50% for normal size images (e.g. photos in Projects page, but not that much for large masthead images, which are bottlenecks.
 * GZIP encoding (less important after deploying the CDN).
 * Preload CSS, fonts, JS and the masthead background.
+* Customized images/video lazy loading on the Project page.
 * CDN.
 
 ## TODOs and Known Issues
