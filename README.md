@@ -77,7 +77,7 @@ Specifically, about performance optimizations:
 * Vanilla JS. No JQuery.
 * Self-host fonts (only three weights of Nunito Sans). No Google Fonts.
 * Inline SVG icons from [Bootstrap Icons](https://icons.getbootstrap.com). No CDN-delivered FontAwesome.
-* ~~Lossy WEBP for images. Targeting Fast 3G loading speed.~~ JPEG images for backward compatibility. WEBP saves up to ~50% for normal size images (e.g. photos in Projects page, but not that much for large masthead images, which are bottlenecks.
+* ~~Lossy WEBP for images. Targeting Fast 3G loading speed.~~ JPEG images for backward compatibility. WEBP saves up to ~50% for normal size images (e.g. photos in Projects page), but not that much for large masthead images (~10%-20%), which are the real bottlenecks.
 * GZIP encoding (less important after deploying the CDN).
 * Preload CSS, fonts, JS and the masthead background.
 * Customized images/video lazy loading on the Project page.
