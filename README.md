@@ -100,6 +100,6 @@ Any feedback is appreciated! If you know me well, just shoot a message to me :)
 
 ## License
 
-All source code (HTML, JS, CSS) is available under the UIUC open source license. Texts and images remain copyrighted
+All source code (HTML, JS, CSS) is available under the MIT open source license. Texts and images remain copyrighted
 unless originated from somewhere else ([reference.md](reference.md)).
 
