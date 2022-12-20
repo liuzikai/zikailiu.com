@@ -86,14 +86,14 @@
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
         <!-- This brand show when >= md -->
-        <div class="navbar-brand show-md" id="mainNavBody">
+        <div class="navbar-brand show-md" id="mainNavBody" aria-hidden="true">
             <a class="navbar-brand-text" href="/">Zikai Liu</a>
         </div>
         <!-- This brand show when < md -->
         <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
              id="mainNavBodyMobile"
              data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-             aria-expanded="false" aria-label="Toggle navigation">
+             aria-expanded="false" aria-label="Toggle navigation" aria-hidden="true">
             <div class="navbar-brand" href="#page-top">
                 <!-- Newline between spans to act as space -->
                 <span class="navbar-brand-part1">Zikai Liu's</span>
@@ -766,7 +766,7 @@
                     </div>
                 </div>
                 <!-- To align two read more buttons, having a new row seems to be the easiest way -->
-                <div class="row show-lg text-end slide-in-text">
+                <div class="row show-lg text-end slide-in-text" aria-hidden="true">
                     <div class="col-lg-6 umami--click--read-aurora-os" style="padding: 0 5rem">
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
@@ -1016,7 +1016,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row show-lg text-end slide-in-text">
+                <div class="row show-lg text-end slide-in-text" aria-hidden="true">
                     <div class="col-lg-6 umami--click--read-riscv" style="padding: 0 5rem">
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
