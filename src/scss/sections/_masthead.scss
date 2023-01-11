@@ -33,18 +33,18 @@
         font-weight: lighter;
         /*@include media-breakpoint-up(sm) {
             font-size: 1.25rem;
-        }
-        @include media-breakpoint-up(md) {
-            font-size: 1.25rem;
         }*/
-        @include media-breakpoint-up(lg) {
+        /*@include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }*/
+        /*@include media-breakpoint-up(lg) {
+            font-size: 1.5rem;
+        }*/
+        @include media-breakpoint-up(xl) {
             font-size: 1.5rem;
         }
-        /*@include media-breakpoint-up(xl) {
-            font-size: 1.5rem;
-        }
-        @include media-breakpoint-up(xxl) {
-            font-size: 1.5rem;
+        /*@include media-breakpoint-up(xxl) {
+            font-size: 1.75rem;
         }*/
     }
 

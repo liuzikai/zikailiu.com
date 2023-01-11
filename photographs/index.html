@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" style="--bs-body-color: black; --bs-body-bg: white; --bs-active-color: rgba(0, 0, 0, 0.3);">
+<html lang="en"
+      style="--bs-body-color: rgba(255, 255, 255, 0.5); --bs-body-rgb: 255, 255, 255; --bs-active-color: white; --bs-annotation-color: rgba(255, 255, 255, 0.5); --bs-annotation-bg: rgba(0, 0, 0, 1);">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -14,10 +15,10 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" fetchpriority="high" href="/assets/masthead-color.jpg" as="image" type="image/jpeg">
+    <link rel="preload" fetchpriority="high" href="/assets/masthead-wireframe.jpg" as="image" type="image/jpeg">
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
@@ -30,7 +31,7 @@
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
     <img src="/assets/masthead-color.jpg"
-         onload='document.getElementById("masthead").classList.add("masthead-photographs-bg");' alt="">
+         onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
 </div>
 
 <!-- Embedded SVG used -->
@@ -74,18 +75,18 @@
 </svg>
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
         <!-- This brand show when >= md -->
-        <div class="navbar-brand show-md" id="mainNavBody">
+        <div class="navbar-brand show-md" id="mainNavBody" aria-hidden="true">
             <a class="navbar-brand-text" href="/">Zikai Liu</a>
         </div>
         <!-- This brand show when < md -->
         <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
              id="mainNavBodyMobile"
              data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-             aria-expanded="false" aria-label="Toggle navigation">
+             aria-expanded="false" aria-label="Toggle navigation" aria-hidden="true">
             <div class="navbar-brand" href="#page-top">
                 <!-- Newline between spans to act as space -->
                 <span class="navbar-brand-part1">Zikai Liu's</span>
@@ -98,13 +99,13 @@
                 </svg>
             </div>
         </div>
-        <!-- Expanded when >= lg, drop-down menu when < lg -->
+        <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link nav-link-outline umami--click--nav-home" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-outline umami--click--nav-projects" href="/projects">Projects</a>
+                <li class="nav-item"><a class="nav-link umami--click--nav-home" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link active umami--click--nav-projects" href="/projects">Projects</a>
                 </li>
-                <li class="nav-item"><a class="nav-link nav-link-outline active umami--click--nav-photographs"
+                <li class="nav-item"><a class="nav-link umami--click--nav-photographs"
                                         href="/photographs">Photographs</a></li>
             </ul>
         </div>
@@ -113,15 +114,53 @@
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="masthead-text text-center">
+                <p class="mx-auto mt-1 mb-0">Life has so much beauty</p>
+                <p class="mx-auto mt-1 mb-0">waiting for us to discover</p>
+                <p class="mx-auto mt-1 mb-0">together.</p>
+            </div>
+        </div>
+    </div>
 </header>
 
 <!-- Body -->
 <section class="projects-section" id="projects">
-    <div class="container py-4 px-4 px-lg-5 d-flex justify-content-center slide-in-text">
-        <div class="biography-text text-start slide-in-text">
-            <h2>This page is under construction :D</h2>
+
+    <div class="pic-section">
+        <div class="pic-list pic-gallery">
+            <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>
+            <img class="modal-image" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
+        </div>
+        <div class="pic-list pic-thumbnails">
+            <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>
+            <img class="modal-image" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
         </div>
     </div>
+
+<!--    <div class="container py-4 px-4 px-lg-5 justify-content-center slide-in-text" style="height: 200vh">-->
+<!--        <div class="row">-->
+<!--            <div class="col-9">-->
+<!--                <div style="min-height: 100vh">-->
+<!--                    <div style="position: sticky; top: 8em">-->
+<!--                        <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--                        233-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--            </div>-->
+<!--            <div class="col-3">-->
+<!--                <div style="position: sticky; top: 10em">-->
+<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </section>
 
 <!-- Contact-->

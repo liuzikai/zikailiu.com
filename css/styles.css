@@ -453,6 +453,24 @@ output {
   margin-top: var(--bs-gutter-y);
 }
 
+.col-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-9 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 75%;
+}
+
 
 .gx-0 {
   --bs-gutter-x: 0;
@@ -1719,18 +1737,18 @@ body {
   font-weight: lighter;
   /*@include media-breakpoint-up(sm) {
       font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(md) {
-      font-size: 1.25rem;
   }*/
-  /*@include media-breakpoint-up(xl) {
+  /*@include media-breakpoint-up(md) {
       font-size: 1.5rem;
-  }
-  @include media-breakpoint-up(xxl) {
+  }*/
+  /*@include media-breakpoint-up(lg) {
       font-size: 1.5rem;
+  }*/
+  /*@include media-breakpoint-up(xxl) {
+      font-size: 1.75rem;
   }*/
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .masthead .masthead-text {
     font-size: 1.5rem;
   }
@@ -2004,12 +2022,8 @@ body {
 }
 
 .masthead.masthead-home-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-normal.jpg");
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.7) 65%, #fff 100%), url("../assets/masthead-normal.jpg");
-  background-position: 58% 50%;
+  background: url("../assets/masthead-normal.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   -moz-background-size: cover;
@@ -2180,6 +2194,49 @@ body {
 }
 #mainNav .collapsed .navbar-brand-part2-photographs:after {
   opacity: 0;
+}
+
+.pic-section {
+  display: grid;
+  grid-template-columns: minmax(auto, 1200px) auto;
+  grid-auto-rows: auto;
+  grid-column-gap: 1em;
+}
+@media (min-width: 576px) {
+  .pic-section {
+    grid-column-gap: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .pic-section {
+    grid-column-gap: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .pic-section {
+    grid-column-gap: 5em;
+  }
+}
+
+.pic-list {
+  display: grid;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  grid-row-gap: 1em;
+  grid-template-rows: auto;
+}
+.pic-list.pic-thumbnails {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 70vh;
+  top: 8em;
+  width: 4em;
+}
+@media (min-width: 768px) {
+  .pic-list.pic-thumbnails {
+    width: 5em;
+  }
 }
 
 .masthead {
