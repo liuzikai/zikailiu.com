@@ -60,3 +60,67 @@
         color: var(--bs-active-color);
     }
 }
+
+.me-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 2rem;
+
+    //border: 1px solid #2c3034;
+
+    @include media-breakpoint-up(lg) {
+        width: 360px;
+        height: 360px;
+        //background-color: white;
+    }
+    /*@include media-breakpoint-up(xl) {
+        font-size: 1.25rem;
+    }
+    @include media-breakpoint-up(xxl) {
+        font-size: 1.25rem;
+    }*/
+    border-radius: 1em;
+}
+
+#me-photo {
+    background-image: url("/assets/robomaster-me.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(lg) {
+        //position: relative;
+        //left: 60%;
+    }
+}
+
+#me-intro-self {
+    @include media-breakpoint-up(lg) {
+        //position: relative;
+        //left: 15%;
+    }
+}
+
+#me-intro-tech {
+    @include media-breakpoint-up(lg) {
+        //position: relative;
+        //left: 10%;
+    }
+}
+
+#me-intro-art {
+    @include media-breakpoint-up(lg) {
+        //position: relative;
+        //left: 65%;
+    }
+}
+
+#me-intro-combined {
+    @include media-breakpoint-up(lg) {
+        //position: relative;
+        //left: 35%;
+    }
+}

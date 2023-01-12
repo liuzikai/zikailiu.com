@@ -1994,7 +1994,7 @@
               Array.from(scrollIndicators).forEach(e => {
                   e.addEventListener('animationiteration', _ => {
                       e.classList.remove("scroll-indicator-path-active");
-                  }, {once : true});
+                  }, {once: true});
               });
           }
 
@@ -2019,9 +2019,9 @@
           });
       });
 
-  /*!
-   * My JS Script
-   */
+      /*!
+       * My JS Script
+       */
 
       // Reference: https://stackoverflow.com/a/12418814/10087792
       //            jquery-visible(https://github.com/customd/jquery-visible)
@@ -2194,9 +2194,10 @@
               }
           }
       }
+
       handleVisibleReadMoreButtons();  // call once at start
 
-      window.readMoreClicked = function(readMoreButton) {
+      window.readMoreClicked = function (readMoreButton) {
           // console.log("readMoreClicked:", readMoreButton);
           let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
           // Lazy load modal videos
@@ -2224,6 +2225,81 @@
           handleVisibleReadMoreButtons();
       });
 
+
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to("#me-photo", {
+          scrollTrigger: {
+              trigger: "#me-photo",
+              start: "top bottom",
+              end: "+=" + (360 * 11),
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              markers: true,
+          },
+          y: "-150vh",
+          ease: "power1.out",
+          // duration: 3,
+      });
+      gsap.to("#me-intro-self", {
+          scrollTrigger: {
+              trigger: "#me-intro-self",
+              start: "top bottom",
+              end: "+=" + (360 * 10),
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              markers: true,
+          },
+          y: "-150vh",
+          ease: "power2.out",
+          // duration: 3,
+      });
+      gsap.to("#me-intro-tech", {
+          scrollTrigger: {
+              trigger: "#me-intro-tech",
+              start: "top bottom",
+              end: "+=" + (360 * 8),
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              markers: true,
+          },
+          y: "-90vh",
+          ease: "power2.out",
+          // duration: 3,
+      });
+      gsap.to("#me-intro-art", {
+          scrollTrigger: {
+              trigger: "#me-intro-art",
+              start: "top bottom",
+              end: "+=" + (360 * 6),
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              // markers: true,
+          },
+          y: "-80vh",
+          // duration: 3,
+      });
+      gsap.to("#me-intro-combined", {
+          scrollTrigger: {
+              trigger: "#me-intro-combined",
+              start: "top bottom",
+              end: "+=" + (360 * 4),
+              pin: true,
+              // pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              // markers: true,
+          },
+          y: "-60vh",
+          // duration: 3,
+      });
   });
 
 }));
