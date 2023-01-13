@@ -2265,18 +2265,45 @@
           scrollTrigger: {
               trigger: "#me-intro-tech",
               start: "top bottom",
-              endTrigger: "#contacts",
-              end: "top bottom",
-              pin: true,
+              endTrigger: "#about",
+              end: "bottom bottom",
+              // pin: true,
               // pinSpacing: false,
               scrub: true,
               // toggleActions: "restart none reverse none",
-              markers: true,
+              // markers: true,
           },
-          y: "-90vh",
-          ease: "power2.out",
+          y: "+210vh",
+          ease: "none",
           // duration: 3,
       });
+
+      // gsap.to("#me-intro-tech", {
+      //     scrollTrigger: {
+      //         trigger: "#me-intro-tech",
+      //         start: "top bottom",
+      //         endTrigger: "#about",
+      //         end: "bottom bottom",
+      //         // pin: true,
+      //         // pinSpacing: false,
+      //         scrub: true,
+      //         // toggleActions: "restart none reverse none",
+      //         // markers: true,
+      //     },
+      //     y: "-90vh",
+      //     ease: "power2.out",
+      //     // duration: 3,
+      // });
+      //
+      // ScrollTrigger.create({
+      //     trigger: "#me-intro-tech",
+      //     start: "top bottom",
+      //     end: 'max',
+      //     pin: true,
+      //     pinSpacing: false,
+      //     markers: true,
+      // })
+
       // gsap.to("#me-intro-tech", {
       //     scrollTrigger: {
       //         trigger: "#me-intro-tech",
@@ -2295,30 +2322,32 @@
           scrollTrigger: {
               trigger: "#me-intro-art",
               start: "top bottom",
-              endTrigger: "#contacts",
-              end: "top bottom",
-              pin: true,
+              endTrigger: "#about",
+              end: "bottom bottom",
+              // pin: true,
               // pinSpacing: false,
               scrub: true,
               // toggleActions: "restart none reverse none",
               // markers: true,
           },
-          y: "-80vh",
+          y: "+120vh",
+          ease: "none",
           // duration: 3,
       });
       gsap.to("#me-intro-combined", {
           scrollTrigger: {
               trigger: "#me-intro-combined",
               start: "top bottom",
-              endTrigger: "#contacts",
-              end: "top bottom",
-              pin: true,
+              endTrigger: "#about",
+              end: "bottom bottom",
+              // pin: true,
               // pinSpacing: false,
               scrub: true,
               // toggleActions: "restart none reverse none",
               // markers: true,
           },
-          y: "-60vh",
+          y: "+30vh",
+          ease: "none",
           // duration: 3,
       });
   });
