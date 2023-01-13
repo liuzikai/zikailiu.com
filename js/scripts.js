@@ -2265,15 +2265,16 @@
           scrollTrigger: {
               trigger: "#me-intro-tech",
               start: "top bottom",
-              endTrigger: "#about",
-              end: "bottom bottom",
+              // endTrigger: "#about",
+              // end: "bottom bottom",
+              end: "max",
               // pin: true,
               // pinSpacing: false,
               scrub: true,
               // toggleActions: "restart none reverse none",
               // markers: true,
           },
-          y: "+210vh",
+          y: "+260vh",
           ease: "none",
           // duration: 3,
       });
@@ -2282,8 +2283,25 @@
       //     scrollTrigger: {
       //         trigger: "#me-intro-tech",
       //         start: "top bottom",
-      //         endTrigger: "#about",
-      //         end: "bottom bottom",
+      //         // endTrigger: "#about",
+      //         end: "max",
+      //         pin: true,
+      //         // pinSpacing: false,
+      //         scrub: true,
+      //         // toggleActions: "restart none reverse none",
+      //         markers: true,
+      //     },
+      //     y: "-90vh",
+      //     ease: "power2.out",
+      //     // duration: 3,
+      // });
+
+      // gsap.to("#me-intro-tech", {
+      //     scrollTrigger: {
+      //         trigger: "#me-intro-tech",
+      //         start: "top bottom",
+      //         endTrigger: "#me-intro-art",
+      //         end: "top bottom",
       //         // pin: true,
       //         // pinSpacing: false,
       //         scrub: true,
@@ -2291,17 +2309,16 @@
       //         // markers: true,
       //     },
       //     y: "-90vh",
-      //     ease: "power2.out",
+      //     ease: "power1.inOut",
       //     // duration: 3,
       // });
-      //
       // ScrollTrigger.create({
       //     trigger: "#me-intro-tech",
       //     start: "top bottom",
       //     end: 'max',
       //     pin: true,
-      //     pinSpacing: false,
-      //     markers: true,
+      //     // pinSpacing: false,
+      //     // markers: true,
       // })
 
       // gsap.to("#me-intro-tech", {
@@ -2318,12 +2335,14 @@
       //     // ease: "power3.out",
       //     opacity: "100%",
       // });
+
       gsap.to("#me-intro-art", {
           scrollTrigger: {
               trigger: "#me-intro-art",
               start: "top bottom",
               endTrigger: "#about",
               end: "bottom bottom",
+              // end: "max",
               // pin: true,
               // pinSpacing: false,
               scrub: true,
@@ -2340,6 +2359,7 @@
               start: "top bottom",
               endTrigger: "#about",
               end: "bottom bottom",
+              // end: "max",
               // pin: true,
               // pinSpacing: false,
               scrub: true,
