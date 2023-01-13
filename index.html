@@ -130,20 +130,17 @@
 <!-- Body -->
 <section class="projects-section" id="about">
     <div class="container">
-        <div class="row justify-content-around">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-3 me-frame" id="me-photo"></div>
-        </div>
-        <div class="row justify-content-around">
-            <div class="col-lg-3 me-frame" id="me-intro-self">
+        <div class="row justify-content-around" id="me-intro">
+            <div class="col-lg-4 me-frame" id="me-intro-self">
                 I am Zikai Liu, a&nbsp;Master's student in Computer Science at ETH Zurich.
             </div>
-            <div class="col-lg-3"></div>
+            <div class="col-lg-4 me-frame" id="me-intro-photo"></div>
         </div>
+        <div class="row justify-content-around"><div class="me-frame"></div></div>
         <div class="row justify-content-around"><div class="me-frame"></div></div>
         <div class="row justify-content-around">
             <div class="col-lg-3 me-frame" id="me-intro-tech">
-                I learn the way of technology in schools. For years, I always feel lucky working on interesting things with great people.
+                In schools, I learn about technology, from semiconductor to code. I am always amazed by what human creations can achieve.
             </div>
             <div class="col-lg-3"></div>
             <div class="col-lg-3"></div>
@@ -283,7 +280,7 @@
 <!--</section>-->
 
 <!-- Contact-->
-<section class="contact-section contact-section-light">
+<section class="contact-section contact-section-light" id="contacts">
     <div class="container px-4 px-lg-5">
         <div class="social d-flex justify-content-center">
             <a class="mx-2 umami--click--footer-email" href="mailto: zikai.liu@outlook.com" aria-label="Email me">
@@ -308,26 +305,26 @@
 </section>
 
 <!-- Footer-->
-<footer class="footer small text-center">
-    <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
-    <div class="container px-4 px-lg-5 py-4">
-        <a class="text-black-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
-           href="https://github.com/liuzikai/liuzik.ai" aria-label="Visit the GitHub repository of this website">
-            Nuts and bolts about this website on
-            <span style="white-space: nowrap">
-            <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                <use xlink:href="#bi-github"></use>
-            </svg>
-            GitHub
-            <svg width="1em" height="1em" style="position: relative; top: -0.15em">
-                <use xlink:href="#bi-chevron-right"></use>
-            </svg>
-            </span>
-        </a>
-    </div>
-</footer>
+<!--<footer class="footer small text-center">-->
+<!--    <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>-->
+<!--    <div class="container px-4 px-lg-5 py-4">-->
+<!--        <a class="text-black-50 umami&#45;&#45;click&#45;&#45;footer-website-repo" target="_blank" rel="noopener noreferrer"-->
+<!--           href="https://github.com/liuzikai/liuzik.ai" aria-label="Visit the GitHub repository of this website">-->
+<!--            Nuts and bolts about this website on-->
+<!--            <span style="white-space: nowrap">-->
+<!--            <svg width="1em" height="1em" style="position: relative; top: -0.15em">-->
+<!--                <use xlink:href="#bi-github"></use>-->
+<!--            </svg>-->
+<!--            GitHub-->
+<!--            <svg width="1em" height="1em" style="position: relative; top: -0.15em">-->
+<!--                <use xlink:href="#bi-chevron-right"></use>-->
+<!--            </svg>-->
+<!--            </span>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</footer>-->
 <!-- Core JS with Bootstrap components needed -->
-<script src="/js/scripts.min.js"></script>
+<script src="/js/scripts.min.js" current="home"></script>
 <!-- Statistics -->
 <script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>

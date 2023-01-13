@@ -269,45 +269,50 @@ window.addEventListener("DOMContentLoaded", event => {
         handleVisibleReadMoreButtons();
     });
 
+    /*if (document.currentScript.getAttribute('current') === "home") {
+        const floatingElems = [
+            ["#me-intro-photo", 10], ["#me-intro-self", 10]
+        ];
+    }*/
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#me-photo", {
+
+    // const tl = gsap.timeline()
+    // tl.to("#me-intro", {
+    //     y: "-50vh",
+    //     yPercent: "-50",
+    //     ease: "none",
+    // }).to("#me-intro", {
+    //     y: "-100vh",
+    //     yPercent: "-50",
+    //     ease: "none",
+    // });
+
+    gsap.to("#me-intro", {
         scrollTrigger: {
-            trigger: "#me-photo",
+            trigger: "#me-intro",
             start: "top bottom",
-            end: "+=" + (360 * 11),
-            pin: true,
-            pinSpacing: false,
+            end: "top top",
+            // pin: true,
+            // pinSpacing: false,
             scrub: true,
             // toggleActions: "restart none reverse none",
-            markers: true,
+            // markers: true,
         },
-        y: "-150vh",
-        ease: "power1.out",
+        y: "+50vh",
+        yPercent: "-50",
+        ease: "none",
         // duration: 3,
     });
-    gsap.to("#me-intro-self", {
-        scrollTrigger: {
-            trigger: "#me-intro-self",
-            start: "top bottom",
-            end: "+=" + (360 * 10),
-            pin: true,
-            pinSpacing: false,
-            scrub: true,
-            // toggleActions: "restart none reverse none",
-            markers: true,
-        },
-        y: "-150vh",
-        ease: "power2.out",
-        // duration: 3,
-    });
+
     gsap.to("#me-intro-tech", {
         scrollTrigger: {
             trigger: "#me-intro-tech",
             start: "top bottom",
-            end: "+=" + (360 * 8),
+            endTrigger: "#contacts",
+            end: "top bottom",
             pin: true,
-            pinSpacing: false,
+            // pinSpacing: false,
             scrub: true,
             // toggleActions: "restart none reverse none",
             markers: true,
@@ -316,13 +321,28 @@ window.addEventListener("DOMContentLoaded", event => {
         ease: "power2.out",
         // duration: 3,
     });
+    // gsap.to("#me-intro-tech", {
+    //     scrollTrigger: {
+    //         trigger: "#me-intro-tech",
+    //         start: "top bottom",
+    //         end: "+=" + (360 * 3),
+    //         // pin: true,
+    //         // pinSpacing: false,
+    //         scrub: true,
+    //         toggleActions: "restart pause reverse pause",
+    //         // markers: true,
+    //     },
+    //     // ease: "power3.out",
+    //     opacity: "100%",
+    // });
     gsap.to("#me-intro-art", {
         scrollTrigger: {
             trigger: "#me-intro-art",
             start: "top bottom",
-            end: "+=" + (360 * 6),
+            endTrigger: "#contacts",
+            end: "top bottom",
             pin: true,
-            pinSpacing: false,
+            // pinSpacing: false,
             scrub: true,
             // toggleActions: "restart none reverse none",
             // markers: true,
@@ -334,7 +354,8 @@ window.addEventListener("DOMContentLoaded", event => {
         scrollTrigger: {
             trigger: "#me-intro-combined",
             start: "top bottom",
-            end: "+=" + (360 * 4),
+            endTrigger: "#contacts",
+            end: "top bottom",
             pin: true,
             // pinSpacing: false,
             scrub: true,
