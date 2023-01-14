@@ -2244,117 +2244,38 @@
       //     ease: "none",
       // });
 
-      // gsap.to("#me-intro", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro",
-      //         start: "top bottom",
-      //         end: "top top",
-      //         // pin: true,
-      //         // pinSpacing: false,
-      //         scrub: true,
-      //         // toggleActions: "restart none reverse none",
-      //         // markers: true,
-      //     },
-      //     y: "+50vh",
-      //     yPercent: "-50",
-      //     ease: "none",
-      //     // duration: 3,
-      // });
-      //
-      // gsap.to("#me-intro-tech", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro-tech",
-      //         start: "top bottom",
-      //         endTrigger: "#me-intro-art",
-      //         end: "top bottom",
-      //         // end: "max",
-      //         // pin: true,
-      //         // pinSpacing: false,
-      //         scrub: true,
-      //         // toggleActions: "restart none reverse none",
-      //         // markers: true,
-      //     },
-      //     y: "+50vh",
-      //     ease: "none",
-      //     // duration: 3,
-      // });
+      gsap.to("#me-intro", {
+          scrollTrigger: {
+              trigger: "#me-intro",
+              start: "top bottom",
+              end: "top top",
+              // pin: true,
+              // pinSpacing: false,
+              scrub: true,
+              // toggleActions: "restart none reverse none",
+              // markers: true,
+          },
+          y: "+50vh",
+          yPercent: "-50",
+          ease: "none",
+          // duration: 3,
+      });
 
-      // gsap.to("#me-intro-tech", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro-art",
-      //         start: "top bottom",
-      //         endTrigger: "#about",
-      //         end: "bottom bottom",
-      //         // end: "max",
-      //         // pin: true,
-      //         // pinSpacing: false,
-      //         scrub: true,
-      //         // toggleActions: "restart none reverse none",
-      //         // markers: true,
-      //     },
-      //     y: "+360vh",
-      //     ease: "none",
-      //     // duration: 3,
-      // });
-
+      // NOTE: unit vh does not work with pin + scrub
       gsap.to("#me-intro-tech", {
           scrollTrigger: {
               trigger: "#me-intro-tech",
               start: "top bottom",
-              // end: "max",
               endTrigger: "#about",
               end: "bottom bottom",
               pin: true,
               pinSpacing: false,
               scrub: true,
-              markers: true,
+              // markers: true,
           },
-          y: "-" + window.innerHeight * 0.9,
+          y: "-" + window.innerHeight * 0.92,
           ease: "power2.out",
-          // duration: 3,
       });
-
-      // gsap.to("#me-intro-tech", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro-tech",
-      //         start: "top bottom",
-      //         endTrigger: "#me-intro-art",
-      //         end: "top bottom",
-      //         // pin: true,
-      //         // pinSpacing: false,
-      //         scrub: true,
-      //         // toggleActions: "restart none reverse none",
-      //         // markers: true,
-      //     },
-      //     y: "-90vh",
-      //     ease: "power1.inOut",
-      //     // duration: 3,
-      // });
-      // ScrollTrigger.create({
-      //     trigger: "#me-intro-tech",
-      //     start: "top center",
-      //     endTrigger: "#about",
-      //     end: "bottom bottom",
-      //     pin: true,
-      //     scrub: true,
-      //     // pinSpacing: false,
-      //     markers: true,
-      // });
-
-      // gsap.to("#me-intro-tech", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro-tech",
-      //         start: "top bottom",
-      //         end: "+=" + (360 * 3),
-      //         // pin: true,
-      //         // pinSpacing: false,
-      //         scrub: true,
-      //         toggleActions: "restart pause reverse pause",
-      //         // markers: true,
-      //     },
-      //     // ease: "power3.out",
-      //     opacity: "100%",
-      // });
 
       gsap.to("#me-intro-art", {
           scrollTrigger: {
@@ -2362,33 +2283,43 @@
               start: "top bottom",
               endTrigger: "#about",
               end: "bottom bottom",
-              // end: "max",
-              // pin: true,
-              // pinSpacing: false,
+              pin: true,
+              pinSpacing: false,
               scrub: true,
-              // toggleActions: "restart none reverse none",
               // markers: true,
           },
-          y: "+220vh",
-          ease: "none",
-          // duration: 3,
+          y: "-" + window.innerHeight * 0.85,
+          ease: "power1.out",
       });
+
       gsap.to("#me-intro-combined", {
           scrollTrigger: {
               trigger: "#me-intro-combined",
               start: "top bottom",
               endTrigger: "#about",
               end: "bottom bottom",
-              // end: "max",
-              // pin: true,
-              // pinSpacing: false,
+              pin: true,
+              pinSpacing: false,
               scrub: true,
-              // toggleActions: "restart none reverse none",
               // markers: true,
           },
-          y: "+100vh",
+          y: "-" + window.innerHeight * 0.45,
           ease: "none",
-          // duration: 3,
+      });
+
+      gsap.to("#main-navigation", {
+          scrollTrigger: {
+              trigger: "#main-navigation",
+              start: "top bottom",
+              endTrigger: "#about",
+              end: "bottom bottom",
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // markers: true,
+          },
+          y: "-" + window.innerHeight * 0.25,
+          ease: "none",
       });
   });
 
