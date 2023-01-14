@@ -16,7 +16,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" fetchpriority="high" href="/assets/masthead-normal.jpg" as="image" type="image/jpeg">
@@ -152,26 +152,48 @@
             <div class="col-lg-4 d-flex align-items-start justify-content-center" style="margin-top: 225vh">
                 <div class="me-frame" id="me-intro-art">
                     Yet from time to time, the world reminds me of another type of beauty, while I travel and
-                    take photos.
+                    photograph.
                 </div>
             </div>
         </div>
-        <div class="row justify-content-between">
-            <div class="biography-text text-start">
-                <h2><a href="/projects" class="home-large-link umami--click--large-projects">
-                    <svg width="0.5em" height="0.5em">
-                        <use xlink:href="#bi-chevron-left"></use>
-                    </svg>
-                    Projects
-                </a></h2>
+        <div class="row justify-content-between align-items-end" style="height: 50vh">
+            <div class="col-lg-4 d-flex align-items-start">
+                <div style="position: relative; width: 20em; height: 10em">
+                    <div style="background-color: white; position: absolute; top: 50%; left: 5em; transform: translate(0, -50%); width:15em; height:15em">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="5" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
+                            <rect x="15" y="10" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
+                            <rect x="10" y="15" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
+                        </svg>
+                    </div>
+                    <div style="background-color: white; position: absolute; top: 50%; transform: translate(0, -50%); font-size: 2rem;">
+                        <a href="/projects" class="home-large-link umami--click--large-projects">
+                            <svg width="1em" height="1em" style="position: relative; top: -0.15em">
+                                <use xlink:href="#bi-chevron-left"></use>
+                            </svg>
+                            PROJECTS
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="biography-text text-end">
-                <h2><a href="/photographs" class="home-large-link umami--click--large-photographs">
-                    Photographs
-                    <svg width="0.5em" height="0.5em">
-                        <use xlink:href="#bi-chevron-right"></use>
-                    </svg>
-                </a></h2>
+            <div class="col-lg-4 d-flex align-items-start">
+                <div style="position: relative; width: 20em; height: 10em">
+                    <div style="background-color: white; position: absolute; top: 50%; right: 3em; transform: translate(0, -50%); width:15em; height:15em">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="24" y="-15" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(30)"/>
+                            <rect x="2" y="13" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(-20)"/>
+                            <rect x="20" y="9" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(10)"/>
+                        </svg>
+                    </div>
+                    <div style="background-color: white; position: absolute; top: 50%; right: 0; transform: translate(0, -50%); font-size: 2rem;">
+                        <a href="/photographs" class="home-large-link umami--click--large-photographs">
+                            PHOTOS
+                            <svg width="1em" height="1em" style="position: relative; top: -0.15em">
+                                <use xlink:href="#bi-chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -295,7 +317,7 @@
 
 <!-- Footer-->
 <footer class="footer small text-center">
-    <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
+    <div class="container px-4 px-lg-5">Zikai Liu &copy; 2023</div>
     <div class="container px-4 px-lg-5 py-4">
         <a class="text-black-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
            href="https://github.com/liuzikai/liuzik.ai" aria-label="Visit the GitHub repository of this website">

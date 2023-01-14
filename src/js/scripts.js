@@ -318,7 +318,7 @@ window.addEventListener("DOMContentLoaded", event => {
             // toggleActions: "restart none reverse none",
             // markers: true,
         },
-        y: "+310vh",
+        y: "+360vh",
         ease: "none",
         // duration: 3,
     });
@@ -394,7 +394,7 @@ window.addEventListener("DOMContentLoaded", event => {
             // toggleActions: "restart none reverse none",
             // markers: true,
         },
-        y: "+170vh",
+        y: "+220vh",
         ease: "none",
         // duration: 3,
     });
@@ -411,7 +411,7 @@ window.addEventListener("DOMContentLoaded", event => {
             // toggleActions: "restart none reverse none",
             // markers: true,
         },
-        y: "+50vh",
+        y: "+100vh",
         ease: "none",
         // duration: 3,
     })
