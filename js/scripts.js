@@ -2244,58 +2244,75 @@
       //     ease: "none",
       // });
 
-      gsap.to("#me-intro", {
-          scrollTrigger: {
-              trigger: "#me-intro",
-              start: "top bottom",
-              end: "top top",
-              // pin: true,
-              // pinSpacing: false,
-              scrub: true,
-              // toggleActions: "restart none reverse none",
-              // markers: true,
-          },
-          y: "+50vh",
-          yPercent: "-50",
-          ease: "none",
-          // duration: 3,
-      });
+      // gsap.to("#me-intro", {
+      //     scrollTrigger: {
+      //         trigger: "#me-intro",
+      //         start: "top bottom",
+      //         end: "top top",
+      //         // pin: true,
+      //         // pinSpacing: false,
+      //         scrub: true,
+      //         // toggleActions: "restart none reverse none",
+      //         // markers: true,
+      //     },
+      //     y: "+50vh",
+      //     yPercent: "-50",
+      //     ease: "none",
+      //     // duration: 3,
+      // });
+      //
+      // gsap.to("#me-intro-tech", {
+      //     scrollTrigger: {
+      //         trigger: "#me-intro-tech",
+      //         start: "top bottom",
+      //         endTrigger: "#me-intro-art",
+      //         end: "top bottom",
+      //         // end: "max",
+      //         // pin: true,
+      //         // pinSpacing: false,
+      //         scrub: true,
+      //         // toggleActions: "restart none reverse none",
+      //         // markers: true,
+      //     },
+      //     y: "+50vh",
+      //     ease: "none",
+      //     // duration: 3,
+      // });
+
+      // gsap.to("#me-intro-tech", {
+      //     scrollTrigger: {
+      //         trigger: "#me-intro-art",
+      //         start: "top bottom",
+      //         endTrigger: "#about",
+      //         end: "bottom bottom",
+      //         // end: "max",
+      //         // pin: true,
+      //         // pinSpacing: false,
+      //         scrub: true,
+      //         // toggleActions: "restart none reverse none",
+      //         // markers: true,
+      //     },
+      //     y: "+360vh",
+      //     ease: "none",
+      //     // duration: 3,
+      // });
 
       gsap.to("#me-intro-tech", {
           scrollTrigger: {
               trigger: "#me-intro-tech",
               start: "top bottom",
+              // end: "max",
               endTrigger: "#about",
               end: "bottom bottom",
-              // end: "max",
-              // pin: true,
-              // pinSpacing: false,
+              pin: true,
+              pinSpacing: false,
               scrub: true,
-              // toggleActions: "restart none reverse none",
-              // markers: true,
+              markers: true,
           },
-          y: "+360vh",
-          ease: "none",
+          y: "-" + window.innerHeight * 0.9,
+          ease: "power2.out",
           // duration: 3,
       });
-
-      // gsap.to("#me-intro-tech", {
-      //     scrollTrigger: {
-      //         trigger: "#me-intro-tech",
-      //         start: "top bottom",
-      //         // end: "max",
-      //         endTrigger: "#about",
-      //         end: "bottom 80%",
-      //         pin: true,
-      //         pinSpacing: false,
-      //         scrub: true,
-      //         // toggleActions: "restart none reverse none",
-      //         markers: true,
-      //     },
-      //     y: "-90vh",
-      //     ease: "power2.out",
-      //     // duration: 3,
-      // });
 
       // gsap.to("#me-intro-tech", {
       //     scrollTrigger: {
@@ -2315,12 +2332,14 @@
       // });
       // ScrollTrigger.create({
       //     trigger: "#me-intro-tech",
-      //     start: "top bottom",
-      //     end: 'max',
+      //     start: "top center",
+      //     endTrigger: "#about",
+      //     end: "bottom bottom",
       //     pin: true,
+      //     scrub: true,
       //     // pinSpacing: false,
-      //     // markers: true,
-      // })
+      //     markers: true,
+      // });
 
       // gsap.to("#me-intro-tech", {
       //     scrollTrigger: {

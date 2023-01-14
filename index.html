@@ -28,8 +28,8 @@
     <!-- SVG icons are loaded in the scripts.js, which also have high priorities       -->
     <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
     <!-- TODO: remove these scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-between align-items-end" style="height: 50vh">
+        <div class="row justify-content-between align-items-end" id="main-navigation" style="height: 50vh;">
             <div class="col-lg-4 d-flex align-items-start">
                 <div style="position: relative; width: 20em; height: 10em">
                     <div style="background-color: white; position: absolute; top: 50%; left: 5em; transform: translate(0, -50%); width:15em; height:15em">
@@ -316,7 +316,7 @@
 </section>
 
 <!-- Footer-->
-<footer class="footer small text-center">
+<footer class="footer small text-center" id="footer">
     <div class="container px-4 px-lg-5">Zikai Liu &copy; 2023</div>
     <div class="container px-4 px-lg-5 py-4">
         <a class="text-black-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
