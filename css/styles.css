@@ -484,15 +484,6 @@ output {
             flex: 1 0 0%;
   }
 
-  .col-lg-3 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-       -moz-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 25%;
-  }
-
   .col-lg-4 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
