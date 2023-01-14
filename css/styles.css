@@ -2122,6 +2122,11 @@ body {
   -moz-background-size: cover;
        background-size: cover;
 }
+.icon-projects-rect, .icon-photos-rect {
+  fill: white;
+  stroke: white;
+}
+
 #mainNav .navbar-brand-part2-projects:before {
   content: "Projects";
   opacity: 0;

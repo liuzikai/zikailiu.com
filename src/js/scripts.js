@@ -306,6 +306,7 @@ window.addEventListener("DOMContentLoaded", event => {
     });
 
     // NOTE: unit vh does not work with pin + scrub
+    // SOLUTION: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
     gsap.to("#me-intro-tech", {
         scrollTrigger: {
             trigger: "#me-intro-tech",
@@ -315,9 +316,10 @@ window.addEventListener("DOMContentLoaded", event => {
             pin: true,
             pinSpacing: false,
             scrub: true,
+            invalidateOnRefresh: true,
             // markers: true,
         },
-        y: "-" + window.innerHeight * 0.92,
+        y: () => "-" + window.innerHeight * 0.92,
         ease: "power2.out",
     });
 
@@ -330,10 +332,12 @@ window.addEventListener("DOMContentLoaded", event => {
             pin: true,
             pinSpacing: false,
             scrub: true,
+            invalidateOnRefresh: true,
+            // anticipatePin: 1,
             // markers: true,
         },
-        y: "-" + window.innerHeight * 0.85,
-        ease: "power1.out",
+        y: () => "-" + window.innerHeight * 0.87,
+        ease: "power2.out",
     });
 
     gsap.to("#me-intro-combined", {
@@ -345,13 +349,15 @@ window.addEventListener("DOMContentLoaded", event => {
             pin: true,
             pinSpacing: false,
             scrub: true,
+            invalidateOnRefresh: true,
+            // anticipatePin: 1,
             // markers: true,
         },
-        y: "-" + window.innerHeight * 0.45,
-        ease: "none",
+        y: () => "-" + window.innerHeight * 0.43,
+        ease: "power3.out",
     });
 
-    gsap.to("#main-navigation", {
+    gsap.timeline({
         scrollTrigger: {
             trigger: "#main-navigation",
             start: "top bottom",
@@ -360,9 +366,35 @@ window.addEventListener("DOMContentLoaded", event => {
             pin: true,
             pinSpacing: false,
             scrub: true,
+            invalidateOnRefresh: true,
+            // anticipatePin: 1,
             // markers: true,
         },
-        y: "-" + window.innerHeight * 0.25,
-        ease: "none",
-    });
+    })
+        // All animations start at the same time ("<")
+        .to("#main-navigation", {
+            y: () => "-" + window.innerHeight * 0.25,
+            ease: "none",
+        })
+        .to("#keyword-tech", {
+            color: "#0039e6",
+        }, "<")
+        .to("#nav-projects", {
+            color: "#0039e6",
+        }, "<")
+        .to(".icon-projects-rect", {
+            stroke: "#3366ff",
+        }, "<")
+        .to("#keyword-photo", {
+            color: "#e62e00",
+        }, "<")
+        .to("#nav-photos", {
+            color: "#e62e00",
+        }, "<")
+        .to(".icon-photos-rect", {
+            stroke: "#ff5c33",
+        }, "<")
+        .to("#keyword-combined", {
+            color: "#9900ff",
+        }, "<");
 });

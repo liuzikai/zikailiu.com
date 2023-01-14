@@ -139,35 +139,43 @@
         <div class="row justify-content-around">
             <div class="col-lg-4 d-flex align-items-start justify-content-center" style="margin-top: 75vh">
                 <div class="me-frame" id="me-intro-tech">
-                    In schools, I learn about technology, from semiconductor to code. I am always amazed by what human
-                    creations can achieve.
+                    <p>
+                        In schools, I learn about <span id="keyword-tech">technology</span>, from semiconductor to code.
+                        I am always amazed by what human creations can achieve.
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 d-flex align-items-start justify-content-center" style="margin-top: 250vh; height: 100vh">
+            <div class="col-lg-4 d-flex align-items-start justify-content-center"
+                 style="margin-top: 250vh;">
                 <div class="me-frame" id="me-intro-combined">
-                    Life should never be a single way. There are always things waiting for us to create and
-                    discover.
+                    <p>
+                        Life should never be a single way. There are always things waiting for us to
+                        <span id="keyword-combined">discover and create</span>.
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-start justify-content-center" style="margin-top: 150vh">
                 <div class="me-frame" id="me-intro-art">
-                    Yet from time to time, the world reminds me of another type of beauty, while I travel and
-                    photograph.
+                    <p>
+                        Yet from time to time, the world reminds me of another type of beauty, while I travel and
+                        <span id="keyword-photo">photograph</span>.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-between align-items-start" id="main-navigation" style="height: 50vh;">
+        <div class="row justify-content-between align-items-start" id="main-navigation"
+             style="margin-top: 100vh; height: 50vh;">
             <div class="col-lg-4 d-flex align-items-start">
                 <div style="position: relative; width: 20em; height: 10em">
                     <div style="background-color: white; position: absolute; top: 50%; left: 5em; transform: translate(0, -50%); width:15em; height:15em">
                         <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="5" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
-                            <rect x="15" y="10" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
-                            <rect x="10" y="15" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1"/>
+                            <rect x="20" y="5" width="20" height="20" rx="4" class="icon-projects-rect"/>
+                            <rect x="15" y="10" width="20" height="20" rx="4" class="icon-projects-rect"/>
+                            <rect x="10" y="15" width="20" height="20" rx="4" class="icon-projects-rect"/>
                         </svg>
                     </div>
                     <div style="background-color: white; position: absolute; top: 50%; transform: translate(0, -50%); font-size: 2rem;">
-                        <a href="/projects" class="home-large-link umami--click--large-projects">
+                        <a id="nav-projects" href="/projects" class="home-large-link umami--click--large-projects">
                             <svg width="1em" height="1em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-chevron-left"></use>
                             </svg>
@@ -180,13 +188,16 @@
                 <div style="position: relative; width: 20em; height: 10em">
                     <div style="background-color: white; position: absolute; top: 50%; right: 3em; transform: translate(0, -50%); width:15em; height:15em">
                         <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="24" y="-15" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(30)"/>
-                            <rect x="2" y="13" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(-20)"/>
-                            <rect x="20" y="9" width="20" height="20" rx="4" style="fill:white;stroke:black;stroke-width:1" transform="rotate(10)"/>
+                            <rect x="24" y="-15" width="20" height="20" rx="4" class="icon-photos-rect"
+                                  transform="rotate(30)"/>
+                            <rect x="2" y="13" width="20" height="20" rx="4" class="icon-photos-rect"
+                                  transform="rotate(-20)"/>
+                            <rect x="20" y="9" width="20" height="20" rx="4" class="icon-photos-rect"
+                                  transform="rotate(10)"/>
                         </svg>
                     </div>
                     <div style="background-color: white; position: absolute; top: 50%; right: 0; transform: translate(0, -50%); font-size: 2rem;">
-                        <a href="/photographs" class="home-large-link umami--click--large-photographs">
+                        <a id="nav-photos" href="/photographs" class="home-large-link umami--click--large-photographs">
                             PHOTOS
                             <svg width="1em" height="1em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-chevron-right"></use>
@@ -283,7 +294,7 @@
 <!--        </div>-->
 <!--    </div>-->
 
-    <!-- Navigation -->
+<!-- Navigation -->
 <!--    <div class="container py-4 px-4 px-lg-5 d-flex justify-content-between slide-in-text">-->
 <!--        -->
 

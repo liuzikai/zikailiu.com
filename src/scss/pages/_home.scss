@@ -1,126 +1,103 @@
 .masthead {
-    &.masthead-home-bg {
-        background: /*linear-gradient(to bottom,
+  &.masthead-home-bg {
+    background: /*linear-gradient(to bottom,
                 #{fade-out($white, 0.8)} 0%,
                 #{fade-out($white, 0.3)} 65%,
                 $white 100%),*/
-                url("../assets/masthead-normal.jpg");
+            url("../assets/masthead-normal.jpg");
 
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-        opacity: 1;
-        animation: bg-fadein 1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    opacity: 1;
+    animation: bg-fadein 1s;
 
-        // border-bottom: 1px solid rgba(0, 0, 0, 50%);
-        border-bottom: 1px solid $white;
-    }
+    // border-bottom: 1px solid rgba(0, 0, 0, 50%);
+    border-bottom: 1px solid $white;
+  }
 }
 
 .biography-text {
-    // Customized responsive font sizes
-    font-size: 1rem;
-    @include media-breakpoint-up(sm) {
-        font-size: 1.25rem;
-    }
-    /*@include media-breakpoint-up(md) {
-        font-size: 1.25rem;
-    }
-    @include media-breakpoint-up(lg) {
-        font-size: 1.25rem;
-    }
-    @include media-breakpoint-up(xl) {
-        font-size: 1.25rem;
-    }
-    @include media-breakpoint-up(xxl) {
-        font-size: 1.25rem;
-    }*/
+  // Customized responsive font sizes
+  font-size: 1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.25rem;
+  }
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xxl) {
+      font-size: 1.25rem;
+  }*/
 
-    mark {
-        background: fade-out(#fcd303, 0.9);
-    }
+  mark {
+    background: fade-out(#fcd303, 0.9);
+  }
 }
 
 .home-timeline {
-    tr, th, td {
-        vertical-align: top;
-        text-align: start;
-    }
+  tr, th, td {
+    vertical-align: top;
+    text-align: start;
+  }
 
-    span {
-        color: rgba(0, 0, 0, 50%);
-    }
+  span {
+    color: rgba(0, 0, 0, 50%);
+  }
 }
 
 .home-large-link {
-    color: var(--bs-body-color);
+  color: var(--bs-body-color);
 
-    &:hover {
-        color: var(--bs-active-color);
-    }
+  &:hover {
+    color: var(--bs-active-color);
+  }
 }
 
 .me-frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    font-size: 2rem;
+  font-size: 2rem;
 
-    //border: 1px solid #2c3034;
+  //border: 1px solid #2c3034;
 
-    @include media-breakpoint-up(lg) {
-        width: 360px;
-        height: 360px;
-        //background-color: white;
-    }
-    /*@include media-breakpoint-up(xl) {
-        font-size: 1.25rem;
-    }
-    @include media-breakpoint-up(xxl) {
-        font-size: 1.25rem;
-    }*/
-    border-radius: 1em;
+  @include media-breakpoint-up(lg) {
+    width: 360px;
+    height: 360px;
+    //background-color: white;
+  }
+  /*@include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(xxl) {
+      font-size: 1.25rem;
+  }*/
+  border-radius: 1em;
 }
 
 #me-intro-photo {
-    background-image: url("/assets/robomaster-me.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("/assets/robomaster-me.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    @include media-breakpoint-up(lg) {
-        //position: relative;
-        //left: 60%;
-    }
+  @include media-breakpoint-up(lg) {
+    //position: relative;
+    //left: 60%;
+  }
 }
 
-#me-intro-self {
-    @include media-breakpoint-up(lg) {
-        //position: relative;
-        //left: 15%;
-    }
-}
-
-#me-intro-tech {
-    @include media-breakpoint-up(lg) {
-        //position: relative;
-        //left: 10%;
-    }
-}
-
-#me-intro-art {
-    @include media-breakpoint-up(lg) {
-        //position: relative;
-        //left: 65%;
-    }
-}
-
-#me-intro-combined {
-    @include media-breakpoint-up(lg) {
-        //position: relative;
-        //left: 35%;
-    }
+.icon-projects-rect, .icon-photos-rect {
+  fill: white;
+  stroke: white;
 }
