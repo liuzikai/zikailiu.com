@@ -277,7 +277,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    if (true) {
+    if (false) {
         gsap.to("#me-intro", {
             scrollTrigger: {
                 trigger: "#me-intro",
