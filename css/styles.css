@@ -1322,6 +1322,10 @@ output {
   padding-bottom: 1.5rem !important;
 }
 
+.pt-5 {
+  padding-top: 3rem !important;
+}
+
 .pb-0 {
   padding-bottom: 0 !important;
 }
@@ -1468,6 +1472,10 @@ output {
   .py-lg-4 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
+  }
+
+  .pt-lg-0 {
+    padding-top: 0 !important;
   }
 
   .pt-lg-3 {

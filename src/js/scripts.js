@@ -304,9 +304,9 @@ window.addEventListener("DOMContentLoaded", event => {
                 // duration: 3,
             });
 
-            gsap.to("#me-intro-tech", {
+            gsap.to("#words-tech", {
                 scrollTrigger: {
-                    trigger: "#me-intro-tech",
+                    trigger: "#words-tech",
                     start: "top bottom",
                     endTrigger: "#about",
                     end: "bottom bottom",
@@ -320,9 +320,9 @@ window.addEventListener("DOMContentLoaded", event => {
                 ease: "power3.out",
             });
 
-            gsap.to("#me-intro-art", {
+            gsap.to("#words-art", {
                 scrollTrigger: {
-                    trigger: "#me-intro-art",
+                    trigger: "#words-art",
                     start: "top bottom",
                     endTrigger: "#about",
                     end: "bottom bottom",
@@ -337,9 +337,9 @@ window.addEventListener("DOMContentLoaded", event => {
                 ease: "power2.out",
             });
 
-            gsap.to("#me-intro-combined", {
+            gsap.to("#words-combined", {
                 scrollTrigger: {
-                    trigger: "#me-intro-combined",
+                    trigger: "#words-combined",
                     start: "top bottom",
                     endTrigger: "#about",
                     end: "bottom bottom",
