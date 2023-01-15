@@ -2272,7 +2272,7 @@
                       invalidateOnRefresh: true,
                       // markers: true,
                   },
-                  y: () => "-" + window.innerHeight * 0.92,
+                  y: () => "-" + window.innerHeight * 0.90,
                   ease: "power3.out",
               });
 
@@ -2411,7 +2411,6 @@
               .to(".icon-projects-rect.two", {x: 4, y: -2}, "<")
               .to(".icon-projects-rect.three", {x: 2, y: -1}, "<")
           ;
-
           let projectsNav = document.getElementById("nav-projects-text");
           projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
           projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
@@ -2421,7 +2420,6 @@
               .to(".icon-photos-rect.two", {x: "-=2", y: "+=1"}, "<")
               .to(".icon-photos-rect.three", {x: "+=2", y: "+=2"}, "<")
           ;
-
           let photosNav = document.getElementById("nav-photos-text");
           photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
           photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());

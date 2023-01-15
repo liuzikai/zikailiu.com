@@ -316,7 +316,7 @@ window.addEventListener("DOMContentLoaded", event => {
                     invalidateOnRefresh: true,
                     // markers: true,
                 },
-                y: () => "-" + window.innerHeight * 0.92,
+                y: () => "-" + window.innerHeight * 0.90,
                 ease: "power3.out",
             });
 

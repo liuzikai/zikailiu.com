@@ -53,31 +53,6 @@
   }
 }
 
-.me-frame {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  font-size: 1.5rem;
-
-  //border: 1px solid #2c3034;
-
-  @include media-breakpoint-up(lg) {
-    width: 360px;
-    height: 360px;
-    font-size: 2rem;
-    //background-color: white;
-  }
-  /*@include media-breakpoint-up(xl) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xxl) {
-      font-size: 1.25rem;
-  }*/
-  border-radius: 1em;
-}
-
 .center-text {
   display: flex;
   justify-content: center;
@@ -95,8 +70,14 @@
 #me-intro-text {
   font-size: 2rem;
   @include media-breakpoint-up(lg) {
+    width: 290px;
+    height: 290px;
+    font-size: 1.75rem;
+  }
+  @include media-breakpoint-up(xl) {
     width: 360px;
     height: 360px;
+    font-size: 2rem;
   }
 }
 
@@ -113,6 +94,11 @@
   padding-top: 100%;
 
   @include media-breakpoint-up(lg) {
+    width: 290px;
+    height: 290px;
+    padding-top: 0;
+  }
+  @include media-breakpoint-up(xl) {
     width: 360px;
     height: 360px;
     padding-top: 0;
@@ -122,6 +108,11 @@
 .words-text {
   font-size: 1.25rem;
   @include media-breakpoint-up(lg) {
+    width: 290px;
+    height: 290px;
+    font-size: 1.75rem;
+  }
+  @include media-breakpoint-up(xl) {
     width: 360px;
     height: 360px;
     font-size: 2rem;

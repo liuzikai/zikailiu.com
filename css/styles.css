@@ -2142,8 +2142,16 @@ body {
 }
 @media (min-width: 992px) {
   #me-intro-text {
+    width: 290px;
+    height: 290px;
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  #me-intro-text {
     width: 360px;
     height: 360px;
+    font-size: 2rem;
   }
 }
 
@@ -2162,6 +2170,13 @@ body {
 }
 @media (min-width: 992px) {
   #me-intro-photo {
+    width: 290px;
+    height: 290px;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  #me-intro-photo {
     width: 360px;
     height: 360px;
     padding-top: 0;
@@ -2172,6 +2187,13 @@ body {
   font-size: 1.25rem;
 }
 @media (min-width: 992px) {
+  .words-text {
+    width: 290px;
+    height: 290px;
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
   .words-text {
     width: 360px;
     height: 360px;
