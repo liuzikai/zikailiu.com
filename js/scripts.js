@@ -2360,6 +2360,7 @@
                   endTrigger: "#nav-projects-container",
                   end: "bottom bottom",
                   scrub: true,
+                  invalidateOnRefresh: true,
                   // markers: true,
               },
           })
@@ -2397,12 +2398,33 @@
                   start: "bottom bottom",
                   endTrigger: "#about",
                   end: "bottom bottom",
+                  invalidateOnRefresh: true,
                   scrub: true,
                   // markers: true,
               },
           }).to("#keyword-combined", {
               color: "#9900ff",
           }, "<");
+
+          let projectsHoverAnimation = gsap.timeline({paused: true})
+              .to(".icon-projects-rect.one", {x: 6, y: -3}, "<")
+              .to(".icon-projects-rect.two", {x: 4, y: -2}, "<")
+              .to(".icon-projects-rect.three", {x: 2, y: -1}, "<")
+          ;
+
+          let projectsNav = document.getElementById("nav-projects-text");
+          projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
+          projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
+
+          let photosHoverAnimation = gsap.timeline({paused: true})
+              .to(".icon-photos-rect.one", {x: "+=2", y: "+=2"}, "<")
+              .to(".icon-photos-rect.two", {x: "-=2", y: "+=1"}, "<")
+              .to(".icon-photos-rect.three", {x: "+=2", y: "+=2"}, "<")
+          ;
+
+          let photosNav = document.getElementById("nav-photos-text");
+          photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
+          photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());
       }
   });
 
