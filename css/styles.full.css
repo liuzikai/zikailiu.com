@@ -15274,6 +15274,18 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  #nav-projects-container {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-photos-container {
+    height: 75vh;
+  }
+}
+
 .icon-projects-rect {
   fill: white;
   stroke: #3366ff;

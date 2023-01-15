@@ -277,7 +277,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    if (false) {
+    if (true) {
         gsap.to("#me-intro", {
             scrollTrigger: {
                 trigger: "#me-intro",
@@ -310,7 +310,7 @@ window.addEventListener("DOMContentLoaded", event => {
                 // markers: true,
             },
             y: () => "-" + window.innerHeight * 0.92,
-            ease: "power2.out",
+            ease: "power3.out",
         });
 
         gsap.to("#me-intro-art", {
@@ -344,7 +344,7 @@ window.addEventListener("DOMContentLoaded", event => {
                 // markers: true,
             },
             y: () => "-" + window.innerHeight * 0.43,
-            ease: "power3.out",
+            ease: "power2.out",
         });
 
         gsap.timeline({

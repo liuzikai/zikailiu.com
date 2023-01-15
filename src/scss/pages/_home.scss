@@ -121,6 +121,18 @@
   }
 }
 
+#nav-projects-container {
+  @include media-breakpoint-up(lg) {
+    height: 75vh
+  }
+}
+
+#nav-photos-container {
+  @include media-breakpoint-up(lg) {
+    height: 75vh
+  }
+}
+
 .icon-projects-rect {
   fill: white;
   stroke: #3366ff;
