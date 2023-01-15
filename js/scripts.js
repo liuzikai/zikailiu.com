@@ -2231,7 +2231,168 @@
           ];
       }*/
 
+
+      // NOTE: unit vh does not work with pin + scrub
+      // SOLUTION: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
+
       gsap.registerPlugin(ScrollTrigger);
+
+      {
+
+          let mm = gsap.matchMedia();
+
+          // >= lg only animation
+          mm.add("(min-width: 992px)", () => {
+
+              gsap.to("#me-intro", {
+                  scrollTrigger: {
+                      trigger: "#me-intro",
+                      start: "top bottom",
+                      end: "top top",
+                      // pin: true,
+                      // pinSpacing: false,
+                      scrub: true,
+                      // markers: true,
+                  },
+                  y: "+50vh",
+                  yPercent: "-50",
+                  ease: "none",
+                  // duration: 3,
+              });
+
+              gsap.to("#me-intro-tech", {
+                  scrollTrigger: {
+                      trigger: "#me-intro-tech",
+                      start: "top bottom",
+                      endTrigger: "#about",
+                      end: "bottom bottom",
+                      pin: true,
+                      pinSpacing: false,
+                      scrub: true,
+                      invalidateOnRefresh: true,
+                      // markers: true,
+                  },
+                  y: () => "-" + window.innerHeight * 0.92,
+                  ease: "power3.out",
+              });
+
+              gsap.to("#me-intro-art", {
+                  scrollTrigger: {
+                      trigger: "#me-intro-art",
+                      start: "top bottom",
+                      endTrigger: "#about",
+                      end: "bottom bottom",
+                      pin: true,
+                      pinSpacing: false,
+                      scrub: true,
+                      invalidateOnRefresh: true,
+                      // anticipatePin: 1,
+                      // markers: true,
+                  },
+                  y: () => "-" + window.innerHeight * 0.87,
+                  ease: "power2.out",
+              });
+
+              gsap.to("#me-intro-combined", {
+                  scrollTrigger: {
+                      trigger: "#me-intro-combined",
+                      start: "top bottom",
+                      endTrigger: "#about",
+                      end: "bottom bottom",
+                      pin: true,
+                      pinSpacing: false,
+                      scrub: true,
+                      invalidateOnRefresh: true,
+                      // anticipatePin: 1,
+                      // markers: true,
+                  },
+                  y: () => "-" + window.innerHeight * 0.43,
+                  ease: "power2.out",
+              });
+
+              gsap.timeline({
+                  scrollTrigger: {
+                      trigger: "#nav-projects",
+                      start: "top bottom",
+                      endTrigger: "#nav-projects-container",
+                      end: "bottom bottom",
+                      pin: true,
+                      pinSpacing: false,
+                      scrub: true,
+                      invalidateOnRefresh: true,
+                      // anticipatePin: 1,
+                      // markers: true,
+                  },
+              }).to("#nav-projects", {
+                  y: () => "-" + window.innerHeight * 0.25,
+                  ease: "power2.out",
+              });
+
+              gsap.timeline({
+                  scrollTrigger: {
+                      trigger: "#nav-photos",
+                      start: "top bottom",
+                      endTrigger: "#nav-photos-container",
+                      end: "bottom bottom",
+                      pin: true,
+                      pinSpacing: false,
+                      scrub: true,
+                      invalidateOnRefresh: true,
+                      // anticipatePin: 1,
+                      // markers: true,
+                  },
+              }).to("#nav-photos", {
+                  y: () => "-" + window.innerHeight * 0.25,
+                  ease: "power2.out",
+              });
+
+              return () => { // optional
+                  // custom cleanup code here (runs when it STOPS matching)
+              };
+          });
+
+          gsap.timeline({
+              scrollTrigger: {
+                  trigger: "#nav-projects",
+                  start: "top bottom",
+                  endTrigger: "#nav-projects-container",
+                  end: "bottom bottom",
+                  scrub: true,
+                  // markers: true,
+              },
+          })
+              // All animations start at the same time ("<")
+              .to("#keyword-tech, #nav-projects-text", {
+                  color: "#0039e6",
+              }, "<")
+              .to(".icon-projects-rect", {
+                  stroke: "#3366ff",
+              }, "<")
+
+              .to("#keyword-combined", {
+                  color: "#9900ff",
+              }, "<");
+
+          gsap.timeline({
+              scrollTrigger: {
+                  trigger: "#nav-photos",
+                  start: "top bottom",
+                  endTrigger: "#nav-photos-container",
+                  end: "bottom bottom",
+                  scrub: true,
+                  invalidateOnRefresh: true,
+                  // anticipatePin: 1,
+                  // markers: true,
+              },
+          })
+              // All animations start at the same time ("<")
+              .to("#keyword-photo, #nav-photos-text", {
+                  color: "#e62e00",
+              }, "<")
+              .to(".icon-photos-rect", {
+                  stroke: "#ff5c33",
+              }, "<");
+      }
   });
 
 }));
