@@ -395,6 +395,8 @@ window.addEventListener("DOMContentLoaded", event => {
             };
         });
 
+        // Always-on animations
+
         gsap.timeline({
             scrollTrigger: {
                 trigger: "#nav-projects",
@@ -411,10 +413,6 @@ window.addEventListener("DOMContentLoaded", event => {
             }, "<")
             .to(".icon-projects-rect", {
                 stroke: "#3366ff",
-            }, "<")
-
-            .to("#keyword-combined", {
-                color: "#9900ff",
             }, "<");
 
         gsap.timeline({
@@ -435,6 +433,19 @@ window.addEventListener("DOMContentLoaded", event => {
             }, "<")
             .to(".icon-photos-rect", {
                 stroke: "#ff5c33",
-            }, "<")
+            }, "<");
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#words-combined-container",
+                start: "bottom bottom",
+                endTrigger: "#about",
+                end: "bottom bottom",
+                scrub: true,
+                // markers: true,
+            },
+        }).to("#keyword-combined", {
+            color: "#9900ff",
+        }, "<");
     }
 });

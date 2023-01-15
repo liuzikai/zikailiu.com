@@ -1330,6 +1330,10 @@ output {
   padding-bottom: 0.25rem !important;
 }
 
+.pb-3 {
+  padding-bottom: 1rem !important;
+}
+
 .pb-4 {
   padding-bottom: 1.5rem !important;
 }
