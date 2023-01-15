@@ -333,7 +333,8 @@ window.addEventListener("DOMContentLoaded", event => {
                     // anticipatePin: 1,
                     // markers: true,
                 },
-                y: () => "-" + window.innerHeight * 0.87,
+                yPercent: "-50",
+                y: () => "-" + window.innerHeight * 0.60,
                 ease: "power2.out",
             });
 
@@ -350,7 +351,8 @@ window.addEventListener("DOMContentLoaded", event => {
                     // anticipatePin: 1,
                     // markers: true,
                 },
-                y: () => "-" + window.innerHeight * 0.43,
+                yPercent: "-50",
+                y: () => "-" + window.innerHeight * 0.30,
                 ease: "power2.out",
             });
 
@@ -368,7 +370,8 @@ window.addEventListener("DOMContentLoaded", event => {
                     // markers: true,
                 },
             }).to("#nav-projects", {
-                y: () => "-" + window.innerHeight * 0.25,
+                yPercent: "-100",
+                y: () => "-" + window.innerHeight * 0.02,
                 ease: "power2.out",
             });
 
@@ -386,7 +389,8 @@ window.addEventListener("DOMContentLoaded", event => {
                     // markers: true,
                 },
             }).to("#nav-photos", {
-                y: () => "-" + window.innerHeight * 0.25,
+                yPercent: "-100",
+                y: () => "-" + window.innerHeight * 0.02,
                 ease: "power2.out",
             });
 
