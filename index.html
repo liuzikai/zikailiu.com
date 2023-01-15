@@ -83,19 +83,14 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
-        <!-- This brand show when >= md -->
-        <div class="navbar-brand show-md" id="mainNavBody">
-            <a class="navbar-brand-text" href="/">Zikai Liu</a>
-        </div>
-        <!-- This brand show when < md -->
-        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBodyMobile"
-             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-             aria-expanded="false" aria-label="Toggle navigation">
-            <div class="navbar-brand" href="#page-top">
-                Zikai Liu's Portfolio
-            </div>
-            <div class="navbar-toggler my-auto">
+        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             id="mainNavBodyMobile">
+            <a class="navbar-brand" href="/">
+                Zikai Liu
+            </a>
+            <div class="navbar-toggler collapsed my-auto"
+                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                 aria-expanded="false" aria-label="Toggle navigation">
                 <svg width="16" height="16">
                     <use xlink:href="#bi-chevron-right"></use>
                 </svg>
@@ -104,12 +99,12 @@
         <!-- Expanded when >= lg, drop-down menu when < lg -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <!--                <li class="nav-item"><a class="nav-link nav-link-outline active umami&#45;&#45;click&#45;&#45;nav-home"-->
-                <!--                                        href="/">Home</a></li>-->
-                <li class="nav-item"><a class="nav-link nav-link-outline umami--click--nav-projects" href="/projects">Projects</a>
+                <li class="nav-item">
+                    <a class="nav-link navbar-invisible-shrink umami--click--nav-projects" href="/projects">Projects</a>
                 </li>
-                <li class="nav-item"><a class="nav-link nav-link-outline umami--click--nav-photographs"
-                                        href="/photographs">Photographs</a></li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-invisible-shrink umami--click--nav-photographs" href="/photographs">Photographs</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1549,7 +1549,7 @@ body {
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
-#mainNav .collapsed .navbar-toggler {
+#mainNav .collapsed.navbar-toggler {
   -webkit-transform: rotate(90deg);
      -moz-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -1568,6 +1568,13 @@ body {
 #mainNav .navbar-brand-part2-container {
   position: relative;
 }
+#mainNav .navbar-invisible-shrink {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 @media (min-width: 768px) {
   #mainNav:not(.navbar-shrink) {
     border-bottom: none;
@@ -1577,6 +1584,9 @@ body {
   }
   #mainNav:not(.navbar-shrink) .nav-link-outline {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  #mainNav:not(.navbar-shrink) .navbar-invisible-shrink {
+    opacity: 0;
   }
   #mainNav .nav-link {
     -webkit-transition: color 0.2s ease-in-out;

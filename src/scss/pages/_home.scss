@@ -1,10 +1,6 @@
 .masthead {
   &.masthead-home-bg {
-    background: /*linear-gradient(to bottom,
-                #{fade-out($white, 0.8)} 0%,
-                #{fade-out($white, 0.3)} 65%,
-                $white 100%),*/
-            url("../assets/masthead-normal.jpg");
+    background: url("../assets/masthead-normal.jpg");
 
     background-position: center center;
     background-repeat: no-repeat;

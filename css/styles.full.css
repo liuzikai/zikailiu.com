@@ -14532,7 +14532,7 @@ body {
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
-#mainNav .collapsed .navbar-toggler {
+#mainNav .collapsed.navbar-toggler {
   -webkit-transform: rotate(90deg);
      -moz-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
