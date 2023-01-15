@@ -67,13 +67,14 @@
   align-items: center;
   text-align: center;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   //border: 1px solid #2c3034;
 
   @include media-breakpoint-up(lg) {
     width: 360px;
     height: 360px;
+    font-size: 2rem;
     //background-color: white;
   }
   /*@include media-breakpoint-up(xl) {
@@ -97,7 +98,41 @@
   }
 }
 
-.icon-projects-rect, .icon-photos-rect {
+// These three containers should have bottom aligned
+
+#words-tech-container {
+  @include media-breakpoint-up(lg) {
+    margin-top: 75vh;
+    height: 275vh
+  }
+}
+
+#words-art-container {
+  @include media-breakpoint-up(lg) {
+    margin-top: 150vh;
+    height: 200vh
+  }
+}
+
+#words-combined-container {
+  @include media-breakpoint-up(lg) {
+    margin-top: 250vh;
+    height: 100vh
+  }
+}
+
+.icon-projects-rect {
   fill: white;
-  stroke: white;
+  stroke: #3366ff;
+  @include media-breakpoint-up(lg) {
+    stroke: white;
+  }
+}
+
+.icon-photos-rect {
+  fill: white;
+  stroke: #ff5c33;
+  @include media-breakpoint-up(lg) {
+    stroke: white;
+  }
 }

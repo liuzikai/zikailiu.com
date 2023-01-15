@@ -15227,7 +15227,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   /*@include media-breakpoint-up(xl) {
       font-size: 1.25rem;
   }
@@ -15242,6 +15242,7 @@ body {
   .me-frame {
     width: 360px;
     height: 360px;
+    font-size: 2rem;
   }
 }
 
@@ -15252,9 +15253,45 @@ body {
   -moz-background-size: cover;
        background-size: cover;
 }
-.icon-projects-rect, .icon-photos-rect {
+@media (min-width: 992px) {
+  #words-tech-container {
+    margin-top: 75vh;
+    height: 275vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #words-art-container {
+    margin-top: 150vh;
+    height: 200vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #words-combined-container {
+    margin-top: 250vh;
+    height: 100vh;
+  }
+}
+
+.icon-projects-rect {
   fill: white;
-  stroke: white;
+  stroke: #3366ff;
+}
+@media (min-width: 992px) {
+  .icon-projects-rect {
+    stroke: white;
+  }
+}
+
+.icon-photos-rect {
+  fill: white;
+  stroke: #ff5c33;
+}
+@media (min-width: 992px) {
+  .icon-photos-rect {
+    stroke: white;
+  }
 }
 
 #mainNav .navbar-brand-part2-projects:before {
