@@ -30,7 +30,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#thumbnails" data-bs-offset="0">
+<!-- TODO: this offset is a bit random -->
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#thumbnails" data-bs-offset="150">
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
@@ -126,7 +127,7 @@
 <section class="projects-section" id="projects">
 
     <div class="pic-section px-3 px-lg-5">
-        <div class="pic-list pic-gallery">
+        <div class="pic-list pic-gallery" id="photos">
             <div id="_0" class="pic-wrapper">
                 <img class="pic-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
             </div>
@@ -145,36 +146,146 @@
             <div id="_5" class="pic-wrapper">
                 <img class="pic-img" src="/assets/photos/Seattle-1.jpg" alt="TODO"/>
             </div>
+            <div id="_6" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Chigago-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_7" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/New-York-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_8" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Japan-1.jpg" alt="TODO"/>
+            </div>
             <div id="_9" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Heihe-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_10" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Hiking-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_11" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Lausanne-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_12" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Lausanne-2.jpg" alt="TODO"/>
+            </div>
+            <div id="_13" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Dresden-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_14" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Prague-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_15" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Lavertezzo-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_16" class="pic-wrapper">
                 <img class="pic-img" src="/assets/photos/Zermatt-1.jpg" alt="TODO"/>
             </div>
+            <div id="_17" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Flims-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_18" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Jungfraujoch-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_19" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Interlaken-1.jpg" alt="TODO"/>
+            </div>
+            <div id="_20" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Interlaken-2.jpg" alt="TODO"/>
+            </div>
+            <div id="_21" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Zurich-1.jpg" alt="TODO"/>
+            </div>
         </div>
-        <div class="pic-list pic-thumbnail-list list-group mx-auto" id="thumbnails">
-            <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_0">
-                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_1">
-                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-2.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_2">
-                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-3.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <a class="pic-thumbnail-wrapper" href="#_3">
-                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-4.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <a class="pic-thumbnail-wrapper" href="#_4">
-                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-5.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <a class="pic-thumbnail-wrapper" href="#_5">
-                <img class="pic-thumbnail-img" src="/assets/photos/Seattle-1.jpg" alt="TODO"/>
-                <div class="pic-thumbnail-overlay"></div>
-            </a>
-            <img class="pic-thumbnail-img" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
+        <div class="d-flex align-items-start">
+            <div class="pic-list pic-thumbnail-list list-group mx-auto" id="thumbnails">
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_0">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_1">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-2.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_2">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-3.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_3">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-4.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_4">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-5.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_5">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Seattle-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_6">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Chigago-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_7">
+                    <img class="pic-thumbnail-img" src="/assets/photos/New-York-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_8">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Japan-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_9">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Heihe-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_10">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Hiking-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_11">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Lausanne-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_12">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Lausanne-2.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_13">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Dresden-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_14">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Prague-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_15">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Lavertezzo-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_16">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Zermatt-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_17">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Flims-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_18">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Jungfraujoch-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_19">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Interlaken-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_20">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Interlaken-2.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+                <a class="pic-thumbnail-wrapper list-group-item list-group-item-action" href="#_21">
+                    <img class="pic-thumbnail-img" src="/assets/photos/Zurich-1.jpg" alt="TODO"/>
+                    <div class="pic-thumbnail-overlay"></div>
+                </a>
+            </div>
         </div>
     </div>
 

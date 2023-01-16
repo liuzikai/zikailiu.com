@@ -60,25 +60,26 @@
 }
 
 .pic-list {
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
-    grid-template-rows: auto;
+    align-items: start;
 
     margin-left: auto;
     margin-right: auto;
 
     &.pic-gallery {
+        display: grid;
         grid-row-gap: 2rem;
         overflow-y: scroll;
     }
 
     &.pic-thumbnail-list {
-        grid-row-gap: 0.5rem;
+        display: flex;
+        align-items: start;
 
-        position: sticky;
-        height: 70vh;
+        //position: sticky;
         top: 8rem;
+        margin-bottom: auto;
 
         width: 4rem;
         @include media-breakpoint-up(md) {
@@ -105,6 +106,8 @@
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
+
+    margin-bottom: 0.5rem;
 
 
     .pic-thumbnail-overlay {

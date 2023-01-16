@@ -269,14 +269,8 @@ window.addEventListener("DOMContentLoaded", event => {
         handleVisibleReadMoreButtons();
     });
 
-    /*if (document.currentScript.getAttribute('current') === "home") {
-        const floatingElems = [
-            ["#me-intro-photo", 10], ["#me-intro-self", 10]
-        ];
-    }*/
-
     const currentPage = document.getElementById("main-script").getAttribute("data-page");
-    console.warn(currentPage);
+    // console.warn(currentPage);
 
 
     // Note on GSAP: unit vh does not work with pin + scrub
@@ -285,7 +279,6 @@ window.addEventListener("DOMContentLoaded", event => {
     gsap.registerPlugin(ScrollTrigger);
 
     if (currentPage === "home") {
-
         let mm = gsap.matchMedia();
 
         // >= lg only animation
@@ -474,5 +467,25 @@ window.addEventListener("DOMContentLoaded", event => {
         let photosNav = document.getElementById("nav-photos-text");
         photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
         photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());
+
+    } else if (currentPage === "photographs") {
+
+        gsap.to("#thumbnails", {
+            scrollTrigger: {
+                trigger: "#photos",
+                start: "top 20%",
+                endTrigger: "#photos",
+                end: "bottom bottom",
+                pin: "#thumbnails",
+                pinSpacing: false,
+                scrub: true,
+                invalidateOnRefresh: true,
+                // anticipatePin: 1,
+                markers: true,
+            },
+            yPercent: "-100",
+            y: () => window.innerHeight * 0.40,
+            ease: "none",
+        });
     }
 });
