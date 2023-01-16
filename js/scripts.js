@@ -890,26 +890,26 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$3 = 'collapse';
-  const DATA_KEY$2 = 'bs.collapse';
-  const EVENT_KEY$2 = `.${DATA_KEY$2}`;
-  const DATA_API_KEY$1 = '.data-api';
+  const NAME$4 = 'collapse';
+  const DATA_KEY$3 = 'bs.collapse';
+  const EVENT_KEY$3 = `.${DATA_KEY$3}`;
+  const DATA_API_KEY$2 = '.data-api';
 
-  const Default$3 = {
+  const Default$4 = {
     toggle: true,
     parent: null
   };
 
-  const DefaultType$3 = {
+  const DefaultType$4 = {
     toggle: 'boolean',
     parent: '(null|element)'
   };
 
-  const EVENT_SHOW$1 = `show${EVENT_KEY$2}`;
-  const EVENT_SHOWN$1 = `shown${EVENT_KEY$2}`;
-  const EVENT_HIDE$1 = `hide${EVENT_KEY$2}`;
-  const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$2}`;
-  const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$2}${DATA_API_KEY$1}`;
+  const EVENT_SHOW$1 = `show${EVENT_KEY$3}`;
+  const EVENT_SHOWN$1 = `shown${EVENT_KEY$3}`;
+  const EVENT_HIDE$1 = `hide${EVENT_KEY$3}`;
+  const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$3}`;
+  const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$3}${DATA_API_KEY$2}`;
 
   const CLASS_NAME_SHOW$2 = 'show';
   const CLASS_NAME_COLLAPSE = 'collapse';
@@ -966,11 +966,11 @@
     // Getters
 
     static get Default() {
-      return Default$3
+      return Default$4
     }
 
     static get NAME() {
-      return NAME$3
+      return NAME$4
     }
 
     // Public
@@ -1017,7 +1017,7 @@
         }
 
         if (!activesData) {
-          Data.set(elemActive, DATA_KEY$2, null);
+          Data.set(elemActive, DATA_KEY$3, null);
         }
       });
 
@@ -1100,13 +1100,13 @@
 
     _getConfig(config) {
       config = {
-        ...Default$3,
+        ...Default$4,
         ...Manipulator.getDataAttributes(this._element),
         ...config
       };
       config.toggle = Boolean(config.toggle); // Coerce string values
       config.parent = getElement(config.parent);
-      typeCheckConfig(NAME$3, config, DefaultType$3);
+      typeCheckConfig(NAME$4, config, DefaultType$4);
       return config
     }
 
@@ -1296,7 +1296,7 @@
    * --------------------------------------------------------------------------
    */
 
-  const Default$2 = {
+  const Default$3 = {
     className: 'modal-backdrop',
     isVisible: true, // if false, we use the backdrop helper without adding any element to the dom
     isAnimated: false,
@@ -1304,18 +1304,18 @@
     clickCallback: null
   };
 
-  const DefaultType$2 = {
+  const DefaultType$3 = {
     className: 'string',
     isVisible: 'boolean',
     isAnimated: 'boolean',
     rootElement: '(element|string)',
     clickCallback: '(function|null)'
   };
-  const NAME$2 = 'backdrop';
+  const NAME$3 = 'backdrop';
   const CLASS_NAME_FADE$1 = 'fade';
   const CLASS_NAME_SHOW$1 = 'show';
 
-  const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$2}`;
+  const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$3}`;
 
   class Backdrop {
     constructor(config) {
@@ -1375,13 +1375,13 @@
 
     _getConfig(config) {
       config = {
-        ...Default$2,
+        ...Default$3,
         ...(typeof config === 'object' ? config : {})
       };
 
       // use getElement() with the default "body" to get a fresh Element on each instantiation
       config.rootElement = getElement(config.rootElement);
-      typeCheckConfig(NAME$2, config, DefaultType$2);
+      typeCheckConfig(NAME$3, config, DefaultType$3);
       return config
     }
 
@@ -1422,21 +1422,21 @@
    * --------------------------------------------------------------------------
    */
 
-  const Default$1 = {
+  const Default$2 = {
     trapElement: null, // The element to trap focus inside of
     autofocus: true
   };
 
-  const DefaultType$1 = {
+  const DefaultType$2 = {
     trapElement: 'element',
     autofocus: 'boolean'
   };
 
-  const NAME$1 = 'focustrap';
-  const DATA_KEY$1 = 'bs.focustrap';
-  const EVENT_KEY$1 = `.${DATA_KEY$1}`;
-  const EVENT_FOCUSIN = `focusin${EVENT_KEY$1}`;
-  const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$1}`;
+  const NAME$2 = 'focustrap';
+  const DATA_KEY$2 = 'bs.focustrap';
+  const EVENT_KEY$2 = `.${DATA_KEY$2}`;
+  const EVENT_FOCUSIN = `focusin${EVENT_KEY$2}`;
+  const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$2}`;
 
   const TAB_KEY = 'Tab';
   const TAB_NAV_FORWARD = 'forward';
@@ -1460,7 +1460,7 @@
         trapElement.focus();
       }
 
-      EventHandler.off(document, EVENT_KEY$1); // guard against infinite focus loop
+      EventHandler.off(document, EVENT_KEY$2); // guard against infinite focus loop
       EventHandler.on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
       EventHandler.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
 
@@ -1473,7 +1473,7 @@
       }
 
       this._isActive = false;
-      EventHandler.off(document, EVENT_KEY$1);
+      EventHandler.off(document, EVENT_KEY$2);
     }
 
     // Private
@@ -1507,10 +1507,10 @@
 
     _getConfig(config) {
       config = {
-        ...Default$1,
+        ...Default$2,
         ...(typeof config === 'object' ? config : {})
       };
-      typeCheckConfig(NAME$1, config, DefaultType$1);
+      typeCheckConfig(NAME$2, config, DefaultType$2);
       return config
     }
   }
@@ -1556,35 +1556,35 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'modal';
-  const DATA_KEY = 'bs.modal';
-  const EVENT_KEY = `.${DATA_KEY}`;
-  const DATA_API_KEY = '.data-api';
+  const NAME$1 = 'modal';
+  const DATA_KEY$1 = 'bs.modal';
+  const EVENT_KEY$1 = `.${DATA_KEY$1}`;
+  const DATA_API_KEY$1 = '.data-api';
   const ESCAPE_KEY = 'Escape';
 
-  const Default = {
+  const Default$1 = {
     backdrop: true,
     keyboard: true,
     focus: true
   };
 
-  const DefaultType = {
+  const DefaultType$1 = {
     backdrop: '(boolean|string)',
     keyboard: 'boolean',
     focus: 'boolean'
   };
 
-  const EVENT_HIDE = `hide${EVENT_KEY}`;
-  const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY}`;
-  const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
-  const EVENT_SHOW = `show${EVENT_KEY}`;
-  const EVENT_SHOWN = `shown${EVENT_KEY}`;
-  const EVENT_RESIZE = `resize${EVENT_KEY}`;
-  const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY}`;
-  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY}`;
-  const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY}`;
-  const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY}`;
-  const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+  const EVENT_HIDE = `hide${EVENT_KEY$1}`;
+  const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$1}`;
+  const EVENT_HIDDEN = `hidden${EVENT_KEY$1}`;
+  const EVENT_SHOW = `show${EVENT_KEY$1}`;
+  const EVENT_SHOWN = `shown${EVENT_KEY$1}`;
+  const EVENT_RESIZE = `resize${EVENT_KEY$1}`;
+  const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY$1}`;
+  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$1}`;
+  const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY$1}`;
+  const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$1}`;
+  const EVENT_CLICK_DATA_API = `click${EVENT_KEY$1}${DATA_API_KEY$1}`;
 
   const CLASS_NAME_OPEN = 'modal-open';
   const CLASS_NAME_FADE = 'fade';
@@ -1619,11 +1619,11 @@
     // Getters
 
     static get Default() {
-      return Default
+      return Default$1
     }
 
     static get NAME() {
-      return NAME
+      return NAME$1
     }
 
     // Public
@@ -1704,7 +1704,7 @@
 
     dispose() {
       [window, this._dialog]
-        .forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY));
+        .forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY$1));
 
       this._backdrop.dispose();
       this._focustrap.deactivate();
@@ -1732,11 +1732,11 @@
 
     _getConfig(config) {
       config = {
-        ...Default,
+        ...Default$1,
         ...Manipulator.getDataAttributes(this._element),
         ...(typeof config === 'object' ? config : {})
       };
-      typeCheckConfig(NAME, config, DefaultType);
+      typeCheckConfig(NAME$1, config, DefaultType$1);
       return config
     }
 
@@ -1962,14 +1962,294 @@
 
   defineJQueryPlugin(Modal);
 
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.1.3): scrollspy.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  const NAME = 'scrollspy';
+  const DATA_KEY = 'bs.scrollspy';
+  const EVENT_KEY = `.${DATA_KEY}`;
+  const DATA_API_KEY = '.data-api';
+
+  const Default = {
+    offset: 10,
+    method: 'auto',
+    target: ''
+  };
+
+  const DefaultType = {
+    offset: 'number',
+    method: 'string',
+    target: '(string|element)'
+  };
+
+  const EVENT_ACTIVATE = `activate${EVENT_KEY}`;
+  const EVENT_SCROLL = `scroll${EVENT_KEY}`;
+  const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
+
+  const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  const CLASS_NAME_ACTIVE = 'active';
+
+  const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
+  const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
+  const SELECTOR_NAV_LINKS = '.nav-link';
+  const SELECTOR_NAV_ITEMS = '.nav-item';
+  const SELECTOR_LIST_ITEMS = '.list-group-item';
+  const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}, .${CLASS_NAME_DROPDOWN_ITEM}`;
+  const SELECTOR_DROPDOWN = '.dropdown';
+  const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
+
+  const METHOD_OFFSET = 'offset';
+  const METHOD_POSITION = 'position';
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  class ScrollSpy extends BaseComponent {
+    constructor(element, config) {
+      super(element);
+      this._scrollElement = this._element.tagName === 'BODY' ? window : this._element;
+      this._config = this._getConfig(config);
+      this._offsets = [];
+      this._targets = [];
+      this._activeTarget = null;
+      this._scrollHeight = 0;
+
+      EventHandler.on(this._scrollElement, EVENT_SCROLL, () => this._process());
+
+      this.refresh();
+      this._process();
+    }
+
+    // Getters
+
+    static get Default() {
+      return Default
+    }
+
+    static get NAME() {
+      return NAME
+    }
+
+    // Public
+
+    refresh() {
+      const autoMethod = this._scrollElement === this._scrollElement.window ?
+        METHOD_OFFSET :
+        METHOD_POSITION;
+
+      const offsetMethod = this._config.method === 'auto' ?
+        autoMethod :
+        this._config.method;
+
+      const offsetBase = offsetMethod === METHOD_POSITION ?
+        this._getScrollTop() :
+        0;
+
+      this._offsets = [];
+      this._targets = [];
+      this._scrollHeight = this._getScrollHeight();
+
+      const targets = SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target);
+
+      targets.map(element => {
+        const targetSelector = getSelectorFromElement(element);
+        const target = targetSelector ? SelectorEngine.findOne(targetSelector) : null;
+
+        if (target) {
+          const targetBCR = target.getBoundingClientRect();
+          if (targetBCR.width || targetBCR.height) {
+            return [
+              Manipulator[offsetMethod](target).top + offsetBase,
+              targetSelector
+            ]
+          }
+        }
+
+        return null
+      })
+        .filter(item => item)
+        .sort((a, b) => a[0] - b[0])
+        .forEach(item => {
+          this._offsets.push(item[0]);
+          this._targets.push(item[1]);
+        });
+    }
+
+    dispose() {
+      EventHandler.off(this._scrollElement, EVENT_KEY);
+      super.dispose();
+    }
+
+    // Private
+
+    _getConfig(config) {
+      config = {
+        ...Default,
+        ...Manipulator.getDataAttributes(this._element),
+        ...(typeof config === 'object' && config ? config : {})
+      };
+
+      config.target = getElement(config.target) || document.documentElement;
+
+      typeCheckConfig(NAME, config, DefaultType);
+
+      return config
+    }
+
+    _getScrollTop() {
+      return this._scrollElement === window ?
+        this._scrollElement.pageYOffset :
+        this._scrollElement.scrollTop
+    }
+
+    _getScrollHeight() {
+      return this._scrollElement.scrollHeight || Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      )
+    }
+
+    _getOffsetHeight() {
+      return this._scrollElement === window ?
+        window.innerHeight :
+        this._scrollElement.getBoundingClientRect().height
+    }
+
+    _process() {
+      const scrollTop = this._getScrollTop() + this._config.offset;
+      const scrollHeight = this._getScrollHeight();
+      const maxScroll = this._config.offset + scrollHeight - this._getOffsetHeight();
+
+      if (this._scrollHeight !== scrollHeight) {
+        this.refresh();
+      }
+
+      if (scrollTop >= maxScroll) {
+        const target = this._targets[this._targets.length - 1];
+
+        if (this._activeTarget !== target) {
+          this._activate(target);
+        }
+
+        return
+      }
+
+      if (this._activeTarget && scrollTop < this._offsets[0] && this._offsets[0] > 0) {
+        this._activeTarget = null;
+        this._clear();
+        return
+      }
+
+      for (let i = this._offsets.length; i--;) {
+        const isActiveTarget = this._activeTarget !== this._targets[i] &&
+            scrollTop >= this._offsets[i] &&
+            (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
+
+        if (isActiveTarget) {
+          this._activate(this._targets[i]);
+        }
+      }
+    }
+
+    _activate(target) {
+      this._activeTarget = target;
+
+      this._clear();
+
+      const queries = SELECTOR_LINK_ITEMS.split(',')
+        .map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
+
+      const link = SelectorEngine.findOne(queries.join(','), this._config.target);
+
+      link.classList.add(CLASS_NAME_ACTIVE);
+      if (link.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
+        SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE, link.closest(SELECTOR_DROPDOWN))
+          .classList.add(CLASS_NAME_ACTIVE);
+      } else {
+        SelectorEngine.parents(link, SELECTOR_NAV_LIST_GROUP)
+          .forEach(listGroup => {
+            // Set triggered links parents as active
+            // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
+            SelectorEngine.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`)
+              .forEach(item => item.classList.add(CLASS_NAME_ACTIVE));
+
+            // Handle special case when .nav-link is inside .nav-item
+            SelectorEngine.prev(listGroup, SELECTOR_NAV_ITEMS)
+              .forEach(navItem => {
+                SelectorEngine.children(navItem, SELECTOR_NAV_LINKS)
+                  .forEach(item => item.classList.add(CLASS_NAME_ACTIVE));
+              });
+          });
+      }
+
+      EventHandler.trigger(this._scrollElement, EVENT_ACTIVATE, {
+        relatedTarget: target
+      });
+    }
+
+    _clear() {
+      SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target)
+        .filter(node => node.classList.contains(CLASS_NAME_ACTIVE))
+        .forEach(node => node.classList.remove(CLASS_NAME_ACTIVE));
+    }
+
+    // Static
+
+    static jQueryInterface(config) {
+      return this.each(function () {
+        const data = ScrollSpy.getOrCreateInstance(this, config);
+
+        if (typeof config !== 'string') {
+          return
+        }
+
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`)
+        }
+
+        data[config]();
+      })
+    }
+  }
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    SelectorEngine.find(SELECTOR_DATA_SPY)
+      .forEach(spy => new ScrollSpy(spy));
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   * add .ScrollSpy to jQuery only if jQuery is present
+   */
+
+  defineJQueryPlugin(ScrollSpy);
+
   /*!
    * Script for my portfolio. See script.js for unminified version with comments.
    * Copyright 2022 Zikai Liu
    * Reference: Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale, Licensed under MIT)
    */
-  // import Offcanvas from "bootstrap/js/src/offcanvas"
-  // import Popover from "bootstrap/js/src/popover"
-  // import ScrollSpy from "bootstrap/js/src/scrollspy"
   // import Tab from "bootstrap/js/src/tab"
   // import Toast from "bootstrap/js/src/toast"
   // import Tooltip from "bootstrap/js/src/tooltip"
@@ -2231,13 +2511,16 @@
           ];
       }*/
 
+      const currentPage = document.getElementById("main-script").getAttribute("data-page");
+      console.warn(currentPage);
 
-      // NOTE: unit vh does not work with pin + scrub
-      // SOLUTION: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
+
+      // Note on GSAP: unit vh does not work with pin + scrub
+      // Solution: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
 
       gsap.registerPlugin(ScrollTrigger);
 
-      {
+      if (currentPage === "home") {
 
           let mm = gsap.matchMedia();
 

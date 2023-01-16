@@ -16,6 +16,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
+    <!-- TODO: use min -->
     <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
@@ -96,7 +97,7 @@
                 </svg>
             </div>
         </div>
-        <!-- Expanded when >= lg, drop-down menu when < lg -->
+        <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -333,7 +334,7 @@
 </section>
 
 <!-- Footer-->
-<footer class="footer small text-center" id="footer">
+<footer class="footer small text-center">
     <div class="container px-4 px-lg-5">Zikai Liu &copy; 2023</div>
     <div class="container px-4 px-lg-5 py-4">
         <a class="text-black-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
@@ -352,7 +353,7 @@
     </div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->
-<script src="/js/scripts.min.js" current="home"></script>
+<script id="main-script" src="/js/scripts.min.js" data-page="home"></script>
 <!-- Statistics -->
 <script async defer data-website-id="73c71412-9e36-405c-9ea1-351b14b0b859" src="/umami/umami.js"></script>
 </body>

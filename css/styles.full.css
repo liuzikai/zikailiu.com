@@ -15491,46 +15491,115 @@ body {
 }
 
 .pic-section {
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: minmax(auto, 1200px) auto;
   grid-auto-rows: auto;
-  grid-column-gap: 1em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column-gap: 1rem;
 }
 @media (min-width: 576px) {
   .pic-section {
-    grid-column-gap: 1em;
+    grid-column-gap: 1rem;
   }
 }
 @media (min-width: 768px) {
   .pic-section {
-    grid-column-gap: 2em;
+    grid-column-gap: 2rem;
   }
 }
 @media (min-width: 992px) {
   .pic-section {
-    grid-column-gap: 5em;
+    grid-column-gap: 5rem;
   }
 }
 
 .pic-list {
   display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
-  grid-row-gap: 1em;
+  grid-row-gap: 1rem;
   grid-template-rows: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.pic-list.pic-thumbnails {
+.pic-list.pic-gallery {
+  overflow-y: scroll;
+}
+.pic-list.pic-thumbnail-list {
   position: -webkit-sticky;
   position: sticky;
   height: 70vh;
-  top: 8em;
-  width: 4em;
+  top: 8rem;
+  width: 4rem;
 }
 @media (min-width: 768px) {
-  .pic-list.pic-thumbnails {
-    width: 5em;
+  .pic-list.pic-thumbnail-list {
+    width: 5rem;
   }
+}
+
+.pic-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic-img {
+  -webkit-border-radius: 1.5rem;
+     -moz-border-radius: 1.5rem;
+          border-radius: 1.5rem;
+  width: 100%;
+}
+
+.pic-thumbnail-wrapper {
+  display: block;
+  -webkit-border-radius: 0.5rem;
+     -moz-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.pic-thumbnail-img {
+  width: 100%;
+}
+
+.pic-thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.pic-text-wrapper {
+  position: relative;
+}
+
+.pic-text {
+  position: absolute;
+  bottom: 0;
+}
+.pic-text.left {
+  left: 0;
+}
+.pic-text.right {
+  right: 0;
 }
 
 .masthead {

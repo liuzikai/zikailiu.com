@@ -13,7 +13,7 @@ import Collapse from "bootstrap/js/src/collapse"
 import Modal from "bootstrap/js/src/modal"
 // import Offcanvas from "bootstrap/js/src/offcanvas"
 // import Popover from "bootstrap/js/src/popover"
-// import ScrollSpy from "bootstrap/js/src/scrollspy"
+import ScrollSpy from "bootstrap/js/src/scrollspy"
 // import Tab from "bootstrap/js/src/tab"
 // import Toast from "bootstrap/js/src/toast"
 // import Tooltip from "bootstrap/js/src/tooltip"
@@ -275,13 +275,16 @@ window.addEventListener("DOMContentLoaded", event => {
         ];
     }*/
 
+    const currentPage = document.getElementById("main-script").getAttribute("data-page");
+    console.warn(currentPage);
 
-    // NOTE: unit vh does not work with pin + scrub
-    // SOLUTION: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
+
+    // Note on GSAP: unit vh does not work with pin + scrub
+    // Solution: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
 
     gsap.registerPlugin(ScrollTrigger);
 
-    if (true) {
+    if (currentPage === "home") {
 
         let mm = gsap.matchMedia();
 

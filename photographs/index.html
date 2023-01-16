@@ -15,6 +15,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
+    <!-- TODO: use min -->
     <link href="/css/styles.full.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
@@ -25,6 +26,9 @@
     <!-- If not preloading, images files can be loaded first, which is not desired     -->
     <!-- SVG icons are loaded in the scripts.js, which also have high priorities       -->
     <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
+    <!-- TODO: remove these scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -78,22 +82,14 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
-        <!-- This brand show when >= md -->
-        <div class="navbar-brand show-md" id="mainNavBody" aria-hidden="true">
-            <a class="navbar-brand-text" href="/">Zikai Liu</a>
-        </div>
-        <!-- This brand show when < md -->
-        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBodyMobile"
-             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-             aria-expanded="false" aria-label="Toggle navigation" aria-hidden="true">
-            <div class="navbar-brand" href="#page-top">
-                <!-- Newline between spans to act as space -->
-                <span class="navbar-brand-part1">Zikai Liu's</span>
-                <!-- navbar-brand-part2-container is used to left-align both :before and :after -->
-                <span class="navbar-brand-part2-container"><span class="navbar-brand-part2-photographs"></span></span>
-            </div>
-            <div class="navbar-toggler navbar-toggler-right my-auto">
+        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             id="mainNavBodyMobile">
+            <a class="navbar-brand" href="/">
+                Zikai Liu
+            </a>
+            <div class="navbar-toggler collapsed my-auto"
+                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                 aria-expanded="false" aria-label="Toggle navigation">
                 <svg width="16" height="16">
                     <use xlink:href="#bi-chevron-right"></use>
                 </svg>
@@ -102,11 +98,12 @@
         <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link umami--click--nav-home" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link active umami--click--nav-projects" href="/projects">Projects</a>
+                <li class="nav-item">
+                    <a class="nav-link umami--click--nav-projects" href="/projects">Projects</a>
                 </li>
-                <li class="nav-item"><a class="nav-link umami--click--nav-photographs"
-                                        href="/photographs">Photographs</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active umami--click--nav-photographs" href="/photographs">Photographs</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -128,43 +125,57 @@
 <!-- Body -->
 <section class="projects-section" id="projects">
 
-    <div class="pic-section">
-        <div class="pic-list pic-gallery">
-            <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>
-            <img class="modal-image" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
+    <div class="pic-section px-3 px-lg-5">
+        <div class="pic-list pic-gallery" data-spy="scroll" data-target="#thumbnails" data-offset="0">
+            <div id="0" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
+            </div>
+            <div id="1" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Xinjiang-2.jpg" alt="TODO"/>
+            </div>
+            <div id="2" class="pic-wrapper">
+                <img class="pic-img" src="/assets/photos/Zermatt-1.jpg" alt="TODO"/>
+            </div>
         </div>
-        <div class="pic-list pic-thumbnails">
-            <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>
-            <img class="modal-image" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
+        <div class="pic-list pic-thumbnail-list mx-auto" id="thumbnails">
+            <a class="pic-thumbnail-wrapper" href="#0">
+                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
+                <div class="pic-thumbnail-overlay"></div>
+            </a>
+            <a class="pic-thumbnail-wrapper" href="#1">
+                <img class="pic-thumbnail-img" src="/assets/photos/Xinjiang-2.jpg" alt="TODO"/>
+                <div class="pic-thumbnail-overlay"></div>
+            </a>
+            <img class="pic-thumbnail-img" src="/assets/photos/Zermatt-1.jpg" alt="Zermatt"/>
         </div>
     </div>
 
-<!--    <div class="container py-4 px-4 px-lg-5 justify-content-center slide-in-text" style="height: 200vh">-->
-<!--        <div class="row">-->
-<!--            <div class="col-9">-->
-<!--                <div style="min-height: 100vh">-->
-<!--                    <div style="position: sticky; top: 8em">-->
-<!--                        <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--                        233-->
-<!--                    </div>-->
-<!--                </div>-->
+    <!--    <div class="container py-4 px-4 px-lg-5 justify-content-center slide-in-text" style="height: 200vh">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-9">-->
+    <!--                <div style="min-height: 100vh">-->
+    <!--                    <div style="position: sticky; top: 8em">-->
+    <!--                        <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--                        233-->
+    <!--                    </div>-->
+    <!--                </div>-->
 
-<!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--            </div>-->
-<!--            <div class="col-3">-->
-<!--                <div style="position: sticky; top: 10em">-->
-<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--            </div>-->
+    <!--            <div class="col-3">-->
+    <!--                <div style="position: sticky; top: 10em">-->
+    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </section>
 
 <!-- Contact-->
-<section class="contact-section contact-section-light">
+<section class="contact-section contact-section-dark">
     <div class="container px-4 px-lg-5">
         <div class="social d-flex justify-content-center">
             <a class="mx-2 umami--click--footer-email" href="mailto: zikai.liu@outlook.com" aria-label="Email me">
@@ -189,10 +200,10 @@
 </section>
 
 <!-- Footer-->
-<footer class="footer small text-center">
-    <div class="container px-4 px-lg-5">Copyright &copy; Zikai Liu 2022</div>
+<footer class="footer bg-black small text-center text-white-50">
+    <div class="container px-4 px-lg-5">Zikai Liu &copy; 2023</div>
     <div class="container px-4 px-lg-5 py-4">
-        <a class="text-black-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
+        <a class="text-white-50 umami--click--footer-website-repo" target="_blank" rel="noopener noreferrer"
            href="https://github.com/liuzikai/liuzik.ai" aria-label="Visit the GitHub repository of this website">
             Nuts and bolts about this website on
             <span style="white-space: nowrap">
@@ -208,7 +219,7 @@
     </div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->
-<script src="/js/scripts.min.js"></script>
+<script id="main-script" src="/js/scripts.min.js" data-page="photographs"></script>
 <!-- Statistics -->
 <script async defer data-website-id="f3d6911a-7637-4169-84c2-c21b4e11e62c" src="/umami/umami.js"></script>
 </body>
