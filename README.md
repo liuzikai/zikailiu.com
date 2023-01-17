@@ -69,6 +69,7 @@ This is a static website. Bootstrap is used for its responsive design. A bit of 
 * Website statistics: self-hosted [umami](https://umami.is). Only anonymous, aggregated statistics are collected
   locally.
 * Favicon assets generated with [RealFaviconGenerator](https://realfavicongenerator.net/#).
+* Animations with [GSAP](https://greensock.com/gsap/).
 
 Specifically, about performance optimizations:
 
@@ -77,7 +78,9 @@ Specifically, about performance optimizations:
 * Vanilla JS. No JQuery.
 * Self-host fonts (only three weights of Nunito Sans). No Google Fonts.
 * Inline SVG icons from [Bootstrap Icons](https://icons.getbootstrap.com). No CDN-delivered FontAwesome.
-* ~~Lossy WEBP for images. Targeting Fast 3G loading speed.~~ JPEG images for backward compatibility. WEBP saves up to ~50% for normal size images (e.g. photos in Projects page), but not that much for large masthead images (~10%-20%), which are the real bottlenecks.
+* ~~Lossy WEBP for images. Targeting Fast 3G loading speed.~~ JPEG images for backward compatibility. WEBP saves up to ~
+  50% for normal size images (e.g. photos in Projects page), but not that much for large masthead images (~10%-20%),
+  which are the real bottlenecks.
 * GZIP encoding (less important after deploying the CDN).
 * Preload CSS, fonts, JS and the masthead background.
 * Customized images/video lazy loading on the Project page.
@@ -85,12 +88,14 @@ Specifically, about performance optimizations:
 
 ## TODOs and Known Issues
 
-- [ ] The photographs page
+- [ ] Maybe organize photos into topics some day...
+- [ ] `.slide-in-text` is also triggered when scrolling upward, which is ugly. Maybe replace it with GSAP ScrollTrigger
+  some day.
 
 ## Reference
 
 I get inspiration from a lot of great websites. The outstanding ones in my mind include the starting template,
-[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), Apple's website, as well as a bunch of
+[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), [Gulia Gatner](https://www.giuligartner.com/, Apple's website, as well as a bunch of
 awesome websites from [Awwwards](https://www.awwwards.com). This site is of nothing compared with those masterpieces.
 
 For a more complete list of references, please refer to [reference.md](reference.md).

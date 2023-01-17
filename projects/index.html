@@ -26,6 +26,9 @@
     <!-- If not preloading, images files can be loaded first, which is not desired     -->
     <!-- SVG icons are loaded in the scripts.js, which also have high priorities       -->
     <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
+    <!-- TODO: remove these scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -130,7 +133,7 @@
     <div class="container px-1 px-lg-5">
         <!-- RoboMaster -->
         <div class="row gx-0 justify-content-center align-items-center project-container">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-1 pb-lg-5">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 px-lg-5 project-svg-container pb-1 pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
                 <div class="icon-placeholder text-center text-white-50"
                      data-include="/assets/robomaster-icon.svg">
@@ -140,7 +143,7 @@
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
                 <p class="slide-in-text">
-                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots.
+                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots for competitions.
                 </p>
                 <p class="slide-in-text">
                     Being the <span class="text-white">Control Group Lead</span> and
@@ -155,7 +158,7 @@
                 <div class="mt-4 text-end slide-in-text umami--click--read-robomaster">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#robomasterMore">
-                        Read more
+                        READ MORE
                         <svg width="1.2em" height="1.2em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
@@ -295,7 +298,7 @@
                 <div class="mt-4 text-end slide-in-text umami--click--read-joystick">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#netEaseGameMore">
-                        Read more
+                        READ MORE
                         <svg width="1.2em" height="1.2em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
@@ -400,7 +403,7 @@
                 <div class="mt-4 text-end slide-in-text umami--click--read-klc3">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#klc3More">
-                        Read more
+                        READ MORE
                         <svg width="1.2em" height="1.2em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
@@ -574,7 +577,7 @@
                 <div class="mt-4 text-end slide-in-text umami--click--read-qi">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#wirelessChargingTableMore">
-                        Read more
+                        READ MORE
                         <svg width="1.2em" height="1.2em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
@@ -717,7 +720,7 @@
                                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#auroraOSMore">
-                                        Read more
+                                        READ MORE
                                         <svg width="1.2em" height="1.2em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
@@ -748,7 +751,7 @@
                                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#ozoneMore">
-                                        Read more
+                                        READ MORE
                                         <svg width="1.2em" height="1.2em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
@@ -758,13 +761,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- To align two read more buttons, having a new row seems to be the easiest way -->
+                <!-- To align two READ MORE buttons, having a new row seems to be the easiest way -->
                 <div class="row show-lg text-end slide-in-text" aria-hidden="true">
                     <div class="col-lg-6 umami--click--read-aurora-os" style="padding: 0 5rem">
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
                            data-bs-target="#auroraOSMore">
-                            Read more
+                            READ MORE
                             <svg width="1.2em" height="1.2em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
@@ -774,7 +777,7 @@
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
                            data-bs-target="#ozoneMore">
-                            Read more
+                            READ MORE
                             <svg width="1.2em" height="1.2em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
@@ -967,7 +970,7 @@
                                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#riscvProcessorMore">
-                                        Read more
+                                        READ MORE
                                         <svg width="1.2em" height="1.2em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
@@ -999,7 +1002,7 @@
                                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#boxheadMore">
-                                        Read more
+                                        READ MORE
                                         <svg width="1.2em" height="1.2em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
@@ -1014,7 +1017,7 @@
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
                            data-bs-target="#riscvProcessorMore">
-                            Read more
+                            READ MORE
                             <svg width="1.2em" height="1.2em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
@@ -1024,7 +1027,7 @@
                         <p class="read-more-button btn shadow-none" data-bs-toggle="modal"
                            onclick="readMoreClicked(this)"
                            data-bs-target="#boxheadMore">
-                            Read more
+                            READ MORE
                             <svg width="1.2em" height="1.2em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>

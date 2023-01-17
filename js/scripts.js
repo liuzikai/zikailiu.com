@@ -2256,9 +2256,6 @@
 
   window.addEventListener("DOMContentLoaded", event => {
 
-      // Home page scroll indicator
-      const scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
-
       // Navbar shrink function
       let navbarShrink = function () {
           const navbarCollapsible = document.body.querySelector("#mainNav");
@@ -2270,12 +2267,6 @@
               // Do not restart the scroll indicator animation
           } else {
               navbarCollapsible.classList.add("navbar-shrink");
-              // Stop the scroll indicator animation smoothly
-              Array.from(scrollIndicators).forEach(e => {
-                  e.addEventListener('animationiteration', _ => {
-                      e.classList.remove("scroll-indicator-path-active");
-                  }, {once: true});
-              });
           }
 
       };
@@ -2350,67 +2341,19 @@
 
       // Functions for SVG animation
 
-      function clamp(num, min, max) {
-          return num <= min ? min : (num >= max ? max : num);
-      }
-
-      function percentageEase(percentage) {
-          return percentage * percentage * percentage * percentage;
-      }
-
       let mainNavBodyElem = document.getElementById("mainNavBody");
-      let mainNavBodyMobileElem = document.getElementById("mainNavBodyMobile");
 
-      function calcProjectSVGPercentage(projectElem) {
-          // 0% when first becomes visible from the bottom
-          //   clientRect.top = window.innerHeight
+      function calcEndTop(projectElem) {
           // Case 1: 100% when the container is centralized vertically
           //   clientRect.top = navBarHeight + (window.innerHeight - navBarHeight) * 0.5 - clientRect.height * 0.5
           // Case 2: 100% when container.top = navBarHeight * 1.5, useful for mobile short screen
           //   clientRect.top = navBarHeight * 1.5
           // Choose the larger one of case 1 and 2 (whichever reach first)
           let clientRect = projectElem.getBoundingClientRect();
-          // mainNav expandable in mobile, use mainNavBody
           let navBarHeight = mainNavBodyElem.offsetHeight;
-          if (navBarHeight === 0) navBarHeight = mainNavBodyMobileElem.offsetHeight;
-          let topStart = window.innerHeight,
-              topEnd1 = (navBarHeight + window.innerHeight - clientRect.height) * 0.5,  // simplified
-              topEnd2 = (navBarHeight * 1.5),
-              topEnd = Math.max(topEnd1, topEnd2);
-          let slope = 1 / (topEnd - topStart);
-          let percentage = (clientRect.top - topStart) * slope;
-          if (percentage < 0) return 0;
-          return percentageEase(clamp(percentage, 0, 1));
-      }
-
-      function drawProjectSVG(svgElem, dashTotal, percentage) {
-          svgElem.style.strokeDashoffset = dashTotal * (1 - percentage);
-      }
-
-      // SVG information: {svg element => [container element, stroke-dashoffset]}
-      let svgInfo = new Map();
-
-      // Update all SVGs
-      function updateSVGs() {
-          for (const [key, value] of svgInfo.entries()) {
-              drawProjectSVG(key, value[1], calcProjectSVGPercentage(value[0]));
-          }
-      }
-
-      function sleep(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-      }
-
-      // Async function to drive an SVG to a certain percentage with delay (animation)
-      // Used to drive a svg when it first shows up, when user refresh the page and it already shows up in the viewpoint
-      async function driveSVG(svgElem, dashTotal, current, target) {
-          if (current > target) current = target;
-          drawProjectSVG(svgElem, dashTotal, current);
-          if (current < target) {
-              // Forward 4% per 40ms (take 1s from 0% to 100%)
-              await sleep(40);
-              await driveSVG(svgElem, dashTotal, current + 0.04, target);
-          }
+          let topEnd1 = (navBarHeight + window.innerHeight - clientRect.height) * 0.5,  // simplified
+              topEnd2 = (navBarHeight * 1.5);
+          return Math.max(topEnd1, topEnd2);
       }
 
       for (let e of document.getElementsByClassName("icon-placeholder")) {
@@ -2430,23 +2373,25 @@
                   // Iterate the path inside
                   Array.from(e.querySelectorAll("path")).forEach(svg => {
                       if (svg.id.endsWith("-animated-svg")) {
-                          // Get the stroke-dashoffset
-                          let style = window.getComputedStyle(svg);
-                          let len = parseInt(style.getPropertyValue("stroke-dashoffset"), 10);
-
-                          // Store the information
-                          svgInfo.set(svg, [container, len]);
-
-                          // First-time show up, animate it to the current point if already in the view point
-                          // console.log("driveSVG: " + svg.id + " " + calcProjectSVGPercentage(container) + "/" + len);
-                          driveSVG(svg, len, 0, calcProjectSVGPercentage(container)).then();
+                          gsap.to(svg, {
+                              scrollTrigger: {
+                                  trigger: svg,
+                                  start: "top bottom",
+                                  endTrigger: container,
+                                  end: () => "top " + calcEndTop(container),  // container as let variable is captured
+                                  invalidateOnRefresh: true,
+                                  scrub: 2,
+                                  // markers: true,
+                              },
+                              strokeDashoffset: 0,
+                              ease: "power1.in",
+                          });
                       }
                   });
               }
           };
           request.send();
       }
-      // Note: svgInfo is updated async
 
       // Lazy load images and videos in Read More sections
 
@@ -2456,7 +2401,7 @@
           allReadMoreButtons.push(e);
       }
 
-      // Slide in animation
+      // Load images when READ MORE buttons are visible
       function handleVisibleReadMoreButtons() {
           for (let i = 0; i < allReadMoreButtons.length; i++) {
               let e = allReadMoreButtons[i];
@@ -2500,14 +2445,12 @@
 
       // On a scroll event
       document.addEventListener("scroll", function (e) {
-          updateSVGs();
           updateSlideInTexts();
           handleVisibleReadMoreButtons();
       });
 
       const currentPage = document.getElementById("main-script").getAttribute("data-page");
       // console.warn(currentPage);
-
 
       // Note on GSAP: unit vh does not work with pin + scrub
       // Solution: use innerHeight and invalidateOnRefresh (y need to be callable to be refreshed)
