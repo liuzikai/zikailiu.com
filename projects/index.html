@@ -85,22 +85,14 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
-        <!-- This brand show when >= md -->
-        <div class="navbar-brand show-md" id="mainNavBody" aria-hidden="true">
-            <a class="navbar-brand-text" href="/">Zikai Liu</a>
-        </div>
-        <!-- This brand show when < md -->
-        <div class="hidden-md collapsed d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBodyMobile"
-             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-             aria-expanded="false" aria-label="Toggle navigation" aria-hidden="true">
-            <div class="navbar-brand" href="#page-top">
-                <!-- Newline between spans to act as space -->
-                <span class="navbar-brand-part1">Zikai Liu's</span>
-                <!-- navbar-brand-part2-container is used to left-align both :before and :after -->
-                <span class="navbar-brand-part2-container"><span class="navbar-brand-part2-projects"></span></span>
-            </div>
-            <div class="navbar-toggler navbar-toggler-right my-auto">
+        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
+             id="mainNavBody">
+            <a class="navbar-brand" href="/">
+                Zikai Liu
+            </a>
+            <div class="navbar-toggler collapsed my-auto"
+                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                 aria-expanded="false" aria-label="Toggle navigation">
                 <svg width="16" height="16">
                     <use xlink:href="#bi-chevron-right"></use>
                 </svg>
@@ -109,11 +101,12 @@
         <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link umami--click--nav-home" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link active umami--click--nav-projects" href="/projects">Projects</a>
+                <li class="nav-item">
+                    <a class="nav-link active umami--click--nav-projects" href="/projects">Projects</a>
                 </li>
-                <li class="nav-item"><a class="nav-link umami--click--nav-photographs"
-                                        href="/photographs">Photographs</a></li>
+                <li class="nav-item">
+                    <a class="nav-link umami--click--nav-photographs" href="/photographs">Photographs</a>
+                </li>
             </ul>
         </div>
     </div>

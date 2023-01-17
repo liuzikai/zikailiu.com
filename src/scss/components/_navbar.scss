@@ -16,11 +16,19 @@
 .navbar-dark {
     backdrop-filter: blur(10px);
     background-color: $navbar-dark-background-color;
-    border-bottom: 1px solid $navbar-dark-border-color;
+    // border-bottom: 1px solid $navbar-dark-border-color;
 
     .navbar-brand {
         .navbar-brand-text {
             color: $navbar-dark-brand-color;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &:not(.navbar-shrink) {
+            .nav-link-outline {
+                text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+            }
         }
     }
 }
@@ -33,6 +41,14 @@
     .navbar-brand {
         .navbar-brand-text {
             color: $navbar-light-brand-color;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &:not(.navbar-shrink) {
+            .nav-link-outline {
+                text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+            }
         }
     }
 }
@@ -79,19 +95,13 @@
             background-color: transparent;
             backdrop-filter: none;
 
-            .nav-link-outline {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-                // text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
-            }
-
             .navbar-invisible-shrink {
                 opacity: 0;
             }
         }
 
         .nav-link {
-            transition: color 0.2s ease-in-out;
-            /* Safari behaviors weirdly if this is commented */
+            transition: color 0.2s ease-in-out;  // Safari behaviors weirdly if this is commented
         }
     }
 }

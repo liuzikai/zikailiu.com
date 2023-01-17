@@ -1,28 +1,3 @@
-#mainNav {
-    .navbar-brand-part2-projects:before {
-        content: "Projects";
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-
-    .navbar-brand-part2-projects:after {
-        content: "Portfolio";
-        opacity: 1;
-        transition: opacity 0.5s ease;
-        // Left align to .navbar-brand-part2-container
-        position: absolute;
-        left: 0;
-    }
-
-    .collapsed .navbar-brand-part2-projects:before {
-        opacity: 1;
-    }
-
-    .collapsed .navbar-brand-part2-projects:after {
-        opacity: 0;
-    }
-}
-
 .masthead {
     &.masthead-projects-bg {
         background: linear-gradient(to bottom,
@@ -36,8 +11,6 @@
         background-attachment: scroll;
         background-size: cover;
         opacity: 1;
-        -webkit-animation: bg-fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: bg-fadein 1s; /* Firefox < 16 */
         animation: bg-fadein 1s;
         border-bottom: 1px solid $black;
     }

@@ -10,21 +10,21 @@ $navbar-toggler-padding-y: 0.75rem;
 
 // Boostrap's inconsistent naming...
 $navbar-nav-link-padding-x: 1.5rem;
-$navbar-nav-link-padding-y: 1.25rem;
 $nav-link-padding-x: 1.5rem;
+$navbar-nav-link-padding-y: 1.25rem;
 $nav-link-padding-y: 1.25rem;
 
 $navbar-dark-brand-color: $white;
-$navbar-dark-color: rgba(255, 255, 255, 0.3);
-$navbar-dark-active-color: $white;
-$navbar-dark-hover-color: $white;
+$navbar-dark-color: var(--bs-body-color);
+$navbar-dark-active-color: var(--bs-active-color);
+$navbar-dark-hover-color: var(--bs-active-color);
 $navbar-dark-background-color: rgba(0, 0, 0, 0.3);
 $navbar-dark-border-color: rgba(255, 255, 255, 0.2);
 
 $navbar-light-brand-color: $black;
-$navbar-light-color: $black;
-$navbar-light-active-color: rgba(0, 0, 0, 0.3);
-$navbar-light-hover-color: rgba(0, 0, 0, 0.3);
+$navbar-light-color: var(--bs-body-color);
+$navbar-light-active-color: var(--bs-active-color);
+$navbar-light-hover-color: var(--bs-active-color);
 $navbar-light-background-color: rgba(255, 255, 255, 0.3);
 $navbar-light-border-color: rgba(0, 0, 0, 0.2);
 

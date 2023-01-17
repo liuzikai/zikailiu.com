@@ -1,7 +1,6 @@
 .masthead {
     &.masthead-photographs-bg {
         background: url("../assets/masthead-color.jpg");
-
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -11,31 +10,6 @@
     }
 
     border-bottom: 1px solid $navbar-light-border-color;
-}
-
-#mainNav {
-    .navbar-brand-part2-photographs:before {
-        content: "Photographs";
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-
-    .navbar-brand-part2-photographs:after {
-        content: "Portfolio";
-        opacity: 1;
-        transition: opacity 0.5s ease;
-        // Left align to .navbar-brand-part2-container
-        position: absolute;
-        left: 0;
-    }
-
-    .collapsed .navbar-brand-part2-photographs:before {
-        opacity: 1;
-    }
-
-    .collapsed .navbar-brand-part2-photographs:after {
-        opacity: 0;
-    }
 }
 
 .pic-section {

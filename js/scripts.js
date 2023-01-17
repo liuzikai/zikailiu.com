@@ -2717,7 +2717,7 @@
                   scrub: true,
                   invalidateOnRefresh: true,
                   // anticipatePin: 1,
-                  markers: true,
+                  // markers: true,
               },
               yPercent: "-100",
               y: () => window.innerHeight * 0.40,

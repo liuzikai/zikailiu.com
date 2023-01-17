@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      style="--bs-body-color: rgba(255, 255, 255, 0.5); --bs-body-rgb: 255, 255, 255; --bs-active-color: white; --bs-annotation-color: rgba(255, 255, 255, 0.5); --bs-annotation-bg: rgba(0, 0, 0, 1);">
+      style="--bs-body-color: rgba(255, 255, 255, 0.6); --bs-body-rgb: 255, 255, 255; --bs-active-color: white; --bs-annotation-color: rgba(255, 255, 255, 0.5); --bs-annotation-bg: rgba(0, 0, 0, 1);">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -15,8 +15,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <!-- TODO: use min -->
-    <link href="/css/styles.full.css" rel="stylesheet"/>
+    <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" fetchpriority="high" href="/assets/masthead-color.jpg" as="image" type="image/jpeg">
@@ -63,6 +62,12 @@
             <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
         </symbol>
+        <symbol id="bi-chevron-double-down" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd"
+                  d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd"
+                  d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </symbol>
         <symbol id="bi-envelope" viewBox="0 0 16 16" fill="currentColor">
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
         </symbol>
@@ -84,7 +89,7 @@
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
         <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBodyMobile">
+             id="mainNavBody">
             <a class="navbar-brand" href="/">
                 Zikai Liu
             </a>
@@ -100,10 +105,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link umami--click--nav-projects" href="/projects">Projects</a>
+                    <a class="nav-link nav-link-outline umami--click--nav-projects" href="/projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active umami--click--nav-photographs" href="/photographs">Photographs</a>
+                    <a class="nav-link nav-link-outline active umami--click--nav-photographs" href="/photographs">Photographs</a>
                 </li>
             </ul>
         </div>
@@ -125,8 +130,7 @@
 
 <!-- Body -->
 <section class="projects-section" id="projects">
-
-    <div class="pic-section px-3 px-lg-5">
+    <div class="pic-section px-3 px-lg-5 pt-5">
         <div class="pic-list pic-gallery" id="photos">
             <div id="_0" class="pic-wrapper">
                 <img class="pic-img" src="/assets/photos/Xinjiang-1.jpg" alt="TODO"/>
@@ -288,29 +292,6 @@
             </div>
         </div>
     </div>
-
-    <!--    <div class="container py-4 px-4 px-lg-5 justify-content-center slide-in-text" style="height: 200vh">-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-9">-->
-    <!--                <div style="min-height: 100vh">-->
-    <!--                    <div style="position: sticky; top: 8em">-->
-    <!--                        <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--                        233-->
-    <!--                    </div>-->
-    <!--                </div>-->
-
-    <!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--                <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--            </div>-->
-    <!--            <div class="col-3">-->
-    <!--                <div style="position: sticky; top: 10em">-->
-    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--                    <img class="modal-image" src="/assets/photos/Zurich.jpg" alt="Zurich"/>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </section>
 
 <!-- Contact-->
