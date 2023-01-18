@@ -1,6 +1,6 @@
 /*!
  * Script for my portfolio. See script.js for unminified version with comments.
- * Copyright 2022 Zikai Liu
+ * Copyright 2023 Zikai Liu
  * Reference: Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale, Licensed under MIT)
  */
 
@@ -17,6 +17,10 @@ import ScrollSpy from "bootstrap/js/src/scrollspy"
 // import Tab from "bootstrap/js/src/tab"
 // import Toast from "bootstrap/js/src/toast"
 // import Tooltip from "bootstrap/js/src/tooltip"
+
+// GSAP
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 window.addEventListener("DOMContentLoaded", event => {
 
@@ -333,6 +337,25 @@ window.addEventListener("DOMContentLoaded", event => {
                 ease: "power2.out",
             });
 
+            let projectsHoverAnimation = gsap.timeline({paused: true})
+                .to(".icon-projects-rect.one", {x: 6, y: -3}, "<")
+                .to(".icon-projects-rect.two", {x: 4, y: -2}, "<")
+                .to(".icon-projects-rect.three", {x: 2, y: -1}, "<")
+            ;
+            let projectsNav = document.getElementById("nav-projects-text");
+            projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
+            projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
+
+            let photosHoverAnimation = gsap.timeline({paused: true})
+                .to(".icon-photos-rect.one", {x: "+=2", y: "+=2"}, "<")
+                .to(".icon-photos-rect.two", {x: "-=2", y: "+=1"}, "<")
+                .to(".icon-photos-rect.three", {x: "+=2", y: "+=2"}, "<")
+            ;
+            let photosNav = document.getElementById("nav-photos-text");
+            photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
+            photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());
+
+
             return () => { // optional
                 // custom cleanup code here (runs when it STOPS matching)
             };
@@ -392,24 +415,6 @@ window.addEventListener("DOMContentLoaded", event => {
         }).to("#keyword-combined", {
             color: "#9900ff",
         }, "<");
-
-        let projectsHoverAnimation = gsap.timeline({paused: true})
-            .to(".icon-projects-rect.one", {x: 6, y: -3}, "<")
-            .to(".icon-projects-rect.two", {x: 4, y: -2}, "<")
-            .to(".icon-projects-rect.three", {x: 2, y: -1}, "<")
-        ;
-        let projectsNav = document.getElementById("nav-projects-text");
-        projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
-        projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
-
-        let photosHoverAnimation = gsap.timeline({paused: true})
-            .to(".icon-photos-rect.one", {x: "+=2", y: "+=2"}, "<")
-            .to(".icon-photos-rect.two", {x: "-=2", y: "+=1"}, "<")
-            .to(".icon-photos-rect.three", {x: "+=2", y: "+=2"}, "<")
-        ;
-        let photosNav = document.getElementById("nav-photos-text");
-        photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
-        photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());
 
     } else if (currentPage === "photographs") {
 

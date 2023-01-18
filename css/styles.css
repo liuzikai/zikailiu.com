@@ -218,11 +218,6 @@ small, .small {
   font-size: 0.875em;
 }
 
-mark, .mark {
-  padding: 0.2em;
-  background-color: #fcf8e3;
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -261,20 +256,6 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
-}
-
-th {
-  text-align: inherit;
-  text-align: -webkit-match-parent;
-}
-
-
-tr,
-td,
-th {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
 }
 
 button {
@@ -377,11 +358,6 @@ output {
 
 [hidden] {
   display: none !important;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -491,15 +467,6 @@ output {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 50%;
-  }
-
-  .col-lg-7 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-       -moz-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 58.33333333%;
   }
 
   .col-lg-8 {
@@ -842,7 +809,7 @@ output {
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: var(--bs-active-color);
 }
-.navbar-light .navbar-nav .show > .nav-link,
+
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--bs-active-color);
 }
@@ -863,7 +830,7 @@ output {
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: var(--bs-active-color);
 }
-.navbar-dark .navbar-nav .show > .nav-link,
+
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--bs-active-color);
 }
@@ -1008,13 +975,6 @@ output {
     -moz-transition: none;
     transition: none;
   }
-}
-.modal.show .modal-dialog {
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
 }
 
 .modal-content {
@@ -1237,14 +1197,6 @@ output {
      -moz-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
-}
-
-.justify-content-between {
-  -webkit-box-pack: justify !important;
-  -webkit-justify-content: space-between !important;
-     -moz-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
 }
 
 .justify-content-around {
@@ -1507,10 +1459,6 @@ output {
     margin-bottom: 0 !important;
   }
 
-  .mb-lg-5 {
-    margin-bottom: 3rem !important;
-  }
-
   .mb-lg-auto {
     margin-bottom: auto !important;
   }
@@ -1577,9 +1525,6 @@ body {
           backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.3);
 }
-.navbar-dark .navbar-brand .navbar-brand-text {
-  color: #fff;
-}
 @media (min-width: 768px) {
   .navbar-dark:not(.navbar-shrink) .nav-link-outline {
     text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
@@ -1591,9 +1536,6 @@ body {
           backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.navbar-light .navbar-brand .navbar-brand-text {
-  color: #000;
 }
 @media (min-width: 768px) {
   .navbar-light:not(.navbar-shrink) .nav-link-outline {
@@ -2085,18 +2027,6 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
-  .show-md {
-    display: none !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .hidden-md {
-    display: none !important;
-  }
-}
-
 .contact-section {
   padding-top: 0;
 }
@@ -2145,38 +2075,6 @@ body {
      -moz-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
   border-bottom: 1px solid #fff;
-}
-
-.biography-text {
-  font-size: 1rem;
-  /*@include media-breakpoint-up(md) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xl) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xxl) {
-      font-size: 1.25rem;
-  }*/
-}
-@media (min-width: 576px) {
-  .biography-text {
-    font-size: 1.25rem;
-  }
-}
-.biography-text mark, .biography-text .mark {
-  background: rgba(252, 211, 3, 0.1);
-}
-
-.home-timeline tr, .home-timeline th, .home-timeline td {
-  vertical-align: top;
-  text-align: start;
-}
-.home-timeline span {
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .center-text {

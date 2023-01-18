@@ -1,7 +1,7 @@
 {
-    "title": "Grayscale",
-    "name": "startbootstrap-grayscale",
-    "version": "7.0.5",
+    "title": "Zikai Liu Portfolio",
+    "name": "zikai-liu-portfolio",
+    "version": "1.1.0",
     "scripts": {
         "build": "npm run clean && npm-run-all --parallel build:css build:js",
         "build:js": "npm run rollup-js && npm run minify-js",
@@ -47,6 +47,7 @@
         "browser-sync": "2.27.9",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "gsap": "^3.11.4",
         "npm-run-all": "^4.1.5",
         "postcss": "8.4.12",
         "prettier": "2.6.0",

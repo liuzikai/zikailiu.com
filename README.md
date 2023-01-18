@@ -67,7 +67,7 @@ This is a static website. Bootstrap is used for its responsive design. A bit of 
   so that there is no need to add prefixes manually. Currently, the target compatibility is set
   to `cover 99.5%` ([browserslist](https://github.com/browserslist/browserslist)).
 * Website statistics: self-hosted [umami](https://umami.is). Only anonymous, aggregated statistics are collected
-  locally.
+  locally on the server.
 * Favicon assets generated with [RealFaviconGenerator](https://realfavicongenerator.net/#).
 * Animations with [GSAP](https://greensock.com/gsap/).
 
@@ -89,13 +89,15 @@ Specifically, about performance optimizations:
 ## TODOs and Known Issues
 
 - [ ] Maybe organize photos into topics some day...
+- [ ] Optimize photo page loading. Simple lazy loading prevents GSAP from calculating the correct heights.
 - [ ] `.slide-in-text` is also triggered when scrolling upward, which is ugly. Maybe replace it with GSAP ScrollTrigger
   some day.
 
 ## Reference
 
 I get inspiration from a lot of great websites. The outstanding ones in my mind include the starting template,
-[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), [Gulia Gatner](https://www.giuligartner.com/, Apple's website, as well as a bunch of
+[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), [Gulia Gatner](https://www.giuligartner.com/, Apple's
+website, as well as a bunch of
 awesome websites from [Awwwards](https://www.awwwards.com). This site is of nothing compared with those masterpieces.
 
 For a more complete list of references, please refer to [reference.md](reference.md).
