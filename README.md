@@ -96,7 +96,7 @@ Specifically, about performance optimizations:
 ## Reference
 
 I get inspiration from a lot of great websites. The outstanding ones in my mind include the starting template,
-[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), [Gulia Gatner](https://www.giuligartner.com/, Apple's
+[quokecola.com](https://github.com/QuokeCola/QuokeCola.github.io), [Gulia Gatner](https://www.giuligartner.com/), Apple's
 website, as well as a bunch of
 awesome websites from [Awwwards](https://www.awwwards.com). This site is of nothing compared with those masterpieces.
 
