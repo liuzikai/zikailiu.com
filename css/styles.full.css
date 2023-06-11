@@ -46,12 +46,14 @@
           transform: translateY(150px);
   -webkit-animation: come-in 0.8s ease forwards;
      -moz-animation: come-in 0.8s ease forwards;
+       -o-animation: come-in 0.8s ease forwards;
           animation: come-in 0.8s ease forwards;
 }
 
 .come-in:nth-child(odd) {
   -webkit-animation-duration: 0.6s;
      -moz-animation-duration: 0.6s;
+       -o-animation-duration: 0.6s;
           animation-duration: 0.6s;
   /* so they look staggered */
 }
@@ -67,6 +69,13 @@
   to {
     -moz-transform: translateY(0);
          transform: translateY(0);
+  }
+}
+
+@-o-keyframes come-in {
+  to {
+    -o-transform: translateY(0);
+       transform: translateY(0);
   }
 }
 
@@ -2884,6 +2893,10 @@ progress {
   color: #6c757d;
   opacity: 1;
 }
+.form-control:-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
 .form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -3117,8 +3130,9 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
-  -moz-background-size: 16px 12px;
-       background-size: 16px 12px;
+  -webkit-background-size: 16px 12px;
+     -moz-background-size: 16px 12px;
+          background-size: 16px 12px;
   border: 1px solid #ced4da;
   -webkit-border-radius: 0.25rem;
      -moz-border-radius: 0.25rem;
@@ -3199,8 +3213,9 @@ textarea.form-control-lg {
   background-color: #000;
   background-repeat: no-repeat;
   background-position: center;
-  -moz-background-size: contain;
-       background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -3446,6 +3461,9 @@ textarea.form-control-lg {
 .form-floating > .form-control::-webkit-input-placeholder {
   color: transparent;
 }
+.form-floating > .form-control:-moz-placeholder {
+  color: transparent;
+}
 .form-floating > .form-control::-moz-placeholder {
   color: transparent;
 }
@@ -3665,9 +3683,9 @@ textarea.form-control-lg {
   background-position: right -webkit-calc(0.375em + 0.1875rem) center;
   background-position: right -moz-calc(0.375em + 0.1875rem) center;
   background-position: right calc(0.375em + 0.1875rem) center;
-  -moz-background-size: -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
-       background-size: -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
-       background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  -webkit-background-size: -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
+     -moz-background-size: -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
+          background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: #67c29c;
@@ -3692,9 +3710,9 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2367c29c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  -moz-background-size: 16px 12px, -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
-       background-size: 16px 12px, -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
-       background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  -webkit-background-size: 16px 12px, -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
+     -moz-background-size: 16px 12px, -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
+          background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: #67c29c;
@@ -3774,9 +3792,9 @@ textarea.form-control-lg {
   background-position: right -webkit-calc(0.375em + 0.1875rem) center;
   background-position: right -moz-calc(0.375em + 0.1875rem) center;
   background-position: right calc(0.375em + 0.1875rem) center;
-  -moz-background-size: -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
-       background-size: -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
-       background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  -webkit-background-size: -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
+     -moz-background-size: -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
+          background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #a16468;
@@ -3801,9 +3819,9 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23a16468'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23a16468' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  -moz-background-size: 16px 12px, -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
-       background-size: 16px 12px, -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
-       background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  -webkit-background-size: 16px 12px, -webkit-calc(0.75em + 0.375rem) -webkit-calc(0.75em + 0.375rem);
+     -moz-background-size: 16px 12px, -moz-calc(0.75em + 0.375rem) -moz-calc(0.75em + 0.375rem);
+          background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: #a16468;
@@ -5334,8 +5352,9 @@ textarea.form-control-lg {
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
-  -moz-background-size: 100%;
-       background-size: 100%;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100%;
+          background-size: 100%;
 }
 
 .navbar-nav-scroll {
@@ -6244,8 +6263,9 @@ textarea.form-control-lg {
   content: "";
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  -moz-background-size: 1.25rem;
-       background-size: 1.25rem;
+  -webkit-background-size: 1.25rem 1.25rem;
+     -moz-background-size: 1.25rem;
+          background-size: 1.25rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   -o-transition: -o-transform 0.2s ease-in-out;
@@ -6658,6 +6678,12 @@ textarea.form-control-lg {
   }
 }
 
+@-o-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -6720,19 +6746,22 @@ textarea.form-control-lg {
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -moz-background-size: 1rem 1rem;
-       background-size: 1rem 1rem;
+  -webkit-background-size: 1rem 1rem;
+     -moz-background-size: 1rem 1rem;
+          background-size: 1rem 1rem;
 }
 
 .progress-bar-animated {
   -webkit-animation: 1s linear infinite progress-bar-stripes;
      -moz-animation: 1s linear infinite progress-bar-stripes;
+       -o-animation: 1s linear infinite progress-bar-stripes;
           animation: 1s linear infinite progress-bar-stripes;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
     -webkit-animation: none;
        -moz-animation: none;
+         -o-animation: none;
             animation: none;
   }
 }
@@ -8139,8 +8168,9 @@ textarea.form-control-lg {
   height: 2rem;
   background-repeat: no-repeat;
   background-position: 50%;
-  -moz-background-size: 100% 100%;
-       background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+          background-size: 100% 100%;
 }
 
 /* rtl:options: {
@@ -8257,6 +8287,13 @@ textarea.form-control-lg {
   }
 }
 
+@-o-keyframes spinner-border {
+  to {
+    -o-transform: rotate(360deg) /* rtl:ignore */;
+       transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+
 @keyframes spinner-border {
   to {
     -webkit-transform: rotate(360deg) /* rtl:ignore */;
@@ -8277,6 +8314,7 @@ textarea.form-control-lg {
           border-radius: 50%;
   -webkit-animation: 0.75s linear infinite spinner-border;
      -moz-animation: 0.75s linear infinite spinner-border;
+       -o-animation: 0.75s linear infinite spinner-border;
           animation: 0.75s linear infinite spinner-border;
 }
 
@@ -8310,6 +8348,18 @@ textarea.form-control-lg {
   }
 }
 
+@-o-keyframes spinner-grow {
+  0% {
+    -o-transform: scale(0);
+       transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    -o-transform: none;
+       transform: none;
+  }
+}
+
 @keyframes spinner-grow {
   0% {
     -webkit-transform: scale(0);
@@ -8337,6 +8387,7 @@ textarea.form-control-lg {
   opacity: 0;
   -webkit-animation: 0.75s linear infinite spinner-grow;
      -moz-animation: 0.75s linear infinite spinner-grow;
+       -o-animation: 0.75s linear infinite spinner-grow;
           animation: 0.75s linear infinite spinner-grow;
 }
 
@@ -8350,6 +8401,7 @@ textarea.form-control-lg {
 .spinner-grow {
     -webkit-animation-duration: 1.5s;
        -moz-animation-duration: 1.5s;
+         -o-animation-duration: 1.5s;
             animation-duration: 1.5s;
   }
 }
@@ -8533,6 +8585,7 @@ textarea.form-control-lg {
 .placeholder-glow .placeholder {
   -webkit-animation: placeholder-glow 2s ease-in-out infinite;
      -moz-animation: placeholder-glow 2s ease-in-out infinite;
+       -o-animation: placeholder-glow 2s ease-in-out infinite;
           animation: placeholder-glow 2s ease-in-out infinite;
 }
 
@@ -8543,6 +8596,12 @@ textarea.form-control-lg {
 }
 
 @-moz-keyframes placeholder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@-o-keyframes placeholder-glow {
   50% {
     opacity: 0.2;
   }
@@ -8560,6 +8619,7 @@ textarea.form-control-lg {
           mask-size: 200% 100%;
   -webkit-animation: placeholder-wave 2s linear infinite;
      -moz-animation: placeholder-wave 2s linear infinite;
+       -o-animation: placeholder-wave 2s linear infinite;
           animation: placeholder-wave 2s linear infinite;
 }
 
@@ -8571,6 +8631,12 @@ textarea.form-control-lg {
 }
 
 @-moz-keyframes placeholder-wave {
+  100% {
+    mask-position: -200% 0%;
+  }
+}
+
+@-o-keyframes placeholder-wave {
   100% {
     mask-position: -200% 0%;
   }
@@ -14732,6 +14798,12 @@ body {
   mix-blend-mode: difference;
   color: white !important;
 }
+@media (min-width: 992px) {
+  .modal-close {
+    top: 1.5em;
+    left: 1.5em;
+  }
+}
 
 .modal-close:hover {
   color: rgba(255, 255, 255, 0.5) !important;
@@ -14751,6 +14823,14 @@ body {
   min-height: 100vh;
   padding: 0;
   opacity: 0;
+}
+@-o-keyframes bg-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes bg-fadein {
   from {
@@ -14829,6 +14909,7 @@ body {
   display: inline;
   -webkit-animation: scrollDown 2s infinite;
      -moz-animation: scrollDown 2s infinite;
+       -o-animation: scrollDown 2s infinite;
           animation: scrollDown 2s infinite;
 }
 
@@ -14848,6 +14929,21 @@ body {
 }
 
 @-moz-keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes scrollDown {
   0% {
     opacity: 0;
   }
@@ -15167,11 +15263,13 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -moz-background-size: cover;
-       background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
+       -o-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
   border-bottom: 1px solid #fff;
 }
@@ -15258,8 +15356,9 @@ body {
   background-image: url("/assets/robomaster-me.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  -moz-background-size: cover;
-       background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   -webkit-border-radius: 2rem;
      -moz-border-radius: 2rem;
           border-radius: 2rem;
@@ -15386,11 +15485,13 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -moz-background-size: cover;
-       background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
+       -o-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
   border-bottom: 1px solid #000;
 }
@@ -15401,8 +15502,9 @@ body {
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/robomaster-me.jpg");
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/robomaster-me.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/robomaster-me.jpg");
-  -moz-background-size: contain;
-       background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 0;
@@ -15415,8 +15517,9 @@ body {
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/joystick-photo.jpg");
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/joystick-photo.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, #000 100%), url("../assets/joystick-photo.jpg");
-  -moz-background-size: contain;
-       background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 0;
@@ -15435,11 +15538,13 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -moz-background-size: cover;
-       background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
+       -o-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
 }
 
@@ -15591,11 +15696,13 @@ body {
   background-position: 58% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -moz-background-size: cover;
-       background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   opacity: 1;
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
+       -o-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
 }
 

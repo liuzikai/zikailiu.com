@@ -140,7 +140,8 @@
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
                 <p class="slide-in-text">
-                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots for competitions.
+                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots for
+                    competitions.
                 </p>
                 <p class="slide-in-text">
                     Being the <span class="text-white">Control Group Lead</span> and
@@ -156,7 +157,7 @@
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#robomasterMore">
                         READ MORE
-                        <svg width="1.2em" height="1.2em">
+                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
                     </p>
@@ -181,43 +182,48 @@
                                 <div class="col-lg-8 mt-0">
                                     <div class="project-text w-100 my-auto text-start text-lg-left">
                                         <p>
-                                            <span class="text-white" title="Yes, Meta was still Facebook back then">Meta Robotics of ZJU-UIUC Joint Institute </span>
+                                            <!-- Not using popover for tooltip as it requires too many dependencies -->
+                                            <span class="text-white">Meta</span>(<a
+                                                onclick="document.getElementById('meta-name').style.display = 'block';">?</a>)
+                                            <span class="text-white">Robotics of ZJU-UIUC Joint
+                                            Institute </span>
                                             was founded in 2018. I was one of the founding members.
                                             We target the <a target="_blank" rel="noopener noreferrer"
                                                              href="https://www.robomaster.com">RoboMaster</a>
                                             competition and build our robots from scratch.
-                                            Being a new team at a new campus without any experience and
+                                            As a new team at a new campus without any experience and
                                             technology heritage, unfortunately, we didn't make it to the competition in
                                             2018.
+                                        </p>
+                                        <p class="image-caption" id="meta-name" style="display: none;">
+                                            ? Yes, Facebook was not yet Meta back then
                                         </p>
                                         <p>
                                             In 2019, I took the role of the <span class="text-white">Control Group
                                             Lead</span>. I led the development of embedded control programs and
                                             electric systems for the robots, built from the ground up.
-                                            In addition, we developed a cross-platform compile toolchain for
-                                            STM32, supporting Windows, Linux, and macOS.
+                                            In addition, we developed a cross-platform build system for
+                                            STM32 microcontroller, supporting Windows, Linux, and macOS.
                                             We also developed a system for wireless parameter tuning
                                             with a graphic user interface (GUI). During the 2019 season, I contributed
-                                            70k+ lines of
-                                            C++ code and 20+ documents.
+                                            70k+ lines of C++ code and 20+ documents.
                                         </p>
                                         <p>
                                             Among the things we have built, I am most proud of the attitude and heading
-                                            reference system (AHRS), in which a
-                                            gyroscope, an accelerometer and a
+                                            reference system (AHRS), in which a gyroscope, an accelerometer and a
                                             magnetometer are integrated to calculate the absolute angle of the targeting
                                             gimbal. Together with the motor control system, our robots were able to
                                             stabilize the gimbal while rotating the chassis to evade incoming bullets,
                                             which provided conspicuous advantages to us in the competition.
                                         </p>
                                         <p>
-                                            At the same time, I took the role of <span class="text-white">Project
-                                            Manager</span>.
+                                            At the same time, I worked as the <span class="text-white">Project
+                                            Manager</span> in 2019 season.
                                             I was responsible for scheduling the overall development timeline and
                                             coordinating different groups.
                                             I arranged the weekly stand-up meetings, when members exchanged updates and
-                                            laid down the upcoming schedule. Together with the team leader, we kept the
-                                            whole team forward.
+                                            laid down the upcoming schedule. Together with other team leaders, we kept
+                                            the whole team forward.
                                         </p>
                                         <p>
                                             In RoboMaster 2019 International Regional Competition, as our debut, we won
@@ -226,7 +232,7 @@
                                             the international teams.
                                         </p>
                                         <p>
-                                            Since 2020, I worked as the <span
+                                            From 2020 to 2021, I worked as the <span
                                                 class="text-white">Vision Group Lead </span>
                                             of the team. I worked on a vision-assisted automatic aiming system,
                                             for which I have contributed 27k+ lines of C++ code.
@@ -296,7 +302,7 @@
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#netEaseGameMore">
                         READ MORE
-                        <svg width="1.2em" height="1.2em">
+                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
                     </p>
@@ -321,46 +327,48 @@
                                 <div class="col-lg-8 mt-0">
                                     <div class="project-text w-100 my-auto text-start text-lg-left">
                                         <p>
-                                            There are various joysticks on the market. On Windows, most
-                                            joysticks use the <span class="text-white">DirectInput</span> interface.
-                                            DirectInput is flexible, but it lacks keymap
-                                            standards. For example, a key in DirectInput can map to key A for one
-                                            joystick, but to key B for another. As the NetEase Android Emulator used
-                                            the DirectInput interface, users needed to manually configure the keymap
-                                            when
-                                            connecting the joystick for the first time.
+                                            On Windows, most joysticks are connected to games or applications using the
+                                            <span class="text-white">DirectInput</span> API.
+                                            DirectInput is flexible, but it lacks a unified keymap standard. For
+                                            example, the same virtual key in DirectInput can map to key A for one
+                                            joystick, but to key B for another. The NetEase Android Emulator used
+                                            the DirectInput API. Therefore, the default keymap may not be accurate and
+                                            users needed to manually configure the joystick when connecting for the
+                                            first time.
                                         </p>
                                         <p>
-                                            When Microsoft rolled out their own joystick&mdash;the Xbox controllers,
-                                            a new interface, <span class="text-white">XInput</span>, was introduced.
-                                            XInput is more clearly defined and easier to use, but only supports the Xbox
-                                            controllers. There are open-source tools that map joysticks of various
-                                            brands to the XInput interface, but they are not easy to use either.
+                                            When Microsoft rolled out their own joysticks&mdash;the Xbox controllers, a
+                                            new interface called <span class="text-white">XInput</span>, was introduced.
+                                            XInput is more well-defined and easier to use, but only supports the Xbox
+                                            controllers. There are open-source tools that map other joysticks to the
+                                            XInput interface, but they require a lot of manual configurations and
+                                            therefore not easy to use either.
                                         </p>
                                         <p>
-                                            In addition, there was another problem for the NetEase Emulator.
+                                            In addition, there was another challenge for the NetEase Emulator.
                                             As Nintendo Switch become popular, more and more users get their
                                             <span class="text-white">Nintendo Switch Joy-Cons</span> and want to use
                                             them in the NetEase Android Emulator. However,
                                             as a pair of two separate controllers, Joy-Cons are recognized as two
-                                            DirectInput devices on Windows. To use the two pieces as one, either the
-                                            program
-                                            needs to support reading from two joysticks simultaneously, or they need to
-                                            be merged at the driver level. In addition, the advanced functions of
-                                            Joy-Cons such as the gyroscope and the haptic feedback are not available
-                                            through DirectInput.
+                                            DirectInput devices on Windows. To use the two pieces as one full joystick,
+                                            the program needs to support reading from two joysticks
+                                            simultaneously, which is not supported back then. In addition,
+                                            the advanced functions of Joy-Cons such as the gyroscope and the haptic
+                                            feedback are not available through DirectInput.
                                         </p>
                                         <p>
                                             We intended to provide a
                                             <span class="text-white">smooth user experience</span>
-                                            for joystick users of the NetEase Emulator. Therefore, we introduced an
-                                            adapter module. When a user plugs a joystick in, the module looks up the
-                                            joystick in a database and applies the keymap. The user can also
-                                            manually configure the keymap through an easy-to-use graphic user interface
-                                            (GUI). For Joy-Cons, two pieces are
+                                            for joystick users of the NetEase Emulator. Therefore, we introduced a new
+                                            adapter module. We integrate a community-contributed keymap database of
+                                            common joysticks into the system. When a user plugs a joystick in,
+                                            the module looks it up the and applies the keymap automatically, unifying
+                                            DirectInput, XInput and Joy-Con-specific interface into an emulated XInput
+                                            interface. The user can also manually configure the keymap through an
+                                            intuitive graphic user interface (GUI). For Joy-Cons, two pieces are
                                             merged automatically (in fact, the module supports merging arbitrary numbers
-                                            of joysticks). Gyroscope and haptic feedback are supported. Users can map
-                                            the gyroscope to axes or buttons, turning games into interactive style.
+                                            of joysticks). Gyroscope and haptic feedback are supported. Users can even
+                                            map the gyroscope to axes or buttons, turning games into interactive ones.
                                         </p>
                                     </div>
                                 </div>
@@ -391,8 +399,8 @@
                 <p class="slide-in-text">
                     <!-- Non-break hyphen &#8209; -->
                     KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
-                    educational assembly) based on LLVM
-                    <a target="_blank" rel="noopener noreferrer" href="https://klee.github.io">KLEE</a>
+                    educational assembly) based on LLVM/<a target="_blank" rel="noopener noreferrer"
+                                                           href="https://klee.github.io">KLEE</a>
                     for automatic bug detection and test case generation. KLC3 was used to provide automatic
                     end-to-end feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall 2020.
                     Our work was published at <span class="text-white">ASE 2021</span>.
@@ -401,7 +409,7 @@
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#klc3More">
                         READ MORE
-                        <svg width="1.2em" height="1.2em">
+                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
                     </p>
@@ -448,7 +456,7 @@
                                             the courses of UIUC and other universities. At the heart of the system is
                                             <span class="text-white">KLC3</span>, a
                                             concolic (concrete + symbolic) execution engine for LC&#8209;3 built on top
-                                            of LLVM KLEE.
+                                            of LLVM/KLEE.
                                         </p>
                                         <p>
                                             At high-level, symbolic execution is a technique that treats inputs as
@@ -461,7 +469,7 @@
                                         </p>
                                         <p>
                                             We also built tools around KLC3 into the system to cover the whole workflow
-                                            of editing, testing, and debugging when students do their programming.
+                                            of editing, testing and debugging when students do their programming.
                                             At the frontend, we develop a
                                             <span class="text-white">VSCode extension</span>
                                             that provides real-time feedback to students while they are editing their
@@ -567,15 +575,15 @@
                 <p class="slide-in-text">
                     As our Bachelor's senior design project, my teammates and I built a wireless charging table that
                     <span class="text-white"> automatically aligns the charging coils with the devices</span>, combining
-                    electrical engineering, computer vision, and
-                    mechanical system. We won <span class="text-white">the most Interdisciplinary Project Award</span>
+                    electrical engineering, computer vision, and mechanical engineering.
+                    We won <span class="text-white">the most Interdisciplinary Project Award</span>
                     at the ZJU-UIUC Institute.
                 </p>
                 <div class="mt-4 text-end slide-in-text umami--click--read-qi">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
                        data-bs-target="#wirelessChargingTableMore">
                         READ MORE
-                        <svg width="1.2em" height="1.2em">
+                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                             <use xlink:href="#bi-plus-circle-fill"></use>
                         </svg>
                     </p>
@@ -613,7 +621,7 @@
                                             hotspots can be found in many public places, such as cafeterias and
                                             airports. However, the device being charged needs to be properly aligned
                                             with the charging coil (by the time we developed this system, Apple
-                                            MagSafe for iPhones/AirPods was not yet available).
+                                            MagSafe for iPhones/AirPods was not a thing yet).
                                         </p>
                                         <p>
                                             Our goal was to provide
@@ -718,7 +726,7 @@
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#auroraOSMore">
                                         READ MORE
-                                        <svg width="1.2em" height="1.2em">
+                                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
                                     </p>
@@ -749,7 +757,7 @@
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#ozoneMore">
                                         READ MORE
-                                        <svg width="1.2em" height="1.2em">
+                                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
                                     </p>
@@ -765,7 +773,7 @@
                            onclick="readMoreClicked(this)"
                            data-bs-target="#auroraOSMore">
                             READ MORE
-                            <svg width="1.2em" height="1.2em">
+                            <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
                         </p>
@@ -775,7 +783,7 @@
                            onclick="readMoreClicked(this)"
                            data-bs-target="#ozoneMore">
                             READ MORE
-                            <svg width="1.2em" height="1.2em">
+                            <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
                         </p>
@@ -968,7 +976,7 @@
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#riscvProcessorMore">
                                         READ MORE
-                                        <svg width="1.2em" height="1.2em">
+                                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
                                     </p>
@@ -1000,7 +1008,7 @@
                                        onclick="readMoreClicked(this)"
                                        data-bs-target="#boxheadMore">
                                         READ MORE
-                                        <svg width="1.2em" height="1.2em">
+                                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                             <use xlink:href="#bi-plus-circle-fill"></use>
                                         </svg>
                                     </p>
@@ -1015,7 +1023,7 @@
                            onclick="readMoreClicked(this)"
                            data-bs-target="#riscvProcessorMore">
                             READ MORE
-                            <svg width="1.2em" height="1.2em">
+                            <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
                         </p>
@@ -1025,7 +1033,7 @@
                            onclick="readMoreClicked(this)"
                            data-bs-target="#boxheadMore">
                             READ MORE
-                            <svg width="1.2em" height="1.2em">
+                            <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
                                 <use xlink:href="#bi-plus-circle-fill"></use>
                             </svg>
                         </p>
@@ -1261,6 +1269,7 @@
     </div>
 </footer>
 <!-- Core JS with Bootstrap components needed -->
+<script id="popper-script" src="https://unpkg.com/@popperjs/core@2" data-page="projects"></script>
 <script id="main-script" src="/js/scripts.min.js" data-page="projects"></script>
 <!-- Statistics -->
 <script async defer data-website-id="32bd8078-6950-47cb-b5d7-27aa81c28b36" src="/umami/umami.js"></script>
