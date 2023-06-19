@@ -15274,28 +15274,8 @@ body {
   border-bottom: 1px solid #fff;
 }
 
-.biography-text {
-  font-size: 1rem;
-  /*@include media-breakpoint-up(md) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xl) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xxl) {
-      font-size: 1.25rem;
-  }*/
-}
-@media (min-width: 576px) {
-  .biography-text {
-    font-size: 1.25rem;
-  }
-}
-.biography-text mark, .biography-text .mark {
-  background: rgba(252, 211, 3, 0.1);
+.home-link-text {
+  font-size: 1.5rem;
 }
 
 .home-timeline tr, .home-timeline th, .home-timeline td {
@@ -15334,21 +15314,47 @@ body {
   }
 }
 
-#me-intro-text {
+.biography-text {
   font-size: 2rem;
 }
 @media (min-width: 992px) {
-  #me-intro-text {
-    width: 290px;
-    height: 290px;
+  .biography-text {
+    width: 540px;
+    height: 160px;
     font-size: 1.75rem;
   }
 }
 @media (min-width: 1200px) {
-  #me-intro-text {
-    width: 360px;
-    height: 360px;
+  .biography-text {
+    width: 630px;
+    height: 160px;
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .biography-links {
+    width: 540px;
+    height: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .biography-links {
+    width: 630px;
+    height: 210px;
+  }
+}
+
+@media (min-width: 992px) {
+  .biography-link {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .biography-link {
+    width: 210px;
+    height: 210px;
   }
 }
 
@@ -15440,7 +15446,7 @@ body {
 }
 @media (min-width: 992px) {
   .home-nav-item .home-nav-text {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 

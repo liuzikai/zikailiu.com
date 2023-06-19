@@ -14,28 +14,8 @@
   }
 }
 
-.biography-text {
-  // Customized responsive font sizes
-  font-size: 1rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.25rem;
-  }
-  /*@include media-breakpoint-up(md) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xl) {
-      font-size: 1.25rem;
-  }
-  @include media-breakpoint-up(xxl) {
-      font-size: 1.25rem;
-  }*/
-
-  mark {
-    background: fade-out(#fcd303, 0.9);
-  }
+.home-link-text {
+  font-size: 1.5rem;
 }
 
 .home-timeline {
@@ -63,17 +43,41 @@
   }
 }
 
-#me-intro-text {
+.biography-text {
   font-size: 2rem;
   @include media-breakpoint-up(lg) {
-    width: 290px;
-    height: 290px;
+    width: 540px;
+    height: 160px;
     font-size: 1.75rem;
   }
   @include media-breakpoint-up(xl) {
-    width: 360px;
-    height: 360px;
+    width: 630px;
+    height: 160px;
     font-size: 2rem;
+  }
+}
+
+.biography-links {
+  @include media-breakpoint-up(lg) {
+    width: 540px;
+    height: 180px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 630px;
+    height: 210px;
+  }
+}
+
+.biography-link {
+  @include media-breakpoint-up(lg) {
+    width: 180px;
+    height: 180px;
+    //font-size: 1.75rem;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 210px;
+    height: 210px;
+    //font-size: 2rem;
   }
 }
 
@@ -155,7 +159,7 @@
 
     font-size: 1.2rem;
     @include media-breakpoint-up(lg) {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 }

@@ -11583,7 +11583,7 @@
           // >= lg only animation
           mm.add("(min-width: 992px)", () => {
 
-              gsapWithCSS.to("#me-intro", {
+              /*gsap.to("#me-intro", {
                   scrollTrigger: {
                       trigger: "#me-intro",
                       start: "top bottom",
@@ -11597,176 +11597,40 @@
                   yPercent: "-50",
                   ease: "none",
                   // duration: 3,
-              });
+              });*/
 
-              gsapWithCSS.to("#words-tech", {
-                  scrollTrigger: {
-                      trigger: "#words-tech",
-                      start: "top bottom",
-                      endTrigger: "#about",
-                      end: "bottom bottom",
-                      pin: true,
-                      pinSpacing: false,
-                      scrub: true,
-                      invalidateOnRefresh: true,
-                      // markers: true,
-                  },
-                  y: () => "-" + window.innerHeight * 0.90,
-                  ease: "power3.out",
-              });
-
-              gsapWithCSS.to("#words-art", {
-                  scrollTrigger: {
-                      trigger: "#words-art",
-                      start: "top bottom",
-                      endTrigger: "#about",
-                      end: "bottom bottom",
-                      pin: true,
-                      pinSpacing: false,
-                      scrub: true,
-                      invalidateOnRefresh: true,
-                      // anticipatePin: 1,
-                      // markers: true,
-                  },
-                  yPercent: "-50",
-                  y: () => "-" + window.innerHeight * 0.60,
-                  ease: "power2.out",
-              });
-
-              gsapWithCSS.to("#words-combined", {
-                  scrollTrigger: {
-                      trigger: "#words-combined",
-                      start: "top bottom",
-                      endTrigger: "#about",
-                      end: "bottom bottom",
-                      pin: true,
-                      pinSpacing: false,
-                      scrub: true,
-                      invalidateOnRefresh: true,
-                      // anticipatePin: 1,
-                      // markers: true,
-                  },
-                  yPercent: "-50",
-                  y: () => "-" + window.innerHeight * 0.30,
-                  ease: "power2.out",
-              });
-
-              gsapWithCSS.timeline({
-                  scrollTrigger: {
-                      trigger: "#nav-projects",
-                      start: "top bottom",
-                      endTrigger: "#nav-projects-container",
-                      end: "bottom bottom",
-                      pin: true,
-                      pinSpacing: false,
-                      scrub: true,
-                      invalidateOnRefresh: true,
-                      // anticipatePin: 1,
-                      // markers: true,
-                  },
-              }).to("#nav-projects", {
-                  yPercent: "-100",
-                  y: () => "-" + window.innerHeight * 0.02,
-                  ease: "power2.out",
-              });
-
-              gsapWithCSS.timeline({
-                  scrollTrigger: {
-                      trigger: "#nav-photos",
-                      start: "top bottom",
-                      endTrigger: "#nav-photos-container",
-                      end: "bottom bottom",
-                      pin: true,
-                      pinSpacing: false,
-                      scrub: true,
-                      invalidateOnRefresh: true,
-                      // anticipatePin: 1,
-                      // markers: true,
-                  },
-              }).to("#nav-photos", {
-                  yPercent: "-100",
-                  y: () => "-" + window.innerHeight * 0.02,
-                  ease: "power2.out",
-              });
+              let aboutHoverAnimation = gsapWithCSS.timeline({paused: true})
+                  .to(".about-icon.one", {x: "+=2", y: "-=2"}, "<")
+                  .to(".about-icon.two", {x: "-=2", y: "+=2"}, "<")
+                  .to(".about-icon.three", {x: "+=2", y: "+=2"}, "<")
+                  .to(".about-icon, #about-link", {fill: "#669966",}, "<");
+              let aboutNav = document.getElementById("about-link");
+              aboutNav.addEventListener("mouseenter", () => aboutHoverAnimation.play());
+              aboutNav.addEventListener("mouseleave", () => aboutHoverAnimation.reverse());
 
               let projectsHoverAnimation = gsapWithCSS.timeline({paused: true})
-                  .to(".icon-projects-rect.one", {x: 6, y: -3}, "<")
-                  .to(".icon-projects-rect.two", {x: 4, y: -2}, "<")
-                  .to(".icon-projects-rect.three", {x: 2, y: -1}, "<")
-              ;
-              let projectsNav = document.getElementById("nav-projects-text");
+                  .to(".projects-icon.one", {x: "-=2", y: "-=2"}, "<")
+                  .to(".projects-icon.two", {x: "+=2", y: "-=2"}, "<")
+                  .to(".projects-icon.three", {x: "+=2", y: "+=2"}, "<")
+                  .to(".projects-icon, #projects-link", {fill: "#3366ff",}, "<");
+              let projectsNav = document.getElementById("projects-link");
               projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
               projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
 
-              let photosHoverAnimation = gsapWithCSS.timeline({paused: true})
-                  .to(".icon-photos-rect.one", {x: "+=2", y: "+=2"}, "<")
-                  .to(".icon-photos-rect.two", {x: "-=2", y: "+=1"}, "<")
-                  .to(".icon-photos-rect.three", {x: "+=2", y: "+=2"}, "<")
-              ;
-              let photosNav = document.getElementById("nav-photos-text");
-              photosNav.addEventListener("mouseenter", () => photosHoverAnimation.play());
-              photosNav.addEventListener("mouseleave", () => photosHoverAnimation.reverse());
+              let photographsHoverAnimation = gsapWithCSS.timeline({paused: true})
+                  .to(".photographs-icon.one", {x: "+=2", y: "+=2"}, "<")
+                  .to(".photographs-icon.two", {x: "-=2", y: "+=2"}, "<")
+                  .to(".photographs-icon.three", {x: "+=2", y: "+=2"}, "<")
+                  .to(".photographs-icon, #photographs-link", {fill: "#e62e00",}, "<");
+              let photographsNav = document.getElementById("photographs-link");
+              photographsNav.addEventListener("mouseenter", () => photographsHoverAnimation.play());
+              photographsNav.addEventListener("mouseleave", () => photographsHoverAnimation.reverse());
 
 
               return () => { // optional
                   // custom cleanup code here (runs when it STOPS matching)
               };
           });
-
-          // Always-on animations
-
-          gsapWithCSS.timeline({
-              scrollTrigger: {
-                  trigger: "#nav-projects",
-                  start: "top bottom",
-                  endTrigger: "#nav-projects-container",
-                  end: "bottom bottom",
-                  scrub: true,
-                  invalidateOnRefresh: true,
-                  // markers: true,
-              },
-          })
-              // All animations start at the same time ("<")
-              .to("#keyword-tech, #nav-projects-text", {
-                  color: "#0039e6",
-              }, "<")
-              .to(".icon-projects-rect", {
-                  stroke: "#3366ff",
-              }, "<");
-
-          gsapWithCSS.timeline({
-              scrollTrigger: {
-                  trigger: "#nav-photos",
-                  start: "top bottom",
-                  endTrigger: "#nav-photos-container",
-                  end: "bottom bottom",
-                  scrub: true,
-                  invalidateOnRefresh: true,
-                  // anticipatePin: 1,
-                  // markers: true,
-              },
-          })
-              // All animations start at the same time ("<")
-              .to("#keyword-photo, #nav-photos-text", {
-                  color: "#e62e00",
-              }, "<")
-              .to(".icon-photos-rect", {
-                  stroke: "#ff5c33",
-              }, "<");
-
-          gsapWithCSS.timeline({
-              scrollTrigger: {
-                  trigger: "#words-combined-container",
-                  start: "bottom bottom",
-                  endTrigger: "#about",
-                  end: "bottom bottom",
-                  invalidateOnRefresh: true,
-                  scrub: true,
-                  // markers: true,
-              },
-          }).to("#keyword-combined", {
-              color: "#9900ff",
-          }, "<");
 
       } else if (currentPage === "photographs") {
 
