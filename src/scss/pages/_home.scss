@@ -36,7 +36,7 @@
   text-align: center;
 }
 
-#me-intro {
+#biography {
   min-height: 100vh;
   @include media-breakpoint-up(lg) {
     min-height: unset;
@@ -44,7 +44,17 @@
 }
 
 .biography-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  @include media-breakpoint-up(sm) {
+    width: 480px;
+    height: 140px;
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-up(md) {
+    width: 540px;
+    height: 160px;
+    font-size: 2rem;
+  }
   @include media-breakpoint-up(lg) {
     width: 540px;
     height: 160px;
@@ -81,7 +91,7 @@
   }
 }
 
-#me-intro-photo {
+#biography-photo {
   background-image: url("/assets/robomaster-me.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -93,6 +103,11 @@
   height: 0;
   padding-top: 100%;
 
+  @include media-breakpoint-up(sm) {
+    width: 360px;
+    height: 360px;
+    padding-top: 0;
+  }
   @include media-breakpoint-up(lg) {
     width: 290px;
     height: 290px;
@@ -116,29 +131,6 @@
     width: 360px;
     height: 360px;
     font-size: 2rem;
-  }
-}
-
-// These three containers should have bottom aligned
-
-#words-tech-container {
-  @include media-breakpoint-up(lg) {
-    margin-top: 75vh;
-    height: 275vh
-  }
-}
-
-#words-art-container {
-  @include media-breakpoint-up(lg) {
-    margin-top: 150vh;
-    height: 200vh
-  }
-}
-
-#words-combined-container {
-  @include media-breakpoint-up(lg) {
-    margin-top: 250vh;
-    height: 100vh
   }
 }
 
