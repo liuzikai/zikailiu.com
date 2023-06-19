@@ -2256,13 +2256,13 @@ body {
 }
 
 @media (min-width: 992px) {
-  .biography-links {
+  #biography-links {
     width: 540px;
     height: 180px;
   }
 }
 @media (min-width: 1200px) {
-  .biography-links {
+  #biography-links {
     width: 630px;
     height: 210px;
   }
