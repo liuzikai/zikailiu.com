@@ -96,11 +96,17 @@
         <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item hidden-lg">
-                    <a class="nav-link navbar-invisible-shrink umami--click--nav-projects" href="/projects">Projects</a>
+                <li class="nav-item navbar-invisible-shrink">
+                    <a class="nav-link active umami--click--nav-home" href="/">Home</a>
                 </li>
-                <li class="nav-item hidden-lg">
-                    <a class="nav-link navbar-invisible-shrink umami--click--nav-photographs" href="/photographs">Photographs</a>
+                <li class="nav-item navbar-invisible-shrink">
+                    <a class="nav-link umami--click--nav-projects" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item navbar-invisible-shrink">
+                    <a class="nav-link umami--click--nav-photographs" href="/photographs">Photographs</a>
+                </li>
+                <li class="nav-item navbar-invisible-shrink">
+                    <a class="nav-link umami--click--nav-about" href="/about">About</a>
                 </li>
             </ul>
         </div>
@@ -116,6 +122,7 @@
                 <p class="mx-auto mt-1 mb-0">People walk on the ground,</p>
                 <p class="mx-auto mt-1 mb-0">yet try creating a starry sky.</p>
             </div>
+            <!-- Scroll Indicator -->
             <div class="text-center py-5" style="height: 5rem; color: rgba(0, 0, 0, 0.25)">
                 <svg width="2.25em" height="2.25em" fill="currentColor" viewBox="0 0 16 16" id="homeScrollIndicator">
                     <path fill-rule="evenodd" class="scroll-indicator-path scroll-indicator-path-active"
