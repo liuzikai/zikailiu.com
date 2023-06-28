@@ -66,8 +66,6 @@ This is a static website. Bootstrap is used for its responsive design. A bit of 
   with [autoprefixer](https://github.com/postcss/autoprefixer) ([render-scss.js](scripts/render-scss.js))
   so that there is no need to add prefixes manually. Currently, the target compatibility is set
   to `cover 99.5%` ([browserslist](https://github.com/browserslist/browserslist)).
-* Website statistics: self-hosted [umami](https://umami.is). Only anonymous, aggregated statistics are collected
-  locally on the server.
 * Favicon assets generated with [RealFaviconGenerator](https://realfavicongenerator.net/#).
 * Animations with [GSAP](https://greensock.com/gsap/).
 
