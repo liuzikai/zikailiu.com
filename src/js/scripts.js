@@ -253,11 +253,11 @@ window.addEventListener("DOMContentLoaded", event => {
                 .to(".projects-icon, #projects-link", {fill: "#3366ff",}, "<");
         }
 
-        function createPhotographsAnimation(vars) {
+        function createPhotographyAnimation(vars) {
             return gsap.timeline(vars)
-                .to(".photographs-icon.one", {x: "+=2", y: "+=2"}, "<")
-                .to(".photographs-icon.two", {x: "-=2", y: "+=2"}, "<")
-                .to(".photographs-icon, #photographs-link", {fill: "#e62e00",}, "<");
+                .to(".photography-icon.one", {x: "+=2", y: "+=2"}, "<")
+                .to(".photography-icon.two", {x: "-=2", y: "+=2"}, "<")
+                .to(".photography-icon, #photography-link", {fill: "#e62e00",}, "<");
         }
 
         let mm = gsap.matchMedia();
@@ -291,21 +291,21 @@ window.addEventListener("DOMContentLoaded", event => {
             projectsNav.addEventListener("mouseenter", () => projectsHoverAnimation.play());
             projectsNav.addEventListener("mouseleave", () => projectsHoverAnimation.reverse());
 
-            let photographsHoverAnimation = createPhotographsAnimation({paused: true});
-            let photographsNav = document.getElementById("photographs-link");
-            photographsNav.addEventListener("mouseenter", () => photographsHoverAnimation.play());
-            photographsNav.addEventListener("mouseleave", () => photographsHoverAnimation.reverse());
+            let photographyHoverAnimation = createPhotographyAnimation({paused: true});
+            let photographyNav = document.getElementById("photography-link");
+            photographyNav.addEventListener("mouseenter", () => photographyHoverAnimation.play());
+            photographyNav.addEventListener("mouseleave", () => photographyHoverAnimation.reverse());
 
             let myPhoto = document.getElementById("biography-photo");
             myPhoto.addEventListener("mouseenter", () => {
                 aboutHoverAnimation.play()
                 projectsHoverAnimation.play()
-                photographsHoverAnimation.play()
+                photographyHoverAnimation.play()
             });
             myPhoto.addEventListener("mouseleave", () => {
                 aboutHoverAnimation.reverse()
                 projectsHoverAnimation.reverse()
-                photographsHoverAnimation.reverse()
+                photographyHoverAnimation.reverse()
             });
 
             // Color animations for contacts
@@ -339,14 +339,14 @@ window.addEventListener("DOMContentLoaded", event => {
 
             createAboutAnimation(vars);
             createProjectsAnimation(vars);
-            createPhotographsAnimation(vars);
+            createPhotographyAnimation(vars);
 
             return () => { // optional
                 // custom cleanup code here (runs when it STOPS matching)
             };
         });
 
-    } else if (currentPage === "photographs") {
+    } else if (currentPage === "photography") {
 
         gsap.to("#thumbnails", {
             scrollTrigger: {

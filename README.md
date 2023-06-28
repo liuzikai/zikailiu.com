@@ -21,10 +21,10 @@ The work is inspired by [Testify](https://www.youtube.com/watch?v=xkUN_9HFNPg) f
 as [this Bilibili video](https://www.bilibili.com/video/BV1TS4y1W7sX).
 Thank [@落琳雪泪](https://space.bilibili.com/36263054) for sharing the 2D masks of gears!
 
-All three masthead images of page Home, Projects and Photographs are of the same model, with different materials
+All three masthead images of page Home, Projects and Photography are of the same model, with different materials
 and lighting.
 The one for Projects is in the wireframe style.
-The one for Photographs is a gradient mapping material using the global coordinates in camera (rather than gradients
+The one for Photography is a gradient mapping material using the global coordinates in camera (rather than gradients
 on each component's scale).
 
 ### SVG with Adobe Illustrator

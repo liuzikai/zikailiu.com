@@ -13,7 +13,7 @@ async function runPurgeCSS() {
         content: [
             upath.resolve(upath.dirname(__filename), '../index.html'),
             upath.resolve(upath.dirname(__filename), '../projects/index.html'),
-            upath.resolve(upath.dirname(__filename), '../photographs/index.html'),
+            upath.resolve(upath.dirname(__filename), '../photography/index.html'),
             upath.resolve(upath.dirname(__filename), '../errors/404.html'),
         ],
         css: [srcFile],
