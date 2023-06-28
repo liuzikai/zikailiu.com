@@ -255,21 +255,21 @@ window.addEventListener("DOMContentLoaded", event => {
         // >= lg: scroll effect + trigger link animation on hover
         mm.add("(min-width: 992px)", () => {
 
-            /*gsap.to("#biography", {
+            let section = document.getElementById("homeSection");
+            let container = document.getElementById("biographyContainer");
+            gsap.to("#biographyContainer", {
                 scrollTrigger: {
-                    trigger: "#biography",
+                    trigger: "#homeSection",
                     start: "top bottom",
-                    end: "top top",
-                    pin: true,
-                    // pinSpacing: false,
+                    end: "bottom bottom",
                     scrub: true,
-                    markers: true,
+                    // markers: true,
+                    invalidateOnRefresh: true,
                 },
-                // y: "+50vh",
-                yPercent: "-50",
-                ease: "power2.out",
+                y: () => Math.max(0, section.getBoundingClientRect().height - container.getBoundingClientRect().height),
+                ease: "none",
                 // duration: 3,
-            });*/
+            });
 
             let aboutHoverAnimation = createAboutAnimation({paused: true})
             let aboutNav = document.getElementById("about-link");

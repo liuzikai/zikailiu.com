@@ -15305,12 +15305,29 @@ body {
   text-align: center;
 }
 
-#biography {
+#homeSection {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 992px) {
-  #biography {
-    min-height: unset;
+  #homeSection {
+    min-height: 175vh;
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  #biographyContainer {
+    min-height: 100vh;
   }
 }
 

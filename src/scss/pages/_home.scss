@@ -36,10 +36,19 @@
   text-align: center;
 }
 
-#biography {
+#homeSection {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
   @include media-breakpoint-up(lg) {
-    min-height: unset;
+    min-height: 175vh;
+    display: block;
+  }
+}
+
+#biographyContainer {
+  @include media-breakpoint-up(lg) {
+    min-height: 100vh;
   }
 }
 
