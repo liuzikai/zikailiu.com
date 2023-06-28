@@ -11376,9 +11376,13 @@
 
   window.addEventListener("DOMContentLoaded", event => {
 
-      // Navbar shrink function
+      // Home page scroll indicator
+      const scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
+
+      // Navbar shrink
+      const navbarCollapsible = document.getElementById("mainNav");
+
       let navbarShrink = function () {
-          const navbarCollapsible = document.body.querySelector("#mainNav");
           if (!navbarCollapsible) {
               return;
           }
@@ -11387,6 +11391,13 @@
               // Do not restart the scroll indicator animation
           } else {
               navbarCollapsible.classList.add("navbar-shrink");
+
+              // Stop the scroll indicator animation smoothly
+              Array.from(scrollIndicators).forEach(el => {
+                  el.addEventListener('animationiteration', _ => {
+                      el.classList.remove("scroll-indicator-path-active");
+                  }, {once : true});
+              });
           }
 
       };
@@ -11578,11 +11589,11 @@
       gsapWithCSS.registerPlugin(ScrollTrigger);
 
       if (currentPage === "home") {
+
           function createAboutAnimation(vars) {
               return gsapWithCSS.timeline(vars)
                   .to(".about-icon.one", {x: "+=2", y: "-=2"}, "<")
                   .to(".about-icon.two", {x: "-=2", y: "+=2"}, "<")
-                  .to(".about-icon.three", {x: "+=2", y: "+=2"}, "<")
                   .to(".about-icon, #about-link", {fill: "#669966",}, "<");
           }
 
@@ -11598,13 +11609,12 @@
               return gsapWithCSS.timeline(vars)
                   .to(".photographs-icon.one", {x: "+=2", y: "+=2"}, "<")
                   .to(".photographs-icon.two", {x: "-=2", y: "+=2"}, "<")
-                  .to(".photographs-icon.three", {x: "+=2", y: "+=2"}, "<")
                   .to(".photographs-icon, #photographs-link", {fill: "#e62e00",}, "<");
           }
 
           let mm = gsapWithCSS.matchMedia();
 
-          // >= lg: scroll effect + trigger link animation on hover
+          // >= lg: scroll effect + trigger link animations on hover + contact icon animations on hover
           mm.add("(min-width: 992px)", () => {
 
               let section = document.getElementById("homeSection");
@@ -11650,6 +11660,14 @@
                   photographsHoverAnimation.reverse();
               });
 
+              // Color animations for contacts
+              let contacts = document.querySelectorAll("#homeContacts > a");
+              console.log(contacts);
+              Array.from(contacts).forEach(el => {
+                  let tl = gsapWithCSS.timeline({paused: true}).to(el, {color: "rgba(0, 0, 0, 0.25)",}, "<");
+                  el.addEventListener("mouseenter", () => tl.play());
+                  el.addEventListener("mouseleave", () => tl.reverse());
+              });
 
               return () => { // optional
                   // custom cleanup code here (runs when it STOPS matching)
@@ -11666,9 +11684,9 @@
                       start: "center bottom",
                       endTrigger: "#biography",
                       end: "top top",
-                      scrub: 5,
+                      scrub: 12,
                       // markers: true,
-                  }
+                  },
               };
 
               createAboutAnimation(vars);
@@ -11679,7 +11697,6 @@
                   // custom cleanup code here (runs when it STOPS matching)
               };
           });
-
 
       } else if (currentPage === "photographs") {
 

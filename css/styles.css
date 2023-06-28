@@ -1309,6 +1309,16 @@ output {
   min-height: 100vh !important;
 }
 
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+     -moz-box-orient: vertical !important;
+     -moz-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
 .justify-content-center {
   -webkit-box-pack: center !important;
   -webkit-justify-content: center !important;
@@ -1331,6 +1341,14 @@ output {
      -moz-box-align: start !important;
       -ms-flex-align: start !important;
           align-items: flex-start !important;
+}
+
+.align-items-end {
+  -webkit-box-align: end !important;
+  -webkit-align-items: flex-end !important;
+     -moz-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
 }
 
 .align-items-center {
@@ -1453,6 +1471,11 @@ output {
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .pt-5 {
@@ -1926,6 +1949,18 @@ body {
   .masthead .masthead-text-large {
     font-size: 2.75rem;
   }
+}
+
+.scroll-indicator-path {
+  display: none;
+}
+
+.scroll-indicator-path-active {
+  display: inline;
+  -webkit-animation: scrollDown 2s infinite;
+     -moz-animation: scrollDown 2s infinite;
+       -o-animation: scrollDown 2s infinite;
+          animation: scrollDown 2s infinite;
 }
 
 @-webkit-keyframes scrollDown {
