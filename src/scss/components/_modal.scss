@@ -24,8 +24,8 @@
     display: flex;
     z-index: 9999;
     overflow: hidden;
-    top: 0.75em;
-    left: 0.75em;
+    top: 0.6em;
+    left: 0.6em;
     @include media-breakpoint-up(lg) {
         top: 1.5em;
         left: 1.5em;
