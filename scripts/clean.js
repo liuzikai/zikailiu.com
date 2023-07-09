@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const toRemove = ['css', 'js', 'photography/index.html'];
+const toRemove = ['css', 'js', 'index.html', 'photography/index.html', 'projects/index.html', 'errors/404.html', 'errors/other.html'];
 
 async function removeDirectoriesAndFiles() {
     try {

@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Zikai Liu's portfolio. An error occurred."/>
+    <meta name="description" content="<%- description %>"/>
     <meta name="author" content="Zikai Liu"/>
-    <title>Zikai Liu's Portfolio - Error</title>
+    <title><%- title %></title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -108,7 +108,7 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="masthead-text-large text-center">
-                <p class="mx-auto mt-1 mb-0">An error occurred</p>
+                <p class="mx-auto mt-1 mb-0"><%- mainText %></p>
                 <p class="mx-auto mt-3 mb-0">
                     <a href="/" class="masthead-text back-to-home-link">
                         Back to Homepage
@@ -123,6 +123,6 @@
 </header>
 
 <!-- Core JS with Bootstrap components needed -->
-<script id="main-script" src="/js/scripts.min.js" data-page="error"></script>
+<script id="main-script" src="/js/scripts.min.js" data-page="<%- pageID %>"></script>
 </body>
 </html>
