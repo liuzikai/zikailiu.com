@@ -1,8 +1,18 @@
-const sh = require('shelljs');
-const upath = require('upath');
+const fs = require('fs').promises;
+const path = require('path');
 
-const destPath = upath.resolve(upath.dirname(__filename), '..');
+const toRemove = ['css', 'js', 'photography/index.html'];
 
-sh.rm('-rf', `${destPath}/css`)
-sh.rm('-rf', `${destPath}/js`)
+async function removeDirectoriesAndFiles() {
+    try {
+        const dirPath = path.join(__dirname, '..');
+        for (const f of toRemove) {
+            const fullPath = path.join(dirPath, f);
+            await fs.rm(fullPath, { recursive: true, force: true });
+        }
+    } catch (error) {
+        console.error(`Error while removing directory or file: ${error}`);
+    }
+}
 
+removeDirectoriesAndFiles();
