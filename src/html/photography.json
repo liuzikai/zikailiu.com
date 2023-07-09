@@ -2,8 +2,49 @@
   "pageID": "photography",
   "mainGalleryPhotos": [
     {
-      "image": "/asserts/photos/Japan-26.jpg",
-      "text": "August 2018 - Japan"
+      "src": "photos/Japan-26.jpg",
+      "heading": "August 2018 - Japan",
+      "text": ""
+    },
+    {
+      "src": "photos/Seattle-1.jpg",
+      "heading": "December 2019 - US West Coast",
+      "text": ""
+    },
+    {
+      "src": "photos/Fairbanks-45.jpg",
+      "heading": "January 2020 - Alaska, US",
+      "text": ""
+    },
+    {
+      "src": "photos/Xinjiang-1.jpg",
+      "heading": "June 2021 - Xingjiang, China",
+      "text": ""
+    },
+    {
+      "src": "photos/Zug-58.jpg",
+      "heading": "November 2021 - Zug, Switzerland",
+      "text": ""
+    },
+    {
+      "src": "photos/Lausanne-2.jpg",
+      "heading": "April 2022 - Lausanne, Switzerland",
+      "text": ""
+    },
+    {
+      "src": "photos/Prague-458.jpg",
+      "heading": "July 2022 - Prague",
+      "text": ""
+    },
+    {
+      "src": "photos/Lavertezzo-1.jpg",
+      "heading": "August 2022 - Lavertezzo, Switzerland",
+      "text": ""
+    },
+    {
+      "src": "photos/Interlaken-2.jpg",
+      "heading": "2021-2022 - Winter Collection",
+      "text": ""
     }
   ]
 }
