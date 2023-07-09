@@ -17,6 +17,7 @@ import ScrollSpy from "bootstrap/js/src/scrollspy"
 // import Tab from "bootstrap/js/src/tab"
 // import Toast from "bootstrap/js/src/toast"
 // import Tooltip from "bootstrap/js/src/tooltip"
+import baguetteBox from 'baguettebox.js';
 
 // GSAP
 import {gsap} from "gsap";
@@ -345,6 +346,10 @@ window.addEventListener("DOMContentLoaded", event => {
                 // custom cleanup code here (runs when it STOPS matching)
             };
         });
+
+    } else if (currentPage === "photography") {
+
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn' });
 
     }
 });
