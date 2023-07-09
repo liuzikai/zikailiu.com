@@ -15,6 +15,7 @@ async function runPurgeCSS() {
             upath.resolve(upath.dirname(__filename), '../projects/index.html'),
             upath.resolve(upath.dirname(__filename), '../photography/index.html'),
             upath.resolve(upath.dirname(__filename), '../errors/404.html'),
+            upath.resolve(upath.dirname(__filename), '../errors/other.html'),
         ],
         css: [srcFile],
         safelist: safeList

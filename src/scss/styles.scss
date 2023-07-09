@@ -19,16 +19,16 @@
 @import "./components/buttons.scss";
 @import "./components/svgs.scss";
 @import "./components/modal.scss";
+@import "./components/gallery.scss";
 
 // Sections
 @import "./sections/masthead.scss";
 @import "./sections/about.scss";
 @import "./sections/projects.scss";
-// @import "./sections/signup.scss";
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
 
-// Pages (this is not per-page configuration but still all pages share the same css)
+// Pages (page-specific styles are all gathered into one single CSS file)
 @import "./pages/home.scss";
 @import "./pages/projects.scss";
 @import "./pages/photography.scss";

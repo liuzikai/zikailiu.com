@@ -346,24 +346,5 @@ window.addEventListener("DOMContentLoaded", event => {
             };
         });
 
-    } else if (currentPage === "photography") {
-
-        gsap.to("#thumbnails", {
-            scrollTrigger: {
-                trigger: "#photos",
-                start: "top 20%",
-                endTrigger: "#photos",
-                end: "bottom bottom",
-                pin: "#thumbnails",
-                pinSpacing: false,
-                scrub: true,
-                invalidateOnRefresh: true,
-                // anticipatePin: 1,
-                // markers: true,
-            },
-            yPercent: "-100",
-            y: () => window.innerHeight * 0.40,
-            ease: "none",
-        });
     }
 });

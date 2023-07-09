@@ -38,7 +38,7 @@ Each image displays 100% as the project section scroll to the center of the view
 (for small devices where the whole section cannot be completely shown in the view).
 I think this helps locate the scrolling position to read the text, without interrupting the scrolling process
 (the website never scrolls for the user automatically).
-I made those SVGs myself. See [reference.md](reference.md) for some references and inspirations.
+I made those SVGs myself. See [reference.md](REFERENCE.md) for some references and inspirations.
 
 The scrolling animation is driven by [scripts.js](src/js/scripts.js). The main idea is to:
 
@@ -60,8 +60,8 @@ template and ended up changing almost everything.
 
 This is a static website. Bootstrap is used for its responsive design. A bit of detail:
 
-* Use SCSS to generate CSS in the same way as the starting template. But I work on raw HTML rather than PUG used by
-  the template.
+* Use EJS to render HTML (instead of PUG used in the Bootstrap template).
+* Use SCSS to generate CSS (same as the Bootstrap template).
 * CSS is post-processed
   with [autoprefixer](https://github.com/postcss/autoprefixer) ([render-scss.js](scripts/render-scss.js))
   so that there is no need to add prefixes manually. Currently, the target compatibility is set
@@ -98,7 +98,7 @@ I get inspiration from a lot of great websites. The outstanding ones in my mind 
 website, as well as a bunch of
 awesome websites from [Awwwards](https://www.awwwards.com). This site is of nothing compared with those masterpieces.
 
-For a more complete list of references, please refer to [reference.md](reference.md).
+For a more complete list of references, please refer to [REFERENCE.md](REFERENCE.md).
 
 ## Feedback
 
@@ -107,5 +107,5 @@ Any feedback is appreciated! If you know me well, just shoot a message to me :)
 ## License
 
 All source code (HTML, JS, CSS) is available under the MIT open source license. Texts and images remain copyrighted
-unless originated from somewhere else ([reference.md](reference.md)).
+unless originated from somewhere else ([REFERENCE.md](REFERENCE.md)).
 
