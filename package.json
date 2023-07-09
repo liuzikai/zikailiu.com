@@ -7,9 +7,9 @@
         "build:js": "npm run rollup-js && npm run minify-js",
         "rollup-js": "rollup src/js/scripts.js -o js/scripts.js -f umd --name bootstrap -p @rollup/plugin-node-resolve --sourcemap",
         "minify-js": "terser --compress passes=2 --mangle --comments '/^!/' --source-map 'content=js/scripts.js.map,includeSources,url=scripts.min.js.map' --output js/scripts.min.js js/scripts.js",
-        "build:css": "npm run render-css && npm run punge-css",
-        "render-css": "node scripts/build-scss.js",
-        "punge-css": "node scripts/punge-scss.js",
+        "build:css": "npm run render-scss && npm run punge-css",
+        "render-scss": "node scripts/render-scss.js",
+        "punge-css": "node scripts/punge-css.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
