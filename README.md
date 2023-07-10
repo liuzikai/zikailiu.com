@@ -1,12 +1,7 @@
 My Personal Portfolio
 =====================
 
-=> [zikailiu.com](https://zikailiu.com), or equivalently [liuzik.ai](https://liuzik.ai)
-
-PS: This work is mainly about practicing frontend development and design. As for the content, do not take them too
-seriously :P
-
-PPS: There is nothing to do with AI...
+=> [zikailiu.com](https://zikailiu.com)
 
 ## Design
 

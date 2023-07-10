@@ -258,6 +258,7 @@ window.addEventListener("DOMContentLoaded", event => {
             return gsap.timeline(vars)
                 .to(".photography-icon.one", {x: "+=2", y: "+=2"}, "<")
                 .to(".photography-icon.two", {x: "-=2", y: "+=2"}, "<")
+                .to(".photography-icon.three", {x: "+=2", y: "-=2"}, "<")
                 .to(".photography-icon, #photography-link", {fill: "#e62e00",}, "<");
         }
 
