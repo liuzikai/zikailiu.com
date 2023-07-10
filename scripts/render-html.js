@@ -26,7 +26,7 @@ const files = [
     {
         "input": '../src/html/photography.ejs',
         "output": '../photography/index.html',
-        "data": readJsonFile('../src/html/photography.json'),
+        "data": readJsonFile('../src/html/data/photography.json'),
     },
     {
         "input": '../src/html/error.ejs',
