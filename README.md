@@ -81,9 +81,9 @@ Specifically, about performance optimizations:
 
 ## TODOs and Known Issues
 
-- [ ] Maybe organize photos into topics some day...
-- [ ] Optimize photo page loading. Simple lazy loading prevents GSAP from calculating the correct heights.
-- [ ] `.slide-in-text` is also triggered when scrolling upward, which is ugly. Maybe replace it with GSAP ScrollTrigger
+- [ ] Continue implementing the Photography page
+- [ ] Refactor and extract the common parts in pages (navigation, contact, ...). With EJS, this should be pretty easy. When I need to change those parts the next time, I will refactor them, but otherwise let them stay there for a while...
+- [ ] `.slide-in-text` is also triggered when scrolling upward. Maybe replace it with GSAP ScrollTrigger
   some day.
 
 ## Reference
