@@ -3,14 +3,10 @@
   "sections": [
     {
       "heading": "October 2018 &bull; Japan",
-      "coverThumbnail": "photos/Japan-26.jpg",
+      "coverThumbnail": "thumbnails/Japan-26.jpg",
       "coverImage": "photos/Japan-26.jpg",
       "coverText": "伏見稲荷大社 Fushimi-Inari Taisha &bull; Wishes",
       "additionalPhotos": [
-        {
-          "image": "photos/Japan-7.jpg",
-          "text": "伏見稲荷大社 Fushimi-Inari Taisha"
-        },
         {
           "image": "photos/Japan-54.jpg",
           "text": "伏見稲荷大社 Fushimi-Inari Taisha"
@@ -36,6 +32,10 @@
           "text": "A man waiting at the street crossing"
         },
         {
+          "image": "photos/Japan-117.jpg",
+          "text": "People walking through the street crossing"
+        },
+        {
           "image": "photos/Japan-160.jpg",
           "text": "Subway"
         },
@@ -54,8 +54,8 @@
       ]
     },
     {
-      "heading": "December 2019 - US West Coast",
-      "coverThumbnail": "photos/Seattle-1.jpg",
+      "heading": "December 2019 &bull; US West Coast",
+      "coverThumbnail": "thumbnails/Seattle-1.jpg",
       "coverImage": "photos/Seattle-1.jpg",
       "coverText": "Seattle",
       "additionalPhotos": [
@@ -78,8 +78,8 @@
       ]
     },
     {
-      "heading": "January 2020 - Alaska, US",
-      "coverThumbnail": "photos/Fairbanks-45.jpg",
+      "heading": "January 2020 &bull; Alaska, US",
+      "coverThumbnail": "thumbnails/Fairbanks-45.jpg",
       "coverImage": "photos/Fairbanks-45.jpg",
       "coverText": "Dog sled tours in Fairbanks, Alaska",
       "additionalPhotos": [
@@ -110,8 +110,8 @@
       ]
     },
     {
-      "heading": "June 2021 - Xingjiang, China",
-      "coverThumbnail": "photos/Xinjiang-1.jpg",
+      "heading": "June 2021 &bull; Xingjiang, China",
+      "coverThumbnail": "thumbnails/Xinjiang-1.jpg",
       "coverImage": "photos/Xinjiang-1.jpg",
       "coverText": "Mountain at dawn",
       "additionalPhotos": [
@@ -142,43 +142,175 @@
       ]
     },
     {
-      "heading": "November 2021 - Zug, Switzerland",
-      "coverThumbnail": "photos/Zug-58.jpg",
+      "heading": "November 2021 &bull; Zug, Switzerland",
+      "coverThumbnail": "thumbnails/Zug-58.jpg",
       "coverImage": "photos/Zug-58.jpg",
-      "coverText": "",
+      "coverText": "Zugersee",
       "additionalPhotos": [
+        {
+          "image": "photos/Zug-7.jpg",
+          "text": "On the hiking way"
+        },
+        {
+          "image": "photos/Zug-13.jpg",
+          "text": "On the hiking way"
+        },
+        {
+          "image": "photos/Zug-17.jpg",
+          "text": "On the hiking way"
+        },
+        {
+          "image": "photos/Zug-55.jpg",
+          "text": "On the hiking way"
+        },
+        {
+          "image": "photos/Zug-60.jpg",
+          "text": "On the hiking way"
+        },
+        {
+          "image": "photos/Zug-62.jpg",
+          "text": "On the hiking way"
+        }
       ]
     },
     {
-      "heading": "April 2022 - Lausanne, Switzerland",
-      "coverThumbnail": "photos/Lausanne-2.jpg",
-      "coverImage": "April 2022 - Lausanne, Switzerland",
-      "coverText": "",
+      "heading": "April 2022 &bull; Lausanne, Switzerland",
+      "coverThumbnail": "thumbnails/Lausanne-2.jpg",
+      "coverImage": "photos/Lausanne-2.jpg",
+      "coverText": "Lausanne Cathedral",
       "additionalPhotos": [
+        {
+          "image": "photos/Lausanne-1.jpg",
+          "text": "Lake Geneva"
+        },
+        {
+          "image": "photos/Lausanne-159.jpg",
+          "text": "Lake Geneva"
+        },
+        {
+          "image": "photos/Lausanne-209.jpg",
+          "text": "Lake Geneva"
+        },
+        {
+          "image": "photos/Lausanne-99.jpg",
+          "text": "Lake Geneva"
+        },
+        {
+          "image": "photos/Lausanne-52.jpg",
+          "text": "École Polytechnique Fédérale de Lausanne"
+        },
+        {
+          "image": "photos/Lausanne-59.jpg",
+          "text": "École Polytechnique Fédérale de Lausanne"
+        },
+        {
+          "image": "photos/Lausanne-75.jpg",
+          "text": "École Polytechnique Fédérale de Lausanne"
+        }
       ]
     },
     {
-      "heading": "July 2022 - Prague",
-      "coverThumbnail": "photos/Prague-458.jpg",
+      "heading": "July 2022 &bull; Prague",
+      "coverThumbnail": "thumbnails/Prague-458.jpg",
       "coverImage": "photos/Prague-458.jpg",
-      "coverText": "",
+      "coverText": "Charles Bridge",
       "additionalPhotos": [
+        {
+          "image": "photos/Prague-1.jpg",
+          "text": "On the Charles Bridge"
+        },
+        {
+          "image": "photos/Prague-212.jpg",
+          "text": "Away from the Charles Bridge"
+        },
+        {
+          "image": "photos/Prague-2.jpg",
+          "text": "At the Petrin Tower"
+        },
+        {
+          "image": "photos/Prague-95.jpg",
+          "text": "Outside the St. Vitus Cathedral"
+        },
+        {
+          "image": "photos/Prague-117.jpg",
+          "text": "Inside the St. Vitus Cathedral"
+        },
+        {
+          "image": "photos/Prague-175.jpg",
+          "text": "City view"
+        },
+        {
+          "image": "photos/Prague-200.jpg",
+          "text": "City view"
+        },
+        {
+          "image": "photos/Prague-323.jpg",
+          "text": "A mini band"
+        },
+        {
+          "image": "photos/Prague-2-4.jpg",
+          "text": "Prague Metronome"
+        },
+        {
+          "image": "photos/Prague-2-5.jpg",
+          "text": "A random garbage can, but I found it very cute"
+        },
+        {
+          "image": "photos/Prague-2-6.jpg",
+          "text": "Statue of Saint Wenceslas"
+        }
       ]
     },
     {
-      "heading": "August 2022 - Lavertezzo, Switzerland",
-      "coverThumbnail": "photos/Lavertezzo-1.jpg",
+      "heading": "August 2022 &bull; Lavertezzo, Switzerland",
+      "coverThumbnail": "thumbnails/Lavertezzo-1.jpg",
       "coverImage": "photos/Lavertezzo-1.jpg",
-      "coverText": "",
+      "coverText": "Ponte dei Salti",
       "additionalPhotos": [
+        {
+          "image": "photos/Lavertezzo-272.jpg",
+          "text": "Ponte dei Salti"
+        },
+        {
+          "image": "photos/Lavertezzo-165.jpg",
+          "text": "Ponte dei Salti"
+        },
+        {
+          "image": "photos/Lavertezzo-113.jpg",
+          "text": "Ponte dei Salti"
+        },
+        {
+          "image": "photos/Lavertezzo-162.jpg",
+          "text": "Ponte dei Salti"
+        },
+        {
+          "image": "photos/Lavertezzo-27.jpg",
+          "text": "Grapes on the hiking way"
+        }
       ]
     },
     {
-      "heading": "2021-2022 - Winter Collection",
-      "coverThumbnail": "photos/Interlaken-2.jpg",
+      "heading": "2021-2022 &bull; Winter Collection",
+      "coverThumbnail": "thumbnails/Interlaken-2.jpg",
       "coverImage": "photos/Interlaken-2.jpg",
-      "coverText": "",
+      "coverText": "WInterlaken: Interlaken in the winter",
       "additionalPhotos": [
+        {
+          "image": "photos/Interlaken-1.jpg",
+          "text": "WInterlaken: Interlaken in the winter"
+        },
+        {
+          "image": "photos/Jungfraujoch-1.jpg",
+          "text": "Jungfraujoch, Switzerland"
+        },
+        {
+          "image": "photos/Zermatt-1.jpg",
+          "text": "Matterhorn, Zermatt, Switzerland"
+        },
+        {
+          "image": "photos/Brunni-4.jpg",
+          "text": "Brunni, Alpthal, Switzerland"
+        }
       ]
     }
   ]
