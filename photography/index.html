@@ -32,7 +32,7 @@
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
     <img src="/assets/masthead-color.jpg"
-         onload='document.getElementById("masthead").classList.add("masthead-photography-bg");' alt="">
+         onload='document.getElementById("masthead").classList.add("masthead-photography-bg"); Array.from(document.querySelectorAll(".thumbnail")).forEach(e => { e.src = e.dataset.src; });' alt="">
 </div>
 
 <!-- Embedded SVGs -->
@@ -162,7 +162,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Japan-26.jpg" data-section="October 2018 &bull; Japan &bull; 1/12" data-caption="伏見稲荷大社 Fushimi-Inari Taisha &bull; Wishes">
-                    <img class="img-fluid image" src="thumbnails/Japan-26.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Japan-26.jpg">
                     <div class="description">
                         <span class="description-heading">October 2018 &bull; Japan</span>
                         <!-- <span class="description-body"></span> -->
@@ -209,7 +209,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Seattle-1.jpg" data-section="December 2019 &bull; US West Coast &bull; 1/5" data-caption="Seattle">
-                    <img class="img-fluid image" src="thumbnails/Seattle-1.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Seattle-1.jpg">
                     <div class="description">
                         <span class="description-heading">December 2019 &bull; US West Coast</span>
                         <!-- <span class="description-body"></span> -->
@@ -235,7 +235,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Fairbanks-45.jpg" data-section="January 2020 &bull; Alaska, US &bull; 1/7" data-caption="Dog sled tours in Fairbanks, Alaska">
-                    <img class="img-fluid image" src="thumbnails/Fairbanks-45.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Fairbanks-45.jpg">
                     <div class="description">
                         <span class="description-heading">January 2020 &bull; Alaska, US</span>
                         <!-- <span class="description-body"></span> -->
@@ -267,7 +267,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Xinjiang-1.jpg" data-section="June 2021 &bull; Xingjiang, China &bull; 1/7" data-caption="Mountain at dawn">
-                    <img class="img-fluid image" src="thumbnails/Xinjiang-1.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Xinjiang-1.jpg">
                     <div class="description">
                         <span class="description-heading">June 2021 &bull; Xingjiang, China</span>
                         <!-- <span class="description-body"></span> -->
@@ -299,7 +299,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Zug-58.jpg" data-section="November 2021 &bull; Zug, Switzerland &bull; 1/7" data-caption="Zugersee">
-                    <img class="img-fluid image" src="thumbnails/Zug-58.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Zug-58.jpg">
                     <div class="description">
                         <span class="description-heading">November 2021 &bull; Zug, Switzerland</span>
                         <!-- <span class="description-body"></span> -->
@@ -331,7 +331,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Lausanne-2.jpg" data-section="April 2022 &bull; Lausanne, Switzerland &bull; 1/8" data-caption="Lausanne Cathedral">
-                    <img class="img-fluid image" src="thumbnails/Lausanne-2.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Lausanne-2.jpg">
                     <div class="description">
                         <span class="description-heading">April 2022 &bull; Lausanne, Switzerland</span>
                         <!-- <span class="description-body"></span> -->
@@ -366,7 +366,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Prague-458.jpg" data-section="July 2022 &bull; Prague &bull; 1/12" data-caption="Charles Bridge">
-                    <img class="img-fluid image" src="thumbnails/Prague-458.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Prague-458.jpg">
                     <div class="description">
                         <span class="description-heading">July 2022 &bull; Prague</span>
                         <!-- <span class="description-body"></span> -->
@@ -413,7 +413,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Lavertezzo-1.jpg" data-section="August 2022 &bull; Lavertezzo, Switzerland &bull; 1/6" data-caption="Ponte dei Salti">
-                    <img class="img-fluid image" src="thumbnails/Lavertezzo-1.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Lavertezzo-1.jpg">
                     <div class="description">
                         <span class="description-heading">August 2022 &bull; Lavertezzo, Switzerland</span>
                         <!-- <span class="description-body"></span> -->
@@ -442,7 +442,7 @@
             
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="photos/Interlaken-2.jpg" data-section="2021-2022 &bull; Winter Collection &bull; 1/5" data-caption="WInterlaken: Interlaken in the winter">
-                    <img class="img-fluid image" src="thumbnails/Interlaken-2.jpg">
+                    <img class="img-fluid image thumbnail" data-src="thumbnails/Interlaken-2.jpg">
                     <div class="description">
                         <span class="description-heading">2021-2022 &bull; Winter Collection</span>
                         <!-- <span class="description-body"></span> -->

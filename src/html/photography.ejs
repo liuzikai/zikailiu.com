@@ -32,7 +32,7 @@
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
     <img src="/assets/masthead-color.jpg"
-         onload='document.getElementById("masthead").classList.add("masthead-photography-bg");' alt="">
+         onload='document.getElementById("masthead").classList.add("masthead-photography-bg"); Array.from(document.querySelectorAll(".thumbnail")).forEach(e => { e.src = e.dataset.src; });' alt="">
 </div>
 
 <%- include("components/_embedded_svgs.ejs") %>
@@ -118,7 +118,7 @@
             <% let imageCount = section.additionalPhotos.length + 1; %>
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
                 <a class="lightbox" href="<%- section.coverImage %>" data-section="<%- section.heading %> &bull; 1/<%= imageCount %>" data-caption="<%- section.coverText %>">
-                    <img class="img-fluid image" src="<%- section.coverThumbnail %>">
+                    <img class="img-fluid image thumbnail" data-src="<%- section.coverThumbnail %>">
                     <div class="description">
                         <span class="description-heading"><%- section.heading %></span>
                         <!-- <span class="description-body"></span> -->
