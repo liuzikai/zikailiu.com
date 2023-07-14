@@ -1,50 +1,185 @@
 {
   "pageID": "photography",
-  "mainGalleryPhotos": [
+  "sections": [
     {
-      "src": "photos/Japan-26.jpg",
       "heading": "October 2018 - Japan",
-      "text": ""
+      "coverThumbnail": "photos/Japan-26.jpg",
+      "coverImage": "photos/Japan-26.jpg",
+      "coverText": "伏見稲荷大社 Fushimi-Inari Taisha &bull; Wishes",
+      "additionalPhotos": [
+        {
+          "image": "photos/Japan-7.jpg",
+          "text": "伏見稲荷大社 Fushimi-Inari Taisha"
+        },
+        {
+          "image": "photos/Japan-54.jpg",
+          "text": "伏見稲荷大社 Fushimi-Inari Taisha"
+        },
+        {
+          "image": "photos/Japan-47.jpg",
+          "text": "伏見稲荷大社 Fushimi-Inari Taisha"
+        },
+        {
+          "image": "photos/Japan-35.jpg",
+          "text": "伏見稲荷大社 Fushimi-Inari Taisha &bull; Sunlight shining on a stone"
+        },
+        {
+          "image": "photos/Japan-1.jpg",
+          "text": "Two men at the bus station"
+        },
+        {
+          "image": "photos/Japan-2.jpg",
+          "text": "Street view"
+        },
+        {
+          "image": "photos/Japan-25.jpg",
+          "text": "A man waiting at the street crossing"
+        },
+        {
+          "image": "photos/Japan-160.jpg",
+          "text": "Subway"
+        },
+        {
+          "image": "photos/Japan-170.jpg",
+          "text": "At the park"
+        },
+        {
+          "image": "photos/Japan-34.jpg",
+          "text": "四天王寺 Shitennō-ji &bull; A cat sleeping at the temple"
+        },
+        {
+          "image": "photos/Japan-158.jpg",
+          "text": "Tsūtenkaku × Hatsune Miku"
+        }
+      ]
     },
     {
-      "src": "photos/Seattle-1.jpg",
       "heading": "December 2019 - US West Coast",
-      "text": ""
+      "coverThumbnail": "photos/Seattle-1.jpg",
+      "coverImage": "photos/Seattle-1.jpg",
+      "coverText": "Seattle",
+      "additionalPhotos": [
+        {
+          "image": "photos/Seattle-5.jpg",
+          "text": "Seattle &bull; Pier 55"
+        },
+        {
+          "image": "photos/Seattle-17-Enhanced-NR.jpg",
+          "text": "Seattle &bull; The Gum Wall"
+        },
+        {
+          "image": "photos/San-Francisco-32.jpg",
+          "text": "San Francisco &bull; The bridge that everyone is going to photo"
+        },
+        {
+          "image": "photos/San-Francisco-52-Enhanced-NR.jpg",
+          "text": "Stanford"
+        }
+      ]
     },
     {
-      "src": "photos/Fairbanks-45.jpg",
       "heading": "January 2020 - Alaska, US",
-      "text": ""
+      "coverThumbnail": "photos/Fairbanks-45.jpg",
+      "coverImage": "photos/Fairbanks-45.jpg",
+      "coverText": "Dog sled tours in Fairbanks, Alaska",
+      "additionalPhotos": [
+        {
+          "image": "photos/Winter-Train-4.jpg",
+          "text": "View from the Winter Train from Anchorage to Fairbanks, a house at the middle of nowhere"
+        },
+        {
+          "image": "photos/Glacier-25.jpg",
+          "text": "Matanuska Glacier Walk"
+        },
+        {
+          "image": "photos/Glacier-103.jpg",
+          "text": "Matanuska Glacier Walk"
+        },
+        {
+          "image": "photos/Glacier-127.jpg",
+          "text": "Matanuska Glacier Walk"
+        },
+        {
+          "image": "photos/Aurora-1.jpg",
+          "text": "Aurora at Fairbanks"
+        },
+        {
+          "image": "photos/Fairbanks-57.jpg",
+          "text": "Morning sunlight at Fairbanks"
+        }
+      ]
     },
     {
-      "src": "photos/Xinjiang-1.jpg",
       "heading": "June 2021 - Xingjiang, China",
-      "text": ""
+      "coverThumbnail": "photos/Xinjiang-1.jpg",
+      "coverImage": "photos/Xinjiang-1.jpg",
+      "coverText": "Mountain at dawn",
+      "additionalPhotos": [
+        {
+          "image": "photos/Xinjiang-140.jpg",
+          "text": "Mountain, cloud, moon, and sky"
+        },
+        {
+          "image": "photos/Xinjiang-2.jpg",
+          "text": "Field under sunshine"
+        },
+        {
+          "image": "photos/Xinjiang-4.jpg",
+          "text": "白沙山 Baisha Mountain"
+        },
+        {
+          "image": "photos/Xinjiang-5.jpg",
+          "text": "盘龙古道 A road full of bends in the Pamir Plateau"
+        },
+        {
+          "image": "photos/Xinjiang-3.jpg",
+          "text": "赛里木湖 Sayram Lake"
+        },
+        {
+          "image": "photos/Xinjiang-54.jpg",
+          "text": "赛里木湖 Sayram Lake"
+        }
+      ]
     },
     {
-      "src": "photos/Zug-58.jpg",
       "heading": "November 2021 - Zug, Switzerland",
-      "text": ""
+      "coverThumbnail": "photos/Zug-58.jpg",
+      "coverImage": "photos/Zug-58.jpg",
+      "coverText": "",
+      "additionalPhotos": [
+      ]
     },
     {
-      "src": "photos/Lausanne-2.jpg",
       "heading": "April 2022 - Lausanne, Switzerland",
-      "text": ""
+      "coverThumbnail": "photos/Lausanne-2.jpg",
+      "coverImage": "April 2022 - Lausanne, Switzerland",
+      "coverText": "",
+      "additionalPhotos": [
+      ]
     },
     {
-      "src": "photos/Prague-458.jpg",
       "heading": "July 2022 - Prague",
-      "text": ""
+      "coverThumbnail": "photos/Prague-458.jpg",
+      "coverImage": "photos/Prague-458.jpg",
+      "coverText": "",
+      "additionalPhotos": [
+      ]
     },
     {
-      "src": "photos/Lavertezzo-1.jpg",
       "heading": "August 2022 - Lavertezzo, Switzerland",
-      "text": ""
+      "coverThumbnail": "photos/Lavertezzo-1.jpg",
+      "coverImage": "photos/Lavertezzo-1.jpg",
+      "coverText": "",
+      "additionalPhotos": [
+      ]
     },
     {
-      "src": "photos/Interlaken-2.jpg",
       "heading": "2021-2022 - Winter Collection",
-      "text": ""
+      "coverThumbnail": "photos/Interlaken-2.jpg",
+      "coverImage": "photos/Interlaken-2.jpg",
+      "coverText": "",
+      "additionalPhotos": [
+      ]
     }
   ]
 }
