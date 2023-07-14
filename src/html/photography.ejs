@@ -115,8 +115,9 @@
 <section class="gallery-block compact-gallery">
     <div class="row g-0">
         <% sections.forEach(function(section) { %>
+            <% let imageCount = section.additionalPhotos.length + 1; %>
             <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                <a class="lightbox" href="<%- section.coverImage %>" data-section="<%- section.heading %>" data-caption="<%- section.coverText %>">
+                <a class="lightbox" href="<%- section.coverImage %>" data-section="<%- section.heading %> &bull; 1/<%= imageCount %>" data-caption="<%- section.coverText %>">
                     <img class="img-fluid image" src="<%- section.coverThumbnail %>">
                     <div class="description">
                         <span class="description-heading"><%- section.heading %></span>
@@ -124,9 +125,10 @@
                     </div>
                 </a>
                 <div style="display: none">
-                    <% section.additionalPhotos.forEach(function(photo) { %>
-                        <a class="lightbox" href="<%- photo.image %>" data-caption="<%- photo.text %>"></a>
-                    <% }); %>
+                    <% for (let i = 0; i < section.additionalPhotos.length; i++) { %>
+                        <% let photo = section.additionalPhotos[i]; %>
+                        <a class="lightbox" href="<%- photo.image %>" data-section="<%- section.heading %> &bull; <%= i + 2 %>/<%= imageCount %>" data-caption="<%- photo.text %>"></a>
+                    <% } %>
                 </div>
             </div>
         <% }); %>

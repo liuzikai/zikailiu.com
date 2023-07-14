@@ -527,6 +527,7 @@
         // Get element reference, optional caption and source path
         var imageElement = galleryItem.imageElement;
         var thumbnailElement = imageElement.getElementsByTagName('img')[0];
+        var imageSection = imageElement.getAttribute('data-section');
         var imageCaption = typeof options.captions === 'function' ?
             options.captions.call(currentGallery, imageElement) :
             imageElement.getAttribute('data-caption') || imageElement.title;
@@ -543,7 +544,12 @@
         if (options.captions && imageCaption) {
             var figcaption = create('figcaption');
             figcaption.id = 'baguetteBox-figcaption-' + index;
-            figcaption.innerHTML = imageCaption;
+            if (imageSection) {
+                figcaption.classList.add("figcaption-two-sides");
+                figcaption.innerHTML = '<div class="figcaption-left">' + imageSection + '</div>' + '<div class="figcaption-right">' + imageCaption + '</div>';
+            } else {
+                figcaption.innerHTML += imageCaption;
+            }
             figure.appendChild(figcaption);
         }
         imageContainer.appendChild(figure);

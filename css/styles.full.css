@@ -14600,6 +14600,51 @@ textarea.form-control-lg {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.6);
   font-family: sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  #baguetteBox-overlay .full-image figcaption.figcaption-two-sides {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  #baguetteBox-overlay .full-image figcaption .figcaption-left {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #baguetteBox-overlay .full-image figcaption .figcaption-right {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    text-align: center;
+  }
 }
 #baguetteBox-overlay .full-image:before {
   content: "";

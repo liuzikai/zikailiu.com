@@ -350,7 +350,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
     } else if (currentPage === "photography") {
 
-        baguetteBox.run('.compact-gallery', { animation: 'slideIn' });
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn', overlayBackgroundColor:'rgba(0, 0, 0, 0.9)' });
 
     }
 });

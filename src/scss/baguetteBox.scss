@@ -60,6 +60,36 @@
             background-color: #000;
             background-color: rgba(0,0,0,.6);
             font-family: sans-serif;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+
+            @include media-breakpoint-up(md) {
+                &.figcaption-two-sides {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+
+            .figcaption-left {
+                @include media-breakpoint-up(md) {
+                    flex: 0 0 auto;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    margin-right: auto;
+                    text-align: center;
+                }
+            }
+
+            .figcaption-right {
+                @include media-breakpoint-up(md) {
+                    flex: 0 0 auto;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    margin-left: auto;
+                    text-align: center;
+                }
+            }
         }
 
         &:before {
