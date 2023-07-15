@@ -293,10 +293,6 @@ button {
   cursor: pointer;
 }
 
-[list]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
 button,
 [type=button],
 [type=submit] {

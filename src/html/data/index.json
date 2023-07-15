@@ -1,0 +1,19 @@
+{
+  "pageID": "index",
+  "title": "Zikai Liu",
+  "description": "I am a Master's student in Computer Science at ETH Zurich. Generally interested in all aspects of computer systems, from semiconductors to code.",
+  "themeColor": "#ffffff",
+  "navbarTheme": "light",
+  "navlinkAlwaysShow": false,
+  "mastheadImage": "/assets/masthead-normal.jpg",
+  "mastheadClass": "masthead-home-bg",
+  "extraCodeAfterMastheadLoad": "",
+  "extraPreloadImages": [
+    "/assets/robomaster-me.jpg"
+  ],
+  "mastheadText": [
+    "People walk on the ground,",
+    "yet try creating a starry sky."
+  ],
+  "scrollIndicatorColor": "rgba(0, 0, 0, 0.25)"
+}

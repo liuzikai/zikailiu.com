@@ -14,14 +14,14 @@ function readJsonFile(filepath) {
 
 const files = [
     {
-        "input": '../src/html/projects.ejs',
-        "output": '../projects/index.html',
-        "data": {},
-    },
-    {
         "input": '../src/html/index.ejs',
         "output": '../index.html',
-        "data": {},
+        "data": readJsonFile('../src/html/data/index.json'),
+    },
+    {
+        "input": '../src/html/projects.ejs',
+        "output": '../projects/index.html',
+        "data": readJsonFile('../src/html/data/projects.json'),
     },
     {
         "input": '../src/html/photography.ejs',
@@ -31,22 +31,12 @@ const files = [
     {
         "input": '../src/html/error.ejs',
         "output": '../errors/404.html',
-        "data": {
-            "pageID": "404",
-            "title": "Zikai Liu's Portfolio - 404",
-            "description": "Zikai Liu's portfolio. The requested page is not found.",
-            "mainText": "page not found",
-        },
+        "data": readJsonFile('../src/html/data/404.json'),
     },
     {
         "input": '../src/html/error.ejs',
         "output": '../errors/other.html',
-        "data": {
-            "pageID": "error",
-            "title": "Zikai Liu's Portfolio - Error",
-            "description": "Zikai Liu's portfolio. An error occurred.",
-            "mainText": "An error occurred",
-        },
+        "data": readJsonFile('../src/html/data/error.json'),
     },
 ]
 

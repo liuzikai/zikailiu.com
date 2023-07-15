@@ -1,0 +1,26 @@
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="<%- description %>"/>
+    <meta name="author" content="Zikai Liu"/>
+    <title><%- title %></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a5a5a">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <!-- This affect the background color of the scroll-over part -->
+    <meta name="theme-color" content="<%- themeColor %>">
+    <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <!-- Preloads (crossorigin is needed for fonts) -->
+    <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" fetchpriority="high" href="<%- mastheadImage %>" as="image" type="image/jpeg">
+    <% extraPreloadImages.forEach(function(image) { %>
+        <link rel="preload" href="<%- image %>" as="image" type="image/jpeg">
+    <% }); %>
+    <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/js/scripts.min.js" as="script">
+</head>

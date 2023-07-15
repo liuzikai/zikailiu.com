@@ -1,0 +1,13 @@
+{
+  "pageID": "404",
+  "title": "Zikai Liu's Portfolio - 404",
+  "description": "Zikai Liu's portfolio. The requested page is not found.",
+  "themeColor": "#ffffff",
+  "navbarTheme": "light",
+  "navlinkAlwaysShow": true,
+  "mastheadImage": "/assets/masthead-white.jpg",
+  "mastheadClass": "masthead-error-bg",
+  "extraCodeAfterMastheadLoad": "",
+  "extraPreloadImages": [],
+  "mainText": "page not found"
+}

@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"
       style="--bs-body-color: black; --bs-body-bg: white; --bs-active-color: rgba(0, 0, 0, 0.3); --bs-annotation-color: rgba(255, 255, 255, 0.75);">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="<%- description %>"/>
-    <meta name="author" content="Zikai Liu"/>
-    <title><%- title %></title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a5a5a">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Core theme CSS (includes Bootstrap and self-host Nunito) -->
-    <link href="/css/styles.css" rel="stylesheet"/>
-    <!-- Preloads (crossorigin is needed for fonts) -->
-    <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" fetchpriority="high" href="/assets/masthead-white.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/js/scripts.min.js" as="script">
-    <!-- If not preloading, images files can be loaded first, which is not desired     -->
-    <!-- SVG icons are loaded in the scripts.js, which also have high priorities       -->
-    <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
-</head>
+<%- include("components/_head.ejs") %>
 <body id="page-top">
+<%- include("components/_embedded_svgs.ejs") %>
+<%- include("components/_nav.ejs") %>
 
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
@@ -34,38 +12,7 @@
          onload='document.getElementById("masthead").classList.add("masthead-error-bg");' alt="">
 </div>
 
-<%- include("components/_embedded_svgs.ejs") %>
-
-<!-- Navigation-->
-<nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
-    <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
-    <div class="container px-4 px-lg-5 d-block d-md-flex">
-        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBody">
-            <a class="navbar-brand" href="/">
-                Zikai Liu
-            </a>
-            <div class="navbar-toggler collapsed my-auto"
-                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                 aria-expanded="false" aria-label="Toggle navigation">
-                <svg width="16" height="16">
-                    <use xlink:href="#bi-chevron-right"></use>
-                </svg>
-            </div>
-        </div>
-        <!-- Expanded when >= md, drop-down menu when < md -->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link nav-link-outline " href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-outline " href="/projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-outline " href="/photography">Photography</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-outline " href="/photography">About</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Masthead-->
+<!-- Masthead for Error Page -->
 <header class="masthead min-vh-100" id="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">

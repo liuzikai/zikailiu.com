@@ -1,5 +1,20 @@
 {
   "pageID": "photography",
+  "title": "Zikai Liu's Photography",
+  "description": "Some photos I took in recent years.",
+  "themeColor": "#000000",
+  "navbarTheme": "dark",
+  "navlinkAlwaysShow": false,
+  "mastheadImage": "/assets/masthead-color.jpg",
+  "mastheadClass": "masthead-photography-bg",
+  "extraCodeAfterMastheadLoad": "Array.from(document.querySelectorAll(\".thumbnail\")).forEach(e => { e.src = e.dataset.src; });",
+  "extraPreloadImages": [],
+  "mastheadText": [
+    "Life has so much beauty",
+    "waiting for us to discover",
+    "together."
+  ],
+  "scrollIndicatorColor": "rgba(255, 255, 255, 0.3)",
   "sections": [
     {
       "heading": "October 2018 &bull; Japan",

@@ -1,0 +1,30 @@
+<!-- Display the background image only when completely loaded -->
+<div id="preload" style="display: none">
+    <img src="<%- mastheadImage %>"
+         onload='document.getElementById("masthead").classList.add("<%- mastheadClass %>");<%- extraCodeAfterMastheadLoad %>' alt="">
+</div>
+
+<!-- Masthead-->
+<header class="masthead min-vh-100" id="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex flex-column justify-content-center h-100">
+            <div class="py-5" style="height: 5rem;"> <!-- placeholder--> </div>
+            <div class="masthead-text text-center">
+                <% mastheadText.forEach(function(line) { %>
+                    <p class="mx-auto mt-1 mb-0"><%- line %></p>
+                <% }); %>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="text-center py-5" style="height: 5rem; color: <%- scrollIndicatorColor %>">
+                <svg width="2.25em" height="2.25em" fill="currentColor" viewBox="0 0 16 16" id="homeScrollIndicator">
+                    <path fill-rule="evenodd" class="scroll-indicator-path scroll-indicator-path-active"
+                          style="animation-delay: -1s"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" class="scroll-indicator-path scroll-indicator-path-active"
+                          style="animation-delay: -1.5s"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>

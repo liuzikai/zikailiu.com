@@ -1,0 +1,13 @@
+{
+  "pageID": "error",
+  "title": "Zikai Liu's Portfolio - Error",
+  "description": "Zikai Liu's portfolio. An error occurred.",
+  "themeColor": "#ffffff",
+  "navbarTheme": "light",
+  "navlinkAlwaysShow": true,
+  "mastheadImage": "/assets/masthead-white.jpg",
+  "mastheadClass": "masthead-error-bg",
+  "extraCodeAfterMastheadLoad": "",
+  "extraPreloadImages": [],
+  "mainText": "An error occurred"
+}

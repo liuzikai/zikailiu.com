@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description"
-          content="A list of my professional and hobby projects, from hardware to software, from electrical systems to high-level applications."/>
+    <meta name="description" content="My professional and hobby projects, from hardware to software, from electrical systems to high-level applications."/>
     <meta name="author" content="Zikai Liu"/>
     <title>Zikai Liu's Projects</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,21 +20,12 @@
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" fetchpriority="high" href="/assets/masthead-wireframe.jpg" as="image" type="image/jpeg">
+    
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
-    <!-- If not preloading, images files can be loaded first, which is not desired     -->
-    <!-- SVG icons are loaded in the scripts.js, which also have high priorities       -->
-    <!-- Images are loaded normally, while the videos are lazily loaded as modal opens -->
 </head>
 <body id="page-top">
-
-<!-- Display the background image only when completely loaded -->
-<div id="preload" style="display: none">
-    <img src="/assets/masthead-wireframe.jpg"
-         onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
-</div>
-
 <!-- Embedded SVGs -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
     <defs>
@@ -81,43 +71,48 @@
         </symbol>
     </defs>
 </svg>
-
 <!-- Navigation-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
     <!-- container for margin and padding, d-block when < lg to expand drop-down, d-lg-flex for same line -->
     <div class="container px-4 px-lg-5 d-block d-md-flex">
-        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;"
-             id="mainNavBody">
+        <div class="d-flex" style="height: 100%; flex:auto; justify-content: space-between;" id="mainNavBody">
             <a class="navbar-brand" href="/">
                 Zikai Liu
             </a>
             <div class="navbar-toggler collapsed my-auto"
                  data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                  aria-expanded="false" aria-label="Toggle navigation">
-                <svg width="16" height="16">
-                    <use xlink:href="#bi-chevron-right"></use>
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 16 16" id="navbarMenu">
+                    <path class="navbar-line one" d="M2.5,4c0-0.3,0.2-0.5,0.5-0.5h10c0.3,0,0.5,0.2,0.5,0.5S13.3,4.5,13,4.5H3C2.7,4.5,2.5,4.3,2.5,4z"/>
+                    <path class="navbar-line two" d="M2.5,8c0-0.3,0.2-0.5,0.5-0.5h10c0.3,0,0.5,0.2,0.5,0.5c0,0.3-0.2,0.5-0.5,0.5H3C2.7,8.5,2.5,8.3,2.5,8z"/>
+                    <path class="navbar-line three" d="M2.5,12c0-0.3,0.2-0.5,0.5-0.5h10c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5H3C2.7,12.5,2.5,12.3,2.5,12z"/>
                 </svg>
             </div>
         </div>
         <!-- Expanded when >= md, drop-down menu when < md -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item navbar-invisible-shrink">
-                    <a class="nav-link " href="/">Home</a>
+                <li class="nav-item navbar-invisible-shrink>">
+                    <a class="nav-link  " href="/">Home</a>
                 </li>
                 <li class="nav-item navbar-invisible-shrink">
-                    <a class="nav-link active " href="/projects">Projects</a>
+                    <a class="nav-link  active" href="/projects">Projects</a>
                 </li>
                 <li class="nav-item navbar-invisible-shrink">
-                    <a class="nav-link " href="/photography">Photography</a>
+                    <a class="nav-link  " href="/photography">Photography</a>
                 </li>
                 <li class="nav-item navbar-invisible-shrink">
-                    <a class="nav-link " href="/about">About</a>
+                    <a class="nav-link  " href="/about">About</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<!-- Display the background image only when completely loaded -->
+<div id="preload" style="display: none">
+    <img src="/assets/masthead-wireframe.jpg"
+         onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
+</div>
 
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
@@ -125,9 +120,13 @@
         <div class="d-flex flex-column justify-content-center h-100">
             <div class="py-5" style="height: 5rem;"> <!-- placeholder--> </div>
             <div class="masthead-text text-center">
-                <p class="mx-auto mt-1 mb-0">Working with great people</p>
-                <p class="mx-auto mt-1 mb-0">on the things I love</p>
-                <p class="mx-auto mt-1 mb-0">is always my fortune.</p>
+                
+                    <p class="mx-auto mt-1 mb-0">Working with great people</p>
+                
+                    <p class="mx-auto mt-1 mb-0">on the things I love</p>
+                
+                    <p class="mx-auto mt-1 mb-0">is always my fortune.</p>
+                
             </div>
             <!-- Scroll Indicator -->
             <div class="text-center py-5" style="height: 5rem; color: rgba(255, 255, 255, 0.25)">
@@ -531,7 +530,7 @@
                                             <a class="btn shadow-none project-details-link  "
                                                target="_blank"
                                                rel="noopener noreferrer"
-                                               href="http://lumetta.web.engr.illinois.edu/ase2021.html">
+                                               href="https://lumetta.web.engr.illinois.edu/ase2021.html">
                                                 The Replication Package
                                                 <svg width="1em" height="1em" style="position: relative; top: -0.15em">
                                                     <use xlink:href="#bi-chevron-right"></use>
@@ -542,7 +541,7 @@
                                             <a class="btn shadow-none project-details-link "
                                                target="_blank"
                                                rel="noopener noreferrer"
-                                               href="http://hdl.handle.net/2142/110284">
+                                               href="https://hdl.handle.net/2142/110284">
                                                 My Senior Thesis on UIUC IDEALS
                                                 <svg width="1em" height="1em" style="position: relative; top: -0.15em">
                                                     <use xlink:href="#bi-chevron-right"></use>
