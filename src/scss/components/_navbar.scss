@@ -9,6 +9,12 @@
     /* border-bottom-color transition behaviors weirdly on Safari */
     .navbar-brand {
         font-weight: 700;
+        padding-left: $navbar-brand-padding-x;
+        padding-right: $navbar-brand-padding-x;
+    }
+
+    .nav-link {
+        text-align: center;
     }
 }
 
@@ -65,14 +71,45 @@
             outline: none;
         }
 
-        transform: rotate(270deg);
-        transition: transform 0.5s;
+        .navbar-line {
+            &.one {
+                transform-origin: 8px 4px;
+                transition: transform 0.5s;
+            }
+            &.two {
+                transform-origin: 8px 8px;
+                transition: transform 0.5s;
+            }
+            &.three {
+                transform-origin: 8px 12px;
+                transition: transform 0.5s;
+            }
+        }
+
+        &.collapsed {
+            .navbar-line {
+                transform: none;
+            }
+        }
+
+        &:not(.collapsed) {
+            .navbar-line {
+                &.one {
+                    transform: translate(0, 4px) rotate(45deg);
+                }
+                &.two {
+                    transform: scale(0, 1);
+                }
+                &.three {
+                    transform: translate(0, -4px) rotate(-45deg);
+                }
+            }
+        }
     }
 
-    .collapsed.navbar-toggler {
-        transform: rotate(90deg);
-        transition: transform 0.5s;
-    }
+
+
+
 
     .navbar-brand-part1 {
         padding-right: 0;

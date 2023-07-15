@@ -772,7 +772,7 @@ output {
 }
 
 .navbar-toggler {
-  padding: 0.75rem 0.75rem;
+  padding: 0.75rem 0.5rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -1955,6 +1955,11 @@ body {
 }
 .navbar .navbar-brand {
   font-weight: 700;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.navbar .nav-link {
+  text-align: center;
 }
 
 .navbar-dark {
@@ -1983,33 +1988,76 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   border: none;
-  -webkit-transform: rotate(270deg);
-     -moz-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-       -o-transform: rotate(270deg);
-          transform: rotate(270deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  -moz-transition: transform 0.5s, -moz-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
-#mainNav .collapsed.navbar-toggler {
-  -webkit-transform: rotate(90deg);
-     -moz-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-       -o-transform: rotate(90deg);
-          transform: rotate(90deg);
+#mainNav .navbar-toggler .navbar-line.one {
+  -webkit-transform-origin: 8px 4px;
+     -moz-transform-origin: 8px 4px;
+      -ms-transform-origin: 8px 4px;
+       -o-transform-origin: 8px 4px;
+          transform-origin: 8px 4px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: -o-transform 0.5s;
   -moz-transition: transform 0.5s, -moz-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+}
+#mainNav .navbar-toggler .navbar-line.two {
+  -webkit-transform-origin: 8px 8px;
+     -moz-transform-origin: 8px 8px;
+      -ms-transform-origin: 8px 8px;
+       -o-transform-origin: 8px 8px;
+          transform-origin: 8px 8px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -moz-transition: transform 0.5s, -moz-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+}
+#mainNav .navbar-toggler .navbar-line.three {
+  -webkit-transform-origin: 8px 12px;
+     -moz-transform-origin: 8px 12px;
+      -ms-transform-origin: 8px 12px;
+       -o-transform-origin: 8px 12px;
+          transform-origin: 8px 12px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -moz-transition: transform 0.5s, -moz-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+}
+#mainNav .navbar-toggler.collapsed .navbar-line {
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+#mainNav .navbar-toggler:not(.collapsed) .navbar-line.one {
+  -webkit-transform: translate(0, 4px) rotate(45deg);
+     -moz-transform: translate(0, 4px) rotate(45deg);
+      -ms-transform: translate(0, 4px) rotate(45deg);
+       -o-transform: translate(0, 4px) rotate(45deg);
+          transform: translate(0, 4px) rotate(45deg);
+}
+#mainNav .navbar-toggler:not(.collapsed) .navbar-line.two {
+  -webkit-transform: scale(0, 1);
+     -moz-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+       -o-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+#mainNav .navbar-toggler:not(.collapsed) .navbar-line.three {
+  -webkit-transform: translate(0, -4px) rotate(-45deg);
+     -moz-transform: translate(0, -4px) rotate(-45deg);
+      -ms-transform: translate(0, -4px) rotate(-45deg);
+       -o-transform: translate(0, -4px) rotate(-45deg);
+          transform: translate(0, -4px) rotate(-45deg);
 }
 #mainNav .navbar-invisible-shrink {
   opacity: 1;

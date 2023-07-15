@@ -1,11 +1,11 @@
 $navbar-padding-x: 0;
 $navbar-padding-y: 0;
 
-$navbar-brand-padding-x: 0;
+$navbar-brand-padding-x: 0.5rem;  // bootstrap does not provide this, but we do
 $navbar-brand-padding-y: 0.9rem;
 $navbar-brand-font-size: 1.5rem;
 
-$navbar-toggler-padding-x: 0.75rem;
+$navbar-toggler-padding-x: 0.5rem;
 $navbar-toggler-padding-y: 0.75rem;
 
 // Boostrap's inconsistent naming...
