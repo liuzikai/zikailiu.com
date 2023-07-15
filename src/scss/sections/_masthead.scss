@@ -3,132 +3,81 @@
 //
 
 .masthead {
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    padding: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
 
-    // Background loading transaction
+  // Background loading transaction
+  opacity: 0;
+  // Actual background &.masthead-*-bg in page-specific scss
 
-    opacity: 0;
-
-    // Actual background &.masthead-*-bg in page-specific scss
-
-    @keyframes bg-fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+  @keyframes bg-fadein {
+    from {
+      opacity: 0;
     }
-    @-moz-keyframes bg-fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+    to {
+      opacity: 1;
     }
-    @-webkit-keyframes bg-fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+  }
+  @-moz-keyframes bg-fadein {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes bg-fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-    .masthead-text {
-        // Customized responsive font sizes
-        font-size: 1.25rem;
-        font-weight: lighter;
-        /*@include media-breakpoint-up(sm) {
-            font-size: 1.25rem;
-        }*/
-        /*@include media-breakpoint-up(md) {
-            font-size: 1.5rem;
-        }*/
-        /*@include media-breakpoint-up(lg) {
-            font-size: 1.5rem;
-        }*/
-        @include media-breakpoint-up(xl) {
-            font-size: 1.5rem;
-        }
-        /*@include media-breakpoint-up(xxl) {
-            font-size: 1.75rem;
-        }*/
+  .masthead-text {
+    font-size: 1.25rem;
+    font-weight: lighter;
+    @include media-breakpoint-up(xl) {
+      font-size: 1.5rem;
     }
+  }
 
-    .masthead-text-large {
-        font-weight: 700;
-        // Customized responsive font sizes
-        font-size: 1.75rem;
-        @include media-breakpoint-up(sm) {
-            font-size: 2rem;
-        }
-        /*@include media-breakpoint-up(md) {
-            font-size: 2rem;
-        }
-        @include media-breakpoint-up(lg) {
-            font-size: 2rem;
-        }*/
-        @include media-breakpoint-up(xl) {
-            font-size: 2.75rem;
-        }
-        /*@include media-breakpoint-up(xxl) {
-            font-size: 2.75rem;
-        }*/
+  .masthead-text-large {
+    font-weight: 700;
+    // Customized responsive font sizes
+    font-size: 1.75rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 2rem;
     }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.75rem;
+    }
+  }
 }
 
 .scroll-indicator-path {
-    display: none;
+  display: none;
 }
 
 .scroll-indicator-path-active {
-    display: inline;
-    animation: scrollDown 2s infinite;
+  display: inline;
+  animation: scrollDown 2s infinite;
 }
 
-@keyframes scrollDown{
-    0% { opacity:0 }
-    25% { opacity:1 }
-    75% { opacity:0 }
-    100% { opacity:0 }
-}
-
-.masthead-annotation {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 0.8rem;
-    color: var(--bs-annotation-color);
-    text-align: left;
-
-    @media (min-width: 420px) {
-        left: unset;
-        right: 0;
-        text-align: right;
-        padding-bottom: 1.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    a {
-        color: inherit;
-        text-decoration-line: underline;
-        text-decoration-style: dotted;
-    }
-
-    .masthead-annotation-container {
-        background: var(--bs-annotation-bg);
-        border-radius: 0.5rem;
-        display: none;
-    }
-
-    .masthead-annotation-button {
-        transition: color 0.2s ease-in-out;
-        filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
-    }
-
-    &:hover, &:active {
-        .masthead-annotation-container {
-            display: block;
-        }
-        .masthead-annotation-button {
-            color: var(--bs-active-color);
-        }
-    }
+@keyframes scrollDown {
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 1
+  }
+  75% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
 }

@@ -5,140 +5,141 @@
 // We use .navbar-brand as div, to set height of navbar with its padding, while use .navbar-brand-text for the href
 
 .navbar {
-    transition: background-color 0.2s ease-in-out;
-    /* border-bottom-color transition behaviors weirdly on Safari */
-    .navbar-brand {
-        font-weight: 700;
-        padding-left: $navbar-brand-padding-x;
-        padding-right: $navbar-brand-padding-x;
-    }
+  transition: background-color 0.2s ease-in-out;
+  /* border-bottom-color transition behaviors weirdly on Safari */
+  .navbar-brand {
+    font-weight: 700;
+    padding-left: $navbar-brand-padding-x;
+    padding-right: $navbar-brand-padding-x;
+  }
 
-    .nav-link {
-        text-align: center;
-    }
+  .nav-link {
+    text-align: center;
+  }
 }
 
 
 .navbar-dark {
-    backdrop-filter: blur(10px);
-    background-color: $navbar-dark-background-color;
-    // border-bottom: 1px solid $navbar-dark-border-color;
+  backdrop-filter: blur(10px);
+  background-color: $navbar-dark-background-color;
+  // border-bottom: 1px solid $navbar-dark-border-color;
 
-    .navbar-brand {
-        .navbar-brand-text {
-            color: $navbar-dark-brand-color;
-        }
+  .navbar-brand {
+    .navbar-brand-text {
+      color: $navbar-dark-brand-color;
     }
+  }
 
-    @include media-breakpoint-up(md) {
-        &:not(.navbar-shrink) {
-            .nav-link-outline {
-                text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
-            }
-        }
+  @include media-breakpoint-up(md) {
+    &:not(.navbar-shrink) {
+      .nav-link-outline {
+        text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+      }
     }
+  }
 }
 
 .navbar-light {
-    backdrop-filter: blur(20px);
-    background-color: $navbar-light-background-color;
-    border-bottom: 1px solid $navbar-light-border-color;
+  backdrop-filter: blur(20px);
+  background-color: $navbar-light-background-color;
+  border-bottom: 1px solid $navbar-light-border-color;
 
-    .navbar-brand {
-        .navbar-brand-text {
-            color: $navbar-light-brand-color;
-        }
+  .navbar-brand {
+    .navbar-brand-text {
+      color: $navbar-light-brand-color;
     }
+  }
 
-    @include media-breakpoint-up(md) {
-        &:not(.navbar-shrink) {
-            .nav-link-outline {
-                text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-            }
-        }
+  @include media-breakpoint-up(md) {
+    &:not(.navbar-shrink) {
+      .nav-link-outline {
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      }
     }
+  }
 }
 
 #mainNav {
 
-    // navbar-toggler uses #bi-chevron-right so the rotation degrees + 90
+  // navbar-toggler uses #bi-chevron-right so the rotation degrees + 90
 
-    .navbar-toggler {
-        font-size: 80%;
-        border: none;
+  .navbar-toggler {
+    font-size: 80%;
+    border: none;
 
-        &:focus {
-            outline: none;
-        }
-
-        .navbar-line {
-            &.one {
-                transform-origin: 8px 4px;
-                transition: transform 0.5s;
-            }
-            &.two {
-                transform-origin: 8px 8px;
-                transition: transform 0.5s;
-            }
-            &.three {
-                transform-origin: 8px 12px;
-                transition: transform 0.5s;
-            }
-        }
-
-        &.collapsed {
-            .navbar-line {
-                transform: none;
-            }
-        }
-
-        &:not(.collapsed) {
-            .navbar-line {
-                &.one {
-                    transform: translate(0, 4px) rotate(45deg);
-                }
-                &.two {
-                    transform: scale(0, 1);
-                }
-                &.three {
-                    transform: translate(0, -4px) rotate(-45deg);
-                }
-            }
-        }
+    &:focus {
+      outline: none;
     }
 
+    .navbar-line {
+      &.one {
+        transform-origin: 8px 4px;
+        transition: transform 0.5s;
+      }
 
+      &.two {
+        transform-origin: 8px 8px;
+        transition: transform 0.5s;
+      }
 
-
-
-    .navbar-brand-part1 {
-        padding-right: 0;
+      &.three {
+        transform-origin: 8px 12px;
+        transition: transform 0.5s;
+      }
     }
 
-    .navbar-brand-part2-container {
-        position: relative;
+    &.collapsed {
+      .navbar-line {
+        transform: none;
+      }
     }
 
-    // .navbar-brand-part2 in page-specific scss
-
-    .navbar-invisible-shrink {
-        opacity: 1;
-        transition: opacity 1s ease;
-    }
-
-    @include media-breakpoint-up(md) {
-        &:not(.navbar-shrink) {
-            border-bottom: none;
-            background-color: transparent;
-            backdrop-filter: none;
-
-            .navbar-invisible-shrink {
-                opacity: 0;
-            }
+    &:not(.collapsed) {
+      .navbar-line {
+        &.one {
+          transform: translate(0, 4px) rotate(45deg);
         }
 
-        .nav-link {
-            transition: color 0.2s ease-in-out;  // Safari behaviors weirdly if this is commented
+        &.two {
+          transform: scale(0, 1);
         }
+
+        &.three {
+          transform: translate(0, -4px) rotate(-45deg);
+        }
+      }
     }
+  }
+
+
+  .navbar-brand-part1 {
+    padding-right: 0;
+  }
+
+  .navbar-brand-part2-container {
+    position: relative;
+  }
+
+  // .navbar-brand-part2 in page-specific scss
+
+  .navbar-invisible-shrink {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:not(.navbar-shrink) {
+      border-bottom: none;
+      background-color: transparent;
+      backdrop-filter: none;
+
+      .navbar-invisible-shrink {
+        opacity: 0;
+      }
+    }
+
+    .nav-link {
+      transition: color 0.2s ease-in-out; // Safari behaviors weirdly if this is commented
+    }
+  }
 }

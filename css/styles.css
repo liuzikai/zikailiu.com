@@ -2375,18 +2375,6 @@ body {
 .masthead .masthead-text {
   font-size: 1.25rem;
   font-weight: lighter;
-  /*@include media-breakpoint-up(sm) {
-      font-size: 1.25rem;
-  }*/
-  /*@include media-breakpoint-up(md) {
-      font-size: 1.5rem;
-  }*/
-  /*@include media-breakpoint-up(lg) {
-      font-size: 1.5rem;
-  }*/
-  /*@include media-breakpoint-up(xxl) {
-      font-size: 1.75rem;
-  }*/
 }
 @media (min-width: 1200px) {
   .masthead .masthead-text {
@@ -2396,15 +2384,6 @@ body {
 .masthead .masthead-text-large {
   font-weight: 700;
   font-size: 1.75rem;
-  /*@include media-breakpoint-up(md) {
-      font-size: 2rem;
-  }
-  @include media-breakpoint-up(lg) {
-      font-size: 2rem;
-  }*/
-  /*@include media-breakpoint-up(xxl) {
-      font-size: 2.75rem;
-  }*/
 }
 @media (min-width: 576px) {
   .masthead .masthead-text-large {

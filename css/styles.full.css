@@ -15371,18 +15371,6 @@ body {
 .masthead .masthead-text {
   font-size: 1.25rem;
   font-weight: lighter;
-  /*@include media-breakpoint-up(sm) {
-      font-size: 1.25rem;
-  }*/
-  /*@include media-breakpoint-up(md) {
-      font-size: 1.5rem;
-  }*/
-  /*@include media-breakpoint-up(lg) {
-      font-size: 1.5rem;
-  }*/
-  /*@include media-breakpoint-up(xxl) {
-      font-size: 1.75rem;
-  }*/
 }
 @media (min-width: 1200px) {
   .masthead .masthead-text {
@@ -15392,15 +15380,6 @@ body {
 .masthead .masthead-text-large {
   font-weight: 700;
   font-size: 1.75rem;
-  /*@include media-breakpoint-up(md) {
-      font-size: 2rem;
-  }
-  @include media-breakpoint-up(lg) {
-      font-size: 2rem;
-  }*/
-  /*@include media-breakpoint-up(xxl) {
-      font-size: 2.75rem;
-  }*/
 }
 @media (min-width: 576px) {
   .masthead .masthead-text-large {
@@ -15484,58 +15463,6 @@ body {
     opacity: 0;
   }
 }
-.masthead-annotation {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  font-size: 0.8rem;
-  color: var(--bs-annotation-color);
-  text-align: left;
-}
-@media (min-width: 420px) {
-  .masthead-annotation {
-    left: unset;
-    right: 0;
-    text-align: right;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-.masthead-annotation a {
-  color: inherit;
-  -webkit-text-decoration-line: underline;
-     -moz-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-style: dotted;
-     -moz-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-}
-.masthead-annotation .masthead-annotation-container {
-  background: var(--bs-annotation-bg);
-  -webkit-border-radius: 0.5rem;
-     -moz-border-radius: 0.5rem;
-          border-radius: 0.5rem;
-  display: none;
-}
-.masthead-annotation .masthead-annotation-button {
-  -webkit-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-  -webkit-filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
-          filter: drop-shadow(0 0 5px var(--bs-annotation-bg));
-}
-.masthead-annotation:hover .masthead-annotation-container, .masthead-annotation:active .masthead-annotation-container {
-  display: block;
-}
-.masthead-annotation:hover .masthead-annotation-button, .masthead-annotation:active .masthead-annotation-button {
-  color: var(--bs-active-color);
-}
-
 .about-section {
   padding-top: 10rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(75%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8)));
