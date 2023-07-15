@@ -462,6 +462,15 @@ output {
 }
 @media (min-width: 768px) {
 
+  .col-md-5 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
   .col-md-6 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -469,6 +478,15 @@ output {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 50%;
+  }
+
+  .col-md-7 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 58.33333333%;
   }
 }
 @media (min-width: 992px) {
@@ -489,15 +507,6 @@ output {
     width: 33.33333333%;
   }
 
-  .col-lg-5 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-       -moz-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 41.66666667%;
-  }
-
   .col-lg-6 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -505,15 +514,6 @@ output {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 50%;
-  }
-
-  .col-lg-7 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-       -moz-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 58.33333333%;
   }
 
   .col-lg-8 {
@@ -1483,6 +1483,19 @@ output {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+
+  .mt-md-0 {
+    margin-top: 0 !important;
+  }
+
+  .px-md-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .pt-md-0 {
+    padding-top: 0 !important;
+  }
 }
 @media (min-width: 992px) {
 
@@ -1519,11 +1532,6 @@ output {
     margin-bottom: auto !important;
   }
 
-  .px-lg-0 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-
   .px-lg-3 {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
@@ -1542,10 +1550,6 @@ output {
   .py-lg-4 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
-  }
-
-  .pt-lg-0 {
-    padding-top: 0 !important;
   }
 
   .pt-lg-3 {
@@ -2673,32 +2677,37 @@ body {
 }
 @media (min-width: 992px) {
   #homeSection {
+    /* For scrolling animation */
     min-height: 175vh;
     display: block;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #biographyContainer {
     min-height: 100vh;
   }
 }
 
 .biography-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 576px) {
   .biography-text {
-    width: 480px;
-    height: 140px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 450px;
+    height: 110px;
     font-size: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .biography-text {
-    width: 540px;
-    height: 160px;
-    font-size: 2rem;
+    width: 430px;
+    height: 110px;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 992px) {
@@ -2729,6 +2738,12 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .biography-link {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+}
 @media (min-width: 992px) {
   .biography-link {
     width: 180px;
@@ -2758,8 +2773,8 @@ body {
 }
 @media (min-width: 576px) {
   #biography-photo {
-    width: 360px;
-    height: 360px;
+    width: 230px;
+    height: 230px;
     padding-top: 0;
   }
 }
