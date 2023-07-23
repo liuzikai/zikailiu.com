@@ -20,8 +20,9 @@
 }
 
 .camera-info-icon {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    position: relative;
     top: -0.15rem;
     @include media-breakpoint-up(md) {
         width: 2.75rem;
