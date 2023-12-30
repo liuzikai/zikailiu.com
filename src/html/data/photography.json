@@ -305,6 +305,122 @@
       ]
     },
     {
+      "heading": "March 2023 &bull; Paris, France",
+      "coverThumbnail": "thumbnails/Paris-1.jpg",
+      "coverImage": "photos/Paris-1.jpg",
+      "coverText": "Eiffel Tower",
+      "additionalPhotos": [
+        {
+          "image": "photos/Paris-2.jpg",
+          "text": "Place de la Concorde, where we encountered a protest and the police locking the roads"
+        },
+        {
+          "image": "photos/Paris-3.jpg",
+          "text": "In a museum"
+        },
+        {
+          "image": "photos/Paris-4.jpg",
+          "text": "Along the Seine River"
+        },
+        {
+          "image": "photos/Paris-5.jpg",
+          "text": "Under the Arc de Triomphe"
+        },
+        {
+          "image": "photos/Paris-6.jpg",
+          "text": "Rainbow on the Arc de Triomphe"
+        },
+        {
+          "image": "photos/Paris-7.jpg",
+          "text": "Some military ceremony held under the Arc de Triomphe"
+        },
+        {
+          "image": "photos/Paris-8.jpg",
+          "text": "In front of the Louvre"
+        }
+      ]
+    },
+    {
+      "heading": "August 2023 &bull; Istanbul, Turkey",
+      "coverThumbnail": "thumbnails/Istanbul-1.jpg",
+      "coverImage": "photos/Istanbul-1.jpg",
+      "coverText": "A cat in Istanbul",
+      "additionalPhotos": [
+        {
+          "image": "photos/Istanbul-2.jpg",
+          "text": "Another cat in Istanbul"
+        },
+        {
+          "image": "photos/Istanbul-3.jpg",
+          "text": "Yet another cat in Istanbul"
+        },
+        {
+          "image": "photos/Istanbul-4.jpg",
+          "text": "Near the Blue Mosque"
+        },
+        {
+          "image": "photos/Istanbul-5.jpg",
+          "text": "Bosphorus Strait"
+        },
+        {
+          "image": "photos/Istanbul-6.jpg",
+          "text": "Bosphorus Strait"
+        },
+        {
+          "image": "photos/Istanbul-7.jpg",
+          "text": "Walking along the coast"
+        },
+        {
+          "image": "photos/Istanbul-8-2.jpg",
+          "text": "Walking along the coast"
+        },
+        {
+          "image": "photos/Istanbul-9-2.jpg",
+          "text": "A cat on the street"
+        }
+      ]
+    },
+    {
+      "heading": "December 2023 &bull; Santorini, Greece",
+      "coverThumbnail": "thumbnails/Santorini-1.jpg",
+      "coverImage": "photos/Santorini-1.jpg",
+      "coverText": "Blue and white away from the crowd",
+      "additionalPhotos": [
+        {
+          "image": "photos/Santorini-2.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-3.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-4.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-5.jpg",
+          "text": "Me and a cat"
+        },
+        {
+          "image": "photos/Santorini-6.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-7.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-8.jpg",
+          "text": "Oia"
+        },
+        {
+          "image": "photos/Santorini-9.jpg",
+          "text": "A proud dog"
+        }
+      ]
+    },
+    {
       "heading": "2021&ndash;2023 &bull; Winter Collection",
       "coverThumbnail": "thumbnails/Interlaken-2.jpg",
       "coverImage": "photos/Interlaken-2.jpg",
