@@ -36,10 +36,10 @@ window.addEventListener("DOMContentLoaded", event => {
             return;
         }
         if (window.scrollY <= 0) {
-            navbarCollapsible.classList.remove("navbar-shrink")
+            // navbarCollapsible.classList.remove("navbar-shrink")
             // Do not restart the scroll indicator animation
         } else {
-            navbarCollapsible.classList.add("navbar-shrink")
+            // navbarCollapsible.classList.add("navbar-shrink")
 
             // Stop the scroll indicator animation smoothly
             Array.from(scrollIndicators).forEach(el => {
