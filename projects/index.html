@@ -25,7 +25,7 @@
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/js/scripts.min.js" as="script">
 </head>
-<body id="page-top">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#projectNav" data-bs-offset="200" style="position: relative;">
 <!-- Embedded SVGs -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
     <defs>
@@ -146,11 +146,95 @@
     </div>
 </header>
 
+<!-- Additional Embedded SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+        <symbol id="proj-robomaster" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/>
+            <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/>
+        </symbol>
+        <symbol id="proj-joystick" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2"/>
+            <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+        </symbol>
+        <symbol id="proj-klc3" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd"
+                  d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/>
+        </symbol>
+        <symbol id="proj-charging" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/>
+        </symbol>
+        <symbol id="proj-os" viewBox="0 0 16 16" fill="currentColor">
+            <text transform="matrix(1 0 0 1 5.328083e-02 12.0681)" style=font-size:11px;">OS</text>
+        </symbol>
+        <symbol id="proj-chip" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+        </symbol>
+    </defs>
+</svg>
+<!-- Project Navigation -->
+<nav class="project-nav nav flex-column" id="projectNav" style="opacity: 0">
+    <a class="nav-link" href="#roboMaster">
+        <svg>
+            <use xlink:href="#proj-robomaster"></use>
+        </svg>
+    </a>
+    <a class="nav-link" href="#netEaseGame">
+        <svg>
+            <use xlink:href="#proj-joystick"></use>
+        </svg>
+    </a>
+    <a class="nav-link" href="#klc3">
+        <svg>
+            <use xlink:href="#proj-klc3"></use>
+        </svg>
+    </a>
+    <a class="nav-link" href="#wirelessChargingTable">
+        <svg>
+            <use xlink:href="#proj-charging"></use>
+        </svg>
+    </a>
+    <a class="nav-link show-lg" href="#combinedOS">
+        <svg>
+            <use xlink:href="#proj-os"></use>
+        </svg>
+    </a>
+    <nav class="nav flex-column hidden-lg">
+        <a class="nav-link" href="#auroraOS">
+            <svg>
+                <use xlink:href="#proj-os"></use>
+            </svg>
+        </a>
+        <a class="nav-link" href="#ozone">
+            <svg>
+                <use xlink:href="#proj-os"></use>
+            </svg>
+        </a>
+    </nav>
+    <a class="nav-link show-lg" href="#combinedChip">
+        <svg>
+            <use xlink:href="#proj-chip"></use>
+        </svg>
+    </a>
+    <nav class="nav flex-column hidden-lg">
+        <a class="nav-link" href="#riscvProcessor">
+            <svg>
+                <use xlink:href="#proj-chip"></use>
+            </svg>
+        </a>
+        <a class="nav-link" href="#boxhead">
+            <svg>
+                <use xlink:href="#proj-chip"></use>
+            </svg>
+        </a>
+    </nav>
+</nav>
+
 <!-- Projects-->
 <section class="projects-section bg-black" id="projects">
     <div class="container px-1 px-lg-5">
         <!-- RoboMaster -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
+        <div class="row gx-0 justify-content-center align-items-center project-container" id="roboMaster">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 px-lg-5 project-svg-container pb-1 pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
                 <div class="icon-placeholder text-center text-white-50"
@@ -300,7 +384,7 @@
         </div>
 
         <!-- NetEase Game -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
+        <div class="row gx-0 justify-content-center align-items-center project-container" id="netEaseGame">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 project-svg-container pb-4 pb-lg-0">
                 <div class="h-auto">
                     <div class="icon-placeholder text-center text-white-50"
@@ -408,7 +492,7 @@
         </div>
 
         <!-- KLC3 -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
+        <div class="row gx-0 justify-content-center align-items-center project-container" id="klc3">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 px-lg-5 project-svg-container pb-0 pb-lg-5">
                 <!-- pb-lg-5 shift it up a little -->
                 <div class="icon-placeholder text-center text-white-50" data-include="/assets/klc3-icon.svg">
@@ -581,7 +665,7 @@
         </div>
 
         <!-- Wireless Charging Table -->
-        <div class="row gx-0 justify-content-center align-items-center project-container">
+        <div class="row gx-0 justify-content-center align-items-center project-container" id="wirelessChargingTable">
             <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container pb-4 pb-lg-0">
                 <div class="h-auto">
                     <div class="icon-placeholder text-center text-white-50"
@@ -715,12 +799,12 @@
         <!-- Full page < lg, in two columns when >= lg -->
         <!-- d-flex required to centralize vertically using my-lg-auto when >= lg -->
         <!-- project-container has no effect when < lg since it only claims min-height -->
-        <div class="justify-content-center align-items-center project-container d-flex">
+        <div class="justify-content-center align-items-center project-container d-flex" id="combinedOS">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
             <div class="container my-lg-auto">
                 <div class="row gx=0">
-                    <div class="col-lg-6 project-container-down-lg d-flex">
+                    <div class="col-lg-6 project-container-down-lg d-flex" id="auroraOS">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
@@ -755,7 +839,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 project-container-down-lg d-flex">
+                    <div class="col-lg-6 project-container-down-lg d-flex" id="ozone">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
@@ -969,12 +1053,12 @@
         <!-- Full page < lg, in two columns when >= lg -->
         <!-- d-flex required to centralize vertically using my-lg-auto when >= lg -->
         <!-- project-container has no effect when < lg since it only claims min-height -->
-        <div class="justify-content-center align-items-center project-container d-flex">
+        <div class="justify-content-center align-items-center project-container d-flex" id="combinedChip">
             <!-- When >= lg, two projects are aligned top (mt-lg-0) to row while this row is centralized vertically -->
             <!-- When < lg, they are no longer col-lg but project-container, and my-auto inside centralize stuff    -->
             <div class="container my-lg-auto">
                 <div class="row gx-0">
-                    <div class="col-lg-6 project-container-down-lg d-flex">
+                    <div class="col-lg-6 project-container-down-lg d-flex" id="riscvProcessor">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->
@@ -1005,7 +1089,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 project-container-down-lg d-flex">
+                    <div class="col-lg-6 project-container-down-lg d-flex" id="boxhead">
                         <div class="mt-lg-0 mb-lg-0 my-auto"> <!-- d-flex of parent + this div gives vertical center -->
                             <div class="mb-4 mx-auto project-svg-container mt-auto mt-lg-0">
                                 <!-- need both mx-auto, why? -->

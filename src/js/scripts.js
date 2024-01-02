@@ -17,6 +17,8 @@ import ScrollSpy from "bootstrap/js/src/scrollspy"
 // import Tab from "bootstrap/js/src/tab"
 // import Toast from "bootstrap/js/src/toast"
 // import Tooltip from "bootstrap/js/src/tooltip"
+
+// BaguetteBox
 import baguetteBox from './baguettebox.js';
 
 // GSAP
@@ -346,6 +348,21 @@ window.addEventListener("DOMContentLoaded", event => {
             return () => { // optional
                 // custom cleanup code here (runs when it STOPS matching)
             };
+        });
+
+    } else if (currentPage === "projects") {
+
+        gsap.to(document.getElementById("projectNav"), {
+            scrollTrigger: {
+                trigger: document.getElementById("projects"),
+                start: "top bottom",
+                end: "top 50%",
+                invalidateOnRefresh: true,
+                scrub: 2,
+                // markers: true,
+            },
+            opacity: 1,
+            ease: "power1.in",
         });
 
     } else if (currentPage === "photography") {

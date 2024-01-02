@@ -12504,6 +12504,21 @@
               };
           });
 
+      } else if (currentPage === "projects") {
+
+          gsapWithCSS.to(document.getElementById("projectNav"), {
+              scrollTrigger: {
+                  trigger: document.getElementById("projects"),
+                  start: "top bottom",
+                  end: "top 50%",
+                  invalidateOnRefresh: true,
+                  scrub: 2,
+                  // markers: true,
+              },
+              opacity: 1,
+              ease: "power1.in",
+          });
+
       } else if (currentPage === "photography") {
 
           baguetteBox.run('.compact-gallery', { animation: 'slideIn', overlayBackgroundColor:'rgba(0, 0, 0, 0.9)' });
