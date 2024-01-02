@@ -12201,7 +12201,7 @@
               Array.from(scrollIndicators).forEach(el => {
                   el.addEventListener('animationiteration', _ => {
                       el.classList.remove("scroll-indicator-path-active");
-                  }, {once : true});
+                  }, {once: true});
               });
           }
 
@@ -12510,7 +12510,7 @@
               scrollTrigger: {
                   trigger: document.getElementById("projects"),
                   start: "top bottom",
-                  end: "top 50%",
+                  end: "top 25%",
                   invalidateOnRefresh: true,
                   scrub: 2,
                   // markers: true,
@@ -12521,7 +12521,7 @@
 
       } else if (currentPage === "photography") {
 
-          baguetteBox.run('.compact-gallery', { animation: 'slideIn', overlayBackgroundColor:'rgba(0, 0, 0, 0.9)' });
+          baguetteBox.run('.compact-gallery', {animation: 'slideIn', overlayBackgroundColor: 'rgba(0, 0, 0, 0.9)'});
 
       }
   });

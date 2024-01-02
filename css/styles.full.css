@@ -14629,7 +14629,7 @@ body {
   position: fixed;
   right: 0.75rem;
   list-style: none;
-  top: 50%;
+  top: 50vh;
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
