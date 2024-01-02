@@ -44,7 +44,7 @@
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^13.3.0",
         "autoprefixer": "10.4.4",
-        "browser-sync": "^2.27.11",
+        "browser-sync": "^3.0.2",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
         "gsap": "^3.11.4",
