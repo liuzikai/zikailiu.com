@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description"
-          content="I am a Master's student in Computer Science at ETH Zurich. Generally interested in all aspects of computer systems, from semiconductors to code."/>
+          content="PhD student in Computer Science at ETH Zürich with Prof. Timothy Roscoe. I am generally interested in computer systems, including operating systems, architecture, compilers, and software engineering."/>
     <meta name="author" content="Zikai Liu"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,6 +28,36 @@
         #description header {
             font-size: 20pt;
             font-weight: 700;
+        }
+
+        #photoContainer {
+            max-width: 200px;
+            padding-right: 1rem;
+            flex-basis: 200px;
+            flex-shrink: 1
+        }
+
+        @media (max-width: 425px) {
+            #photoContainer {
+                flex-basis: 133px;
+                max-width: 133px;
+            }
+        }
+
+        #photo {
+            background-image: url(zikai.jpg);
+            background-position: center;
+            background-size: cover;
+            max-width: 200px;
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+        }
+
+        @media (max-width: 425px) {
+            #photo {
+                padding-top: 133%;
+            }
         }
 
         #navigation {
@@ -73,15 +103,15 @@
 <body>
 <div id="description">
     <div style="display: flex;">
-        <div style="max-width: 200px; padding-right: 1rem">
-            <img src="zikai.jpg" style="max-width: 100%" alt="my photo in 2023">
+        <div id="photoContainer">
+            <div id="photo"></div>
         </div>
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
             <div style="align-self: flex-start;">
                 <header>Zikai Liu</header>
                 <b><a href="mailto:zikai.liu@inf.ethz.ch">zikai.liu@inf.ethz.ch</a></b>
             </div>
-            <div style="">
+            <div>
                 Doctoral Student<br>
                 STF H 326<br>
                 <a target="_blank" rel="noopener noreferrer" href="https://systems.ethz.ch"
@@ -106,7 +136,10 @@
         [&nbsp;<a href="#experience">Experience</a>&nbsp;]
         [&nbsp;<a target="_blank" rel="noopener noreferrer" href="zikai-cv-2024-01.pdf"
                   aria-label="Download my CV in PDF">C.V.&nbsp;in&nbsp;PDF</a>&nbsp;]
-        [&nbsp;<a href="https://zikailiu.com" aria-label="Visit my blog">Blog</a>&nbsp;&nearr;&nbsp;]
+        [&nbsp;<a href="https://zikailiu.com" aria-label="Visit my blog">Blog</a>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="0.75rem" height="0.75rem" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+    </svg>&nbsp;]
     </p>
 </div>
 <div id="biography">
@@ -114,21 +147,20 @@
                                                   href="https://people.inf.ethz.ch/troscoe/"
                                                   aria-label="Visit the website of Timothy Roscoe">Prof. Timothy
         Roscoe</a> in the Systems Group at ETH Zürich.</p>
-    <p>I am generally interested in computer systems, including microarchitecture, operating systems, compilers, and
-        software engineering. I am diving into those areas with my research and study, while exploring some others
-        (augmented/mixed reality, human-computer interaction, design).</p>
+    <p>I am generally interested in computer systems, including operating systems, architecture, compilers, and
+        software engineering. My other areas of interest include VR/AR, frontend, design and photography.</p>
 </div>
 <div class="section" id="education">
     <header>Education</header>
     <ul>
         <li>
             <p>
-                <strong>Doctoral Student in Computer Science</strong>
+                <strong>Doctor of Science (PhD) in Computer Science</strong>
                 <br>
                 <a target="_blank" rel="noopener noreferrer" href="https://ethz.ch/"
                    aria-label="Visit the official website of ETH Zürich">ETH Zürich</a>, Switzerland
                 <br>
-                November 2023 &ndash; present
+                November 2023&ndash;ongoing
                 <br>
                 Advisor: <a target="_blank" rel="noopener noreferrer" href="https://people.inf.ethz.ch/troscoe/"
                             aria-label="Visit the website of Timothy Roscoe">Prof. Timothy Roscoe</a>
@@ -141,7 +173,7 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://ethz.ch/"
                    aria-label="Visit the official website of ETH Zürich">ETH Zürich</a>, Switzerland
                 <br>
-                September 2021 &ndash; September 2023
+                September 2021&ndash;September 2023
             </p>
         </li>
         <li>
@@ -152,7 +184,7 @@
                    aria-label="Visit the official website of University of Illinois at Urbana-Champaign">University of
                     Illinois at Urbana-Champaign</a>, United States
                 <br>
-                September 2017 &ndash; June 2021
+                September 2017&ndash;June 2021
                 <br>
                 Highest Honors
                 <br>
@@ -165,7 +197,7 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://www.zju.edu.cn/english/"
                    aria-label="Visit the official website of Zhejiang University">Zhejiang University</a>, China
                 <br>
-                September 2017 &ndash; June 2021
+                September 2017&ndash;June 2021
                 <br>
                 Outstanding Graduate
             </p>
@@ -182,7 +214,8 @@
                 <strong>Zikai Liu</strong>
                 <br>
                 Master Thesis, ETH Zürich, September 2023<br>
-                [<a target="_blank" rel="noopener noreferrer" href="https://www.research-collection.ethz.ch/handle/20.500.11850/632755"
+                [<a target="_blank" rel="noopener noreferrer"
+                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/632755"
                     aria-label="View my Master Thesis on ETH Zürich Research Collection">ETHZ</a>]
             </p>
         </li>
@@ -251,7 +284,7 @@
 <div class="section" id="experience">
     <header>Experience</header>
     <p class="text-center">More in my [<a href="https://zikailiu.com/projects" aria-label="Visit my project portfolio">Project
-        Portfolio</a> &nearr;]</p>
+        Portfolio</a>]</p>
     <ul>
         <li>
             <p>
@@ -259,7 +292,7 @@
                 <br>
                 Control Group Lead & Project Manager, CV Group Lead
                 <br>
-                2018 &ndash; 2021
+                2018&ndash;2021
             </p>
         </li>
         <li>
@@ -277,7 +310,7 @@
                 <br>
                 Platform Engineer Intern
                 <br>
-                June 2020 &ndash; August 2020
+                June 2020&ndash;August 2020
             </p>
         </li>
     </ul>
@@ -289,7 +322,7 @@
         [<a target="_blank" rel="noopener noreferrer" href="https://github.com/liuzikai"
             aria-label="Visit my GitHub profile">GitHub</a>]
     </p>
-    <p class="text-center"><b>Copyright &copy; 2023 Zikai Liu, all rights reserved</b></p>
+    <p class="text-center"><b>Copyright &copy; 2023&ndash;2024 Zikai&nbsp;Liu, all rights reserved</b></p>
 </div>
 </body>
 </html>
