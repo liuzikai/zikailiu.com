@@ -2204,8 +2204,18 @@ body {
   }
 }
 .masthead .masthead-text {
-  font-size: 1.25rem;
+  font-size: 2.5vmax;
   font-weight: lighter;
+}
+@media (min-width: 576px) {
+  .masthead .masthead-text {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .masthead .masthead-text {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 1200px) {
   .masthead .masthead-text {
@@ -2553,6 +2563,7 @@ body {
   -webkit-justify-content: center;
      -moz-box-pack: center;
           justify-content: center;
+  will-change: transform;
 }
 @media (min-width: 992px) {
   #homeSection {
@@ -2619,8 +2630,8 @@ body {
 
 @media (max-width: 767.98px) {
   .biography-link {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 992px) {

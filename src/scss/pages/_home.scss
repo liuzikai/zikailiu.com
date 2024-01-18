@@ -45,6 +45,7 @@
     min-height: 175vh;
     display: block;
   }
+  will-change: transform;
 }
 
 #biographyContainer {
@@ -94,8 +95,8 @@
 
 .biography-link {
   @include media-breakpoint-down(md) {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   @include media-breakpoint-up(lg) {
     width: 180px;
