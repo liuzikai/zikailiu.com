@@ -42,7 +42,6 @@
   -webkit-transform: translateY(150px);
      -moz-transform: translateY(150px);
       -ms-transform: translateY(150px);
-       -o-transform: translateY(150px);
           transform: translateY(150px);
   -webkit-animation: come-in 0.8s ease forwards;
      -moz-animation: come-in 0.8s ease forwards;
@@ -74,7 +73,6 @@
   to {
     -webkit-transform: translateY(0);
        -moz-transform: translateY(0);
-         -o-transform: translateY(0);
             transform: translateY(0);
   }
 }
@@ -544,7 +542,6 @@ output {
   border-radius: 0.25rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -552,7 +549,6 @@ output {
 @media (prefers-reduced-motion: reduce) {
   .btn {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -572,14 +568,12 @@ output {
 
 .fade {
   -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
   -moz-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 @media (prefers-reduced-motion: reduce) {
   .fade {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -596,14 +590,12 @@ output {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -626,14 +618,12 @@ output {
   padding: 1.25rem 1.5rem;
   color: #000;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -735,7 +725,6 @@ output {
   border-radius: 0.25rem;
   -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
   transition: -webkit-box-shadow 0.15s ease-in-out;
-  -o-transition: box-shadow 0.15s ease-in-out;
   -moz-transition: box-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -743,7 +732,6 @@ output {
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -873,20 +861,17 @@ output {
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   -moz-transition: transform 0.3s ease-out, -moz-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -moz-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -moz-transform 0.3s ease-out;
   -webkit-transform: translate(0, -50px);
      -moz-transform: translate(0, -50px);
       -ms-transform: translate(0, -50px);
-       -o-transform: translate(0, -50px);
           transform: translate(0, -50px);
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     -webkit-transition: none;
-    -o-transition: none;
     -moz-transition: none;
     transition: none;
   }
@@ -1026,7 +1011,6 @@ output {
   to {
     -webkit-transform: rotate(360deg) /* rtl:ignore */;
        -moz-transform: rotate(360deg) /* rtl:ignore */;
-         -o-transform: rotate(360deg) /* rtl:ignore */;
             transform: rotate(360deg) /* rtl:ignore */;
   }
 }
@@ -1059,14 +1043,12 @@ output {
   0% {
     -webkit-transform: scale(0);
        -moz-transform: scale(0);
-         -o-transform: scale(0);
             transform: scale(0);
   }
   50% {
     opacity: 1;
     -webkit-transform: none;
        -moz-transform: none;
-         -o-transform: none;
             transform: none;
   }
 }
@@ -1474,7 +1456,6 @@ output {
   background-color: #222;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
@@ -1573,10 +1554,9 @@ output {
   white-space: nowrap;
   -webkit-transition: left 0.4s ease, -webkit-transform 0.4s ease;
   transition: left 0.4s ease, -webkit-transform 0.4s ease;
-  -o-transition: left 0.4s ease, -o-transform 0.4s ease;
   -moz-transition: left 0.4s ease, transform 0.4s ease, -moz-transform 0.4s ease;
   transition: left 0.4s ease, transform 0.4s ease;
-  transition: left 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease, -o-transform 0.4s ease;
+  transition: left 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease;
 }
 #baguetteBox-slider.bounce-from-right {
   -webkit-animation: bounceFromRight 0.4s ease-out;
@@ -1679,7 +1659,6 @@ output {
   color: #ddd;
   font: 1.6em sans-serif;
   -webkit-transition: background-color 0.4s ease;
-  -o-transition: background-color 0.4s ease;
   -moz-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
 }
@@ -1769,13 +1748,11 @@ output {
   0%, 100% {
     -webkit-transform: scale(0);
        -moz-transform: scale(0);
-         -o-transform: scale(0);
             transform: scale(0);
   }
   50% {
     -webkit-transform: scale(1);
        -moz-transform: scale(1);
-         -o-transform: scale(1);
             transform: scale(1);
   }
 }
@@ -1791,7 +1768,6 @@ body {
 
 .navbar {
   -webkit-transition: background-color 0.2s ease-in-out;
-  -o-transition: background-color 0.2s ease-in-out;
   -moz-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
   /* border-bottom-color transition behaviors weirdly on Safari */
@@ -1839,73 +1815,62 @@ body {
   -webkit-transform-origin: 8px 4px;
      -moz-transform-origin: 8px 4px;
       -ms-transform-origin: 8px 4px;
-       -o-transform-origin: 8px 4px;
           transform-origin: 8px 4px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
   -moz-transition: transform 0.5s, -moz-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s;
 }
 #mainNav .navbar-toggler .navbar-line.two {
   -webkit-transform-origin: 8px 8px;
      -moz-transform-origin: 8px 8px;
       -ms-transform-origin: 8px 8px;
-       -o-transform-origin: 8px 8px;
           transform-origin: 8px 8px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
   -moz-transition: transform 0.5s, -moz-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s;
 }
 #mainNav .navbar-toggler .navbar-line.three {
   -webkit-transform-origin: 8px 12px;
      -moz-transform-origin: 8px 12px;
       -ms-transform-origin: 8px 12px;
-       -o-transform-origin: 8px 12px;
           transform-origin: 8px 12px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
   -moz-transition: transform 0.5s, -moz-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s;
 }
 #mainNav .navbar-toggler.collapsed .navbar-line {
   -webkit-transform: none;
      -moz-transform: none;
       -ms-transform: none;
-       -o-transform: none;
           transform: none;
 }
 #mainNav .navbar-toggler:not(.collapsed) .navbar-line.one {
   -webkit-transform: translate(0, 4px) rotate(45deg);
      -moz-transform: translate(0, 4px) rotate(45deg);
       -ms-transform: translate(0, 4px) rotate(45deg);
-       -o-transform: translate(0, 4px) rotate(45deg);
           transform: translate(0, 4px) rotate(45deg);
 }
 #mainNav .navbar-toggler:not(.collapsed) .navbar-line.two {
   -webkit-transform: scale(0, 1);
      -moz-transform: scale(0, 1);
       -ms-transform: scale(0, 1);
-       -o-transform: scale(0, 1);
           transform: scale(0, 1);
 }
 #mainNav .navbar-toggler:not(.collapsed) .navbar-line.three {
   -webkit-transform: translate(0, -4px) rotate(-45deg);
      -moz-transform: translate(0, -4px) rotate(-45deg);
       -ms-transform: translate(0, -4px) rotate(-45deg);
-       -o-transform: translate(0, -4px) rotate(-45deg);
           transform: translate(0, -4px) rotate(-45deg);
 }
 #mainNav .navbar-invisible-shrink {
   opacity: 1;
   -webkit-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
   -moz-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
@@ -1921,7 +1886,6 @@ body {
   }
   #mainNav .nav-link {
     -webkit-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
   }
@@ -2082,7 +2046,6 @@ body {
   -webkit-transform: none;
      -moz-transform: none;
       -ms-transform: none;
-       -o-transform: none;
           transform: none;
 }
 
@@ -2112,7 +2075,6 @@ body {
 
 .gallery-block.compact-gallery .item .image {
   -webkit-transition: 0.8s ease;
-  -o-transition: 0.8s ease;
   -moz-transition: 0.8s ease;
   transition: 0.8s ease;
 }
@@ -2132,7 +2094,6 @@ body {
   opacity: 1;
   color: #fff;
   -webkit-transition: 0.8s ease;
-  -o-transition: 0.8s ease;
   -moz-transition: 0.8s ease;
   transition: 0.8s ease;
   text-align: center;
@@ -2167,7 +2128,6 @@ body {
     -webkit-transform: scale(1.3);
        -moz-transform: scale(1.3);
         -ms-transform: scale(1.3);
-         -o-transform: scale(1.3);
             transform: scale(1.3);
     opacity: 0.7;
   }
@@ -2458,7 +2418,6 @@ body {
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
@@ -2782,7 +2741,6 @@ body {
 
 .back-to-home-link {
   -webkit-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
