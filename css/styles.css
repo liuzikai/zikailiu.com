@@ -1952,6 +1952,11 @@ body {
   stroke-dashoffset: 575;
 }
 
+#hololens-animated-svg, #hololens-side-animated-svg {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+}
+
 #wireless-charging-table-animated-svg, #wireless-charging-table-side-animated-svg {
   stroke-dasharray: 550;
   stroke-dashoffset: 550;

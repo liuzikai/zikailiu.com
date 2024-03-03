@@ -18,6 +18,10 @@
             <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2"/>
             <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
         </symbol>
+        <symbol id="proj-hololens" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+            <path d="M4.508 11h1.429l1.99-5.999H6.61L5.277 9.708H5.22L3.875 5.001H2.5zm6.387-5.999H8.5V11h1.173V8.763h1.064L11.787 11h1.327L11.91 8.583C12.455 8.373 13 7.779 13 6.9c0-1.147-.773-1.9-2.105-1.9zm-1.222 2.87V5.933h1.05c.63 0 1.05.347 1.05.989 0 .633-.408.95-1.067.95z"/>
+        </symbol>
         <symbol id="proj-klc3" viewBox="0 0 16 16" fill="currentColor">
             <path fill-rule="evenodd"
                   d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/>
@@ -44,6 +48,11 @@
     <a class="nav-link" href="#netEaseGame">
         <svg>
             <use xlink:href="#proj-joystick"></use>
+        </svg>
+    </a>
+    <a class="nav-link" href="#hololens3DScanning">
+        <svg>
+            <use xlink:href="#proj-hololens"></use>
         </svg>
     </a>
     <a class="nav-link" href="#klc3">
@@ -107,8 +116,8 @@
             <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">RoboMaster</h2>
                 <p class="slide-in-text">
-                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build combat robots for
-                    competitions.
+                    At the <span class="text-white">ZJU-UIUC Robotics Team,</span> we build robots for the RoboMaster
+                    competition.
                 </p>
                 <p class="slide-in-text">
                     Being the <span class="text-white">Control Group Lead</span> and
@@ -155,12 +164,12 @@
                                             <span class="text-white">Robotics of ZJU-UIUC Joint
                                             Institute </span>
                                             was founded in 2018. I was one of the founding members.
-                                            We target the <a target="_blank" rel="noopener noreferrer"
-                                                             href="https://www.robomaster.com">RoboMaster</a>
-                                            competition and build our robots from scratch.
+                                            We targeted the <a target="_blank" rel="noopener noreferrer"
+                                                               href="https://www.robomaster.com">RoboMaster</a>
+                                            competition and built our robots from scratch.
                                             As a new team at a new campus without any experience and
-                                            technology heritage, unfortunately, we didn't make it to the competition in
-                                            2018.
+                                            technology heritage, unfortunately, in 2018, we didn't make it to the
+                                            competition.
                                         </p>
                                         <p class="image-caption" id="meta-name" style="display: none;">
                                             ? Yes, Facebook was not yet Meta back then
@@ -168,39 +177,40 @@
                                         <p>
                                             In 2019, I took the role of the <span class="text-white">Control Group
                                             Lead</span>. I led the development of embedded control programs and
-                                            electric systems for the robots, built from the ground up.
-                                            In addition, we developed a cross-platform build system for
-                                            STM32 microcontroller, supporting Windows, Linux, and macOS.
-                                            We also developed a system for wireless parameter tuning
-                                            with a graphic user interface (GUI). During the 2019 season, I contributed
-                                            70k+ lines of C++ code and 20+ documents.
+                                            electric systems for robots, built from the ground up.
+                                            We developed a cross-platform build system for STM32 microcontrollers,
+                                            supporting Windows, Linux, and macOS.
+                                            To ease the parameter tuning work, we also developed a wireless parameter
+                                            tuning utility with a graphic user interface (GUI). During the 2019 season,
+                                            I contributed 70k+ lines of C++ code and 20+ documents to the codebase.
                                         </p>
                                         <p>
                                             Among the things we have built, I am most proud of the attitude and heading
-                                            reference system (AHRS), in which a gyroscope, an accelerometer and a
-                                            magnetometer are integrated to calculate the absolute angle of the targeting
-                                            gimbal. Together with the motor control system, our robots were able to
+                                            reference system (AHRS).
+                                            In this subsystem, a gyroscope, an accelerometer and a magnetometer are
+                                            integrated to calculate the absolute angle of the targeting gimbal.
+                                            Together with the motor control system, our robots were able to
                                             stabilize the gimbal while rotating the chassis to evade incoming bullets,
-                                            which provided conspicuous advantages to us in the competition.
+                                            which provided us considerable advantage in the competition.
                                         </p>
                                         <p>
                                             At the same time, I worked as the <span class="text-white">Project
                                             Manager</span> in 2019 season.
                                             I was responsible for scheduling the overall development timeline and
                                             coordinating different groups.
-                                            I arranged the weekly stand-up meetings, when members exchanged updates and
-                                            laid down the upcoming schedule. Together with other team leaders, we kept
-                                            the whole team forward.
+                                            I arranged the weekly stand-up meetings, where members exchanged updates and
+                                            settled the upcoming schedule.
+                                            Together with other team leaders, we kept the whole team moving forward.
                                         </p>
                                         <p>
-                                            In RoboMaster 2019 International Regional Competition, as our debut, we won
-                                            <a class="text-white" target="_blank" rel="noopener noreferrer"
-                                               href="https://zjui.intl.zju.edu.cn/en/news/746">the fifth place</a> among
-                                            the international teams.
+                                            In the RoboMaster 2019 International Regional Competition, as our debut, we
+                                            won <a class="text-white" target="_blank" rel="noopener noreferrer"
+                                                   href="https://zjui.intl.zju.edu.cn/en/news/746">the fifth place</a>
+                                            among all the international teams.
+                                            It's only achievable with the joint effort of the whole team.
                                         </p>
                                         <p>
-                                            From 2020 to 2021, I worked as the <span
-                                                    class="text-white">Vision Group Lead </span>
+                                            From 2020 to 2021, I worked as the <span class="text-white">Vision Group Lead</span>
                                             of the team. I worked on a vision-assisted automatic aiming system,
                                             for which I have contributed 27k+ lines of C++ code.
                                         </p>
@@ -222,9 +232,11 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/robomaster-me.jpg"
                                              alt="RoboMaster 2019"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">RoboMaster 2019</p>
+                                        <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/robomaster-competition.jpg"
                                              alt="RoboMaster 2019"/>
                                         <p class="image-caption mt-2 mb-4">RoboMaster 2019</p>
@@ -341,10 +353,178 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/joystick-photo.jpg"
                                              alt="Various Joysticks"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">Various Joysticks</p>
+                                        <!-- Additional images -->
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hololens 3D Scanning -->
+        <div class="row gx-0 justify-content-center align-items-center project-container" id="hololens3DScanning">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container pb-4 pb-lg-0">
+                <div class="h-auto">
+                    <div class="icon-placeholder text-center text-white-50"
+                         data-include="/assets/hololens-icon.svg">Loading image...
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
+                <h2 class="project-header mb-3 slide-in-text">
+                    3D Scanning with Mixed Reality Headsets
+                </h2>
+                <p class="slide-in-text">
+                    A system for near-real-time 3D scanning and reconstruction on <span class="text-white">Microsoft HoloLens 2</span>.
+                    It uses the depth camera on the headset to acquire depth data. User holds the object in hands and
+                    gets visual feedback via the <span class="text-white">mixed reality</span> experience.
+                </p>
+                <div class="mt-4 text-end slide-in-text ">
+                    <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
+                       data-bs-target="#hololens3DScanningMore">
+                        READ MORE
+                        <svg width="1.2em" height="1.2em" style="position: relative; top: -0.15em">
+                            <use xlink:href="#bi-plus-circle-fill"></use>
+                        </svg>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="hololens3DScanningMore" tabindex="-1"
+             aria-labelledby="hololens3DScanningMoreLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg width="1em" height="1em">
+                            <use xlink:href="#bi-x-circle"></use>
+                        </svg>
+                    </button>
+                    <div class="modal-body px-0 py-0 py-lg-4">
+                        <div class="text-center hidden-lg">
+                            <img class="modal-image" src="" data-src="/assets/hololens-scanning.jpg"
+                                 alt="The 3D scanning process with mixed reality experience"/>
+                            <p class="image-caption mt-2 mb-0">The 3D Scanning Process with Mixed Reality Experience</p>
+                        </div>
+                        <div class="container">
+                            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
+                                <div class="col-lg-8 mt-0">
+                                    <div class="project-text w-100 my-auto text-start text-lg-left">
+                                        <p>
+                                            During the course <span
+                                                    class="text-white">Mixed Reality at ETH Zurich</span>, my teammates
+                                            and I developed a system for scanning and reconstructing irregular
+                                            geometries using a mixed-reality headset, Microsoft HoloLens 2.
+                                        </p>
+                                        <p>
+                                            Our goal was to provide <span class="text-white">near-real-time 3D scanning and reconstruction</span>.
+                                            The system consists of a HoloLens 2 and a host computer, connected
+                                            by a cable or wirelessly.
+                                            The user holds the object to scan in hands, and starts the scanning process
+                                            with an <span class="text-white">eye-tracking button</span> (the user can
+                                            have both hands occupied).
+                                            The system acquires depth data through the depth camera on HoloLens 2 and
+                                            converts them to point clouds.
+                                            The user is able to see the <span class="text-white">point cloud</span>
+                                            overlapping on the object with the mixed reality experience.
+                                            To scan the complete object, the user slowly rotates the object.
+                                            The point cloud follows.
+                                            When the user is satisfied with the result, the scanning process can be
+                                            stopped by the same eye-tracking button.
+                                            The <span class="text-white">reconstructed mesh</span> is further
+                                            post-processed on the computer.
+                                        </p>
+                                        <p>
+                                            The whole processing pipeline consists of multiple steps.
+                                            Without the joint effort of the team, none of these would have been
+                                            achieved.
+                                        </p>
+                                        <p>
+                                            The first step is to acquire the depth data.
+                                            The depth camera on HoloLens 2 can operate in two modes.
+                                            The long-throw mode is used for environment modeling.
+                                            The short-throw mode, known as <span class="text-white">AHAT (Articulated HAnd Tracking) mode</span>,
+                                            is originally used for hand tracking.
+                                            We use the latter since it provides high resolution and high frame rates.
+                                            A Unity-based app is deployed on HoloLens 2, which acquires data through the
+                                            Research Mode API.
+                                        </p>
+                                        <p>
+                                            HoloLens 2 has limited computation capability.
+                                            After some early-stage performance tests, we decided to put the remaining
+                                            pipeline on a host machine.
+                                            The depth data is streamed to the host via TCP through a wired or wireless
+                                            connection.
+                                            And then, the data is <span class="text-white">preprocessed</span>.
+                                            A lot of operations happen in this step, in addition to converting
+                                            depth images to point clouds.
+                                            For example, the depth image contains the user's hands.
+                                            We remove the part using a hand model and the HoloLens 2 built-in
+                                            hand-tracking functionality that provides coordinates of hand joints.
+                                        </p>
+                                        <p>
+                                            The next step is to <span
+                                                    class="text-white">register per-frame point clouds</span> into a
+                                            global point cloud.
+                                            We adopt a local ICP (iterative closet points) algorithm.
+                                            We do not make any assumption about the rotation direction.
+                                            Instead, we assume small movement between frames and adopt a
+                                            human-in-the-loop approach.
+                                            When the algorithm decides the movement is above a threshold, it pauses the
+                                            registration process and gives visual feedback to the user.
+                                            Once the user re-aligns the object with the point cloud, the registration
+                                            resumes.
+                                        </p>
+                                        <p>
+                                            Finally, once the point cloud is complete, the next step is to <span
+                                                    class="text-white">reconstruct the mesh</span>.
+                                            This step is computationally expensive and has a handful of parameters for
+                                            fine-tuning.
+                                            Therefore, this step is performed offline on the host machine.
+                                            It also involves a handful of denoising, smoothing, and voxelizing
+                                            algorithms.
+                                        </p>
+                                        <div class="mt-5 text-center ">
+                                            <a class="btn shadow-none project-details-link "
+                                               target="_blank"
+                                               rel="noopener noreferrer"
+                                               href="https://github.com/liuzikai/HoloScanner">
+                                                View on
+                                                <svg width="1em" height="1em" style="position: relative; top: -0.15em">
+                                                    <use xlink:href="#bi-github"></use>
+                                                </svg>
+                                                GitHub
+                                                <svg width="1em" height="1em" style="position: relative; top: -0.15em">
+                                                    <use xlink:href="#bi-chevron-right"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
+                                    <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
+                                        <img class="modal-image show-lg" src="" data-src="/assets/hololens-scanning.jpg"
+                                             alt="The 3D scanning process with mixed reality experience"/>
+                                        <p class="image-caption mt-2 mb-4 show-lg">The 3D Scanning Process with Mixed
+                                            Reality
+                                            Experience</p>
+                                        <!-- Additional images -->
+                                        <img class="modal-image" src="" data-src="/assets/hololens-illustration.jpg"
+                                             alt="Illustration of the scanning process"/>
+                                        <p class="image-caption mt-2 mb-4">Illustration of the Scanning Process</p>
+                                        <img class="modal-image" src="" data-src="/assets/hololens-result.jpg"
+                                             alt="Two reference objects and their reconstruction results"/>
+                                        <p class="image-caption mt-2 mb-4">Two Reference Objects and Their
+                                            Reconstruction Results</p>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -361,7 +541,7 @@
                     Loading image...
                 </div>
             </div>
-            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
+            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">KLC3</h2>
                 <p class="slide-in-text">
                     <!-- Non-break hyphen &#8209; -->
@@ -511,11 +691,13 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src=""
                                              data-src="/assets/klc3-ase2021-title.jpg"
                                              alt="My Presentation at ASE 2021"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">My Presentation at
                                             ASE 2021</p>
+                                        <!-- Additional images -->
                                     </div>
 
                                 </div>
@@ -535,7 +717,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 order-lg-first mt-0 mb-auto mb-lg-0 project-text text-start">
+            <div class="col-lg-8 mt-0 mb-auto mb-lg-0 project-text text-start">
                 <h2 class="project-header mb-3 slide-in-text">
                     Wireless Charging Table with Auto Alignment
                 </h2>
@@ -822,11 +1004,13 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src=""
                                              data-src="/assets/aurora-os-competition.jpg"
                                              alt="Our team at ECE391 design competition"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">
                                             Our Team at ECE391 Design Competition</p>
+                                        <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/aurora-os-photo.jpg"
                                              alt="AuroraOS"/>
                                         <p class="image-caption mt-2 mb-4">
@@ -895,10 +1079,12 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/ozone-team.jpg"
                                              alt="Our team and the teaching staff at the Advanced Operating Systems demo"/>
                                         <p class="image-caption mt-2 mb-0 show-lg">
                                             Our Team and the Teaching Staff at the Advanced Operating Systems Demo</p>
+                                        <!-- Additional images -->
                                     </div>
                                 </div>
                             </div>
@@ -1155,10 +1341,12 @@
                                 </div>
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
+                                        <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/boxhead-original.jpg"
                                              alt="Screenshot of the original Boxhead game: two players killing zombines"/>
                                         <p class="image-caption mt-2 mb-4 show-lg">
                                             Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
+                                        <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/boxhead-block-diagram.jpg"
                                              alt="Block diagram of the system"/>
                                         <p class="image-caption mt-2 mb-4">
