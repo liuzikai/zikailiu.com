@@ -92,9 +92,6 @@ The goal is to maximize compatibility.
 
 ## TODOs and Known Issues
 
-- [ ] `.slide-in-text` is also triggered when scrolling upward. Maybe replace it with GSAP ScrollTrigger
-  some day.
-
 ## Reference
 
 [REFERENCE.md](REFERENCE.md)

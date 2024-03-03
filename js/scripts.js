@@ -12257,6 +12257,8 @@
       // Get the array of all .slide-in-text
       let allSlideInTexts = [];
       for (const e of document.getElementsByClassName("slide-in-text")) {
+          let rec = e.getBoundingClientRect();
+          if (rec.top < 0) continue;  // already above, skip
           allSlideInTexts.push(e);
       }
 
