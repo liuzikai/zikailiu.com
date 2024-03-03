@@ -2021,26 +2021,27 @@ body {
   z-index: 9999;
   overflow: hidden;
   top: 0.6em;
-  left: 0.6em;
+  right: 0.6em;
+  font-size: 1.75rem;
   margin: 0;
   padding: 0;
-  font-size: 30px;
   line-height: 1;
   cursor: pointer;
-  background: none;
+  background: #333333;
   border: 0;
-  mix-blend-mode: difference;
-  color: white !important;
+  border-radius: 2rem;
+  color: #d6d6d6;
 }
 @media (min-width: 992px) {
   .modal-close {
     top: 1.5em;
-    left: 1.5em;
+    right: 1.5em;
+    font-size: 2rem;
   }
 }
 
 .modal-close:hover {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
 }
 
 .modal.fade .modal-dialog {
@@ -2271,12 +2272,6 @@ body {
 }
 .projects-section {
   padding: 5rem 0 0 0;
-}
-.projects-section .project-text {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 5rem;
   font-size: 1rem;
   /*@include media-breakpoint-up(md) {
       font-size: 1.25rem;
@@ -2287,6 +2282,22 @@ body {
   /*@include media-breakpoint-up(xxl) {
       font-size: 1.5rem;
   }*/
+}
+@media (min-width: 576px) {
+  .projects-section {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .projects-section {
+    font-size: 1.5rem;
+  }
+}
+.projects-section .project-text {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
@@ -2301,16 +2312,6 @@ body {
   -webkit-text-decoration-style: dotted;
      -moz-text-decoration-style: dotted;
           text-decoration-style: dotted;
-}
-@media (min-width: 576px) {
-  .projects-section .project-text {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1200px) {
-  .projects-section .project-text {
-    font-size: 1.5rem;
-  }
 }
 .projects-section .project-text .project-header {
   color: var(--bs-active-color);
@@ -2341,6 +2342,13 @@ body {
   -webkit-text-decoration-line: none !important;
      -moz-text-decoration-line: none !important;
           text-decoration-line: none !important;
+  color: #ffffff;
+  cursor: pointer;
+}
+.projects-section .read-more-button-circle {
+  position: relative;
+  top: -0.1em;
+  color: #1CABC4;
 }
 
 .image-caption {

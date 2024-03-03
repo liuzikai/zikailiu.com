@@ -25,24 +25,26 @@
     z-index: 9999;
     overflow: hidden;
     top: 0.6em;
-    left: 0.6em;
+    right: 0.6em;
+    font-size: 1.75rem;
     @include media-breakpoint-up(lg) {
         top: 1.5em;
-        left: 1.5em;
+        right: 1.5em;
+        font-size: 2rem;
     }
     margin: 0;
     padding: 0;
-    font-size: 30px;
     line-height: 1;
     cursor: pointer;
-    background: none;
+    background: #333333;
     border: 0;
-    mix-blend-mode: difference;
-    color: rgba(255, 255, 255, 1) !important;
+    border-radius: 2rem;
+    // mix-blend-mode: difference;
+    color: #d6d6d6;
 }
 
 .modal-close:hover {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #ffffff !important;
 }
 
 .modal.fade .modal-dialog {

@@ -3,225 +3,235 @@
 //
 
 .project-container {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 @include media-breakpoint-down(lg) {
-    .project-container-down-lg {
-        min-height: 100vh !important;
-    }
+  .project-container-down-lg {
+    min-height: 100vh !important;
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    .project-container-down-lg {
-        .project-text {
-            padding-left: 2.5rem !important;
-            padding-right: 2.5rem !important;
-        }
+  .project-container-down-lg {
+    .project-text {
+      padding-left: 2.5rem !important;
+      padding-right: 2.5rem !important;
     }
+  }
 }
 
 .projects-section {
-    padding: 5rem 0 0 0;
+  padding: 5rem 0 0 0;
 
-    .featured-text {
-        padding: 2rem;
+  // Customized responsive font sizes
+  font-size: 1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.25rem;
+  }
+  /*@include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+  }*/
+  @include media-breakpoint-up(xl) {
+    font-size: 1.5rem;
+  }
+  /*@include media-breakpoint-up(xxl) {
+      font-size: 1.5rem;
+  }*/
 
-        @include media-breakpoint-up(lg) {
-            padding: 0 0 0 2rem;
-            border-left: 0.5rem solid $primary;
-        }
+  .featured-text {
+    padding: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid $primary;
+    }
+  }
+
+  .project-text {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 5rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: 5rem;
     }
 
-    .project-text {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        padding-top: 1.5rem;
-        padding-bottom: 5rem;
-
-        @include media-breakpoint-up(lg) {
-            padding: 5rem;
-        }
-
-        a {
-            color: var(--bs-body-color);
-            text-decoration-line: underline;
-            text-decoration-style: dotted;
-        }
-
-        // Customized responsive font sizes
-        font-size: 1rem;
-        @include media-breakpoint-up(sm) {
-            font-size: 1.25rem;
-        }
-        /*@include media-breakpoint-up(md) {
-            font-size: 1.25rem;
-        }
-        @include media-breakpoint-up(lg) {
-            font-size: 1.25rem;
-        }*/
-        @include media-breakpoint-up(xl) {
-            font-size: 1.5rem;
-        }
-        /*@include media-breakpoint-up(xxl) {
-            font-size: 1.5rem;
-        }*/
-
-        .project-header {
-            color: var(--bs-active-color);
-
-            // Customized responsive font sizes
-            font-size: 1.75rem;
-            @include media-breakpoint-up(sm) {
-                font-size: 2rem;
-            }
-            /*@include media-breakpoint-up(md) {
-                font-size: 2rem;
-            }
-            @include media-breakpoint-up(lg) {
-                font-size: 2rem;
-            }*/
-            @include media-breakpoint-up(xl) {
-                font-size: 2.75rem;
-            }
-            @include media-breakpoint-up(xxl) {
-                font-size: 3rem;
-            }
-        }
-
-        .project-header-small {
-            color: var(--bs-active-color);
-
-            // Customized responsive font sizes
-            font-size: 1.75rem;
-            @include media-breakpoint-up(xl) {
-                font-size: 2.75rem;
-            }
-            @include media-breakpoint-up(xxl) {
-                font-size: 3rem;
-            }
-        }
+    a {
+      color: var(--bs-body-color);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
     }
 
-    .read-more-button, .project-details-link {
-        text-decoration-line: none !important;
+    .project-header {
+      color: var(--bs-active-color);
+
+      // Customized responsive font sizes
+      font-size: 1.75rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 2rem;
+      }
+      /*@include media-breakpoint-up(md) {
+          font-size: 2rem;
+      }
+      @include media-breakpoint-up(lg) {
+          font-size: 2rem;
+      }*/
+      @include media-breakpoint-up(xl) {
+        font-size: 2.75rem;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 3rem;
+      }
     }
+
+    .project-header-small {
+      color: var(--bs-active-color);
+
+      // Customized responsive font sizes
+      font-size: 1.75rem;
+      @include media-breakpoint-up(xl) {
+        font-size: 2.75rem;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .read-more-button, .project-details-link {
+    text-decoration-line: none !important;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .read-more-button-circle {
+    position: relative;
+    top: -0.1em;
+    color: #1CABC4;
+  }
 }
 
 .image-caption {
-    // Font color: .text-white-50
-    --bs-text-opacity: 1;
-    color: rgba(255, 255, 255, 0.5) !important;
-    margin-top: 0.5rem !important;  // mt-2
-    margin-bottom: 1.5rem !important;  // mb-4
+  // Font color: .text-white-50
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.5) !important;
+  margin-top: 0.5rem !important; // mt-2
+  margin-bottom: 1.5rem !important; // mb-4
 
-    // Customized responsive font sizes
+  // Customized responsive font sizes
+  font-size: 12px;
+  @include media-breakpoint-up(sm) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-up(lg) {
     font-size: 12px;
-    @include media-breakpoint-up(sm) {
-        font-size: 16px;
-    }
-    @include media-breakpoint-up(md) {
-        font-size: 16px;
-    }
-    @include media-breakpoint-up(lg) {
-        font-size: 12px;
-    }
-    @include media-breakpoint-up(xl) {
-        font-size: 16px;
-    }
-    @include media-breakpoint-up(xxl) {
-        font-size: 16px;
-    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+  }
 }
 
 .project-svg-container {
-    max-width: 60%;
-    @include media-breakpoint-up(sm) {
-        max-width: 50%;
-    }
-    @include media-breakpoint-up(md) {
-        max-width: 50%;
-    }
-    @include media-breakpoint-up(lg) {
-        max-width: 100%;
-    }
+  max-width: 60%;
+  @include media-breakpoint-up(sm) {
+    max-width: 50%;
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 50%;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 100%;
+  }
 }
 
 .show-lg {
-    @include media-breakpoint-down(lg) {
-        display: none !important;
-    }
+  @include media-breakpoint-down(lg) {
+    display: none !important;
+  }
 }
 
 .hidden-lg {
-    @include media-breakpoint-up(lg) {
-        display: none !important;
-    }
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
 }
 
 .zero-size-lg {
-    @include media-breakpoint-up(lg) {
-        width: 0 !important;
-        height: 0 !important;
-    }
+  @include media-breakpoint-up(lg) {
+    width: 0 !important;
+    height: 0 !important;
+  }
 }
 
 .show-md {
-    @include media-breakpoint-down(md) {
-        display: none !important;
-    }
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
 }
 
 .hidden-md {
-    @include media-breakpoint-up(md) {
-        display: none !important;
-    }
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
 }
 
 .modal-image {
-    max-width: 100%
+  max-width: 100%
 }
 
 .project-nav {
-    margin: 0;
-    padding: 0 0.25rem;
-    position: fixed;
-    right: 0.75rem;
-    list-style: none;
-    top: 50vh;
-    transform: translateY(-50%);
-    //background-color: rgba(255, 255, 255, 0.2);
-    //border-radius: 1.5rem;
+  margin: 0;
+  padding: 0 0.25rem;
+  position: fixed;
+  right: 0.75rem;
+  list-style: none;
+  top: 50vh;
+  transform: translateY(-50%);
+  //background-color: rgba(255, 255, 255, 0.2);
+  //border-radius: 1.5rem;
 }
 
 @include media-breakpoint-up(md) {
-    .project-nav {
-        right: 2rem;
-    }
+  .project-nav {
+    right: 2rem;
+  }
 }
 
 .project-nav a {
-    padding: 0;
-    line-height: 2rem;
+  padding: 0;
+  line-height: 2rem;
 
-    color: var(--bs-body-color);
-    &:hover {
-        color: var(--bs-active-color)
-    }
+  color: var(--bs-body-color);
 
-    &.active {
-        color: #1CABC4 !important;
-        background-color: transparent;
-    }
+  &:hover {
+    color: var(--bs-active-color)
+  }
 
+  &.active {
+    color: #1CABC4 !important;
+    background-color: transparent;
+  }
+
+  svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  @include media-breakpoint-up(md) {
     svg {
-        width: 0.75rem;
-        height: 0.75rem;
+      width: 1rem;
+      height: 1rem;
     }
-    @include media-breakpoint-up(md) {
-        svg {
-            width: 1rem;
-            height: 1rem;
-        }
-    }
+  }
 }
