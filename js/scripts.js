@@ -12292,6 +12292,17 @@
           return Math.max(topEnd1, topEnd2);
       }
 
+      function resizeProjectContainersMinHeight() {
+          for (let e of document.getElementsByClassName("project-container")) {
+              e.style["min-height"] = (window.innerHeight - mainNavBodyElem.offsetHeight) + "px";
+          }
+      }
+
+      window.addEventListener('resize', function(event) {
+          resizeProjectContainersMinHeight();
+      });
+      resizeProjectContainersMinHeight();
+
       for (let e of document.getElementsByClassName("icon-placeholder")) {
           // Fetch the content
           let request = new XMLHttpRequest();

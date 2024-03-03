@@ -2255,7 +2255,7 @@ body {
 }
 
 .project-container {
-  min-height: 100vh !important;
+  min-height: 100vh;
 }
 
 @media (max-width: 991.98px) {
