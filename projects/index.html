@@ -260,12 +260,12 @@
                 </p>
                 <p class="slide-in-text">
                     Being the <span class="text-white">Control Group Lead</span> and
-                    the <span class="text-white">Project Manager</span> in 2019,
+                    the <span class="text-white">Project Manager</span> in&nbsp;2019,
                     I led the development of embedded control systems and
                     managed project timelines.
                 </p>
                 <p class="slide-in-text">
-                    As the <span class="text-white">Vision Group Lead</span> in 2020-2021,
+                    As the <span class="text-white">Vision Group Lead</span> in&nbsp;2020-2021,
                     I worked on a vision-assisted automatic aiming system.
                 </p>
                 <div class="mt-4 text-end slide-in-text ">
@@ -374,17 +374,17 @@
                                         <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/robomaster-me.jpg"
                                              alt="RoboMaster 2019"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">RoboMaster 2019</p>
+                                        <p class="image-caption show-lg">RoboMaster 2019</p>
                                         <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/robomaster-competition.jpg"
                                              alt="RoboMaster 2019"/>
-                                        <p class="image-caption mt-2 mb-4">RoboMaster 2019</p>
+                                        <p class="image-caption">RoboMaster 2019</p>
                                         <img class="modal-image" src="" data-src="/assets/robomaster-we.jpg"
                                              alt="Meta Robotics in 2019"/>
-                                        <p class="image-caption mt-2 mb-4">Meta Robotics in 2019</p>
+                                        <p class="image-caption">Meta Robotics in 2019</p>
                                         <img class="modal-image" src="" data-src="/assets/robomaster-teams.jpg"
                                              alt="With Fukuoka and Guangdong Taiwan Chung Cheng University Teams"/>
-                                        <p class="image-caption mt-2 mb-4">With Fukuoka and Guangdong
+                                        <p class="image-caption">With Fukuoka and Guangdong
                                             Taiwan Chung Cheng University Teams</p>
                                     </div>
 
@@ -411,7 +411,7 @@
                     Joystick Module for the NetEase Android Emulator
                 </h2>
                 <p class="slide-in-text">
-                    During Summer 2020, as a <span class="text-white">Platform Engineer Intern at NetEase Game</span>,
+                    During Summer&nbsp;2020, as a <span class="text-white">Platform Engineer Intern at NetEase Game</span>,
                     I developed a driver module that automatically detects and configures joystick keymaps,
                     providing <span class="text-white">plug-and-play user experience</span> for joystick users of
                     the NetEase Android Emulator.
@@ -447,46 +447,50 @@
                                         <p>
                                             On Windows, most joysticks are connected to games or applications using the
                                             <span class="text-white">DirectInput</span> API.
-                                            DirectInput is flexible, but it lacks a unified keymap standard. For
-                                            example, the same virtual key in DirectInput can map to key A for one
-                                            joystick, but to key B for another. The NetEase Android Emulator used
-                                            the DirectInput API. Therefore, the default keymap may not be accurate and
-                                            users needed to manually configure the joystick when connecting for the
+                                            DirectInput is flexible, but it lacks a unified keymap standard.
+                                            For example, the same virtual key in DirectInput can map to key "A" for one
+                                            joystick, but to key "B" for another.
+                                            The NetEase Android Emulator used the DirectInput API.
+                                            Therefore, the default keymap may not be accurate.
+                                            Users needed to manually configure the joystick when connecting for the
                                             first time.
                                         </p>
                                         <p>
                                             When Microsoft rolled out their own joysticks&mdash;the Xbox controllers, a
-                                            new interface called <span class="text-white">XInput</span>, was introduced.
+                                            new interface called <span class="text-white">XInput</span> was introduced.
                                             XInput is more well-defined and easier to use, but only supports the Xbox
-                                            controllers. There are open-source tools that map other joysticks to the
-                                            XInput interface, but they require a lot of manual configurations and
-                                            therefore not easy to use either.
+                                            controllers.
+                                            There are open-source tools that map other joysticks to XInput.
+                                            However, they require a lot of manual configurations.
                                         </p>
                                         <p>
-                                            In addition, there was another challenge for the NetEase Emulator.
+                                            In addition, there was another challenge for the NetEase Android Emulator.
                                             As Nintendo Switch become popular, more and more users get their
                                             <span class="text-white">Nintendo Switch Joy-Cons</span> and want to use
-                                            them in the NetEase Android Emulator. However,
-                                            as a pair of two separate controllers, Joy-Cons are recognized as two
-                                            DirectInput devices on Windows. To use the two pieces as one full joystick,
-                                            the program needs to support reading from two joysticks
-                                            simultaneously, which is not supported back then. In addition,
-                                            the advanced functions of Joy-Cons such as the gyroscope and the haptic
-                                            feedback are not available through DirectInput.
+                                            them in the NetEase Android Emulator.
+                                            However, as a pair of two separate controllers, Joy-Cons are recognized as
+                                            two DirectInput devices on Windows.
+                                            To use the two pieces as one full joystick, the program needs to support
+                                            reading from two joysticks simultaneously, which is not supported back then.
+                                            In addition, the advanced functions of Joy-Cons such as the gyroscope and
+                                            the haptic feedback are not available through DirectInput.
                                         </p>
                                         <p>
                                             We intended to provide a
                                             <span class="text-white">smooth user experience</span>
-                                            for joystick users of the NetEase Emulator. Therefore, we introduced a new
-                                            adapter module. We integrate a community-contributed keymap database of
-                                            common joysticks into the system. When a user plugs a joystick in,
-                                            the module looks it up the and applies the keymap automatically, unifying
-                                            DirectInput, XInput and Joy-Con-specific interface into an emulated XInput
-                                            interface. The user can also manually configure the keymap through an
-                                            intuitive graphic user interface (GUI). For Joy-Cons, two pieces are
-                                            merged automatically (in fact, the module supports merging arbitrary numbers
-                                            of joysticks). Gyroscope and haptic feedback are supported. Users can even
-                                            map the gyroscope to axes or buttons, turning games into interactive ones.
+                                            for joystick users of the NetEase Emulator.
+                                            Therefore, we introduced a new adapter module.
+                                            We integrate a community-contributed joystick keymap database of into the
+                                            system.
+                                            When a user plugs a joystick in, the module looks it up and applies the
+                                            keymap automatically, unifying DirectInput, XInput and the Joy-Con-specific
+                                            interface into an emulated XInput interface.
+                                            The user can also manually configure the keymap through an intuitive graphic
+                                            user interface (GUI).
+                                            For Joy-Cons, two pieces are merged automatically (in fact, the module
+                                            supports merging arbitrary numbers of joysticks).
+                                            Gyroscope and haptic feedback are supported. Users can even map the
+                                            gyroscope to axes or buttons, turning games into interactive ones.
                                         </p>
                                     </div>
                                 </div>
@@ -495,7 +499,7 @@
                                         <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/joystick-photo.jpg"
                                              alt="Various Joysticks"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">Various Joysticks</p>
+                                        <p class="image-caption show-lg">Various Joysticks</p>
                                         <!-- Additional images -->
                                     </div>
                                 </div>
@@ -508,7 +512,7 @@
 
         <!-- Hololens 3D Scanning -->
         <div class="row gx-0 justify-content-center align-items-center project-container" id="hololens3DScanning">
-            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-4 project-svg-container pb-4 pb-lg-0">
+            <div class="col-lg-4 mt-auto mb-0 mb-lg-auto px-3 px-lg-4 project-svg-container pb-4 pb-lg-0">
                 <div class="h-auto">
                     <div class="icon-placeholder text-center text-white-50"
                          data-include="/assets/hololens-icon.svg">Loading image...
@@ -520,7 +524,7 @@
                     3D Scanning with Mixed Reality Headsets
                 </h2>
                 <p class="slide-in-text">
-                    A system for near-real-time 3D scanning and reconstruction on <span class="text-white">Microsoft HoloLens 2</span>.
+                    A system for near-real-time 3D scanning and reconstruction on <span class="text-white">Microsoft HoloLens&nbsp;2</span>.
                     It uses the depth camera on the headset to acquire depth data. User holds the object in hands and
                     gets visual feedback via the <span class="text-white">mixed reality</span> experience.
                 </p>
@@ -549,7 +553,7 @@
                         <div class="text-center hidden-lg">
                             <img class="modal-image" src="" data-src="/assets/hololens-scanning.jpg"
                                  alt="The 3D scanning process with mixed reality experience"/>
-                            <p class="image-caption mt-2 mb-0">The 3D Scanning Process with Mixed Reality Experience</p>
+                            <p class="image-caption">The 3D Scanning Process with Mixed Reality Experience</p>
                         </div>
                         <div class="container">
                             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
@@ -559,7 +563,7 @@
                                             During the course <span
                                                     class="text-white">Mixed Reality at ETH Zurich</span>, my teammates
                                             and I developed a system for scanning and reconstructing irregular
-                                            geometries using a mixed-reality headset, Microsoft HoloLens 2.
+                                            geometries using a mixed-reality headset&mdash;Microsoft HoloLens 2.
                                         </p>
                                         <p>
                                             Our goal was to provide <span class="text-white">near-real-time 3D scanning and reconstruction</span>.
@@ -651,16 +655,16 @@
                                         <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/hololens-scanning.jpg"
                                              alt="The 3D scanning process with mixed reality experience"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">The 3D Scanning Process with Mixed
+                                        <p class="image-caption show-lg">The 3D Scanning Process with Mixed
                                             Reality
                                             Experience</p>
                                         <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/hololens-illustration.jpg"
                                              alt="Illustration of the scanning process"/>
-                                        <p class="image-caption mt-2 mb-4">Illustration of the Scanning Process</p>
+                                        <p class="image-caption">Illustration of the Scanning Process</p>
                                         <img class="modal-image" src="" data-src="/assets/hololens-result.jpg"
                                              alt="Two reference objects and their reconstruction results"/>
-                                        <p class="image-caption mt-2 mb-4">Two Reference Objects and Their
+                                        <p class="image-caption">Two Reference Objects and Their
                                             Reconstruction Results</p>
                                     </div>
 
@@ -684,12 +688,11 @@
                 <h2 class="project-header mb-3 slide-in-text">KLC3</h2>
                 <p class="slide-in-text">
                     <!-- Non-break hyphen &#8209; -->
-                    KLEE on LC&#8209;3. A <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
-                    educational assembly) based on LLVM/<a target="_blank" rel="noopener noreferrer"
-                                                           href="https://klee.github.io">KLEE</a>
-                    for automatic bug detection and test case generation. KLC3 was used to provide automatic
-                    end-to-end feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall 2020.
-                    Our work was published at <span class="text-white">ASE 2021</span>.
+                    KLEE on LC&#8209;3, a <span class="text-white">symbolic execution engine</span> for LC&#8209;3 (an
+                    educational assembly) based on LLVM/KLEE
+                    for automatic bug detection and test case generation. The system provided automatic
+                    feedback to 100+ sophomore students for their LC&#8209;3 assignments in Fall&nbsp;2020.
+                    Our work was published at <span class="text-white">ASE&nbsp;2021</span>.
                 </p>
                 <div class="mt-4 text-end slide-in-text ">
                     <p class="read-more-button btn shadow-none" data-bs-toggle="modal" onclick="readMoreClicked(this)"
@@ -715,34 +718,32 @@
                         <div class="text-center hidden-lg">
                             <img class="modal-image" src="" data-src="/assets/klc3-ase2021-title.jpg"
                                  alt="My Presentation at ASE 2021"/>
-                            <p class="image-caption mt-2 mb-0">My Presentation at ASE 2021</p>
+                            <p class="image-caption">My Presentation at ASE 2021</p>
                         </div>
                         <div class="container">
                             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-start">
                                 <div class="col-lg-8 mt-0">
                                     <div class="project-text w-100 my-auto text-start text-lg-left">
                                         <p>
-                                            Learning to program is difficult. As with all topics, students learn more
-                                            quickly when given immediate feedback tailored to their efforts. However,
-                                            while university staff&mdash;instructors and teaching assistants&mdash;are
-                                            capable
-                                            of providing such feedback, staff are not available 24/7 and lack the time
-                                            needed to provide individual attention to each student's programs.
+                                            Learning to program is difficult.
+                                            As with all topics, students learn more quickly when given immediate feedback tailored to their efforts.
+                                            However, while university staff&mdash;instructors and teaching assistants&mdash;are capable of providing such feedback, staff are not available 24/7 and lack the time needed to provide individual attention to each student's programs.
                                         </p>
                                         <p>
-                                            Automating feedback has been an important topic in CS education for years. A
-                                            simple and widely adopted approach is to use systems that run test cases on
-                                            student submissions. However, these systems typically fail to provide
-                                            feedback tailored to each student's effort.
+                                            Automating feedback has been an important topic in CS education for years.
+                                            A simple and widely adopted approach is to use systems that run test cases on student submissions.
+                                            However, these systems typically fail to provide feedback tailored to each student's effort.
+                                            For example, these systems cannot give out the test cases but only showing pass/fail results.
                                         </p>
                                         <p>
                                             To address the need of rapid and tailored feedback, we develop
                                             <span class="text-white">a system for end-to-end automatic feedback</span>.
                                             Specifically, we target LC&#8209;3, a RISC-like educational assembly used in
-                                            the courses of UIUC and other universities. At the heart of the system is
-                                            <span class="text-white">KLC3</span>, a
+                                            the courses at UIUC and other universities.
+                                            At the heart of the system is <span class="text-white">KLC3</span>, a
                                             concolic (concrete + symbolic) execution engine for LC&#8209;3 built on top
-                                            of LLVM/KLEE.
+                                            of LLVM/<a target="_blank" rel="noopener noreferrer"
+                                                       href="https://klee.github.io">KLEE</a>.
                                         </p>
                                         <p>
                                             At high-level, symbolic execution is a technique that treats inputs as
@@ -780,8 +781,7 @@
                                             It requires a lot of computation power. A lot of effort has been made into
                                             KLC3
                                             to provide feedback in time after students submit their code. Those works
-                                            also form parts of my <span class="text-white">senior thesis</span>
-                                            of my Bachelor's degree.
+                                            also form parts of my <span class="text-white">Bachelor's thesis</span>.
                                         </p>
                                         <div class="mt-5 text-center ">
                                             <a class="btn shadow-none project-details-link "
@@ -810,7 +810,7 @@
                                                target="_blank"
                                                rel="noopener noreferrer"
                                                href="https://hdl.handle.net/2142/110284">
-                                                My Senior Thesis on UIUC IDEALS
+                                                My Bachelor's Thesis on UIUC IDEALS
                                                 <svg width="1em" height="1em" style="position: relative; top: -0.15em">
                                                     <use xlink:href="#bi-chevron-right"></use>
                                                 </svg>
@@ -834,7 +834,7 @@
                                         <img class="modal-image show-lg" src=""
                                              data-src="/assets/klc3-ase2021-title.jpg"
                                              alt="My Presentation at ASE 2021"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">My Presentation at
+                                        <p class="image-caption show-lg">My Presentation at
                                             ASE 2021</p>
                                         <!-- Additional images -->
                                     </div>
@@ -861,8 +861,8 @@
                     Wireless Charging Table with Auto Alignment
                 </h2>
                 <p class="slide-in-text">
-                    As our Bachelor's senior design project, my teammates and I built a wireless charging table that
-                    <span class="text-white"> automatically aligns the charging coils with the devices</span>, combining
+                    As our Bachelor's senior design project, my teammates and I built a smart table that
+                    <span class="text-white"> automatically aligns the wireless charging coils with the devices</span>, combining
                     electrical engineering, computer vision, and mechanical engineering.
                     We won <span class="text-white">the most Interdisciplinary Project Award</span>
                     at the ZJU-UIUC Institute.
@@ -896,7 +896,7 @@
                                         type="video/mp4">
                                 Sorry, your browser does not support the video tag.
                             </video>
-                            <p class="image-caption mt-2 mb-0">
+                            <p class="image-caption">
                                 Demonstration of the Table Charging Multiple Cellphones</p>
                         </div>
                         <div class="container">
@@ -955,7 +955,7 @@
                                                     type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
-                                        <p class="image-caption mt-2 mb-4 show-lg">Demonstration of the
+                                        <p class="image-caption show-lg">Demonstration of the
                                             Table Charging Multiple Cellphones</p>
                                         <!-- Additional images -->
                                         <video style="width: 100%; object-fit: cover" autoplay muted loop>
@@ -963,7 +963,7 @@
                                                     data-src="/assets/qi-table-mechanism.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
                                         </video>
-                                        <p class="image-caption mt-2 mb-4">Mechanical System of
+                                        <p class="image-caption">Mechanical System of
                                             the Table</p>
                                     </div>
 
@@ -1000,7 +1000,7 @@
                                 <h2 class="project-header mb-4 slide-in-text">AuroraOS</h2>
                                 <p class="slide-in-text">
                                     <span class="text-white">x86 operating system</span> with basic
-                                    kernel functions, a scheduler with wait lists, SVGA high-color
+                                    kernel functions, a scheduler with wait lists, SVGA
                                     driver with hardware acceleration, and GUI.
 
                                     Our team got a prize at the <span
@@ -1034,9 +1034,8 @@
                             <div class="pt-lg-3 pb-lg-0 mt-0 mb-auto mb-lg-0 project-text text-start">
                                 <h2 class="project-header mb-4 slide-in-text">Ozone</h2>
                                 <p class="slide-in-text">
-                                    <span class="text-white">ARMv8 multi-kernel operating system</span> built on the
-                                    <a target="_blank" rel="noopener noreferrer" href="https://barrelfish.org">Barrelfish</a>
-                                    codebase, featuring tree-based memory management systems, multiple IPC mechanisms,
+                                    <span class="text-white">ARMv8 multi-kernel operating system</span> partically based on
+                                    Barrelfish, featuring memory management systems, multiple IPC mechanisms,
                                     and several user-level services. Team project at ETH <span class="text-white">Advanced Operating Systems</span>.
                                 </p>
                                 <!-- This button is hidden when >= lg -->
@@ -1092,7 +1091,7 @@
                         <div class="hidden-lg text-center">
                             <img class="modal-image" src="" data-src="/assets/aurora-os-competition.jpg"
                                  alt="Our Team at ECE391 Design Competition"/>
-                            <p class="image-caption mt-2 mb-0">Our Team at ECE391 Design
+                            <p class="image-caption">Our Team at ECE391 Design
                                 Competition</p>
                         </div>
                         <div class="container">
@@ -1147,12 +1146,12 @@
                                         <img class="modal-image show-lg" src=""
                                              data-src="/assets/aurora-os-competition.jpg"
                                              alt="Our team at ECE391 design competition"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">
+                                        <p class="image-caption show-lg">
                                             Our Team at ECE391 Design Competition</p>
                                         <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/aurora-os-photo.jpg"
                                              alt="AuroraOS"/>
-                                        <p class="image-caption mt-2 mb-4">
+                                        <p class="image-caption">
                                             Emulation with QEMU</p>
                                     </div>
                                 </div>
@@ -1175,7 +1174,7 @@
                         <div class="text-center hidden-lg">
                             <img class="modal-image" src="" data-src="/assets/ozone-team.jpg"
                                  alt="Our team at the Advanced Operating Systems demo"/>
-                            <p class="image-caption mt-2 mb-0">
+                            <p class="image-caption">
                                 Our team at the Advanced Operating Systems Demo</p>
                         </div>
                         <div class="container">
@@ -1188,7 +1187,7 @@
                                             at ETH Zurich, my teammates and I built
                                             <span class="text-white">Ozone</span> ("OS one").
                                             Ozone is an <span class="text-white">ARMv8</span> operating system,
-                                            built upon a research OS Barrelfish. Similar to Barrelfish, Ozone is a
+                                            built upon a research OS <a target="_blank" rel="noopener noreferrer" href="https://barrelfish.org">Barrelfish</a>. Similar to Barrelfish, Ozone is a
                                             <span class="text-white">multikernel</span> OS&mdash;each CPU runs an
                                             independent copy of the kernel, while the shared states are minimized and
                                             intercore communications are pushed to the
@@ -1221,7 +1220,7 @@
                                         <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/ozone-team.jpg"
                                              alt="Our team and the teaching staff at the Advanced Operating Systems demo"/>
-                                        <p class="image-caption mt-2 mb-0 show-lg">
+                                        <p class="image-caption show-lg">
                                             Our Team and the Teaching Staff at the Advanced Operating Systems Demo</p>
                                         <!-- Additional images -->
                                     </div>
@@ -1258,7 +1257,7 @@
                                 <h2 class="project-header mb-4 slide-in-text">RISC&#8209;V Processor Design</h2>
                                 <p class="slide-in-text">
                                     As the UIUC ECE411 design project, my teammates and I designed and simulated a
-                                    pipeline RV32I processor in <span class="text-white">SystemVerilog</span>.
+                                    pipeline RISC-V processor in <span class="text-white">SystemVerilog</span>.
                                     The system features parameterized caches, tournament branch predictions,
                                     and a next-line prefetcher.
                                 </p>
@@ -1290,7 +1289,7 @@
                                 <p class="slide-in-text">
                                     As the UIUC ECE385 design project, my teammate and I developed the
                                     Boxhead video game on
-                                    the Altera DE2-115. We wrote the SRAM controller and the hardware graphic engine in
+                                    the Altera FPGA. We wrote the SRAM controller and the hardware graphic engine in
                                     <span class="text-white">SystemVerilog</span>,
                                     and the game logic in <span class="text-white">C</span>.
                                 </p>
@@ -1381,12 +1380,12 @@
                                     <div class="modal-gallery text-center">
                                         <img class="modal-image" src="" data-src="/assets/rv32i-processor-cache.jpg"
                                              alt="Presentation of the cache performance: more than 90% hit rates for all levels and significant speedups, varying for different workloads"/>
-                                        <p class="image-caption mt-2 mb-4">
+                                        <p class="image-caption">
                                             Presentation of the cache performance</p>
                                         <img class="modal-image" src="" data-src="/assets/rv32i-processor-datapath.jpg"
 
                                              alt="Datapath block diagram of the processor"/>
-                                        <p class="image-caption mt-2 mb-4">
+                                        <p class="image-caption">
                                             Datapath of the Processor</p>
                                     </div>
                                 </div>
@@ -1410,7 +1409,7 @@
                         <div class="text-center hidden-lg">
                             <img class="modal-image" src="" data-src="/assets/boxhead-original.jpg"
                                  alt="Screenshot of the original Boxhead game: two players killing zombines"/>
-                            <p class="image-caption mt-2 mb-0">
+                            <p class="image-caption">
                                 Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
                         </div>
                         <div class="container">
@@ -1483,16 +1482,16 @@
                                         <!-- First side image only showing in lg mode -->
                                         <img class="modal-image show-lg" src="" data-src="/assets/boxhead-original.jpg"
                                              alt="Screenshot of the original Boxhead game: two players killing zombines"/>
-                                        <p class="image-caption mt-2 mb-4 show-lg">
+                                        <p class="image-caption show-lg">
                                             Original BoxHead Game<br>(We Implemented a Simplified Version)</p>
                                         <!-- Additional images -->
                                         <img class="modal-image" src="" data-src="/assets/boxhead-block-diagram.jpg"
                                              alt="Block diagram of the system"/>
-                                        <p class="image-caption mt-2 mb-4">
+                                        <p class="image-caption">
                                             Block Diagram of the System</p>
                                         <img class="modal-image" src="" data-src="/assets/boxhead-pll-cycles.jpg"
                                              alt="PLL cycle allocation: 3 cycles for writes and 1 cycle for read"/>
-                                        <p class="image-caption mt-2 mb-4">
+                                        <p class="image-caption">
                                             PLL Cycle Allocation</p>
                                     </div>
                                 </div>

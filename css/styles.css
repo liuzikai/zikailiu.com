@@ -1207,10 +1207,6 @@ output {
   margin-top: 0.25rem !important;
 }
 
-.mt-2 {
-  margin-top: 0.5rem !important;
-}
-
 .mt-3 {
   margin-top: 1rem !important;
 }
@@ -2350,6 +2346,8 @@ body {
 .image-caption {
   --bs-text-opacity: 1;
   color: rgba(255, 255, 255, 0.5) !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
   font-size: 12px;
 }
 @media (min-width: 576px) {
