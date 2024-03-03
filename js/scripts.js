@@ -12274,10 +12274,7 @@
       }
 
       updateSlideInTexts();  // run once when DOM is ready
-
-      // Functions for SVG animation
-
-      let mainNavBodyElem = document.getElementById("mainNavBody");
+      document.addEventListener("scroll", updateSlideInTexts);  // on a scroll event
 
       function getStableWindowHeight() {
           // https://github.com/tylerjpeterson/ios-inner-height
@@ -12288,123 +12285,6 @@
               return window.innerHeight;
           }
       }
-
-      function calcEndTop(projectElem) {
-          // Case 1: 100% when the container is centralized vertically
-          //   clientRect.top = navBarHeight + (window.innerHeight - navBarHeight) * 0.5 - clientRect.height * 0.5
-          // Case 2: 100% when container.top = navBarHeight * 1.5, useful for mobile short screen
-          //   clientRect.top = navBarHeight * 1.5
-          // Choose the larger one of case 1 and 2 (whichever reach first)
-          let clientRect = projectElem.getBoundingClientRect();
-          let navBarHeight = mainNavBodyElem.offsetHeight;
-          let topEnd1 = (navBarHeight + getStableWindowHeight() - clientRect.height) * 0.5,  // simplified
-              topEnd2 = (navBarHeight * 1.5);
-          return Math.max(topEnd1, topEnd2);
-      }
-
-      function resizeProjectContainersMinHeight() {
-          for (let e of document.getElementsByClassName("project-container")) {
-              e.style["min-height"] = (getStableWindowHeight() - mainNavBodyElem.offsetHeight) + "px";
-          }
-      }
-
-      window.addEventListener('resize', function (event) {
-          resizeProjectContainersMinHeight();
-      });
-      resizeProjectContainersMinHeight();
-
-      for (let e of document.getElementsByClassName("icon-placeholder")) {
-          // Fetch the content
-          let request = new XMLHttpRequest();
-          request.open("GET", e.dataset.include, true);
-          request.onload = function () {
-              if (request.status >= 200 && request.status < 400) {
-                  e.innerHTML = request.responseText;
-
-                  // Find the container
-                  let container = e.closest(".project-container-down-lg");
-                  if (!container) {
-                      container = e.closest(".project-container");
-                  }
-
-                  // Iterate the path inside
-                  Array.from(e.querySelectorAll("path")).forEach(svg => {
-                      if (svg.id.endsWith("-animated-svg")) {
-                          gsapWithCSS.to(svg, {
-                              scrollTrigger: {
-                                  trigger: svg,
-                                  start: "top bottom",
-                                  endTrigger: container,
-                                  end: () => "top " + calcEndTop(container),  // container as let variable is captured
-                                  invalidateOnRefresh: true,
-                                  scrub: 2,
-                                  // markers: true,
-                              },
-                              strokeDashoffset: 0,
-                              ease: "power1.in",
-                          });
-                      }
-                  });
-              }
-          };
-          request.send();
-      }
-
-      // Lazy load images and videos in Read More sections
-
-      // Get the array of all .read-more-button
-      let allReadMoreButtons = [];
-      for (let e of document.getElementsByClassName("read-more-button")) {
-          allReadMoreButtons.push(e);
-      }
-
-      // Load images when READ MORE buttons are visible
-      function handleVisibleReadMoreButtons() {
-          for (let i = 0; i < allReadMoreButtons.length; i++) {
-              let e = allReadMoreButtons[i];
-              if (inViewportPartial(e)) {
-                  // Lazy load modal image
-                  let modal = document.querySelector(e.getAttribute("data-bs-target"));
-                  Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
-                      e.src = e.dataset.src;
-                      // console.log("Lazy load image:", e.src);
-                  });
-
-                  // Remove it from the list
-                  allReadMoreButtons.splice(i, 1);
-                  i--;
-              }
-          }
-      }
-
-      handleVisibleReadMoreButtons();  // call once at start
-
-      window.readMoreClicked = function (readMoreButton) {
-          // console.log("readMoreClicked:", readMoreButton);
-          let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
-          // Lazy load modal videos
-          Array.from(modal.querySelectorAll(".modal-lazy-video")).forEach(e => {
-              e.src = e.dataset.src;
-              e.classList.remove("modal-lazy-video");
-              if (e.type === "video/mp4") {
-                  // console.log(e.src, e.parentNode);
-                  e.parentNode.load();
-              }
-          });
-          // Just in case handleVisibleReadMoreButtons does not work
-          Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
-              if (!e.getAttribute("src")) {
-                  e.src = e.dataset.src;
-                  console.warn("Modal lazy loading image is not loaded:", e.src);
-              }
-          });
-      };
-
-      // On a scroll event
-      document.addEventListener("scroll", function (e) {
-          updateSlideInTexts();
-          handleVisibleReadMoreButtons();
-      });
 
       const currentPage = document.getElementById("main-script").getAttribute("data-page");
       // console.warn(currentPage);
@@ -12526,6 +12406,124 @@
           });
 
       } else if (currentPage === "projects") {
+
+          // Functions for SVG animation
+
+          let mainNavBodyElem = document.getElementById("mainNavBody");
+
+          function calcEndTop(projectElem) {
+              // Case 1: 100% when the container is centralized vertically
+              //   clientRect.top = navBarHeight + (windowHeight - navBarHeight) * 0.5 - clientRect.height * 0.5
+              // Case 2: 100% when container.top = navBarHeight * 1.5, useful for mobile short screen
+              //   clientRect.top = navBarHeight * 1.5
+              // Choose the larger one of case 1 and 2 (whichever reach first)
+              let clientRect = projectElem.getBoundingClientRect();
+              let navBarHeight = mainNavBodyElem.offsetHeight;
+              let topEnd1 = (navBarHeight + getStableWindowHeight() - clientRect.height) * 0.5,  // simplified
+                  topEnd2 = (navBarHeight * 1.5);
+              return Math.max(topEnd1, topEnd2);
+          }
+
+          function resizeProjectContainersMinHeight() {
+              for (let e of document.getElementsByClassName("project-container")) {
+                  e.style["min-height"] = (getStableWindowHeight() - mainNavBodyElem.offsetHeight) + "px";
+              }
+          }
+
+          resizeProjectContainersMinHeight();  // run once
+
+          window.addEventListener('resize', resizeProjectContainersMinHeight);  // run on resize
+
+          for (let e of document.getElementsByClassName("icon-placeholder")) {
+              // Fetch the content
+              let request = new XMLHttpRequest();
+              request.open("GET", e.dataset.include, true);
+              request.onload = function () {
+                  if (request.status >= 200 && request.status < 400) {
+                      e.innerHTML = request.responseText;
+
+                      // Find the container
+                      let container = e.closest(".project-container-down-lg");
+                      if (!container) {
+                          container = e.closest(".project-container");
+                      }
+
+                      // Iterate the path inside
+                      Array.from(e.querySelectorAll("path")).forEach(svg => {
+                          if (svg.id.endsWith("-animated-svg")) {
+                              gsapWithCSS.to(svg, {
+                                  scrollTrigger: {
+                                      trigger: svg,
+                                      start: "top bottom",
+                                      endTrigger: container,
+                                      end: () => "top " + calcEndTop(container),  // container as let variable is captured
+                                      invalidateOnRefresh: true,
+                                      scrub: 2,
+                                      // markers: true,
+                                  },
+                                  strokeDashoffset: 0,
+                                  ease: "power1.in",
+                              });
+                          }
+                      });
+                  }
+              };
+              request.send();
+          }
+
+          // Lazy load images and videos in Read More sections
+
+          // Get the array of all .read-more-button
+          let allReadMoreButtons = [];
+          for (let e of document.getElementsByClassName("read-more-button")) {
+              allReadMoreButtons.push(e);
+          }
+
+          // Load images when READ MORE buttons are visible
+          function handleVisibleReadMoreButtons() {
+              for (let i = 0; i < allReadMoreButtons.length; i++) {
+                  let e = allReadMoreButtons[i];
+                  if (inViewportPartial(e)) {
+                      // Lazy load modal image
+                      let modal = document.querySelector(e.getAttribute("data-bs-target"));
+                      Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
+                          e.src = e.dataset.src;
+                          // console.log("Lazy load image:", e.src);
+                      });
+
+                      // Remove it from the list
+                      allReadMoreButtons.splice(i, 1);
+                      i--;
+                  }
+              }
+          }
+
+          handleVisibleReadMoreButtons();  // call once at start
+
+          document.addEventListener("scroll", handleVisibleReadMoreButtons);  // on a scroll event
+
+          window.readMoreClicked = function (readMoreButton) {
+              // console.log("readMoreClicked:", readMoreButton);
+              let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
+              // Lazy load modal videos
+              Array.from(modal.querySelectorAll(".modal-lazy-video")).forEach(e => {
+                  e.src = e.dataset.src;
+                  e.classList.remove("modal-lazy-video");
+                  if (e.type === "video/mp4") {
+                      // console.log(e.src, e.parentNode);
+                      e.parentNode.load();
+                  }
+              });
+              // Just in case handleVisibleReadMoreButtons does not work
+              Array.from(modal.querySelectorAll(".modal-image")).forEach(e => {
+                  if (!e.getAttribute("src")) {
+                      e.src = e.dataset.src;
+                      console.warn("Modal lazy loading image is not loaded:", e.src);
+                  }
+              });
+          };
+
+          // Project navigation
 
           gsapWithCSS.to(document.getElementById("projectNav"), {
               scrollTrigger: {
