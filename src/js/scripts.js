@@ -125,6 +125,16 @@ window.addEventListener("DOMContentLoaded", event => {
 
     let mainNavBodyElem = document.getElementById("mainNavBody");
 
+    function getStableWindowHeight() {
+        // https://github.com/tylerjpeterson/ios-inner-height
+        let masthead = document.getElementById("masthead");  // masthead has 100vh
+        if (masthead) {
+            return masthead.getBoundingClientRect().height;
+        } else {
+            return window.innerHeight;
+        }
+    }
+
     function calcEndTop(projectElem) {
         // Case 1: 100% when the container is centralized vertically
         //   clientRect.top = navBarHeight + (window.innerHeight - navBarHeight) * 0.5 - clientRect.height * 0.5
@@ -133,18 +143,18 @@ window.addEventListener("DOMContentLoaded", event => {
         // Choose the larger one of case 1 and 2 (whichever reach first)
         let clientRect = projectElem.getBoundingClientRect();
         let navBarHeight = mainNavBodyElem.offsetHeight;
-        let topEnd1 = (navBarHeight + window.innerHeight - clientRect.height) * 0.5,  // simplified
+        let topEnd1 = (navBarHeight + getStableWindowHeight() - clientRect.height) * 0.5,  // simplified
             topEnd2 = (navBarHeight * 1.5);
         return Math.max(topEnd1, topEnd2);
     }
 
     function resizeProjectContainersMinHeight() {
         for (let e of document.getElementsByClassName("project-container")) {
-            e.style["min-height"] = (window.innerHeight - mainNavBodyElem.offsetHeight) + "px";
+            e.style["min-height"] = (getStableWindowHeight() - mainNavBodyElem.offsetHeight) + "px";
         }
     }
 
-    window.addEventListener('resize', function(event) {
+    window.addEventListener('resize', function (event) {
         resizeProjectContainersMinHeight();
     });
     resizeProjectContainersMinHeight();
