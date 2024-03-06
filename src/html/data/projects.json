@@ -6,6 +6,7 @@
   "navbarTheme": "dark",
   "navlinkAlwaysShow": false,
   "mastheadImage": "/assets/masthead-wireframe.jpg",
+  "mastheadImageSmall": "/assets/masthead-wireframe-small.jpg",
   "mastheadClass": "masthead-projects-bg",
   "extraCodeAfterMastheadLoad": "",
   "extraPreloadImages": [],

@@ -6,11 +6,10 @@
   "navbarTheme": "light",
   "navlinkAlwaysShow": false,
   "mastheadImage": "/assets/masthead-normal.jpg",
+  "mastheadImageSmall": "/assets/masthead-normal-small.jpg",
   "mastheadClass": "masthead-home-bg",
   "extraCodeAfterMastheadLoad": "",
-  "extraPreloadImages": [
-    "/assets/robomaster-me.jpg"
-  ],
+  "extraPreloadImages": [],
   "mastheadText": [
     "Every project a journey",
     "Every photo a story"

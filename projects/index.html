@@ -19,7 +19,6 @@
     <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Preloads (crossorigin is needed for fonts) -->
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" fetchpriority="high" href="/assets/masthead-wireframe.jpg" as="image" type="image/jpeg">
     
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/nunito-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -110,8 +109,17 @@
 </nav>
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="/assets/masthead-wireframe.jpg"
-         onload='document.getElementById("masthead").classList.add("masthead-projects-bg");' alt="">
+    <img id="mastheadLoader"
+         rel="preload" fetchpriority="high"
+         srcset="/assets/masthead-wireframe.jpg 1920w, /assets/masthead-wireframe-small.jpg 1024w"
+         sizes="100vw"
+         src="/assets/masthead-wireframe.jpg"
+         onload='let e = document.getElementById("masthead");
+                 let f = document.getElementById("mastheadLoader");
+                 e.style["background-image"]=`url("${f.currentSrc || f.src}")`;
+                 e.classList.add("masthead-projects-bg");
+         '
+         alt="">
 </div>
 
 <!-- Masthead-->

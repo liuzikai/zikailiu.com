@@ -6,6 +6,7 @@
   "navbarTheme": "light",
   "navlinkAlwaysShow": true,
   "mastheadImage": "/assets/masthead-white.jpg",
+  "mastheadImageSmall": "/assets/masthead-white-small.jpg",
   "mastheadClass": "masthead-error-bg",
   "extraCodeAfterMastheadLoad": "",
   "extraPreloadImages": [],

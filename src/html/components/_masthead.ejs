@@ -1,7 +1,16 @@
 <!-- Display the background image only when completely loaded -->
 <div id="preload" style="display: none">
-    <img src="<%- mastheadImage %>"
-         onload='document.getElementById("masthead").classList.add("<%- mastheadClass %>");<%- extraCodeAfterMastheadLoad %>' alt="">
+    <img id="mastheadLoader"
+         rel="preload" fetchpriority="high"
+         srcset="<%- mastheadImage %> 1920w, <%- mastheadImageSmall %> 1024w"
+         sizes="100vw"
+         src="<%- mastheadImage %>"
+         onload='let e = document.getElementById("masthead");
+                 let f = document.getElementById("mastheadLoader");
+                 e.style["background-image"]=`url("${f.currentSrc || f.src}")`;
+                 e.classList.add("<%- mastheadClass %>");
+         <%- extraCodeAfterMastheadLoad %>'
+         alt="">
 </div>
 
 <!-- Masthead-->

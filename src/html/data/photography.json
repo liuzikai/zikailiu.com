@@ -6,6 +6,7 @@
   "navbarTheme": "dark",
   "navlinkAlwaysShow": false,
   "mastheadImage": "/assets/masthead-color.jpg",
+  "mastheadImageSmall": "/assets/masthead-color-small.jpg",
   "mastheadClass": "masthead-photography-bg",
   "extraCodeAfterMastheadLoad": "Array.from(document.querySelectorAll(\".thumbnail\")).forEach(e => { e.src = e.dataset.src; });",
   "extraPreloadImages": [],
