@@ -2,9 +2,12 @@
 
 WEBSITE_OPTIONS='-d zikailiu.com'
 
-systemctl stop nginx
+sudo systemctl stop nginx
 
-~/.acme.sh/acme.sh --issue ${WEBSITE_OPTIONS} --standalone -k ec-256 || echo "Skipped TLS certification refresh"
-~/.acme.sh/acme.sh --installcert ${WEBSITE_OPTIONS} --fullchainpath "/usr/share/nginx/portfolio.crt" --keypath "/usr/share/nginx/portfolio.key" --ecc
+~/.acme.sh/acme.sh --server letsencrypt --issue ${WEBSITE_OPTIONS} --standalone -k ec-256 || echo "Skipped TLS certification refresh"
 
-systemctl start nginx
+sudo chmod a+w /usr/share/nginx
+~/.acme.sh/acme.sh --installcert ${WEBSITE_OPTIONS} --fullchainpath "/usr/share/nginx/zikailiu.com.crt" --keypath "/usr/share/nginx/zikailiu.com.key" --ecc
+sudo chmod a-w /usr/share/nginx
+
+sudo systemctl start nginx
