@@ -102,10 +102,16 @@ window.addEventListener("DOMContentLoaded", event => {
 
     // Get the array of all .slide-in-text
     let allSlideInTexts = [];
-    for (const e of document.getElementsByClassName("slide-in-text")) {
-        let rec = e.getBoundingClientRect();
-        if (rec.top < 0) continue;  // already above, skip
-        allSlideInTexts.push(e);
+    let foundAllSlideInTexts = false;
+
+    function findAllSlideInTexts() {
+        for (const e of document.getElementsByClassName("slide-in-text")) {
+            let rec = e.getBoundingClientRect();
+            if (rec.top < 0) continue;  // already above, skip
+            // console.log(rec.top);
+            allSlideInTexts.push(e);
+        }
+        foundAllSlideInTexts = true;
     }
 
     // Slide in animation
@@ -121,8 +127,16 @@ window.addEventListener("DOMContentLoaded", event => {
         }
     }
 
-    updateSlideInTexts();  // run once when DOM is ready
-    document.addEventListener("scroll", updateSlideInTexts);  // on a scroll event
+    function slideInTextsHandler() {
+        // Only do this on first scroll. When refreshing a page already scrolled, browsers scroll it back automatically.
+        // Some like Chrome scroll it first and then trigger the load event. Others like Safari do the opposite.
+        // In the latter case, getBoundingClientRect returns wrong top so elements already above the viewpoint are not
+        // skipped. To handle it, we always find slide-in-texts on first scroll.
+        if (!foundAllSlideInTexts) findAllSlideInTexts();
+        updateSlideInTexts();  // always run once when DOM is ready
+    }
+
+    document.addEventListener("scroll", slideInTextsHandler);  // on a scroll event
 
     function getStableWindowHeight() {
         // https://github.com/tylerjpeterson/ios-inner-height
@@ -217,7 +231,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
             // Color animations for contacts
             let contacts = document.querySelectorAll("#homeContacts > a");
-            console.log(contacts);
+            // console.log(contacts);
             Array.from(contacts).forEach(el => {
                 let tl = gsap.timeline({paused: true}).to(el, {color: "rgba(0, 0, 0, 0.25)",}, "<");
                 el.addEventListener("mouseenter", () => tl.play());
