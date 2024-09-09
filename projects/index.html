@@ -907,7 +907,7 @@
                     <div class="modal-body px-0 py-0 py-lg-4">
                         <div class="text-center hidden-lg">
                             <!-- GIF is too large, ~20MB, while MP4 is only 2MB -->
-                            <video style="width: 100%; object-fit: cover" autoplay muted loop>
+                            <video style="width: 100%; object-fit: cover" autoplay playsinline muted loop>
                                 <source class="modal-lazy-video" src="" data-src="/assets/qi-table-demo-muted.mp4"
                                         type="video/mp4">
                                 Sorry, your browser does not support the video tag.
@@ -964,7 +964,8 @@
                                 <div class="col-lg-4 px-lg-4 mt-0 order-last order-lg-first">
                                     <div class="modal-gallery text-center">
                                         <!-- First side image only showing in lg mode -->
-                                        <video class="show-lg" style="width: 100%; object-fit: cover" autoplay muted
+                                        <video class="show-lg" style="width: 100%; object-fit: cover" autoplay
+                                               playsinline muted
                                                loop>
                                             <source class="modal-lazy-video" src=""
                                                     data-src="/assets/qi-table-demo-muted.mp4"
@@ -974,7 +975,7 @@
                                         <p class="image-caption show-lg">Demonstration of the
                                             Table Charging Multiple Cellphones</p>
                                         <!-- Additional images -->
-                                        <video style="width: 100%; object-fit: cover" autoplay muted loop>
+                                        <video style="width: 100%; object-fit: cover" autoplay playsinline muted loop>
                                             <source class="modal-lazy-video" src=""
                                                     data-src="/assets/qi-table-mechanism.mp4" type="video/mp4">
                                             Sorry, your browser does not support the video tag.
