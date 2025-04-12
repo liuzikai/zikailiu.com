@@ -11,8 +11,9 @@
   "extraCodeAfterMastheadLoad": "",
   "extraPreloadImages": [],
   "mastheadText": [
-    "Every project a journey",
-    "Every photo a story"
+    "Built from real moments.",
+    "Shared with anyone",
+    "curious enough to scroll."
   ],
-  "scrollIndicatorColor": "rgba(0, 0, 0, 0.25)"
+  "scrollIndicatorColor": "rgba(0, 0, 0, 0.5)"
 }

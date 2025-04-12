@@ -244,7 +244,7 @@ window.addEventListener("DOMContentLoaded", event => {
         });
 
         // < lg: trigger link animation on scroll
-        mm.add("(max-width: 991px)", () => {
+        /*mm.add("(max-width: 991px)", () => {
 
             let vars = {
                 paused: true,
@@ -265,7 +265,7 @@ window.addEventListener("DOMContentLoaded", event => {
             return () => { // optional
                 // custom cleanup code here (runs when it STOPS matching)
             };
-        });
+        });*/
 
     } else if (currentPage === "projects") {
 

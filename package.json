@@ -1,7 +1,7 @@
 {
-    "title": "Zikai Liu Portfolio",
-    "name": "zikai-liu-portfolio",
-    "version": "1.1.0",
+    "title": "zikailiu.com",
+    "name": "zikai-liu-com",
+    "version": "0.0.0",
     "scripts": {
         "build": "npm run clean && npm run build:html && npm-run-all --parallel build:css build:js",
         "build:html": "node scripts/render-html.js",
@@ -11,20 +11,9 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "A grayscale one page HTML theme for Bootstrap.",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/theme/grayscale",
-    "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "description": "Zikai Liu's website",
+    "keywords": [],
+    "homepage": "https://zikailiu.com",
     "license": "MIT",
     "author": "Zikai Liu",
     "contributors": [
@@ -33,7 +22,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale.git"
+        "url": "https://github.com/liuzikai/zikailiu.com.git"
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",

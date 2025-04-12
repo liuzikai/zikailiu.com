@@ -7,7 +7,7 @@
          src="<%- mastheadImage %>"
          onload='let e = document.getElementById("masthead");
                  let f = document.getElementById("mastheadLoader");
-                 e.style["background-image"]=`url("${f.currentSrc || f.src}")`;
+                 e.style["background-image"]=`linear-gradient(to bottom, transparent 75%, var(--bs-body-bg) 100%), url("${f.currentSrc || f.src}")`;
                  e.classList.add("<%- mastheadClass %>");
          <%- extraCodeAfterMastheadLoad %>'
          alt="">
@@ -16,7 +16,7 @@
 <!-- Masthead-->
 <header class="masthead min-vh-100" id="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex flex-column justify-content-center h-100">
+        <div class="d-flex flex-column justify-content-between h-100">
             <div class="py-5" style="height: 5rem;"> <!-- placeholder--> </div>
             <div class="masthead-text text-center">
                 <% mastheadText.forEach(function(line) { %>
@@ -24,7 +24,7 @@
                 <% }); %>
             </div>
             <!-- Scroll Indicator -->
-            <div class="text-center py-5" style="height: 5rem; color: <%- scrollIndicatorColor %>">
+            <div class="text-center" style="height: 5rem; color: <%- scrollIndicatorColor %>">
                 <svg width="2.25em" height="2.75em" fill="currentColor" viewBox="0 0 16 16" id="homeScrollIndicator">
                     <path fill-rule="evenodd" class="scroll-indicator-path scroll-indicator-path-active"
                           style="animation-delay: -1s"

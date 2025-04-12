@@ -1,0 +1,1 @@
+In Adobe Illustrator, when saving SVG, use CSS Properties: Style Attributes (Entity References) and then clean up manually.
