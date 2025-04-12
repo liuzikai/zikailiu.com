@@ -7,7 +7,7 @@
          src="<%- mastheadImage %>"
          onload='let e = document.getElementById("masthead");
                  let f = document.getElementById("mastheadLoader");
-                 e.style["background-image"]=`linear-gradient(to bottom, transparent 75%, var(--bs-body-bg) 100%), url("${f.currentSrc || f.src}")`;
+                 e.style["background-image"]=`linear-gradient(to bottom, transparent 70%, var(--bs-body-bg) 100%), url("${f.currentSrc || f.src}")`;
                  e.classList.add("<%- mastheadClass %>");
          <%- extraCodeAfterMastheadLoad %>'
          alt="">
@@ -24,7 +24,7 @@
                 <% }); %>
             </div>
             <!-- Scroll Indicator -->
-            <div class="text-center" style="height: 5rem; color: <%- scrollIndicatorColor %>">
+            <div class="text-center mb-5 mb-lg-0" style="height: 5rem; color: <%- scrollIndicatorColor %>">
                 <svg width="2.25em" height="2.75em" fill="currentColor" viewBox="0 0 16 16" id="homeScrollIndicator">
                     <path fill-rule="evenodd" class="scroll-indicator-path scroll-indicator-path-active"
                           style="animation-delay: -1s"
