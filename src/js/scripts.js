@@ -28,10 +28,10 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 window.addEventListener("DOMContentLoaded", event => {
 
     // Home page scroll indicator
-    const scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
+    let scrollIndicators = document.querySelectorAll("#homeScrollIndicator > path");
 
     // Navbar shrink
-    const navbarCollapsible = document.getElementById("mainNav");
+    let navbarCollapsible = document.getElementById("mainNav");
 
     let navbarShrink = function () {
         if (!navbarCollapsible) {
@@ -60,8 +60,8 @@ window.addEventListener("DOMContentLoaded", event => {
     document.addEventListener("scroll", navbarShrink);
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector(".navbar-toggler");
-    const responsiveNavItems = [].slice.call(
+    let navbarToggler = document.body.querySelector(".navbar-toggler");
+    let responsiveNavItems = [].slice.call(
         document.querySelectorAll("#navbarResponsive .nav-link")
     );
     responsiveNavItems.map(function (responsiveNavItem) {
@@ -105,7 +105,7 @@ window.addEventListener("DOMContentLoaded", event => {
     let foundAllSlideInTexts = false;
 
     function findAllSlideInTexts() {
-        for (const e of document.getElementsByClassName("slide-in-text")) {
+        for (let e of document.getElementsByClassName("slide-in-text")) {
             let rec = e.getBoundingClientRect();
             if (rec.top < 0) continue;  // already above, skip
             // console.log(rec.top);
@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", event => {
         }
     }
 
-    const currentPage = document.getElementById("main-script").getAttribute("data-page");
+    let currentPage = document.getElementById("main-script").getAttribute("data-page");
     // console.warn(currentPage);
 
     // Note on GSAP: unit vh does not work with pin + scrub
@@ -366,7 +366,8 @@ window.addEventListener("DOMContentLoaded", event => {
 
         window.readMoreClicked = function (readMoreButton) {
             // console.log("readMoreClicked:", readMoreButton);
-            let modal = document.querySelector(readMoreButton.getAttribute("data-bs-target"));
+            let modalId = readMoreButton.getAttribute("data-bs-target");
+            let modal = document.querySelector(modalId);
             // Lazy load modal videos
             Array.from(modal.querySelectorAll(".modal-lazy-video")).forEach(e => {
                 e.src = e.dataset.src;
@@ -383,7 +384,32 @@ window.addEventListener("DOMContentLoaded", event => {
                     console.warn("Modal lazy loading image is not loaded:", e.src);
                 }
             });
+            // Use history to allow closing the model on backwards
+            history.replaceState({ modelStage: 0, modalId: modalId }, '');
+            // on popstate, the next state is popped so the modelID must also be saved here
+            history.pushState({ modelStage: 1, modalId: modalId }, '');
+            // We don't remove history on clicking the close button
+            // there is no way just to remove a history - we can only go back, which causes more problems than benefits
         };
+
+        // Close the model on backwards
+        window.addEventListener('popstate', function (event) {
+            // console.log("popstate:", event);
+            if (event.state && event.state.modalId) {
+                let modalElem = document.querySelector(event.state.modalId);
+                if (modalElem) {
+                    let modal = Modal.getInstance(modalElem)
+                    if (modal) {
+                        if (event.state.modelStage) {
+                            modal.show();
+                        } else {
+                            modal.hide();
+                        }
+                    }
+                }
+                // We do not further manipulate history - it causes more problems than benefits
+            }
+        });
 
         // Project navigation
 
