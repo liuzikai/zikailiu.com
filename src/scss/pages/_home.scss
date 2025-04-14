@@ -1,15 +1,13 @@
-.masthead {
-  &.masthead-home-bg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    opacity: 1;
-    animation: bg-fadein 1s;
+.masthead-home-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 1;
+  animation: bg-fadein 1s;
 
-    // border-bottom: 1px solid rgba(0, 0, 0, 50%);
-    border-bottom: 1px solid $white;
-  }
+  // border-bottom: 1px solid rgba(0, 0, 0, 50%);
+  // border-bottom: 1px solid $white;
 }
 
 .home-link-text {

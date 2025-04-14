@@ -14771,7 +14771,7 @@ body {
   padding: 5rem 0;
 }
 
-.masthead.masthead-home-bg {
+.masthead-home-bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -14780,7 +14780,6 @@ body {
   -webkit-animation: bg-fadein 1s;
      -moz-animation: bg-fadein 1s;
           animation: bg-fadein 1s;
-  border-bottom: 1px solid #fff;
 }
 
 .home-link-text {
@@ -14938,7 +14937,7 @@ body {
   }
 }
 
-.masthead.masthead-projects-bg {
+.masthead-projects-bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -14974,7 +14973,7 @@ body {
   padding-top: 50%;
 }
 
-.masthead.masthead-photography-bg {
+.masthead-photography-bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15007,10 +15006,7 @@ body {
   }
 }
 
-.masthead {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.masthead.masthead-error-bg {
+.masthead-error-bg {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), color-stop(20%, rgba(255, 255, 255, 0.2)), color-stop(70%, rgba(255, 255, 255, 0.7)), to(#fff)), url("../assets/masthead-white.jpg");
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.7) 70%, #fff 100%), url("../assets/masthead-white.jpg");
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.7) 70%, #fff 100%), url("../assets/masthead-white.jpg");

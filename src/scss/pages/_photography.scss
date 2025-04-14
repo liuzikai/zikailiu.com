@@ -1,30 +1,26 @@
-.masthead {
-    &.masthead-photography-bg {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-        opacity: 1;
-        animation: bg-fadein 1s;
-    }
-
-    // border-bottom: 1px solid $navbar-light-border-color;
+.masthead-photography-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 1;
+  animation: bg-fadein 1s;
 }
 
 .camera-info-text {
-    font-size: 1rem;
-    @include media-breakpoint-up(md) {
-        font-size: 1.25rem;
-    }
+  font-size: 1rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1.25rem;
+  }
 }
 
 .camera-info-icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    position: relative;
-    top: -0.15rem;
-    @include media-breakpoint-up(md) {
-        width: 2.75rem;
-        height: 2.75rem;
-    }
+  width: 1.75rem;
+  height: 1.75rem;
+  position: relative;
+  top: -0.15rem;
+  @include media-breakpoint-up(md) {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
