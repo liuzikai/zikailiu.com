@@ -108,7 +108,8 @@
         </div>
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
             <div style="align-self: flex-start;">
-                <header>Zikai Liu</header>
+                <div style="display: flex; align-items: center">
+                    <header>Zikai Liu</header>&nbsp;&nbsp;<span style="font-size: 14pt">刘子恺</span></div>
                 <b><a href="mailto:zikai.liu@inf.ethz.ch">zikai.liu@inf.ethz.ch</a></b>
             </div>
             <div>
@@ -132,7 +133,7 @@
     <p class="text-center">
         [&nbsp;<a href="#education">Education</a>&nbsp;]
         [&nbsp;<a href="#publications">Publications</a>&nbsp;]
-        [&nbsp;<a href="#presentations">Presentations</a>&nbsp;]
+        [&nbsp;<a href="#talks">Talks</a>&nbsp;]
         [&nbsp;<a href="#experience">Experience</a>&nbsp;]
         [&nbsp;<a target="_blank" rel="noopener noreferrer" href="zikai-cv-2025-02.pdf"
                   aria-label="Download my CV in PDF">C.V.&nbsp;in&nbsp;PDF</a>&nbsp;]
@@ -148,12 +149,20 @@
 </div>
 <div id="biography">
     <p>I am a second-year doctoral student with <a target="_blank" rel="noopener noreferrer"
-                                                  href="https://people.inf.ethz.ch/troscoe/"
-                                                  aria-label="Visit the website of Timothy Roscoe">Prof. Timothy
-        Roscoe</a> in the Systems Group at ETH Zürich.</p>
+                                                   href="https://people.inf.ethz.ch/troscoe/"
+                                                   aria-label="Visit the website of Timothy Roscoe">Prof. Timothy
+        Roscoe</a> in the <a target="_blank" rel="noopener noreferrer" href="https://systems.ethz.ch"
+                             aria-label="Visit the website of the Institute for Computing Platforms - Systems Group">Systems
+        Group</a> at ETH Zürich.</p>
     <p>I am generally interested in computer systems, including operating systems, architecture, compilers, and
-        software engineering. My other areas of interest include VR/AR, all kinds of programming, design and
-        photography.</p>
+        software engineering. My other areas of interest include VR/AR, design, photography and ice skating.</p>
+    <p>My current project is about new programming models and software/hardware co-design on emerging coherent memory
+        systems like CXL. I am also part of the
+        <a target="_blank" rel="noopener noreferrer" href="https://enzian.systems"
+           aria-label="Visit the website of Enzian">Enzian Project</a>,
+        the <a target="_blank" rel="noopener noreferrer" href="https://sockeye.ethz.ch/kirsch/"
+               aria-label="Visit the website of Kirsch">Kirsch Project</a>,
+        and the Lauberhorn SmartNIC Project.</p>
 </div>
 <div class="section" id="education">
     <header>Education</header>
@@ -162,8 +171,7 @@
             <p>
                 <strong>Doctoral student in Computer Science</strong>
                 <br>
-                <a target="_blank" rel="noopener noreferrer" href="https://ethz.ch/"
-                   aria-label="Visit the official website of ETH Zürich">ETH Zürich</a>, Switzerland
+                ETH Zürich, Switzerland
                 <br>
                 November 2023&ndash;present
                 <br>
@@ -175,8 +183,7 @@
             <p>
                 <strong>Master of Science (MSc) in Computer Science</strong>
                 <br>
-                <a target="_blank" rel="noopener noreferrer" href="https://ethz.ch/"
-                   aria-label="Visit the official website of ETH Zürich">ETH Zürich</a>, Switzerland
+                ETH Zürich, Switzerland
                 <br>
                 September 2021&ndash;September 2023
                 <br>
@@ -190,11 +197,13 @@
             <p>
                 <strong>Bachelor of Science (BSc) in Computer Engineering</strong>
                 <br>
-                <a target="_blank" rel="noopener noreferrer" href="https://illinois.edu"
-                   aria-label="Visit the official website of University of Illinois at Urbana-Champaign">University of
-                    Illinois at Urbana-Champaign</a>, United States
+                University of Illinois at Urbana-Champaign, United States
                 <br>
-                September 2017&ndash;June 2021, Highest Honors
+                <strong>Bachelor of Engineering (BEng) in Electronics and Computer Engineering</strong>
+                <br>
+                Zhejiang University, China
+                <br>
+                <u>Dual degrees</u>, September 2017&ndash;June 2021, Highest Honors / Outstanding Graduate
                 <br>
                 Supervisor: <a target="_blank" rel="noopener noreferrer" href="http://lumetta.web.engr.illinois.edu"
                                aria-label="Visit the website of Steven Lumetta">Prof. Steven Lumetta</a>
@@ -203,14 +212,6 @@
                            href="https://experts.illinois.edu/en/publications/end-to-end-automation-of-feedback-on-student-assembly-programs"
                            aria-label="View my Bachelor's thesis on Illinois Experts">Using Concolic Execution to
                 Provide Automatic Feedback on LC-3</a>
-            </p>
-            <p>
-                <strong>Bachelor of Engineering (BEng) in Electronics and Computer Engineering</strong>
-                <br>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.zju.edu.cn/english/"
-                   aria-label="Visit the official website of Zhejiang University">Zhejiang University</a>, China
-                <br>
-                September 2017&ndash;June 2021, Outstanding Graduate
             </p>
         </li>
     </ul>
@@ -223,40 +224,42 @@
             <p>
                 <strong>Efeu: generating efficient, verified, hybrid hardware/software drivers for I2C devices</strong>
                 <br>
-                Daniel Schwyn*, <strong>Zikai Liu</strong>*, Timothy Roscoe
+                Daniel Schwyn*, <u>Zikai Liu</u>*, Timothy Roscoe
                 <br>
-                EuroSys'25: 20th European Conference on Computer Systems, March&ndash;April 2025 (to appear)
+                EuroSys'25: 20th European Conference on Computer Systems, March&ndash;April 2025
                 <br>
                 [<a target="_blank" rel="noopener noreferrer" href="efeu.pdf"
                     aria-label="View the paper in PDF">PDF</a>]
+                [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3689031.3696093"
+                   aria-label="View the paper on ACM Digital Library">ACM</a>]
             </p>
         </li>
         <li>
             <p>
                 <strong>Verified fault handling for modern board management controllers</strong>
                 <br>
-                Ben Fiedler, <strong>Zikai Liu</strong>, David Cock, Timothy Roscoe
+                Ben Fiedler, <u>Zikai Liu</u>, David Cock, Timothy Roscoe
                 <br>
                 FACS'24: 20th Formal Aspects of Component Software, September 2024
                 <br>
                 [<a target="_blank" rel="noopener noreferrer" href="verified-fault-handling.pdf"
                     aria-label="View the paper in PDF">PDF</a>]
-                [<a target="_blank" rel="noopener noreferrer" href="https://dl.acm.org/doi/10.1007/978-3-031-71261-6_2"
-                    aria-label="View the paper on ACM Digital Library">ACM</a>]
+                [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-031-71261-6_2"
+                    aria-label="View the paper on Springer">Springer</a>]
             </p>
         </li>
         <li>
             <p>
                 <strong>End-to-End Automation of Feedback on Student Assembly Programs</strong>
                 <br>
-                <strong>Zikai Liu</strong>, Tingkai Liu, Qi Li, Wenqing Luo, Steven S. Lumetta
+                <u>Zikai Liu</u>, Tingkai Liu, Qi Li, Wenqing Luo, Steven S. Lumetta
                 <br>
                 ASE'21: 36th ACM/IEEE International Conference on Automated Software Engineering, November 2021
                 <br>
                 [<a target="_blank" rel="noopener noreferrer" href="klc3.pdf"
                     aria-label="View the paper in PDF">PDF</a>]
                 [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/ASE51524.2021.9678837"
-                    aria-label="View the paper on doi.org">DOI</a>]
+                    aria-label="View the paper on IEEE Xplore">IEEE</a>]
                 [<a target="_blank" rel="noopener noreferrer"
                     href="https://experts.illinois.edu/en/publications/end-to-end-automation-of-feedback-on-student-assembly-programs"
                     aria-label="View the paper on Illinois Experts">UIUC</a>]
@@ -264,41 +267,28 @@
         </li>
     </ul>
 </div>
-<div class="section" id="presentations">
-    <header>Presentations</header>
-    <p class="text-center">Presenters are <u>underlined</u></p>
+<div class="section" id="talks">
+    <header>Talks</header>
     <ul>
         <li>
             <p>
                 <strong>Generating Trustworthy Hardware/Software I2C Drivers for Board Management Controllers</strong>
                 <br>
-                Daniel Schwyn, <u><strong>Zikai Liu</strong></u>, Timothy Roscoe
+                Daniel Schwyn, <u>Zikai Liu</u>, Timothy Roscoe
                 <br>
                 seL4 Summit 2024, October 2024<br>
                 [<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/b6t-qkHjgdE?si=KJH2FOEo36-NG2Vg"
-                    aria-label="Watch my presentation at the seL4 summit">Video</a>]
+                    aria-label="Watch my presentation at the seL4 Summit">Video</a>]
                 [<a target="_blank" rel="noopener noreferrer"
                     href="https://static.sched.com/hosted_files/sel4summit2024/d6/seL4-Summit-Efeu-Presentation.pdf"
-                    aria-label="View my slides presented at the seL4 summit">Slides</a>]
-            </p>
-            <p>
-                <strong>seL4 as a CPU Driver in an OS for Real Computers</strong>
-                <br>
-                <u>Roman Meier</u>, <strong>Zikai Liu</strong>, Ben Fiedler, Timothy Roscoe
-                <br>
-                seL4 Summit 2024, October 2024<br>
-                [<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/DGLSJ8m-X2I?si=IEWPwa07bV2ui8a-"
-                    aria-label="Watch Roman's presentation at the workshop">Video</a>]
-                [<a target="_blank" rel="noopener noreferrer"
-                    href="https://static.sched.com/hosted_files/sel4summit2024/31/seL4-Summit-2024_seL4-as-a-CPU-driver.pdf"
-                    aria-label="View Roman's slides presented at the workshop">Slides</a>]
+                    aria-label="View my slides presented at the seL4 Summit">Slides</a>]
             </p>
         </li>
         <li>
             <p>
                 <strong>Caching Results from KLEE’s Independent Solver</strong>
                 <br>
-                <u><strong>Zikai Liu</strong></u>, Steven S. Lumetta
+                <u>Zikai Liu</u>, Steven S. Lumetta
                 <br>
                 2nd KLEE Workshop, June 2021<br>
                 [<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/4UtwHWgOrKk"
@@ -306,18 +296,6 @@
                 [<a target="_blank" rel="noopener noreferrer"
                     href="https://srg.doc.ic.ac.uk/klee21/talks/Liu-Caching.pdf"
                     aria-label="View my slides presented at the workshop">Slides</a>]
-            </p>
-            <p>
-                <strong>Timely Feedback on Assembly Assignments Using KLEE</strong>
-                <br>
-                <strong>Zikai Liu</strong>, <u>Tingkai Liu</u>, Qi Li, Wenqing Luo, Steven Lumetta
-                <br>
-                2nd KLEE Workshop, June 2021<br>
-                [<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/w0a60vvmRmg"
-                    aria-label="Watch Tingkai's presentation at the workshop">Video</a>]
-                [<a target="_blank" rel="noopener noreferrer"
-                    href="https://srg.doc.ic.ac.uk/klee21/talks/Liu-Assembly-Feedback.pdf"
-                    aria-label="View Tingkai's slides presented at the workshop">Slides</a>]
             </p>
         </li>
     </ul>
@@ -327,6 +305,15 @@
     <p class="text-center">More in my [<a href="https://zikailiu.com/projects" aria-label="Visit my project portfolio">Project
         Portfolio</a>]</p>
     <ul>
+        <li>
+            <p>
+                <strong>ETH Zürich</strong>
+                <br>
+                Teaching Assistant
+                <br>
+                Spring 2024&ndash;present
+            </p>
+        </li>
         <li>
             <p>
                 <strong>ZJU-UIUC Robotics Team</strong>
